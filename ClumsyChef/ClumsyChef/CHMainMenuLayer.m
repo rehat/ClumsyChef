@@ -69,6 +69,15 @@
 		menu.position = CGPointZero;
 		[self updateSoundToggleButton];
 		[self addChild:menu];
+        
+        
+        
+        [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"mainMenu.caf" loop:YES];
+        
+        if ([SimpleAudioEngine sharedEngine].willPlayBackgroundMusic) {
+            [SimpleAudioEngine sharedEngine].backgroundMusicVolume = 0.4f;
+        }
+
 	}
 	return self;
 }

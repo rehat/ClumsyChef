@@ -13,6 +13,7 @@
 #import "CHGameLoseLayer.h"
 #import "CHPauseLayer.h"
 #import "CHPlayerInfo.h"
+#import "SimpleAudioEngine.h"
 
 
 @implementation CHGameScene
@@ -99,11 +100,13 @@
 
 - (void)pauseGame
 {
+	[[SimpleAudioEngine sharedEngine] pauseBackgroundMusic];
 	[self showModalOverlay:[CHPauseLayer node]];
 }
 
 - (void)resumeGame
 {
+    [[SimpleAudioEngine sharedEngine] resumeBackgroundMusic];
 	[self prepareToDismissModalOverlay];
 }
 

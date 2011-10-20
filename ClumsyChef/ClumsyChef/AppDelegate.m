@@ -126,6 +126,7 @@
     [[SimpleAudioEngine sharedEngine] preloadBackgroundMusic:@"gameLayer-music.caf"];
     [[SimpleAudioEngine sharedEngine] preloadEffect:@"levelFail.caf"];
     [[SimpleAudioEngine sharedEngine] preloadEffect:@"levelWin.caf"];
+    [[SimpleAudioEngine sharedEngine] preloadBackgroundMusic:@"mainMenu.caf"];
 
     
     

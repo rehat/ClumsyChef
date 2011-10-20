@@ -344,6 +344,8 @@
 		BC7A84A81484A6A000634F56 /* levelFail.caf in Resources */ = {isa = PBXBuildFile; fileRef = BC7A84A61484A6A000634F56 /* levelFail.caf */; };
 		BC7A84AB1484A6AB00634F56 /* levelWin.caf in Resources */ = {isa = PBXBuildFile; fileRef = BC7A84AA1484A6AB00634F56 /* levelWin.caf */; };
 		BC7A84AC1484A6AB00634F56 /* levelWin.caf in Resources */ = {isa = PBXBuildFile; fileRef = BC7A84AA1484A6AB00634F56 /* levelWin.caf */; };
+		BC7A84AE1484A9B700634F56 /* mainMenu.caf in Resources */ = {isa = PBXBuildFile; fileRef = BC7A84AD1484A9B700634F56 /* mainMenu.caf */; };
+		BC7A84AF1484A9B700634F56 /* mainMenu.caf in Resources */ = {isa = PBXBuildFile; fileRef = BC7A84AD1484A9B700634F56 /* mainMenu.caf */; };
 		BCC06AAC146B2DB60068103A /* coinObject-coin-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BCC06AA4146B2DB60068103A /* coinObject-coin-hd.png */; };
 		BCC06AAD146B2DB60068103A /* coinObject-coin-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BCC06AA4146B2DB60068103A /* coinObject-coin-hd.png */; };
 		BCC06AAE146B2DB60068103A /* coinObject-coin.png in Resources */ = {isa = PBXBuildFile; fileRef = BCC06AA5146B2DB60068103A /* coinObject-coin.png */; };
@@ -939,6 +941,7 @@
 		BC622ABB1463362A0016DFA0 /* ClumsyChef copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ClumsyChef copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC7A84A61484A6A000634F56 /* levelFail.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = levelFail.caf; path = Resources/levelFail.caf; sourceTree = "<group>"; };
 		BC7A84AA1484A6AB00634F56 /* levelWin.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = levelWin.caf; path = Resources/levelWin.caf; sourceTree = "<group>"; };
+		BC7A84AD1484A9B700634F56 /* mainMenu.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = mainMenu.caf; path = Resources/mainMenu.caf; sourceTree = "<group>"; };
 		BCC06AA4146B2DB60068103A /* coinObject-coin-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "coinObject-coin-hd.png"; path = "Resources/coinObject-coin-hd.png"; sourceTree = "<group>"; };
 		BCC06AA5146B2DB60068103A /* coinObject-coin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "coinObject-coin.png"; path = "Resources/coinObject-coin.png"; sourceTree = "<group>"; };
 		BCC06AA6146B2DB60068103A /* gameLayer-music.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "gameLayer-music.caf"; path = "Resources/gameLayer-music.caf"; sourceTree = "<group>"; };
@@ -1550,6 +1553,7 @@
 			children = (
 				E5A30315147F14C80050DA25 /* mainMenu-background-hd.png */,
 				E5A30316147F14C80050DA25 /* mainMenu-background.png */,
+				BC7A84AD1484A9B700634F56 /* mainMenu.caf */,
 				E5A30317147F14C80050DA25 /* mainMenu-credits-hd.png */,
 				E5A30318147F14C80050DA25 /* mainMenu-credits-high-hd.png */,
 				E5A30319147F14C80050DA25 /* mainMenu-credits-high.png */,
@@ -2863,6 +2867,7 @@
 				E5B4D5F8147FA0AD009B76FD /* recipeItem-collected-particle.png in Resources */,
 				BC7A84A81484A6A000634F56 /* levelFail.caf in Resources */,
 				BC7A84AC1484A6AB00634F56 /* levelWin.caf in Resources */,
+				BC7A84AF1484A9B700634F56 /* mainMenu.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3125,6 +3130,7 @@
 				E5B4D5F7147FA0AD009B76FD /* recipeItem-collected-particle.png in Resources */,
 				BC7A84A71484A6A000634F56 /* levelFail.caf in Resources */,
 				BC7A84AB1484A6AB00634F56 /* levelWin.caf in Resources */,
+				BC7A84AE1484A9B700634F56 /* mainMenu.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
