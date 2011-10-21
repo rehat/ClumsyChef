@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		E55D60D81451244F00C9D237 /* CHGameLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = E55D60D71451244F00C9D237 /* CHGameLibrary.m */; };
+		E55D60DC145132BC00C9D237 /* CHPlayerInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E55D60DB145132BC00C9D237 /* CHPlayerInfo.m */; };
+		E55D60E31451361F00C9D237 /* CHTitleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E55D60E21451361F00C9D237 /* CHTitleLayer.m */; };
+		E55D60E6145136BF00C9D237 /* CHSelectStageLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E55D60E5145136BF00C9D237 /* CHSelectStageLayer.m */; };
+		E55D60E91451372000C9D237 /* CHGameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = E55D60E81451372000C9D237 /* CHGameScene.m */; };
+		E55D60EC1451373A00C9D237 /* CHGameLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E55D60EB1451373A00C9D237 /* CHGameLayer.m */; };
+		E55D60EF1451376F00C9D237 /* CHHUDLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E55D60EE1451376F00C9D237 /* CHHUDLayer.m */; };
+		E55D60F21451378B00C9D237 /* CHPauseLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E55D60F11451378B00C9D237 /* CHPauseLayer.m */; };
 		E5A90387144F7799002A1F6C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A90386144F7799002A1F6C /* QuartzCore.framework */; };
 		E5A90389144F7799002A1F6C /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A90388144F7799002A1F6C /* OpenGLES.framework */; };
 		E5A9038B144F7799002A1F6C /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A9038A144F7799002A1F6C /* OpenAL.framework */; };
@@ -165,6 +172,20 @@
 /* Begin PBXFileReference section */
 		E55D60D61451244F00C9D237 /* CHGameLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGameLibrary.h; sourceTree = "<group>"; };
 		E55D60D71451244F00C9D237 /* CHGameLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGameLibrary.m; sourceTree = "<group>"; };
+		E55D60DA145132BC00C9D237 /* CHPlayerInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHPlayerInfo.h; sourceTree = "<group>"; };
+		E55D60DB145132BC00C9D237 /* CHPlayerInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHPlayerInfo.m; sourceTree = "<group>"; };
+		E55D60E11451361F00C9D237 /* CHTitleLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTitleLayer.h; sourceTree = "<group>"; };
+		E55D60E21451361F00C9D237 /* CHTitleLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTitleLayer.m; sourceTree = "<group>"; };
+		E55D60E4145136BF00C9D237 /* CHSelectStageLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHSelectStageLayer.h; sourceTree = "<group>"; };
+		E55D60E5145136BF00C9D237 /* CHSelectStageLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHSelectStageLayer.m; sourceTree = "<group>"; };
+		E55D60E71451372000C9D237 /* CHGameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGameScene.h; sourceTree = "<group>"; };
+		E55D60E81451372000C9D237 /* CHGameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGameScene.m; sourceTree = "<group>"; };
+		E55D60EA1451373A00C9D237 /* CHGameLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGameLayer.h; sourceTree = "<group>"; };
+		E55D60EB1451373A00C9D237 /* CHGameLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGameLayer.m; sourceTree = "<group>"; };
+		E55D60ED1451376F00C9D237 /* CHHUDLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHHUDLayer.h; sourceTree = "<group>"; };
+		E55D60EE1451376F00C9D237 /* CHHUDLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHHUDLayer.m; sourceTree = "<group>"; };
+		E55D60F01451378B00C9D237 /* CHPauseLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHPauseLayer.h; sourceTree = "<group>"; };
+		E55D60F11451378B00C9D237 /* CHPauseLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHPauseLayer.m; sourceTree = "<group>"; };
 		E5A90382144F7799002A1F6C /* ClumsyChef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClumsyChef.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5A90386144F7799002A1F6C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		E5A90388144F7799002A1F6C /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -506,6 +527,32 @@
 			name = "Game Library";
 			sourceTree = "<group>";
 		};
+		E55D60E01451352100C9D237 /* Beginning Screens */ = {
+			isa = PBXGroup;
+			children = (
+				E55D60E11451361F00C9D237 /* CHTitleLayer.h */,
+				E55D60E21451361F00C9D237 /* CHTitleLayer.m */,
+				E55D60E4145136BF00C9D237 /* CHSelectStageLayer.h */,
+				E55D60E5145136BF00C9D237 /* CHSelectStageLayer.m */,
+			);
+			name = "Beginning Screens";
+			sourceTree = "<group>";
+		};
+		E55D60F31451379F00C9D237 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				E55D60EA1451373A00C9D237 /* CHGameLayer.h */,
+				E55D60EB1451373A00C9D237 /* CHGameLayer.m */,
+				E55D60E71451372000C9D237 /* CHGameScene.h */,
+				E55D60E81451372000C9D237 /* CHGameScene.m */,
+				E55D60ED1451376F00C9D237 /* CHHUDLayer.h */,
+				E55D60EE1451376F00C9D237 /* CHHUDLayer.m */,
+				E55D60F01451378B00C9D237 /* CHPauseLayer.h */,
+				E55D60F11451378B00C9D237 /* CHPauseLayer.m */,
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
 		E5A90377144F7799002A1F6C = {
 			isa = PBXGroup;
 			children = (
@@ -541,11 +588,15 @@
 		E5A90396144F7799002A1F6C /* ClumsyChef */ = {
 			isa = PBXGroup;
 			children = (
+				E55D60DA145132BC00C9D237 /* CHPlayerInfo.h */,
+				E55D60DB145132BC00C9D237 /* CHPlayerInfo.m */,
 				E5BCE39814511F66002D006B /* Framework */,
-				E5A90397144F7799002A1F6C /* Resources */,
-				E5A903AB144F7799002A1F6C /* libs */,
-				E5A90557144F779D002A1F6C /* Supporting Files */,
 				E55D60D91451260200C9D237 /* Game Library */,
+				E5A903AB144F7799002A1F6C /* libs */,
+				E5A90397144F7799002A1F6C /* Resources */,
+				E5A90557144F779D002A1F6C /* Supporting Files */,
+				E55D60E01451352100C9D237 /* Beginning Screens */,
+				E55D60F31451379F00C9D237 /* New Group */,
 			);
 			path = ClumsyChef;
 			sourceTree = "<group>";
@@ -1230,6 +1281,13 @@
 				E5A90563144F779D002A1F6C /* HelloWorldLayer.mm in Sources */,
 				E5A90566144F779D002A1F6C /* GLES-Render.mm in Sources */,
 				E55D60D81451244F00C9D237 /* CHGameLibrary.m in Sources */,
+				E55D60DC145132BC00C9D237 /* CHPlayerInfo.m in Sources */,
+				E55D60E31451361F00C9D237 /* CHTitleLayer.m in Sources */,
+				E55D60E6145136BF00C9D237 /* CHSelectStageLayer.m in Sources */,
+				E55D60E91451372000C9D237 /* CHGameScene.m in Sources */,
+				E55D60EC1451373A00C9D237 /* CHGameLayer.m in Sources */,
+				E55D60EF1451376F00C9D237 /* CHHUDLayer.m in Sources */,
+				E55D60F21451378B00C9D237 /* CHPauseLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1248,7 +1306,7 @@
 					"COCOS2D_DEBUG=1",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
@@ -1263,7 +1321,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREPROCESSOR_DEFINITIONS = NDEBUG;
-				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
@@ -1281,6 +1339,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ClumsyChef/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				GCC_VERSION = "";
 				INFOPLIST_FILE = ClumsyChef/Resources/Info.plist;
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1297,6 +1356,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ClumsyChef/Prefix.pch;
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
+				GCC_VERSION = "";
 				INFOPLIST_FILE = ClumsyChef/Resources/Info.plist;
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";

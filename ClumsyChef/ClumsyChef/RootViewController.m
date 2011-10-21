@@ -3,7 +3,7 @@
 //  ClumsyChef
 //
 //  Created by  on 19/10/11.
-//  Copyright Think Bulbs Ltd. 2011. All rights reserved.
+//  Copyright Team iUCI. 2011. All rights reserved.
 //
 
 //
