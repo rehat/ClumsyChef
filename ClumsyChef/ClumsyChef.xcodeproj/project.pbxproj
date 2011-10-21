@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E55D60D81451244F00C9D237 /* CHGameLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = E55D60D71451244F00C9D237 /* CHGameLibrary.m */; };
 		E5A90387144F7799002A1F6C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A90386144F7799002A1F6C /* QuartzCore.framework */; };
 		E5A90389144F7799002A1F6C /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A90388144F7799002A1F6C /* OpenGLES.framework */; };
 		E5A9038B144F7799002A1F6C /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A9038A144F7799002A1F6C /* OpenAL.framework */; };
@@ -162,6 +163,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E55D60D61451244F00C9D237 /* CHGameLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGameLibrary.h; sourceTree = "<group>"; };
+		E55D60D71451244F00C9D237 /* CHGameLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGameLibrary.m; sourceTree = "<group>"; };
 		E5A90382144F7799002A1F6C /* ClumsyChef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClumsyChef.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5A90386144F7799002A1F6C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		E5A90388144F7799002A1F6C /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -494,6 +497,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E55D60D91451260200C9D237 /* Game Library */ = {
+			isa = PBXGroup;
+			children = (
+				E55D60D61451244F00C9D237 /* CHGameLibrary.h */,
+				E55D60D71451244F00C9D237 /* CHGameLibrary.m */,
+			);
+			name = "Game Library";
+			sourceTree = "<group>";
+		};
 		E5A90377144F7799002A1F6C = {
 			isa = PBXGroup;
 			children = (
@@ -529,18 +541,11 @@
 		E5A90396144F7799002A1F6C /* ClumsyChef */ = {
 			isa = PBXGroup;
 			children = (
-				E5A9055B144F779D002A1F6C /* AppDelegate.h */,
-				E5A9055C144F779D002A1F6C /* AppDelegate.mm */,
-				E5A9055E144F779D002A1F6C /* RootViewController.h */,
-				E5A9055F144F779D002A1F6C /* RootViewController.m */,
-				E5A90561144F779D002A1F6C /* HelloWorldLayer.h */,
-				E5A90562144F779D002A1F6C /* HelloWorldLayer.mm */,
-				E5A90564144F779D002A1F6C /* GLES-Render.h */,
-				E5A90565144F779D002A1F6C /* GLES-Render.mm */,
-				E5A90567144F779D002A1F6C /* GameConfig.h */,
+				E5BCE39814511F66002D006B /* Framework */,
 				E5A90397144F7799002A1F6C /* Resources */,
 				E5A903AB144F7799002A1F6C /* libs */,
 				E5A90557144F779D002A1F6C /* Supporting Files */,
+				E55D60D91451260200C9D237 /* Game Library */,
 			);
 			path = ClumsyChef;
 			sourceTree = "<group>";
@@ -1003,6 +1008,22 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		E5BCE39814511F66002D006B /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				E5A9055B144F779D002A1F6C /* AppDelegate.h */,
+				E5A9055C144F779D002A1F6C /* AppDelegate.mm */,
+				E5A9055E144F779D002A1F6C /* RootViewController.h */,
+				E5A9055F144F779D002A1F6C /* RootViewController.m */,
+				E5A90561144F779D002A1F6C /* HelloWorldLayer.h */,
+				E5A90562144F779D002A1F6C /* HelloWorldLayer.mm */,
+				E5A90564144F779D002A1F6C /* GLES-Render.h */,
+				E5A90565144F779D002A1F6C /* GLES-Render.mm */,
+				E5A90567144F779D002A1F6C /* GameConfig.h */,
+			);
+			name = Framework;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1208,6 +1229,7 @@
 				E5A90560144F779D002A1F6C /* RootViewController.m in Sources */,
 				E5A90563144F779D002A1F6C /* HelloWorldLayer.mm in Sources */,
 				E5A90566144F779D002A1F6C /* GLES-Render.mm in Sources */,
+				E55D60D81451244F00C9D237 /* CHGameLibrary.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1303,6 +1325,7 @@
 				E5A9056E144F779D002A1F6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
