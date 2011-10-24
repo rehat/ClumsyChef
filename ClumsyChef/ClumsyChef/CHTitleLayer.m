@@ -9,11 +9,16 @@
 #import "CHTitleLayer.h"
 
 @implementation CHTitleLayer
-
+{
+	// Instance variables
+}
 
 + (CCScene *)scene
 {
-	return NULL;
+	CHTitleLayer *layer = [CHTitleLayer node];
+	CCScene *scene = [CCScene node];
+	[scene addChild:layer];
+	return scene;
 }
 
 @end

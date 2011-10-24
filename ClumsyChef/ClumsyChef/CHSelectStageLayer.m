@@ -12,7 +12,10 @@
 
 + (CCScene *)scene
 {
-	return NULL;
+	CHSelectStageLayer *layer = [CHSelectStageLayer node];
+	CCScene *scene = [CCScene node];
+	[scene addChild:layer];
+	return scene;
 }
 
 @end

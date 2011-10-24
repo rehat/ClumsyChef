@@ -7,7 +7,31 @@
 //
 
 #import "CHGameScene.h"
+#import "CHBackgroundLayer.h"
+#import "CHGameLayer.h"
+
 
 @implementation CHGameScene
+{
+	CHBackgroundLayer	*_bgLayer;
+	CHGameLayer			*_gameLayer;
+}
+
+- (id)init
+{
+	if (self = [super init])
+	{
+		_bgLayer = [[CHBackgroundLayer alloc] init];
+		_gameLayer = [[CHGameLayer alloc] init];
+	}
+	return self;
+}
+
+- (void)dealloc
+{
+	[_bgLayer release];
+	[_gameLayer release];
+	[super dealloc];
+}
 
 @end
