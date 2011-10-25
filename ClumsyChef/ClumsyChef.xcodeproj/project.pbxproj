@@ -169,7 +169,7 @@
 		E5A90569144F779D002A1F6C /* blocks.png in Resources */ = {isa = PBXBuildFile; fileRef = E5A90568144F779D002A1F6C /* blocks.png */; };
 		E5F410BA1455DEBD00FBEE4B /* CHBackgroundLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F410B91455DEBD00FBEE4B /* CHBackgroundLayer.m */; };
 		E5F410FB1455E9A800FBEE4B /* CHUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F410FA1455E9A800FBEE4B /* CHUtilities.m */; };
-		E5F410FE1455EEB000FBEE4B /* testLayer-teamLogo_hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E5F410FC1455EEB000FBEE4B /* testLayer-teamLogo_hd.png */; };
+		E5F410FE1455EEB000FBEE4B /* testLayer-teamLogo-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E5F410FC1455EEB000FBEE4B /* testLayer-teamLogo-hd.png */; };
 		E5F410FF1455EEB000FBEE4B /* testLayer-teamLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = E5F410FD1455EEB000FBEE4B /* testLayer-teamLogo.png */; };
 		E5FF873114550E8600103871 /* TestMenuLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E5FF873014550E8600103871 /* TestMenuLayer.m */; };
 /* End PBXBuildFile section */
@@ -506,7 +506,7 @@
 		E5F410B91455DEBD00FBEE4B /* CHBackgroundLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = CHBackgroundLayer.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		E5F410F91455E9A800FBEE4B /* CHUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHUtilities.h; sourceTree = "<group>"; };
 		E5F410FA1455E9A800FBEE4B /* CHUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHUtilities.m; sourceTree = "<group>"; };
-		E5F410FC1455EEB000FBEE4B /* testLayer-teamLogo_hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "testLayer-teamLogo_hd.png"; path = "Resources/testLayer-teamLogo_hd.png"; sourceTree = "<group>"; };
+		E5F410FC1455EEB000FBEE4B /* testLayer-teamLogo-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "testLayer-teamLogo-hd.png"; path = "Resources/testLayer-teamLogo-hd.png"; sourceTree = "<group>"; };
 		E5F410FD1455EEB000FBEE4B /* testLayer-teamLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "testLayer-teamLogo.png"; path = "Resources/testLayer-teamLogo.png"; sourceTree = "<group>"; };
 		E5FF872F14550E8600103871 /* TestMenuLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = TestMenuLayer.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		E5FF873014550E8600103871 /* TestMenuLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = TestMenuLayer.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
@@ -623,7 +623,7 @@
 		E5A90397144F7799002A1F6C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				E5F410FC1455EEB000FBEE4B /* testLayer-teamLogo_hd.png */,
+				E5F410FC1455EEB000FBEE4B /* testLayer-teamLogo-hd.png */,
 				E5F410FD1455EEB000FBEE4B /* testLayer-teamLogo.png */,
 				E5A90398144F7799002A1F6C /* Default.png */,
 				E5A9039A144F7799002A1F6C /* fps_images.png */,
@@ -1173,7 +1173,7 @@
 				E5A903A7144F7799002A1F6C /* Icon@2x.png in Resources */,
 				E5A903AA144F7799002A1F6C /* iTunesArtwork in Resources */,
 				E5A90569144F779D002A1F6C /* blocks.png in Resources */,
-				E5F410FE1455EEB000FBEE4B /* testLayer-teamLogo_hd.png in Resources */,
+				E5F410FE1455EEB000FBEE4B /* testLayer-teamLogo-hd.png in Resources */,
 				E5F410FF1455EEB000FBEE4B /* testLayer-teamLogo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -63,32 +63,19 @@
 			item.fontSize = 14;			
 		}
 		
-		[testMenu alignItemsVertically];
+		[testMenu alignItemsVertically];	
 		
-		// Effect
-		int delayScale = 0;
-		for (CCNode *item in testMenu.children) 
-		{
-			CGPoint p = item.position;
-			float offset = -(p.y + 20 + [[CCDirector sharedDirector] winSize].height * 0.5f);
-			
-			item.position = ccp(p.x, p.y + offset);
-			
-			CCAction *animations = [CCSequence actions:
-									[CCDelayTime actionWithDuration:delayScale * 0.3f], 
-									[CCEaseElasticOut actionWithAction:[CCMoveBy actionWithDuration:1.5f position:ccp(0, -offset)]], nil];
-			
-			[item runAction:animations];
-			
-			delayScale++;
-		}		
-		
-		[self addChild:testMenu];
+		CCLayer *layer = [CCLayer node];
+		[layer addChild:testMenu];
 		
 		// team logo
 		CCSprite *sprite = [CCSprite spriteWithFile:@"testLayer-teamLogo.png"];
 		sprite.position = ccp(160, 360);
-		[self addChild:sprite];
+		[layer addChild:sprite];
+		
+		[self addChild:layer];
+		layer.position = ccp(0, -480);
+		[layer runAction:[CCEaseElasticOut actionWithAction:[CCMoveBy actionWithDuration:2.f position:ccp(0, 480)]]];
 	}
 	return self;
 }
