@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E5233F9514572CBD00CB8173 /* CHGameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E5233F9414572CBD00CB8173 /* CHGameObject.m */; };
 		E55D60D81451244F00C9D237 /* CHGameLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = E55D60D71451244F00C9D237 /* CHGameLibrary.m */; };
 		E55D60DC145132BC00C9D237 /* CHPlayerInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E55D60DB145132BC00C9D237 /* CHPlayerInfo.m */; };
 		E55D60E31451361F00C9D237 /* CHTitleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E55D60E21451361F00C9D237 /* CHTitleLayer.m */; };
@@ -175,6 +176,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E5233F9314572CBD00CB8173 /* CHGameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGameObject.h; sourceTree = "<group>"; };
+		E5233F9414572CBD00CB8173 /* CHGameObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGameObject.m; sourceTree = "<group>"; };
 		E55D60D61451244F00C9D237 /* CHGameLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGameLibrary.h; sourceTree = "<group>"; };
 		E55D60D71451244F00C9D237 /* CHGameLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGameLibrary.m; sourceTree = "<group>"; };
 		E55D60DA145132BC00C9D237 /* CHPlayerInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHPlayerInfo.h; sourceTree = "<group>"; };
@@ -536,6 +539,8 @@
 			children = (
 				E55D60D61451244F00C9D237 /* CHGameLibrary.h */,
 				E55D60D71451244F00C9D237 /* CHGameLibrary.m */,
+				E5233F9314572CBD00CB8173 /* CHGameObject.h */,
+				E5233F9414572CBD00CB8173 /* CHGameObject.m */,
 			);
 			name = "Game Library";
 			sourceTree = "<group>";
@@ -1330,6 +1335,7 @@
 				E5FF873114550E8600103871 /* TestMenuLayer.m in Sources */,
 				E5F410BA1455DEBD00FBEE4B /* CHBackgroundLayer.m in Sources */,
 				E5F410FB1455E9A800FBEE4B /* CHUtilities.m in Sources */,
+				E5233F9514572CBD00CB8173 /* CHGameObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
