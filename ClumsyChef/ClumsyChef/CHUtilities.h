@@ -3,7 +3,7 @@
 //  ClumsyChef
 //
 //  Created by Tong on 24/10/11.
-//  Copyright (c) 2011 Think Bulbs Ltd. All rights reserved.
+//  Copyright (c) 2011 Team iUCI. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
@@ -12,7 +12,24 @@
 
 // Some utilties
 
-static inline ccColor3B cc3Hex(uint32_t hexValue)
+
+// Initialize. Call this right after the app finishes launching
+
+void CHUtilitiesInit();
+
+CGSize CHGetWinSize();
+
+CGPoint CHGetWinCenterPoint();
+
+// Convert the point in the flipped coordinate to the one cocos2d uses
+// e.g. CHGetWinPointTL(10, 20) returns {10, 460}
+CGPoint CHGetWinPointTL(CGFloat x, CGFloat y);
+
+CGPoint CHGetWinPointTR(CGFloat x, CGFloat y);
+
+// Color utilities
+
+static inline ccColor3B ccc3Hex(uint32_t hexValue)
 {
 	uint8_t r, g, b;
 	r = (hexValue & 0xff0000) >> 16;
@@ -21,12 +38,12 @@ static inline ccColor3B cc3Hex(uint32_t hexValue)
 	return ccc3(r, g, b);
 }
 
-static inline ccColor4B cc3To4(ccColor3B c)
+static inline ccColor4B ccc3To4(ccColor3B c)
 {
 	return ccc4(c.r, c.g, c.b, 255);
 }
 
-static inline ccColor4B cc4Hex(uint32_t hexValue)
+static inline ccColor4B ccc4Hex(uint32_t hexValue)
 {
-	return cc3To4(cc3Hex(hexValue));
+	return ccc3To4(ccc3Hex(hexValue));
 }

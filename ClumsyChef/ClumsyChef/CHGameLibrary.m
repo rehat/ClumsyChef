@@ -7,17 +7,13 @@
 //
 
 #import "CHGameLibrary.h"
-
-
-@interface CHGameItemInfo ()
-
-@end
+//#import "CHGameObject.h"
 
 @implementation CHGameItemInfo
 {
 	CHGameObjectID	_objectID;
-	NSString			*_spritePath;
-	int					_score;
+	NSString		*_spritePath;
+	int				_score;
 }
 
 @synthesize objectID = _objectID;
@@ -90,15 +86,31 @@
 	NSArray	*_stageInfo;
 }
 
-
 #pragma mark -
 #pragma mark Constructor and Destructor
+
+- (void)addItemInfo:(CHGameObjectID)objectID spritePath:(NSString *)spritePath score:(int)score to:(NSMutableArray *)items
+{
+	CHGameItemInfo *info = [[CHGameItemInfo alloc] initWithObjectID:objectID spritePath:spritePath score:score];
+	[items replaceObjectAtIndex:(NSUInteger)objectID withObject:info];
+	[info release];
+}
 
 - (id)init
 {
 	if (self = [super init])
 	{
+		// Allocate the array for storing the items
+		NSMutableArray *items = [[NSMutableArray alloc] initWithCapacity:CHStageIDNumItems];
+		for (int i=0; i<CHStageIDNumItems; i++) 
+		{
+			[items addObject:[NSNull null]];
+		}
+		
 		// Setup item info and stage info
+		[self addItemInfo:CHGameObjectIDTestItem spritePath:@"gameObject-testIcon.png" score:0 to:items];
+		
+		_itemInfo = items;
 	}
 	return self;
 }
@@ -125,14 +137,22 @@
 
 - (CHGameItemInfo *)gameObjectInfoWithID:(CHGameObjectID)objectID
 {
-	int index = (int)objectID;
+	NSInteger index = (NSInteger)objectID;
 	return [_itemInfo objectAtIndex:index];
 }
 
 - (CHStageInfo *)stageInfoWithID:(CHStageID)stageID
 {
-	int index = (int)stageID;
+	NSInteger index = (NSInteger)stageID;
 	return [_stageInfo objectAtIndex:index];
+}
+
+// Create new game object
+- (CHGameObject *)gameObjectWithID:(CHGameObjectID)objectID
+{
+	CHGameItemInfo *info = [self gameObjectInfoWithID:objectID];
+	CHGameObject *object = [[[CHGameObject alloc] initWithRepresentedItem:info] autorelease];
+	return object;
 }
 
 @end

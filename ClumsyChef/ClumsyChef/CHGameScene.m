@@ -9,7 +9,7 @@
 #import "CHGameScene.h"
 #import "CHBackgroundLayer.h"
 #import "CHGameLayer.h"
-
+#import "CHGameObject.h"
 
 @implementation CHGameScene
 {
@@ -17,12 +17,17 @@
 	CHGameLayer			*_gameLayer;
 }
 
+#pragma mark - 
+#pragma mark Constructor and destructor
+
 - (id)init
 {
 	if (self = [super init])
 	{
 		_bgLayer = [[CHBackgroundLayer alloc] init];
 		_gameLayer = [[CHGameLayer alloc] init];
+		
+		
 	}
 	return self;
 }
@@ -33,5 +38,8 @@
 	[_gameLayer release];
 	[super dealloc];
 }
+
+#pragma mark -
+#pragma mark xx
 
 @end

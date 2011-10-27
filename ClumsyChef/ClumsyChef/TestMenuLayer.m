@@ -16,6 +16,10 @@
 
 //-----------------------------------
 
+
+
+NSInteger const TestBackButtonTag = -9999;
+
 @implementation TestMenuLayer
 
 + (CCScene *)scene
@@ -28,6 +32,7 @@
 
 - (void)runScene:(CCScene *)scene
 {
+	[scene addChild:[TestMenuLayer backButton]];	// Add back button
 	[[CCDirector sharedDirector] pushScene:scene];
 }
 
@@ -41,7 +46,7 @@
 
 - (id)init
 {
-	if (self = [super initWithColor:cc4Hex(0x80c8ff) fadingTo:cc4Hex(0x0593ed)])
+	if (self = [super initWithColor:ccc4Hex(0x80c8ff) fadingTo:ccc4Hex(0x0593ed)])
 	{
 		// Add the tests menu item here
 		//-----------------------------------
@@ -78,5 +83,22 @@
 		[layer runAction:[CCEaseElasticOut actionWithAction:[CCMoveBy actionWithDuration:2.f position:ccp(0, 480)]]];
 	}
 	return self;
+}
+
+#pragma mark -
+#pragma mark public APIs
+
++ (CCMenu *)backButton
+{
+	CCMenuItemImage *item = [CCMenuItemImage itemFromNormalImage:@"testLayer-backButton.png" 
+												   selectedImage:@"testLayer-backButton-highlighted.png" 
+														   block:^(id sender) {
+															   [[CCDirector sharedDirector] popScene];
+														   }];
+	CCMenu *menu = [CCMenu menuWithItems:item, nil];
+	menu.position = CHGetWinPointTL(40, 40);
+	menu.tag = TestBackButtonTag;
+	
+	return menu;
 }
 @end

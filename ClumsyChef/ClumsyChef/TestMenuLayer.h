@@ -14,5 +14,9 @@
 
 + (CCScene *)scene;
 
++ (CCMenu *)backButton;
 
 @end
+
+
+extern NSInteger const TestBackButtonTag;

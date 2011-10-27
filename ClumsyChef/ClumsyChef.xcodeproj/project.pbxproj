@@ -7,7 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E511C294145925B3008BCFF8 /* testLayer-backButton.png in Resources */ = {isa = PBXBuildFile; fileRef = E511C293145925B3008BCFF8 /* testLayer-backButton.png */; };
+		E511C298145925BC008BCFF8 /* testLayer-backButton-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E511C295145925BC008BCFF8 /* testLayer-backButton-hd.png */; };
+		E511C299145925BC008BCFF8 /* testLayer-backButton-highlighted-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E511C296145925BC008BCFF8 /* testLayer-backButton-highlighted-hd.png */; };
+		E511C29A145925BC008BCFF8 /* testLayer-backButton-highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = E511C297145925BC008BCFF8 /* testLayer-backButton-highlighted.png */; };
 		E5233F9514572CBD00CB8173 /* CHGameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E5233F9414572CBD00CB8173 /* CHGameObject.m */; };
+		E52FECB81458C6EB0015B37E /* gameObject-testIcon_hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E52FECB61458C6EB0015B37E /* gameObject-testIcon_hd.png */; };
+		E52FECB91458C6EB0015B37E /* gameObject-testIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E52FECB71458C6EB0015B37E /* gameObject-testIcon.png */; };
 		E55D60D81451244F00C9D237 /* CHGameLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = E55D60D71451244F00C9D237 /* CHGameLibrary.m */; };
 		E55D60DC145132BC00C9D237 /* CHPlayerInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E55D60DB145132BC00C9D237 /* CHPlayerInfo.m */; };
 		E55D60E31451361F00C9D237 /* CHTitleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E55D60E21451361F00C9D237 /* CHTitleLayer.m */; };
@@ -163,10 +169,8 @@
 		E5A90551144F779C002A1F6C /* b2RevoluteJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E5A90550144F779C002A1F6C /* b2RevoluteJoint.cpp */; };
 		E5A90554144F779C002A1F6C /* b2WeldJoint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E5A90553144F779C002A1F6C /* b2WeldJoint.cpp */; };
 		E5A9055A144F779D002A1F6C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A90559144F779D002A1F6C /* main.m */; };
-		E5A9055D144F779D002A1F6C /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = E5A9055C144F779D002A1F6C /* AppDelegate.mm */; };
+		E5A9055D144F779D002A1F6C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9055C144F779D002A1F6C /* AppDelegate.m */; };
 		E5A90560144F779D002A1F6C /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9055F144F779D002A1F6C /* RootViewController.m */; };
-		E5A90563144F779D002A1F6C /* HelloWorldLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = E5A90562144F779D002A1F6C /* HelloWorldLayer.mm */; };
-		E5A90566144F779D002A1F6C /* GLES-Render.mm in Sources */ = {isa = PBXBuildFile; fileRef = E5A90565144F779D002A1F6C /* GLES-Render.mm */; };
 		E5A90569144F779D002A1F6C /* blocks.png in Resources */ = {isa = PBXBuildFile; fileRef = E5A90568144F779D002A1F6C /* blocks.png */; };
 		E5F410BA1455DEBD00FBEE4B /* CHBackgroundLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F410B91455DEBD00FBEE4B /* CHBackgroundLayer.m */; };
 		E5F410FB1455E9A800FBEE4B /* CHUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F410FA1455E9A800FBEE4B /* CHUtilities.m */; };
@@ -176,8 +180,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E511C293145925B3008BCFF8 /* testLayer-backButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "testLayer-backButton.png"; path = "Resources/testLayer-backButton.png"; sourceTree = "<group>"; };
+		E511C295145925BC008BCFF8 /* testLayer-backButton-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "testLayer-backButton-hd.png"; path = "Resources/testLayer-backButton-hd.png"; sourceTree = "<group>"; };
+		E511C296145925BC008BCFF8 /* testLayer-backButton-highlighted-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "testLayer-backButton-highlighted-hd.png"; path = "Resources/testLayer-backButton-highlighted-hd.png"; sourceTree = "<group>"; };
+		E511C297145925BC008BCFF8 /* testLayer-backButton-highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "testLayer-backButton-highlighted.png"; path = "Resources/testLayer-backButton-highlighted.png"; sourceTree = "<group>"; };
 		E5233F9314572CBD00CB8173 /* CHGameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGameObject.h; sourceTree = "<group>"; };
 		E5233F9414572CBD00CB8173 /* CHGameObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGameObject.m; sourceTree = "<group>"; };
+		E52FECB61458C6EB0015B37E /* gameObject-testIcon_hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gameObject-testIcon_hd.png"; path = "Resources/gameObject-testIcon_hd.png"; sourceTree = "<group>"; };
+		E52FECB71458C6EB0015B37E /* gameObject-testIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gameObject-testIcon.png"; path = "Resources/gameObject-testIcon.png"; sourceTree = "<group>"; };
 		E55D60D61451244F00C9D237 /* CHGameLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGameLibrary.h; sourceTree = "<group>"; };
 		E55D60D71451244F00C9D237 /* CHGameLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGameLibrary.m; sourceTree = "<group>"; };
 		E55D60DA145132BC00C9D237 /* CHPlayerInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHPlayerInfo.h; sourceTree = "<group>"; };
@@ -496,13 +506,9 @@
 		E5A90558144F779D002A1F6C /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		E5A90559144F779D002A1F6C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E5A9055B144F779D002A1F6C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		E5A9055C144F779D002A1F6C /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
+		E5A9055C144F779D002A1F6C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		E5A9055E144F779D002A1F6C /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		E5A9055F144F779D002A1F6C /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		E5A90561144F779D002A1F6C /* HelloWorldLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldLayer.h; sourceTree = "<group>"; };
-		E5A90562144F779D002A1F6C /* HelloWorldLayer.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = HelloWorldLayer.mm; sourceTree = "<group>"; };
-		E5A90564144F779D002A1F6C /* GLES-Render.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GLES-Render.h"; sourceTree = "<group>"; };
-		E5A90565144F779D002A1F6C /* GLES-Render.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "GLES-Render.mm"; sourceTree = "<group>"; };
 		E5A90567144F779D002A1F6C /* GameConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
 		E5A90568144F779D002A1F6C /* blocks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blocks.png; path = Resources/blocks.png; sourceTree = "<group>"; };
 		E5F410B81455DEBD00FBEE4B /* CHBackgroundLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = CHBackgroundLayer.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -534,6 +540,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E511C2911459258B008BCFF8 /* Test Materials */ = {
+			isa = PBXGroup;
+			children = (
+				E52FECB71458C6EB0015B37E /* gameObject-testIcon.png */,
+				E52FECB61458C6EB0015B37E /* gameObject-testIcon_hd.png */,
+				E511C295145925BC008BCFF8 /* testLayer-backButton-hd.png */,
+				E511C296145925BC008BCFF8 /* testLayer-backButton-highlighted-hd.png */,
+				E511C297145925BC008BCFF8 /* testLayer-backButton-highlighted.png */,
+				E511C293145925B3008BCFF8 /* testLayer-backButton.png */,
+				E5F410FC1455EEB000FBEE4B /* testLayer-teamLogo-hd.png */,
+				E5F410FD1455EEB000FBEE4B /* testLayer-teamLogo.png */,
+			);
+			name = "Test Materials";
+			sourceTree = "<group>";
+		};
+		E511C29B145925D8008BCFF8 /* Testing */ = {
+			isa = PBXGroup;
+			children = (
+				E5FF872F14550E8600103871 /* TestMenuLayer.h */,
+				E5FF873014550E8600103871 /* TestMenuLayer.m */,
+			);
+			name = Testing;
+			sourceTree = "<group>";
+		};
 		E55D60D91451260200C9D237 /* Game Library */ = {
 			isa = PBXGroup;
 			children = (
@@ -612,8 +642,7 @@
 				E5F410F81455E98500FBEE4B /* Utilities */,
 				E55D60DA145132BC00C9D237 /* CHPlayerInfo.h */,
 				E55D60DB145132BC00C9D237 /* CHPlayerInfo.m */,
-				E5FF872F14550E8600103871 /* TestMenuLayer.h */,
-				E5FF873014550E8600103871 /* TestMenuLayer.m */,
+				E511C29B145925D8008BCFF8 /* Testing */,
 				E5BCE39814511F66002D006B /* Framework */,
 				E55D60D91451260200C9D237 /* Game Library */,
 				E5A903AB144F7799002A1F6C /* libs */,
@@ -628,8 +657,7 @@
 		E5A90397144F7799002A1F6C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				E5F410FC1455EEB000FBEE4B /* testLayer-teamLogo-hd.png */,
-				E5F410FD1455EEB000FBEE4B /* testLayer-teamLogo.png */,
+				E511C2911459258B008BCFF8 /* Test Materials */,
 				E5A90398144F7799002A1F6C /* Default.png */,
 				E5A9039A144F7799002A1F6C /* fps_images.png */,
 				E5A9039C144F7799002A1F6C /* Icon-72.png */,
@@ -1089,13 +1117,9 @@
 			isa = PBXGroup;
 			children = (
 				E5A9055B144F779D002A1F6C /* AppDelegate.h */,
-				E5A9055C144F779D002A1F6C /* AppDelegate.mm */,
+				E5A9055C144F779D002A1F6C /* AppDelegate.m */,
 				E5A9055E144F779D002A1F6C /* RootViewController.h */,
 				E5A9055F144F779D002A1F6C /* RootViewController.m */,
-				E5A90561144F779D002A1F6C /* HelloWorldLayer.h */,
-				E5A90562144F779D002A1F6C /* HelloWorldLayer.mm */,
-				E5A90564144F779D002A1F6C /* GLES-Render.h */,
-				E5A90565144F779D002A1F6C /* GLES-Render.mm */,
 				E5A90567144F779D002A1F6C /* GameConfig.h */,
 			);
 			name = Framework;
@@ -1180,6 +1204,12 @@
 				E5A90569144F779D002A1F6C /* blocks.png in Resources */,
 				E5F410FE1455EEB000FBEE4B /* testLayer-teamLogo-hd.png in Resources */,
 				E5F410FF1455EEB000FBEE4B /* testLayer-teamLogo.png in Resources */,
+				E52FECB81458C6EB0015B37E /* gameObject-testIcon_hd.png in Resources */,
+				E52FECB91458C6EB0015B37E /* gameObject-testIcon.png in Resources */,
+				E511C294145925B3008BCFF8 /* testLayer-backButton.png in Resources */,
+				E511C298145925BC008BCFF8 /* testLayer-backButton-hd.png in Resources */,
+				E511C299145925BC008BCFF8 /* testLayer-backButton-highlighted-hd.png in Resources */,
+				E511C29A145925BC008BCFF8 /* testLayer-backButton-highlighted.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1320,10 +1350,8 @@
 				E5A90551144F779C002A1F6C /* b2RevoluteJoint.cpp in Sources */,
 				E5A90554144F779C002A1F6C /* b2WeldJoint.cpp in Sources */,
 				E5A9055A144F779D002A1F6C /* main.m in Sources */,
-				E5A9055D144F779D002A1F6C /* AppDelegate.mm in Sources */,
+				E5A9055D144F779D002A1F6C /* AppDelegate.m in Sources */,
 				E5A90560144F779D002A1F6C /* RootViewController.m in Sources */,
-				E5A90563144F779D002A1F6C /* HelloWorldLayer.mm in Sources */,
-				E5A90566144F779D002A1F6C /* GLES-Render.mm in Sources */,
 				E55D60D81451244F00C9D237 /* CHGameLibrary.m in Sources */,
 				E55D60DC145132BC00C9D237 /* CHPlayerInfo.m in Sources */,
 				E55D60E31451361F00C9D237 /* CHTitleLayer.m in Sources */,

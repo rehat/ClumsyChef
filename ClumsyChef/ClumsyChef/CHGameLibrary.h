@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "CHGameObject.h"
 
 typedef enum
 {
@@ -23,7 +23,7 @@ typedef enum
 
 
 @property(nonatomic, readonly) CHGameObjectID objectID;
-@property(nonatomic, readonly, retain) NSString *spritePath;
+@property(nonatomic, readonly) NSString *spritePath;
 @property(nonatomic, readonly) int score;
 // TODO: more information
 
@@ -52,13 +52,21 @@ typedef enum
 @end
 
 
+@class CHGameObject;
 
 @interface CHGameLibrary : NSObject
 
 
 + (CHGameLibrary *)sharedGameLibrary;		// Singleton object
 
+// Obtain game item info
 - (CHGameItemInfo *)gameObjectInfoWithID:(CHGameObjectID)objectID;
+
+// Obtain stage info
 - (CHStageInfo *)stageInfoWithID:(CHStageID)stageID;
+
+// Create new game object
+- (CHGameObject *)gameObjectWithID:(CHGameObjectID)objectID;
+
 
 @end
