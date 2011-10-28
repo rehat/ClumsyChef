@@ -5,12 +5,21 @@
 *.mode2v3
 *.perspectivev3
 *.xcclassmodel/
+
 # files created by Xcode 4
+*.xcuserstate
+project.xcworkspace/
 xcuserdata/
+
 # build products
 *.build/
 build/
 DerivedData/
+
 # Misc
-.svn
-.DS_Store
+*.svn
+*.DS_Store
+
+# Backup files
+*~.nib
+
