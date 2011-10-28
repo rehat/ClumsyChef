@@ -12,7 +12,7 @@
 		E511C299145925BC008BCFF8 /* testLayer-backButton-highlighted-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E511C296145925BC008BCFF8 /* testLayer-backButton-highlighted-hd.png */; };
 		E511C29A145925BC008BCFF8 /* testLayer-backButton-highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = E511C297145925BC008BCFF8 /* testLayer-backButton-highlighted.png */; };
 		E5233F9514572CBD00CB8173 /* CHGameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E5233F9414572CBD00CB8173 /* CHGameObject.m */; };
-		E52FECB81458C6EB0015B37E /* gameObject-testIcon_hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E52FECB61458C6EB0015B37E /* gameObject-testIcon_hd.png */; };
+		E52FECB81458C6EB0015B37E /* gameObject-testIcon-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E52FECB61458C6EB0015B37E /* gameObject-testIcon-hd.png */; };
 		E52FECB91458C6EB0015B37E /* gameObject-testIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E52FECB71458C6EB0015B37E /* gameObject-testIcon.png */; };
 		E55D60D81451244F00C9D237 /* CHGameLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = E55D60D71451244F00C9D237 /* CHGameLibrary.m */; };
 		E55D60DC145132BC00C9D237 /* CHPlayerInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E55D60DB145132BC00C9D237 /* CHPlayerInfo.m */; };
@@ -22,6 +22,10 @@
 		E55D60EC1451373A00C9D237 /* CHGameLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E55D60EB1451373A00C9D237 /* CHGameLayer.m */; };
 		E55D60EF1451376F00C9D237 /* CHHUDLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E55D60EE1451376F00C9D237 /* CHHUDLayer.m */; };
 		E55D60F21451378B00C9D237 /* CHPauseLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E55D60F11451378B00C9D237 /* CHPauseLayer.m */; };
+		E58ABB5A145A7B15002CC4EE /* font-testFont.fnt in Resources */ = {isa = PBXBuildFile; fileRef = E58ABB58145A7B15002CC4EE /* font-testFont.fnt */; };
+		E58ABB5B145A7B15002CC4EE /* font-testFont.png in Resources */ = {isa = PBXBuildFile; fileRef = E58ABB59145A7B15002CC4EE /* font-testFont.png */; };
+		E58ABB5E145A7EB6002CC4EE /* font-testFont-hd.fnt in Resources */ = {isa = PBXBuildFile; fileRef = E58ABB5C145A7EB6002CC4EE /* font-testFont-hd.fnt */; };
+		E58ABB5F145A7EB6002CC4EE /* font-testFont-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E58ABB5D145A7EB6002CC4EE /* font-testFont-hd.png */; };
 		E5A90387144F7799002A1F6C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A90386144F7799002A1F6C /* QuartzCore.framework */; };
 		E5A90389144F7799002A1F6C /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A90388144F7799002A1F6C /* OpenGLES.framework */; };
 		E5A9038B144F7799002A1F6C /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A9038A144F7799002A1F6C /* OpenAL.framework */; };
@@ -186,7 +190,7 @@
 		E511C297145925BC008BCFF8 /* testLayer-backButton-highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "testLayer-backButton-highlighted.png"; path = "Resources/testLayer-backButton-highlighted.png"; sourceTree = "<group>"; };
 		E5233F9314572CBD00CB8173 /* CHGameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGameObject.h; sourceTree = "<group>"; };
 		E5233F9414572CBD00CB8173 /* CHGameObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGameObject.m; sourceTree = "<group>"; };
-		E52FECB61458C6EB0015B37E /* gameObject-testIcon_hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gameObject-testIcon_hd.png"; path = "Resources/gameObject-testIcon_hd.png"; sourceTree = "<group>"; };
+		E52FECB61458C6EB0015B37E /* gameObject-testIcon-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gameObject-testIcon-hd.png"; path = "Resources/gameObject-testIcon-hd.png"; sourceTree = "<group>"; };
 		E52FECB71458C6EB0015B37E /* gameObject-testIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gameObject-testIcon.png"; path = "Resources/gameObject-testIcon.png"; sourceTree = "<group>"; };
 		E55D60D61451244F00C9D237 /* CHGameLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGameLibrary.h; sourceTree = "<group>"; };
 		E55D60D71451244F00C9D237 /* CHGameLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGameLibrary.m; sourceTree = "<group>"; };
@@ -204,6 +208,10 @@
 		E55D60EE1451376F00C9D237 /* CHHUDLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHHUDLayer.m; sourceTree = "<group>"; };
 		E55D60F01451378B00C9D237 /* CHPauseLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHPauseLayer.h; sourceTree = "<group>"; };
 		E55D60F11451378B00C9D237 /* CHPauseLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHPauseLayer.m; sourceTree = "<group>"; };
+		E58ABB58145A7B15002CC4EE /* font-testFont.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "font-testFont.fnt"; path = "Resources/font-testFont.fnt"; sourceTree = "<group>"; };
+		E58ABB59145A7B15002CC4EE /* font-testFont.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "font-testFont.png"; path = "Resources/font-testFont.png"; sourceTree = "<group>"; };
+		E58ABB5C145A7EB6002CC4EE /* font-testFont-hd.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "font-testFont-hd.fnt"; path = "Resources/font-testFont-hd.fnt"; sourceTree = "<group>"; };
+		E58ABB5D145A7EB6002CC4EE /* font-testFont-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "font-testFont-hd.png"; path = "Resources/font-testFont-hd.png"; sourceTree = "<group>"; };
 		E5A90382144F7799002A1F6C /* ClumsyChef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClumsyChef.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5A90386144F7799002A1F6C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		E5A90388144F7799002A1F6C /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -543,8 +551,12 @@
 		E511C2911459258B008BCFF8 /* Test Materials */ = {
 			isa = PBXGroup;
 			children = (
+				E58ABB5C145A7EB6002CC4EE /* font-testFont-hd.fnt */,
+				E58ABB5D145A7EB6002CC4EE /* font-testFont-hd.png */,
+				E58ABB58145A7B15002CC4EE /* font-testFont.fnt */,
+				E58ABB59145A7B15002CC4EE /* font-testFont.png */,
+				E52FECB61458C6EB0015B37E /* gameObject-testIcon-hd.png */,
 				E52FECB71458C6EB0015B37E /* gameObject-testIcon.png */,
-				E52FECB61458C6EB0015B37E /* gameObject-testIcon_hd.png */,
 				E511C295145925BC008BCFF8 /* testLayer-backButton-hd.png */,
 				E511C296145925BC008BCFF8 /* testLayer-backButton-highlighted-hd.png */,
 				E511C297145925BC008BCFF8 /* testLayer-backButton-highlighted.png */,
@@ -657,7 +669,7 @@
 		E5A90397144F7799002A1F6C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				E511C2911459258B008BCFF8 /* Test Materials */,
+				E5A90568144F779D002A1F6C /* blocks.png */,
 				E5A90398144F7799002A1F6C /* Default.png */,
 				E5A9039A144F7799002A1F6C /* fps_images.png */,
 				E5A9039C144F7799002A1F6C /* Icon-72.png */,
@@ -668,7 +680,7 @@
 				E5A903A6144F7799002A1F6C /* Icon@2x.png */,
 				E5A903A8144F7799002A1F6C /* Info.plist */,
 				E5A903A9144F7799002A1F6C /* iTunesArtwork */,
-				E5A90568144F779D002A1F6C /* blocks.png */,
+				E511C2911459258B008BCFF8 /* Test Materials */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1151,6 +1163,7 @@
 				E5A9037E144F7799002A1F6C /* Sources */,
 				E5A9037F144F7799002A1F6C /* Frameworks */,
 				E5A90380144F7799002A1F6C /* Resources */,
+				E58ABB57145A70D3002CC4EE /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1204,16 +1217,36 @@
 				E5A90569144F779D002A1F6C /* blocks.png in Resources */,
 				E5F410FE1455EEB000FBEE4B /* testLayer-teamLogo-hd.png in Resources */,
 				E5F410FF1455EEB000FBEE4B /* testLayer-teamLogo.png in Resources */,
-				E52FECB81458C6EB0015B37E /* gameObject-testIcon_hd.png in Resources */,
+				E52FECB81458C6EB0015B37E /* gameObject-testIcon-hd.png in Resources */,
 				E52FECB91458C6EB0015B37E /* gameObject-testIcon.png in Resources */,
 				E511C294145925B3008BCFF8 /* testLayer-backButton.png in Resources */,
 				E511C298145925BC008BCFF8 /* testLayer-backButton-hd.png in Resources */,
 				E511C299145925BC008BCFF8 /* testLayer-backButton-highlighted-hd.png in Resources */,
 				E511C29A145925BC008BCFF8 /* testLayer-backButton-highlighted.png in Resources */,
+				E58ABB5A145A7B15002CC4EE /* font-testFont.fnt in Resources */,
+				E58ABB5B145A7B15002CC4EE /* font-testFont.png in Resources */,
+				E58ABB5E145A7EB6002CC4EE /* font-testFont-hd.fnt in Resources */,
+				E58ABB5F145A7EB6002CC4EE /* font-testFont-hd.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E58ABB57145A70D3002CC4EE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export CODESIGN_ALLOCATE=/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/codesign_allocate\nif [ \"${PLATFORM_NAME}\" == \"iphoneos\" ]; then\n/Developer/iphoneentitlements401/gen_entitlements.py \"my.company.${PROJECT_NAME}\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${PROJECT_NAME}.xcent\";\ncodesign -f -s \"iPhone Developer\" --entitlements \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/${PROJECT_NAME}.xcent\" \"${BUILT_PRODUCTS_DIR}/${WRAPPER_NAME}/\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E5A9037E144F7799002A1F6C /* Sources */ = {
@@ -1374,7 +1407,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1385,8 +1418,8 @@
 				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				SDKROOT = iphoneos;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				SDKROOT = iphoneos5.0;
 			};
 			name = Debug;
 		};
@@ -1394,15 +1427,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREPROCESSOR_DEFINITIONS = NDEBUG;
 				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos5.0;
 			};
 			name = Release;
 		};
@@ -1410,6 +1443,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1428,6 +1462,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ClumsyChef/Prefix.pch;

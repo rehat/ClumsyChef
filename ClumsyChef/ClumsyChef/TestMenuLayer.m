@@ -44,29 +44,29 @@ NSInteger const TestBackButtonTag = -9999;
 	[self runScene:scene];
 }
 
+- (CCMenuItem *)menuItemWithTitle:(NSString *)title block:(void (^)(id sender))block
+{
+	// Create the label
+	CCLabelBMFont *label = [CCLabelBMFont labelWithString:title fntFile:@"font-testFont.fnt"];
+	CCMenuItem *item = [CCMenuItemLabel itemWithLabel:label block:block];
+	return item;
+}
+
 - (id)init
 {
 	if (self = [super initWithColor:ccc4Hex(0x80c8ff) fadingTo:ccc4Hex(0x0593ed)])
 	{
 		// Add the tests menu item here
 		//-----------------------------------
-		CCMenuItemFont *itemTest1 = [CCMenuItemFont itemFromString:@"Background Layer" block:^(id sender) {
+		CCMenuItem *itemTest1 = [self menuItemWithTitle:@"Background Layer" block:^(id sender) {
 			[self runLayer:[CHBackgroundLayer node]];
 		}];
-		
-		CCMenuItemFont *itemTest2 = [CCMenuItemFont itemFromString:@"Game Layer" block:^(id sender) {
+
+		CCMenuItem *itemTest2 = [self menuItemWithTitle:@"Game Layer" block:^(id sender) {
 			[self runLayer:[CHGameLayer node]];
 		}];
 		
 		CCMenu *testMenu = [CCMenu menuWithItems:itemTest1, itemTest2, nil];
-		
-		
-		// Change the font of each menu item
-		for (CCMenuItemFont *item in testMenu.children) 
-		{
-			item.fontName = @"HelveticaNeue-Bold";
-			item.fontSize = 14;			
-		}
 		
 		[testMenu alignItemsVertically];	
 		
