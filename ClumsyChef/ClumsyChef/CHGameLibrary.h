@@ -12,6 +12,7 @@
 typedef enum
 {
 	CHGameObjectIDTestItem,
+	CHGameObjectIDChef,
 	
 	//---------------------
 	CHGameObjectIDNumItems,

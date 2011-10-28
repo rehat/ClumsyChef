@@ -18,6 +18,8 @@
 void CHUtilitiesInit();
 
 CGSize CHGetWinSize();
+CGFloat CHGetWinHeight();
+CGFloat CHGetWinWidth();
 
 CGPoint CHGetWinCenterPoint();
 

@@ -23,6 +23,16 @@ CGSize CHGetWinSize()
 	return winSize;
 }
 
+CGFloat CHGetWinHeight()
+{
+	return winSize.height;
+}
+
+CGFloat CHGetWinWidth()
+{
+	return winSize.width;
+}
+
 CGPoint CHGetWinCenterPoint()
 {
 	return centerPoint;

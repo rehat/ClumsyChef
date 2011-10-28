@@ -176,6 +176,7 @@
 		E5A9055D144F779D002A1F6C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9055C144F779D002A1F6C /* AppDelegate.m */; };
 		E5A90560144F779D002A1F6C /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9055F144F779D002A1F6C /* RootViewController.m */; };
 		E5A90569144F779D002A1F6C /* blocks.png in Resources */ = {isa = PBXBuildFile; fileRef = E5A90568144F779D002A1F6C /* blocks.png */; };
+		E5C8E190145B4144003372F2 /* CHChefObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C8E18F145B4144003372F2 /* CHChefObject.m */; };
 		E5F410BA1455DEBD00FBEE4B /* CHBackgroundLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F410B91455DEBD00FBEE4B /* CHBackgroundLayer.m */; };
 		E5F410FB1455E9A800FBEE4B /* CHUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F410FA1455E9A800FBEE4B /* CHUtilities.m */; };
 		E5F410FE1455EEB000FBEE4B /* testLayer-teamLogo-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E5F410FC1455EEB000FBEE4B /* testLayer-teamLogo-hd.png */; };
@@ -519,6 +520,8 @@
 		E5A9055F144F779D002A1F6C /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		E5A90567144F779D002A1F6C /* GameConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
 		E5A90568144F779D002A1F6C /* blocks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blocks.png; path = Resources/blocks.png; sourceTree = "<group>"; };
+		E5C8E18E145B4144003372F2 /* CHChefObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHChefObject.h; sourceTree = "<group>"; };
+		E5C8E18F145B4144003372F2 /* CHChefObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHChefObject.m; sourceTree = "<group>"; };
 		E5F410B81455DEBD00FBEE4B /* CHBackgroundLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = CHBackgroundLayer.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		E5F410B91455DEBD00FBEE4B /* CHBackgroundLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = CHBackgroundLayer.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		E5F410F91455E9A800FBEE4B /* CHUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHUtilities.h; sourceTree = "<group>"; };
@@ -583,6 +586,8 @@
 				E55D60D71451244F00C9D237 /* CHGameLibrary.m */,
 				E5233F9314572CBD00CB8173 /* CHGameObject.h */,
 				E5233F9414572CBD00CB8173 /* CHGameObject.m */,
+				E5C8E18E145B4144003372F2 /* CHChefObject.h */,
+				E5C8E18F145B4144003372F2 /* CHChefObject.m */,
 			);
 			name = "Game Library";
 			sourceTree = "<group>";
@@ -1397,6 +1402,7 @@
 				E5F410BA1455DEBD00FBEE4B /* CHBackgroundLayer.m in Sources */,
 				E5F410FB1455E9A800FBEE4B /* CHUtilities.m in Sources */,
 				E5233F9514572CBD00CB8173 /* CHGameObject.m in Sources */,
+				E5C8E190145B4144003372F2 /* CHChefObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
