@@ -8,8 +8,12 @@
 
 #import "CHChefObject.h"
 #import "CHGameLibrary.h"
-static CGFloat const kMaxSpeed = 150;
-static CGFloat const kNormalSpeed = 60;
+
+static CGFloat const kMaxSpeed = 200;
+static CGFloat const kNormalSpeed = 100;
+static CGFloat const kFallAcceleration = 100;
+static CGFloat const kFallDeceleration = -130;
+
 
 @implementation CHChefObject
 {
@@ -44,16 +48,22 @@ static CGFloat const kNormalSpeed = 60;
 	self.verticalSpeed = vSpeed;
 	
 	[super update:dt];
+	
+	// Correct coordinate so that it doesn't go out of bounds
+	CGFloat halfWidth = 0.5f * self.contentSize.width;
+	CGPoint p = self.position;
+	p.x = clampf(p.x, halfWidth, CHGetWinWidth() - halfWidth);
+	self.position = p;
 }
 
 - (void)startAccelerating
 {
-	_verticalAcc = 40;
+	_verticalAcc = kFallAcceleration;
 }
 
 - (void)stopAccelerating
 {
-	_verticalAcc = -65;
+	_verticalAcc = kFallDeceleration;
 }
 
 - (void)setHorizontalAcceleration:(float)a

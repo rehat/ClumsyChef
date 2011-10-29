@@ -109,7 +109,7 @@
 		
 		// Setup item info and stage info
 		[self addItemInfo:CHGameObjectIDTestItem spritePath:@"gameObject-testIcon.png" score:0 to:items];
-		[self addItemInfo:CHGameObjectIDChef spritePath:@"gameObject-testIcon.png" score:0 to:items];
+		[self addItemInfo:CHGameObjectIDChef spritePath:@"gameObject-testIconBlue.png" score:0 to:items];
 		
 		_itemInfo = items;
 	}

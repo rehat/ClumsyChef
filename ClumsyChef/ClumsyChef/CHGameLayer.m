@@ -16,7 +16,7 @@ static CGFloat const kChefYOffset = 100.f;
 // When objected go out of the screen at the top and beyond this distance,
 // They get removed
 static float const kObjectActiveRangeUp = 400.f;
-
+static float const kGenObjectRangeDown = 100.f;		// For generating objects before they appears
 
 
 @implementation CHGameLayer
@@ -26,7 +26,8 @@ static float const kObjectActiveRangeUp = 400.f;
 	CHChefObject *_chefObj;
 	CCArray *_items;
 	
-	float bottomWorldOffset;
+	float _bottomWorldOffset;
+	float _nextGenItemsOffset;
 }
 
 
@@ -43,6 +44,18 @@ static float const kObjectActiveRangeUp = 400.f;
 	[_debugLabel setString:text];
 	_debugLabel.anchorPoint = ccp(1, 1);
 	_debugLabel.position = CHGetWinPointTR(20, 20);
+}
+
+- (CGFloat)generateItemsAtY:(CGFloat)y	// Return the interval after which the next generation takes place
+{
+	CGPoint p = ccp(CCRANDOM_0_1() * CHGetWinWidth(), y);
+	CHGameObject *item = [[CHGameLibrary sharedGameLibrary] gameObjectWithID:CHGameObjectIDTestItem];
+	item.position = p;
+	item.verticalSpeed = CCRANDOM_0_1() * 30.f;
+	[self addChild:item];
+	[_items addObject:item];
+	
+	return 30;
 }
 
 #pragma mark - 
@@ -64,23 +77,15 @@ static float const kObjectActiveRangeUp = 400.f;
 		_chefObj.position = [self positionForChef];
 		[self addChild:_chefObj];
 		
-		bottomWorldOffset = CHGetWinHeight();
+		_bottomWorldOffset = CHGetWinHeight();
+		_nextGenItemsOffset = _bottomWorldOffset;
 		
 		// Items
 		_items = [[CCArray alloc] initWithCapacity:64];
 		
-		for (int i=0; i<10; i++) 
-		{
-			CGPoint p = CGPointMake(CCRANDOM_0_1() * CHGetWinWidth(), CCRANDOM_0_1() * CHGetWinHeight());
-			CHGameObject *obj = [[[CHGameLibrary sharedGameLibrary] gameObjectWithID:CHGameObjectIDTestItem] retain];
-			obj.position = p;
-			obj.verticalSpeed = CCRANDOM_0_1() * 30;
-			
-			[_items addObject:obj];
-			[self addChild:obj];
-		}
-		
 		_debugLabel = [[CCLabelBMFont alloc] initWithString:@"" fntFile:@"font-testFont.fnt"];
+		[_debugLabel setColor:ccGREEN];
+		
 		[self addChild:_debugLabel];
 
 		[[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
@@ -110,16 +115,54 @@ static float const kObjectActiveRangeUp = 400.f;
 
 	// Pull everything up
 	CGPoint delta = ccp(0, pullUp);
-	[self setDebugDisplayText:[NSString stringWithFormat:@"%.f", _chefObj.verticalSpeed]];
 	
 	_chefObj.position = ccpAdd(_chefObj.position, delta);
+	CGFloat cullThresh = CHGetWinHeight() + kObjectActiveRangeUp;
+	
+	CCArray *toBeRemoved = nil;
 	for (CHGameObject *item in _items) 
 	{
+		// Update the item
 		[item update:dt];
-		item.position = ccpAdd(item.position, delta);
+		CGPoint p = ccpAdd(item.position, delta);
+		
+		// Perform culling
+		if (p.y >= cullThresh)
+		{
+			[item removeFromParentAndCleanup:YES];
+			// Do not mutate _items during enumeration, so 
+			// add it to a separate array for further actions
+			if (toBeRemoved == nil)
+			{
+				toBeRemoved = [[CCArray alloc] initWithCapacity:16];
+			}
+			[toBeRemoved addObject:item];
+		}
+		else
+		{
+			item.position = p;
+		}
 	}
 	
-	bottomWorldOffset += pullUp;
+	// Remove items
+	if (toBeRemoved != nil)
+	{
+		[_items removeObjectsInArray:toBeRemoved];
+	}
+	
+	_bottomWorldOffset += pullUp;
+	
+	// Generate new items
+	while (_bottomWorldOffset + kGenObjectRangeDown >= _nextGenItemsOffset)
+	{
+		CGFloat y = -(_nextGenItemsOffset - _bottomWorldOffset);
+		float interval = [self generateItemsAtY:y];
+		
+		// Next round
+		_nextGenItemsOffset += interval;
+	}
+	
+	[self setDebugDisplayText:[NSString stringWithFormat:@"%d", [_items count]]];
 }
 
 #pragma mark -
