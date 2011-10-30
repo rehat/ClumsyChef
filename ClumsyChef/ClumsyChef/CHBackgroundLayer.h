@@ -12,6 +12,16 @@
 /**
  Background layer with parallax effect
  */
-@interface CHBackgroundLayer : CCLayerGradient
+@interface CHBackgroundLayer : CCNode {
+    CCSprite *background1;
+    CCSprite *background2;
+    CCSprite *sideBuilding;
+    
+    float speed1;
+    float speed2;
+    
+    CGSize screenSize;
+
+}
 
 @end

@@ -72,7 +72,7 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 		
 		
 		// Chef objects
-		_chefObj = [[CHChefObject chefObject] retain];
+		_chefObj = [CHChefObject chefObject] ;
 		_chefObj.position = ccp(CHGetWinWidth() / 2, 0);
 		_chefObj.position = [self positionForChef];
 		[self addChild:_chefObj];

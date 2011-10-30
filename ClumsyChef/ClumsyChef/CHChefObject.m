@@ -24,7 +24,7 @@ static CGFloat const kFallDeceleration = -130;
 + (CHChefObject *)chefObject
 {
 	CHGameItemInfo *info = [[CHGameLibrary sharedGameLibrary] gameObjectInfoWithID:CHGameObjectIDChef];
-	return [[[CHChefObject alloc] initWithRepresentedItem:info] autorelease];
+	return [[CHChefObject node] initWithRepresentedItem:info] ;
 }
 
 - (id)initWithRepresentedItem:(CHGameItemInfo *)item

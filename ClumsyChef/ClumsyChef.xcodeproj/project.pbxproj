@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC5CA83A145D4B21001B8B46 /* backB.png in Resources */ = {isa = PBXBuildFile; fileRef = BC5CA839145D4B21001B8B46 /* backB.png */; };
+		BC5CA83D145D4B2B001B8B46 /* sideB.png in Resources */ = {isa = PBXBuildFile; fileRef = BC5CA83C145D4B2B001B8B46 /* sideB.png */; };
+		BC5CA83F145D4B33001B8B46 /* clouds.png in Resources */ = {isa = PBXBuildFile; fileRef = BC5CA83E145D4B33001B8B46 /* clouds.png */; };
 		E511C294145925B3008BCFF8 /* testLayer-backButton.png in Resources */ = {isa = PBXBuildFile; fileRef = E511C293145925B3008BCFF8 /* testLayer-backButton.png */; };
 		E511C298145925BC008BCFF8 /* testLayer-backButton-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E511C295145925BC008BCFF8 /* testLayer-backButton-hd.png */; };
 		E511C299145925BC008BCFF8 /* testLayer-backButton-highlighted-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E511C296145925BC008BCFF8 /* testLayer-backButton-highlighted-hd.png */; };
@@ -187,6 +190,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BC5CA839145D4B21001B8B46 /* backB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backB.png; sourceTree = "<group>"; };
+		BC5CA83C145D4B2B001B8B46 /* sideB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sideB.png; sourceTree = "<group>"; };
+		BC5CA83E145D4B33001B8B46 /* clouds.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = clouds.png; sourceTree = "<group>"; };
 		E511C293145925B3008BCFF8 /* testLayer-backButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "testLayer-backButton.png"; path = "Resources/testLayer-backButton.png"; sourceTree = "<group>"; };
 		E511C295145925BC008BCFF8 /* testLayer-backButton-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "testLayer-backButton-hd.png"; path = "Resources/testLayer-backButton-hd.png"; sourceTree = "<group>"; };
 		E511C296145925BC008BCFF8 /* testLayer-backButton-highlighted-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "testLayer-backButton-highlighted-hd.png"; path = "Resources/testLayer-backButton-highlighted-hd.png"; sourceTree = "<group>"; };
@@ -558,9 +564,12 @@
 		E511C2911459258B008BCFF8 /* Test Materials */ = {
 			isa = PBXGroup;
 			children = (
+				BC5CA839145D4B21001B8B46 /* backB.png */,
 				E58ABB5C145A7EB6002CC4EE /* font-testFont-hd.fnt */,
+				BC5CA83C145D4B2B001B8B46 /* sideB.png */,
 				E58ABB5D145A7EB6002CC4EE /* font-testFont-hd.png */,
 				E58ABB58145A7B15002CC4EE /* font-testFont.fnt */,
+				BC5CA83E145D4B33001B8B46 /* clouds.png */,
 				E58ABB59145A7B15002CC4EE /* font-testFont.png */,
 				E52FECB61458C6EB0015B37E /* gameObject-testIcon-hd.png */,
 				E52FECB71458C6EB0015B37E /* gameObject-testIcon.png */,
@@ -1240,6 +1249,9 @@
 				E58ABB5F145A7EB6002CC4EE /* font-testFont-hd.png in Resources */,
 				E5F2342F145BBF820026799C /* gameObject-testIconBlue-hd.png in Resources */,
 				E5F23430145BBF820026799C /* gameObject-testIconBlue.png in Resources */,
+				BC5CA83A145D4B21001B8B46 /* backB.png in Resources */,
+				BC5CA83D145D4B2B001B8B46 /* sideB.png in Resources */,
+				BC5CA83F145D4B33001B8B46 /* clouds.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1465,8 +1477,10 @@
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				GCC_VERSION = "";
 				INFOPLIST_FILE = ClumsyChef/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "\"ClumsyChef/libs\"";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1483,8 +1497,10 @@
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				GCC_VERSION = "";
 				INFOPLIST_FILE = ClumsyChef/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "\"ClumsyChef/libs\"";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
