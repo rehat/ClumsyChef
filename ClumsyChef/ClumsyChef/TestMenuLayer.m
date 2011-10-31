@@ -13,7 +13,7 @@
 #import "CHBackgroundLayer.h"
 #import "CHGameLayer.h"
 #import "CHGameScene.h"
-
+#import "CHTitleLayer.h"
 //-----------------------------------
 
 
@@ -65,21 +65,38 @@ NSInteger const TestBackButtonTag = -9999;
 		CCMenuItem *itemTest2 = [self menuItemWithTitle:@"Game Layer" block:^(id sender) {
 			[self runLayer:[CHGameLayer node]];
 		}];
+
+		CCMenuItem *itemTest3 = [self menuItemWithTitle:@"Title Menu Layer" block:^(id sender) {
+			[self runLayer:[CHTitleLayer node]];
+		}];
 		
-		CCMenu *testMenu = [CCMenu menuWithItems:itemTest1, itemTest2, nil];
+		CCMenu *testMenu = [CCMenu menuWithItems:itemTest1, itemTest2, itemTest3, nil];
 		
-		[testMenu alignItemsVertically];	
+		// ----------------------------------
 		
 		CCLayer *layer = [CCLayer node];
-		[layer addChild:testMenu];
+		
 		
 		// team logo
 		CCSprite *sprite = [CCSprite spriteWithFile:@"testLayer-teamLogo.png"];
-		sprite.position = ccp(160, 360);
+		[sprite setPositionSharp:CHGetWinPointTL(CHGetHalfWinWidth(), 120)];
 		[layer addChild:sprite];
 		
+		// Align the menu items
+		testMenu.anchorPoint = CGPointZero;
+		testMenu.position = CGPointZero;
+		
+		CGFloat y = sprite.position.y - sprite.contentSize.height + 20;
+		for (CCNode *item in testMenu.children)
+		{
+			[item setPositionSharp:CGPointMake(CHGetHalfWinWidth(), y)];
+			y -= item.contentSize.height;
+		}
+		
+		[layer addChild:testMenu];
+		
 		[self addChild:layer];
-		layer.position = ccp(0, -480);
+		layer.position = ccp(0, -CHGetWinHeight());
 		[layer runAction:[CCEaseElasticOut actionWithAction:[CCMoveBy actionWithDuration:2.f position:ccp(0, 480)]]];
 	}
 	return self;
@@ -96,7 +113,7 @@ NSInteger const TestBackButtonTag = -9999;
 															   [[CCDirector sharedDirector] popScene];
 														   }];
 	CCMenu *menu = [CCMenu menuWithItems:item, nil];
-	menu.position = CHGetWinPointTL(40, 40);
+	[menu setPositionSharp:CHGetWinPointTL(40, 40)];
 	menu.tag = TestBackButtonTag;
 	
 	return menu;

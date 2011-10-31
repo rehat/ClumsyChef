@@ -179,6 +179,7 @@
 		E5A9055D144F779D002A1F6C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9055C144F779D002A1F6C /* AppDelegate.m */; };
 		E5A90560144F779D002A1F6C /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9055F144F779D002A1F6C /* RootViewController.m */; };
 		E5A90569144F779D002A1F6C /* blocks.png in Resources */ = {isa = PBXBuildFile; fileRef = E5A90568144F779D002A1F6C /* blocks.png */; };
+		E5B234BE145F1C1000BED350 /* CCNode+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B234BD145F1C1000BED350 /* CCNode+Utilities.m */; };
 		E5C8E190145B4144003372F2 /* CHChefObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C8E18F145B4144003372F2 /* CHChefObject.m */; };
 		E5F2342F145BBF820026799C /* gameObject-testIconBlue-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E5F2342D145BBF820026799C /* gameObject-testIconBlue-hd.png */; };
 		E5F23430145BBF820026799C /* gameObject-testIconBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = E5F2342E145BBF820026799C /* gameObject-testIconBlue.png */; };
@@ -528,6 +529,8 @@
 		E5A9055F144F779D002A1F6C /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		E5A90567144F779D002A1F6C /* GameConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
 		E5A90568144F779D002A1F6C /* blocks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blocks.png; path = Resources/blocks.png; sourceTree = "<group>"; };
+		E5B234BC145F1C1000BED350 /* CCNode+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CCNode+Utilities.h"; sourceTree = "<group>"; };
+		E5B234BD145F1C1000BED350 /* CCNode+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CCNode+Utilities.m"; sourceTree = "<group>"; };
 		E5C8E18E145B4144003372F2 /* CHChefObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHChefObject.h; sourceTree = "<group>"; };
 		E5C8E18F145B4144003372F2 /* CHChefObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHChefObject.m; sourceTree = "<group>"; };
 		E5F2342D145BBF820026799C /* gameObject-testIconBlue-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gameObject-testIconBlue-hd.png"; path = "Resources/gameObject-testIconBlue-hd.png"; sourceTree = "<group>"; };
@@ -1169,6 +1172,8 @@
 			children = (
 				E5F410F91455E9A800FBEE4B /* CHUtilities.h */,
 				E5F410FA1455E9A800FBEE4B /* CHUtilities.m */,
+				E5B234BC145F1C1000BED350 /* CCNode+Utilities.h */,
+				E5B234BD145F1C1000BED350 /* CCNode+Utilities.m */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -1423,6 +1428,7 @@
 				E5F410FB1455E9A800FBEE4B /* CHUtilities.m in Sources */,
 				E5233F9514572CBD00CB8173 /* CHGameObject.m in Sources */,
 				E5C8E190145B4144003372F2 /* CHChefObject.m in Sources */,
+				E5B234BE145F1C1000BED350 /* CCNode+Utilities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1477,7 +1483,7 @@
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				GCC_VERSION = "";
 				INFOPLIST_FILE = ClumsyChef/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1497,7 +1503,7 @@
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				GCC_VERSION = "";
 				INFOPLIST_FILE = ClumsyChef/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;

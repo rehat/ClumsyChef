@@ -3,7 +3,7 @@
 //  ClumsyChef
 //
 //  Created by Tong on 28/10/11.
-//  Copyright 2011 Think Bulbs Ltd. All rights reserved.
+//  Copyright 2011 Team iUCI. All rights reserved.
 //
 
 #import "CHChefObject.h"
@@ -24,7 +24,7 @@ static CGFloat const kFallDeceleration = -130;
 + (CHChefObject *)chefObject
 {
 	CHGameItemInfo *info = [[CHGameLibrary sharedGameLibrary] gameObjectInfoWithID:CHGameObjectIDChef];
-	return [[CHChefObject node] initWithRepresentedItem:info] ;
+	return [[[CHChefObject alloc] initWithRepresentedItem:info] autorelease];
 }
 
 - (id)initWithRepresentedItem:(CHGameItemInfo *)item

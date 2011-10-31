@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 
+// Other utitlies
+#import "CCNode+Utilities.h"
 
 // Some utilties
 
@@ -21,6 +23,8 @@ CGSize CHGetWinSize();
 CGFloat CHGetWinHeight();
 CGFloat CHGetWinWidth();
 
+CGFloat CHGetHalfWinWidth();
+CGFloat CHGetHalfWinHeight();
 CGPoint CHGetWinCenterPoint();
 
 // Convert the point in the flipped coordinate to the one cocos2d uses
@@ -30,7 +34,7 @@ CGPoint CHGetWinPointTL(CGFloat x, CGFloat y);
 CGPoint CHGetWinPointTR(CGFloat x, CGFloat y);
 
 // Color utilities
-
+						  
 static inline ccColor3B ccc3Hex(uint32_t hexValue)
 {
 	uint8_t r, g, b;
