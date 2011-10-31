@@ -113,6 +113,9 @@
 	// Initialize the utilities
 	CHUtilitiesInit();
 	
+	// Disable idle timer so the LCD backlight won't dim
+	application.idleTimerDisabled = YES;
+	
 	// Run the intro Scene
 	[[CCDirector sharedDirector] runWithScene: [TestMenuLayer scene]];
 }
