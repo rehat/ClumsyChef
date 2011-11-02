@@ -25,6 +25,10 @@
 		E55D60EC1451373A00C9D237 /* CHGameLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E55D60EB1451373A00C9D237 /* CHGameLayer.m */; };
 		E55D60EF1451376F00C9D237 /* CHHUDLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E55D60EE1451376F00C9D237 /* CHHUDLayer.m */; };
 		E55D60F21451378B00C9D237 /* CHPauseLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E55D60F11451378B00C9D237 /* CHPauseLayer.m */; };
+		E565162C1461FD3800F89149 /* CHItemObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E565162B1461FD3800F89149 /* CHItemObject.m */; };
+		E5651631146200C900F89149 /* CHCoinObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E5651630146200C800F89149 /* CHCoinObject.m */; };
+		E56516341462010600F89149 /* CHRecipeItemObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E56516331462010600F89149 /* CHRecipeItemObject.m */; };
+		E56516381462015500F89149 /* CHHarmfulObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E56516371462015500F89149 /* CHHarmfulObject.m */; };
 		E58ABB5A145A7B15002CC4EE /* font-testFont.fnt in Resources */ = {isa = PBXBuildFile; fileRef = E58ABB58145A7B15002CC4EE /* font-testFont.fnt */; };
 		E58ABB5B145A7B15002CC4EE /* font-testFont.png in Resources */ = {isa = PBXBuildFile; fileRef = E58ABB59145A7B15002CC4EE /* font-testFont.png */; };
 		E58ABB5E145A7EB6002CC4EE /* font-testFont-hd.fnt in Resources */ = {isa = PBXBuildFile; fileRef = E58ABB5C145A7EB6002CC4EE /* font-testFont-hd.fnt */; };
@@ -218,6 +222,14 @@
 		E55D60EE1451376F00C9D237 /* CHHUDLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHHUDLayer.m; sourceTree = "<group>"; };
 		E55D60F01451378B00C9D237 /* CHPauseLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHPauseLayer.h; sourceTree = "<group>"; };
 		E55D60F11451378B00C9D237 /* CHPauseLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHPauseLayer.m; sourceTree = "<group>"; };
+		E565162A1461FD3800F89149 /* CHItemObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHItemObject.h; sourceTree = "<group>"; };
+		E565162B1461FD3800F89149 /* CHItemObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHItemObject.m; sourceTree = "<group>"; };
+		E565162F146200C800F89149 /* CHCoinObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCoinObject.h; sourceTree = "<group>"; };
+		E5651630146200C800F89149 /* CHCoinObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCoinObject.m; sourceTree = "<group>"; };
+		E56516321462010600F89149 /* CHRecipeItemObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHRecipeItemObject.h; sourceTree = "<group>"; };
+		E56516331462010600F89149 /* CHRecipeItemObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHRecipeItemObject.m; sourceTree = "<group>"; };
+		E56516361462015500F89149 /* CHHarmfulObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHHarmfulObject.h; sourceTree = "<group>"; };
+		E56516371462015500F89149 /* CHHarmfulObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHHarmfulObject.m; sourceTree = "<group>"; };
 		E58ABB58145A7B15002CC4EE /* font-testFont.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "font-testFont.fnt"; path = "Resources/font-testFont.fnt"; sourceTree = "<group>"; };
 		E58ABB59145A7B15002CC4EE /* font-testFont.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "font-testFont.png"; path = "Resources/font-testFont.png"; sourceTree = "<group>"; };
 		E58ABB5C145A7EB6002CC4EE /* font-testFont-hd.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "font-testFont-hd.fnt"; path = "Resources/font-testFont-hd.fnt"; sourceTree = "<group>"; };
@@ -600,12 +612,10 @@
 		E55D60D91451260200C9D237 /* Game Library */ = {
 			isa = PBXGroup;
 			children = (
-				E55D60D61451244F00C9D237 /* CHGameLibrary.h */,
-				E55D60D71451244F00C9D237 /* CHGameLibrary.m */,
 				E5233F9314572CBD00CB8173 /* CHGameObject.h */,
 				E5233F9414572CBD00CB8173 /* CHGameObject.m */,
-				E5C8E18E145B4144003372F2 /* CHChefObject.h */,
-				E5C8E18F145B4144003372F2 /* CHChefObject.m */,
+				E55D60D61451244F00C9D237 /* CHGameLibrary.h */,
+				E55D60D71451244F00C9D237 /* CHGameLibrary.m */,
 			);
 			name = "Game Library";
 			sourceTree = "<group>";
@@ -624,9 +634,7 @@
 		E55D60F31451379F00C9D237 /* Game Scene */ = {
 			isa = PBXGroup;
 			children = (
-				E5F410BC1455E2D900FBEE4B /* Game Objects */,
-				E55D60EA1451373A00C9D237 /* CHGameLayer.h */,
-				E55D60EB1451373A00C9D237 /* CHGameLayer.m */,
+				E565162E1461FFE000F89149 /* Game Layer */,
 				E55D60E71451372000C9D237 /* CHGameScene.h */,
 				E55D60E81451372000C9D237 /* CHGameScene.m */,
 				E55D60ED1451376F00C9D237 /* CHHUDLayer.h */,
@@ -637,6 +645,29 @@
 				E5F410B91455DEBD00FBEE4B /* CHBackgroundLayer.m */,
 			);
 			name = "Game Scene";
+			sourceTree = "<group>";
+		};
+		E565162E1461FFE000F89149 /* Game Layer */ = {
+			isa = PBXGroup;
+			children = (
+				E55D60EA1451373A00C9D237 /* CHGameLayer.h */,
+				E55D60EB1451373A00C9D237 /* CHGameLayer.m */,
+				E5F410BC1455E2D900FBEE4B /* Game Objects */,
+			);
+			name = "Game Layer";
+			sourceTree = "<group>";
+		};
+		E56516351462011C00F89149 /* Item Objects */ = {
+			isa = PBXGroup;
+			children = (
+				E565162F146200C800F89149 /* CHCoinObject.h */,
+				E5651630146200C800F89149 /* CHCoinObject.m */,
+				E56516321462010600F89149 /* CHRecipeItemObject.h */,
+				E56516331462010600F89149 /* CHRecipeItemObject.m */,
+				E56516361462015500F89149 /* CHHarmfulObject.h */,
+				E56516371462015500F89149 /* CHHarmfulObject.m */,
+			);
+			name = "Item Objects";
 			sourceTree = "<group>";
 		};
 		E5A90377144F7799002A1F6C = {
@@ -674,17 +705,17 @@
 		E5A90396144F7799002A1F6C /* ClumsyChef */ = {
 			isa = PBXGroup;
 			children = (
-				E5F410F81455E98500FBEE4B /* Utilities */,
+				E55D60E01451352100C9D237 /* Beginning Screens */,
 				E55D60DA145132BC00C9D237 /* CHPlayerInfo.h */,
 				E55D60DB145132BC00C9D237 /* CHPlayerInfo.m */,
-				E511C29B145925D8008BCFF8 /* Testing */,
 				E5BCE39814511F66002D006B /* Framework */,
 				E55D60D91451260200C9D237 /* Game Library */,
+				E55D60F31451379F00C9D237 /* Game Scene */,
 				E5A903AB144F7799002A1F6C /* libs */,
 				E5A90397144F7799002A1F6C /* Resources */,
 				E5A90557144F779D002A1F6C /* Supporting Files */,
-				E55D60E01451352100C9D237 /* Beginning Screens */,
-				E55D60F31451379F00C9D237 /* Game Scene */,
+				E511C29B145925D8008BCFF8 /* Testing */,
+				E5F410F81455E98500FBEE4B /* Utilities */,
 			);
 			path = ClumsyChef;
 			sourceTree = "<group>";
@@ -1163,6 +1194,11 @@
 		E5F410BC1455E2D900FBEE4B /* Game Objects */ = {
 			isa = PBXGroup;
 			children = (
+				E5C8E18E145B4144003372F2 /* CHChefObject.h */,
+				E5C8E18F145B4144003372F2 /* CHChefObject.m */,
+				E565162A1461FD3800F89149 /* CHItemObject.h */,
+				E565162B1461FD3800F89149 /* CHItemObject.m */,
+				E56516351462011C00F89149 /* Item Objects */,
 			);
 			name = "Game Objects";
 			sourceTree = "<group>";
@@ -1429,6 +1465,10 @@
 				E5233F9514572CBD00CB8173 /* CHGameObject.m in Sources */,
 				E5C8E190145B4144003372F2 /* CHChefObject.m in Sources */,
 				E5B234BE145F1C1000BED350 /* CCNode+Utilities.m in Sources */,
+				E565162C1461FD3800F89149 /* CHItemObject.m in Sources */,
+				E5651631146200C900F89149 /* CHCoinObject.m in Sources */,
+				E56516341462010600F89149 /* CHRecipeItemObject.m in Sources */,
+				E56516381462015500F89149 /* CHHarmfulObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

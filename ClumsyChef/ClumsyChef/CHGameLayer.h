@@ -7,17 +7,14 @@
 //
 
 #import "cocos2d.h"
-#import "CHGameScene.h"
+#import "CHGameLibrary.h"
 
 @class CHGameObject;
 
 @interface CHGameLayer : CCLayerColor
 
+
+
 @end
 
 
-@interface CHGameScene (CHGameLayerCalls)
-
-- (void)handleChefCollisionWithItem:(CHGameObject *)object;
-
-@end

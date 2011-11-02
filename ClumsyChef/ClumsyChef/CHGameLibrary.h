@@ -55,6 +55,12 @@ typedef enum
 
 @class CHGameObject;
 
+/**
+ * CHGameLibrary
+ * A centralized place to look for:
+ *    - stage info
+ *    - receipt item info
+ */
 @interface CHGameLibrary : NSObject
 
 

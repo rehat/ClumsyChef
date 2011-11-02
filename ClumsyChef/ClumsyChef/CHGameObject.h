@@ -8,16 +8,21 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
-//#import "CHGameLibrary.h"
 
 @class CHGameItemInfo;
 
+/**
+ * CHGameObject
+ * Base class for all the objects that appears in the game layer
+ */
 @interface CHGameObject : CCSprite
 
 
 // The corresponding item in the game library represented by this game object
 @property(nonatomic, readonly) CHGameItemInfo *representedItem;
+
 @property(nonatomic, assign) float verticalSpeed;	// +ve is downward
+
 @property(nonatomic, assign) float horizontalSpeed;	// +ve is right
 
 

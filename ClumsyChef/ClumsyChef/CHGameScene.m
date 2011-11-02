@@ -9,7 +9,7 @@
 #import "CHGameScene.h"
 #import "CHBackgroundLayer.h"
 #import "CHGameLayer.h"
-#import "CHGameObject.h"
+#import "CHGameLibrary.h"
 
 @implementation CHGameScene
 {
@@ -24,10 +24,9 @@
 {
 	if (self = [super init])
 	{
-		_bgLayer = [[CHBackgroundLayer alloc] init];
+		//_bgLayer = [[CHBackgroundLayer alloc] init];
 		_gameLayer = [[CHGameLayer alloc] init];
-		
-		
+		[self addChild:_gameLayer];
 	}
 	return self;
 }
@@ -40,6 +39,15 @@
 }
 
 #pragma mark -
-#pragma mark xx
+#pragma mark Game Scene
 
+- (void)chefDidCollideWithItem:(CHGameObject *)object
+{
+	CCLOG(@"chefDidCollideWithItem");
+}
+
+- (void)worldOffsetDidChange:(CGFloat)offset
+{
+	CCLOG(@"offset = %f", offset);
+}
 @end

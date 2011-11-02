@@ -10,7 +10,10 @@
 #import "cocos2d.h"
 #import "CHGameObject.h"
 
-
+/**
+ * CHChefObject
+ * Class for the chef object
+ */
 @interface CHChefObject : CHGameObject 
 
 + (CHChefObject *)chefObject;

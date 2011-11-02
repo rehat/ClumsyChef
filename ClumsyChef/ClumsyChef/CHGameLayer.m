@@ -8,8 +8,8 @@
 
 #import "CHGameLayer.h"
 #import "CHGameLibrary.h"
-#import "CHUtilities.h"
 #import "CHChefObject.h"
+#import "CHGameScene.h"
 
 static CGFloat const kChefYOffset = 100.f;
 
@@ -28,6 +28,8 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 	
 	float _bottomWorldOffset;
 	float _nextGenItemsOffset;
+	
+	// TODO: shared particle effects, sound effects
 }
 
 
@@ -56,6 +58,14 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 	[_items addObject:item];
 	
 	return 30;
+}
+
+- (CHGameScene *)gameSceneParent
+{
+	CHGameScene *p = (CHGameScene *)self.parent;
+	if ([p isKindOfClass:[CHGameScene class]])
+		return p;
+	return nil;
 }
 
 #pragma mark - 
@@ -107,12 +117,14 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 
 - (void)update:(ccTime)dt
 {
+	CHGameScene *gsParent = [self gameSceneParent];
+	
 	// Update objects
 	CGFloat oldOffset = _chefObj.position.y;
 	[_chefObj update:dt];
 	
 	CGFloat pullUp = oldOffset - _chefObj.position.y;
-
+	
 	// Pull everything up
 	CGPoint delta = ccp(0, pullUp);
 	
@@ -120,6 +132,8 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 	CGFloat cullThresh = CHGetWinHeight() + kObjectActiveRangeUp;
 	
 	CCArray *toBeRemoved = nil;
+	CGFloat chefRadius = MAX(_chefObj.contentSize.width, _chefObj.contentSize.height) * 0.5f;
+	
 	for (CHGameObject *item in _items) 
 	{
 		// Update the item
@@ -141,6 +155,14 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 		else
 		{
 			item.position = p;
+			
+			// Detect collision
+			CGFloat itemRadius = MAX(item.contentSize.width, item.contentSize.height) * 0.5f;
+			CGFloat dist = ccpDistance(_chefObj.position, item.position);
+			if (dist < chefRadius + itemRadius)
+			{
+				[gsParent chefDidCollideWithItem:item];
+			}
 		}
 	}
 	
@@ -151,6 +173,9 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 	}
 	
 	_bottomWorldOffset += pullUp;
+	
+	// Notify the parent
+	[gsParent worldOffsetDidChange:_bottomWorldOffset];
 	
 	// Generate new items
 	while (_bottomWorldOffset + kGenObjectRangeDown >= _nextGenItemsOffset)
@@ -187,6 +212,25 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 - (void)ccTouchCancelled:(UITouch *)touch withEvent:(UIEvent *)event
 {
 	[_chefObj stopAccelerating];
+}
+
+
+#pragma mark -
+#pragma mark Item API
+
+- (void)chefDidCollectCoin:(CHGameObject *)coinObject
+{
+	
+}
+
+- (void)chefDidTouchHarmfulItem:(CHGameObject *)item
+{
+	
+}
+
+- (void)chefDidCollectReceiptItem:(CHGameObject *)item
+{
+	
 }
 
 @end

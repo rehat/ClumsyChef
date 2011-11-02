@@ -7,7 +7,14 @@
 //
 
 #import "cocos2d.h"
+#import "CHGameLibrary.h"
 
 @interface CHGameScene : CCScene
 
+
+// For game layer to calls
+- (void)chefDidCollideWithItem:(CHGameObject *)object;
+- (void)worldOffsetDidChange:(CGFloat)offset;
+
 @end
+
