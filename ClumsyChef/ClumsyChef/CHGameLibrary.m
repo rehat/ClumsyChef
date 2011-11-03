@@ -63,9 +63,11 @@
 @interface CHStageInfo ()
 
 @property(nonatomic, assign) CHStageID stageID;
+@property(nonatomic, retain) NSString *stageName;
+@property(nonatomic, retain) NSString *previewImageFilename;
+@property(nonatomic, assign) NSInteger worldHeight;
 @property(nonatomic, retain) NSString *backgroundFrontImageFilename;
 @property(nonatomic, retain) NSString *backgroundBackImageFilename;
-@property(nonatomic, assign) NSInteger worldHeight;
 
 @end
 
@@ -73,18 +75,25 @@
 @implementation CHStageInfo
 {
 	CHStageID		_stageID;
+	NSString		*_stageName;
+	NSString		*_previewImageFilename;
+	NSInteger		_worldHeight;
 	NSString		*_backgroundFrontImageFilename;
 	NSString		*_backgroundBackImageFilename;
-	NSInteger		_worldHeight;
+
 }
 
 @synthesize stageID = _stageID;
+@synthesize stageName = _stageName;
+@synthesize previewImageFilename = _previewImageFilename;
+@synthesize worldHeight = _worldHeight;
 @synthesize backgroundFrontImageFilename = _backgroundFrontImageFilename;
 @synthesize backgroundBackImageFilename = _backgroundBackImageFilename;
-@synthesize worldHeight = _worldHeight;
 
 - (void)dealloc
 {
+	[_stageName release];
+	[_previewImageFilename release];
 	[_backgroundFrontImageFilename release];
 	[_backgroundBackImageFilename release];
 	[super dealloc];

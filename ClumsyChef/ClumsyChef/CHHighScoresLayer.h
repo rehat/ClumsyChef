@@ -1,5 +1,5 @@
 //
-//  CHGameLoseLayer.h
+//  CHHighScoresLayer.h
 //  ClumsyChef
 //
 //  Created by Tong on 3/11/11.
@@ -9,6 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 
-@interface CHGameLoseLayer : CCLayer
+@interface CHHighScoresLayer : CCLayer
 
 @end

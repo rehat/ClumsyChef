@@ -11,6 +11,7 @@
 
 // Other utitlies
 #import "CCNode+Utilities.h"
+#import "CCLayer+Utilities.h"
 
 // Some utilties
 

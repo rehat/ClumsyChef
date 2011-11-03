@@ -117,7 +117,7 @@
 	application.idleTimerDisabled = YES;
 	
 	// Run the intro Scene
-	[[CCDirector sharedDirector] runWithScene: [TestMenuLayer scene]];
+	[[CCDirector sharedDirector] runWithScene: [TestMenuLayer layerAsScene]];
 }
 
 

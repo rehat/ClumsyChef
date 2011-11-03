@@ -11,9 +11,6 @@
 
 @interface TestMenuLayer : CCLayerGradient
 
-
-+ (CCScene *)scene;
-
 + (CCMenu *)backButton;
 
 @end

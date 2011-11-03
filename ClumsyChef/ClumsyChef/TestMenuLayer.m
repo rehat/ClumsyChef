@@ -13,7 +13,7 @@
 #import "CHBackgroundLayer.h"
 #import "CHGameLayer.h"
 #import "CHGameScene.h"
-#import "CHTitleLayer.h"
+#import "CHMainMenuLayer.h"
 //-----------------------------------
 
 
@@ -21,14 +21,6 @@
 NSInteger const TestBackButtonTag = -9999;
 
 @implementation TestMenuLayer
-
-+ (CCScene *)scene
-{
-	TestMenuLayer *layer = [TestMenuLayer node];
-	CCScene *scene = [CCScene node];
-	[scene addChild:layer];
-	return scene;
-}
 
 - (void)runScene:(CCScene *)scene
 {
@@ -66,8 +58,8 @@ NSInteger const TestBackButtonTag = -9999;
 			[self runLayer:[CHGameLayer node]];
 		}];
 
-		CCMenuItem *itemTest3 = [self menuItemWithTitle:@"Title Menu Layer" block:^(id sender) {
-			[self runLayer:[CHTitleLayer node]];
+		CCMenuItem *itemTest3 = [self menuItemWithTitle:@"Main Menu" block:^(id sender) {
+			[self runLayer:[CHMainMenuLayer node]];
 		}];
 		
 		CCMenuItem *itemTest4 = [self menuItemWithTitle:@"Game Scene" block:^(id sender) {

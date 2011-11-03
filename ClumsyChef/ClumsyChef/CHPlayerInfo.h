@@ -8,15 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import "CHGameLibrary.h"
+
+
 @interface CHPlayerInfo : NSObject
 
-//@property(nonatomic, readonly) NSSet	*clearedStageIDs;		// NSNumber set
-//@property(nonatomic, readonly) NSArray	*highestScorePlayers;	// NSDictionary {name, score}
+//@property(nonatomic, readonly) NSInteger	*numClearedLevels;
+//@property(nonatomic, readonly) NSArray	*highestScores;	// NSDictionary {name, score}
 
 + (CHPlayerInfo *)sharedPlayerInfo;
-
-//- (BOOL)isStageCleared:(CHStageID)stageID;
-//- (void)setStageCleared:(CHStageID)stageID;
 
 
 @end

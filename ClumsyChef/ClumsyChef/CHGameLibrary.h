@@ -63,9 +63,12 @@ typedef enum
 
 // Background information
 @property(nonatomic, readonly, assign) CHStageID stageID;
+@property(nonatomic, readonly, retain) NSString *stageName;
+@property(nonatomic, readonly, retain) NSString *previewImageFilename;
+@property(nonatomic, readonly, assign) NSInteger worldHeight;
 @property(nonatomic, readonly, retain) NSString *backgroundFrontImageFilename;
 @property(nonatomic, readonly, retain) NSString *backgroundBackImageFilename;
-@property(nonatomic, readonly, assign) NSInteger worldHeight;
+
 // TODO: More
 
 @end

@@ -19,10 +19,13 @@
 		E52FECB91458C6EB0015B37E /* gameObject-testIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = E52FECB71458C6EB0015B37E /* gameObject-testIcon.png */; };
 		E552D23A1463148A005EBBB1 /* CHGameWinLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E552D23914631489005EBBB1 /* CHGameWinLayer.m */; };
 		E552D23E146314A4005EBBB1 /* CHGameLoseLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E552D23D146314A3005EBBB1 /* CHGameLoseLayer.m */; };
+		E552D242146318DD005EBBB1 /* CHMainMenuLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E552D241146318DD005EBBB1 /* CHMainMenuLayer.m */; };
+		E552D245146319B7005EBBB1 /* CHCreditLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E552D244146319B7005EBBB1 /* CHCreditLayer.m */; };
+		E552D248146319E6005EBBB1 /* CHHighScoresLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E552D247146319E6005EBBB1 /* CHHighScoresLayer.m */; };
+		E552D24E14631A34005EBBB1 /* CHSelectLevelLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E552D24D14631A34005EBBB1 /* CHSelectLevelLayer.m */; };
+		E552D25114631C89005EBBB1 /* CCLayer+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E552D25014631C89005EBBB1 /* CCLayer+Utilities.m */; };
 		E55D60D81451244F00C9D237 /* CHGameLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = E55D60D71451244F00C9D237 /* CHGameLibrary.m */; };
 		E55D60DC145132BC00C9D237 /* CHPlayerInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = E55D60DB145132BC00C9D237 /* CHPlayerInfo.m */; };
-		E55D60E31451361F00C9D237 /* CHTitleLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E55D60E21451361F00C9D237 /* CHTitleLayer.m */; };
-		E55D60E6145136BF00C9D237 /* CHSelectStageLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E55D60E5145136BF00C9D237 /* CHSelectStageLayer.m */; };
 		E55D60E91451372000C9D237 /* CHGameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = E55D60E81451372000C9D237 /* CHGameScene.m */; };
 		E55D60EC1451373A00C9D237 /* CHGameLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E55D60EB1451373A00C9D237 /* CHGameLayer.m */; };
 		E55D60EF1451376F00C9D237 /* CHHUDLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E55D60EE1451376F00C9D237 /* CHHUDLayer.m */; };
@@ -212,14 +215,20 @@
 		E552D23914631489005EBBB1 /* CHGameWinLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGameWinLayer.m; sourceTree = "<group>"; };
 		E552D23C146314A2005EBBB1 /* CHGameLoseLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGameLoseLayer.h; sourceTree = "<group>"; };
 		E552D23D146314A3005EBBB1 /* CHGameLoseLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGameLoseLayer.m; sourceTree = "<group>"; };
+		E552D240146318DD005EBBB1 /* CHMainMenuLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHMainMenuLayer.h; sourceTree = "<group>"; };
+		E552D241146318DD005EBBB1 /* CHMainMenuLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHMainMenuLayer.m; sourceTree = "<group>"; };
+		E552D243146319B7005EBBB1 /* CHCreditLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCreditLayer.h; sourceTree = "<group>"; };
+		E552D244146319B7005EBBB1 /* CHCreditLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHCreditLayer.m; sourceTree = "<group>"; };
+		E552D246146319E6005EBBB1 /* CHHighScoresLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHHighScoresLayer.h; sourceTree = "<group>"; };
+		E552D247146319E6005EBBB1 /* CHHighScoresLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHHighScoresLayer.m; sourceTree = "<group>"; };
+		E552D24C14631A34005EBBB1 /* CHSelectLevelLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHSelectLevelLayer.h; sourceTree = "<group>"; };
+		E552D24D14631A34005EBBB1 /* CHSelectLevelLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHSelectLevelLayer.m; sourceTree = "<group>"; };
+		E552D24F14631C89005EBBB1 /* CCLayer+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CCLayer+Utilities.h"; sourceTree = "<group>"; };
+		E552D25014631C89005EBBB1 /* CCLayer+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CCLayer+Utilities.m"; sourceTree = "<group>"; };
 		E55D60D61451244F00C9D237 /* CHGameLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGameLibrary.h; sourceTree = "<group>"; };
 		E55D60D71451244F00C9D237 /* CHGameLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGameLibrary.m; sourceTree = "<group>"; };
 		E55D60DA145132BC00C9D237 /* CHPlayerInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHPlayerInfo.h; sourceTree = "<group>"; };
 		E55D60DB145132BC00C9D237 /* CHPlayerInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHPlayerInfo.m; sourceTree = "<group>"; };
-		E55D60E11451361F00C9D237 /* CHTitleLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTitleLayer.h; sourceTree = "<group>"; };
-		E55D60E21451361F00C9D237 /* CHTitleLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTitleLayer.m; sourceTree = "<group>"; };
-		E55D60E4145136BF00C9D237 /* CHSelectStageLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHSelectStageLayer.h; sourceTree = "<group>"; };
-		E55D60E5145136BF00C9D237 /* CHSelectStageLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHSelectStageLayer.m; sourceTree = "<group>"; };
 		E55D60E71451372000C9D237 /* CHGameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGameScene.h; sourceTree = "<group>"; };
 		E55D60E81451372000C9D237 /* CHGameScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGameScene.m; sourceTree = "<group>"; };
 		E55D60EA1451373A00C9D237 /* CHGameLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGameLayer.h; sourceTree = "<group>"; };
@@ -615,6 +624,21 @@
 			name = Testing;
 			sourceTree = "<group>";
 		};
+		E552D23F146318A7005EBBB1 /* Main Menu */ = {
+			isa = PBXGroup;
+			children = (
+				E552D243146319B7005EBBB1 /* CHCreditLayer.h */,
+				E552D244146319B7005EBBB1 /* CHCreditLayer.m */,
+				E552D246146319E6005EBBB1 /* CHHighScoresLayer.h */,
+				E552D247146319E6005EBBB1 /* CHHighScoresLayer.m */,
+				E552D240146318DD005EBBB1 /* CHMainMenuLayer.h */,
+				E552D241146318DD005EBBB1 /* CHMainMenuLayer.m */,
+				E552D24C14631A34005EBBB1 /* CHSelectLevelLayer.h */,
+				E552D24D14631A34005EBBB1 /* CHSelectLevelLayer.m */,
+			);
+			name = "Main Menu";
+			sourceTree = "<group>";
+		};
 		E55D60D91451260200C9D237 /* Game Library */ = {
 			isa = PBXGroup;
 			children = (
@@ -624,17 +648,6 @@
 				E55D60D71451244F00C9D237 /* CHGameLibrary.m */,
 			);
 			name = "Game Library";
-			sourceTree = "<group>";
-		};
-		E55D60E01451352100C9D237 /* Beginning Screens */ = {
-			isa = PBXGroup;
-			children = (
-				E55D60E11451361F00C9D237 /* CHTitleLayer.h */,
-				E55D60E21451361F00C9D237 /* CHTitleLayer.m */,
-				E55D60E4145136BF00C9D237 /* CHSelectStageLayer.h */,
-				E55D60E5145136BF00C9D237 /* CHSelectStageLayer.m */,
-			);
-			name = "Beginning Screens";
 			sourceTree = "<group>";
 		};
 		E55D60F31451379F00C9D237 /* Game Scene */ = {
@@ -715,13 +728,13 @@
 		E5A90396144F7799002A1F6C /* ClumsyChef */ = {
 			isa = PBXGroup;
 			children = (
-				E55D60E01451352100C9D237 /* Beginning Screens */,
 				E55D60DA145132BC00C9D237 /* CHPlayerInfo.h */,
 				E55D60DB145132BC00C9D237 /* CHPlayerInfo.m */,
 				E5BCE39814511F66002D006B /* Framework */,
 				E55D60D91451260200C9D237 /* Game Library */,
 				E55D60F31451379F00C9D237 /* Game Scene */,
 				E5A903AB144F7799002A1F6C /* libs */,
+				E552D23F146318A7005EBBB1 /* Main Menu */,
 				E5A90397144F7799002A1F6C /* Resources */,
 				E5A90557144F779D002A1F6C /* Supporting Files */,
 				E511C29B145925D8008BCFF8 /* Testing */,
@@ -1216,10 +1229,12 @@
 		E5F410F81455E98500FBEE4B /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				E5F410F91455E9A800FBEE4B /* CHUtilities.h */,
-				E5F410FA1455E9A800FBEE4B /* CHUtilities.m */,
+				E552D24F14631C89005EBBB1 /* CCLayer+Utilities.h */,
+				E552D25014631C89005EBBB1 /* CCLayer+Utilities.m */,
 				E5B234BC145F1C1000BED350 /* CCNode+Utilities.h */,
 				E5B234BD145F1C1000BED350 /* CCNode+Utilities.m */,
+				E5F410F91455E9A800FBEE4B /* CHUtilities.h */,
+				E5F410FA1455E9A800FBEE4B /* CHUtilities.m */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -1463,8 +1478,6 @@
 				E5A90560144F779D002A1F6C /* RootViewController.m in Sources */,
 				E55D60D81451244F00C9D237 /* CHGameLibrary.m in Sources */,
 				E55D60DC145132BC00C9D237 /* CHPlayerInfo.m in Sources */,
-				E55D60E31451361F00C9D237 /* CHTitleLayer.m in Sources */,
-				E55D60E6145136BF00C9D237 /* CHSelectStageLayer.m in Sources */,
 				E55D60E91451372000C9D237 /* CHGameScene.m in Sources */,
 				E55D60EC1451373A00C9D237 /* CHGameLayer.m in Sources */,
 				E55D60EF1451376F00C9D237 /* CHHUDLayer.m in Sources */,
@@ -1481,6 +1494,11 @@
 				E56516381462015500F89149 /* CHHarmfulObject.m in Sources */,
 				E552D23A1463148A005EBBB1 /* CHGameWinLayer.m in Sources */,
 				E552D23E146314A4005EBBB1 /* CHGameLoseLayer.m in Sources */,
+				E552D242146318DD005EBBB1 /* CHMainMenuLayer.m in Sources */,
+				E552D245146319B7005EBBB1 /* CHCreditLayer.m in Sources */,
+				E552D248146319E6005EBBB1 /* CHHighScoresLayer.m in Sources */,
+				E552D24E14631A34005EBBB1 /* CHSelectLevelLayer.m in Sources */,
+				E552D25114631C89005EBBB1 /* CCLayer+Utilities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
