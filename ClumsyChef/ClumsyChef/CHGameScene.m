@@ -24,9 +24,11 @@
 {
 	if (self = [super init])
 	{
-		_bgLayer = [[CHBackgroundLayer alloc] init];
-		_gameLayer = [[CHGameLayer alloc] init];
-		
+		_bgLayer = [CHBackgroundLayer node];
+		_gameLayer = [CHGameLayer node];
+		[self addChild:_bgLayer z:-1];
+        [self addChild:_gameLayer z:0];
+        
 		
 	}
 	return self;
@@ -34,8 +36,7 @@
 
 - (void)dealloc
 {
-	[_bgLayer release];
-	[_gameLayer release];
+	
 	[super dealloc];
 }
 

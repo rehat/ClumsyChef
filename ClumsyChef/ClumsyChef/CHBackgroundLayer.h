@@ -12,16 +12,10 @@
 /**
  Background layer with parallax effect
  */
-@interface CHBackgroundLayer : CCNode {
-    CCSprite *background1;
-    CCSprite *background2;
-    CCSprite *sideBuilding;
-    
-    float speed1;
-    float speed2;
-    
-    CGSize screenSize;
+@interface CHBackgroundLayer : CCNode 
 
-}
 
+
+
+-(void)initWithInfo:(CGFloat) worldHeight;
 @end

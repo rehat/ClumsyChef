@@ -69,8 +69,12 @@ NSInteger const TestBackButtonTag = -9999;
 		CCMenuItem *itemTest3 = [self menuItemWithTitle:@"Title Menu Layer" block:^(id sender) {
 			[self runLayer:[CHTitleLayer node]];
 		}];
+        
+        CCMenuItem *itemTest4 = [self menuItemWithTitle:@"Game Layer with Back" block:^(id sender) {
+			[self runLayer:[CHGameScene node]];
+		}];
 		
-		CCMenu *testMenu = [CCMenu menuWithItems:itemTest1, itemTest2, itemTest3, nil];
+		CCMenu *testMenu = [CCMenu menuWithItems:itemTest1, itemTest2, itemTest3, itemTest4, nil];
 		
 		// ----------------------------------
 		

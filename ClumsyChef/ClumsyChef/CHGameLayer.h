@@ -11,7 +11,7 @@
 
 @class CHGameObject;
 
-@interface CHGameLayer : CCLayerColor
+@interface CHGameLayer : CCLayer
 
 @end
 

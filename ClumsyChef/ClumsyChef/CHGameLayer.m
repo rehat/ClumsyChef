@@ -63,7 +63,7 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 
 - (id)init	// TODO: Init with scene description
 {
-	if (self = [super initWithColor:ccc3To4(ccWHITE)])
+	if (self = [super init])
 	{
 		// Sensors
 		self.isTouchEnabled = true;
