@@ -69,7 +69,7 @@
         background2 = [CCSprite spriteWithFile:@"backB.png"];
         background2.position = CGPointMake(screenSize.width - background2.contentSize.width/2,screenSize.height-background2.contentSize.height/2);
         [self addChild:background2];
-        sideBuilding = [CCSprite spriteWithFile:@"sideB.png"];
+        sideBuilding = [CCSprite spriteWithFile:@"sideB2.png"];
         sideBuilding.position = CGPointMake(screenSize.width - sideBuilding.contentSize.width/2, 0);
         [self addChild:sideBuilding];
         
