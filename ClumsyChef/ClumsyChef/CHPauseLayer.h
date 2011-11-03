@@ -10,4 +10,9 @@
 
 @interface CHPauseLayer : CCLayer
 
+//+ (id)node;
+//
+//- (void)showInNode:(CCNode *)parent;
+//- (void)hide;
+
 @end

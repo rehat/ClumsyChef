@@ -9,9 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 #import "CHItemObject.h"
-
+#import "CHGameLibrary.h"
 
 
 @interface CHHarmfulObject : CHItemObject
+
++ (id)nodeWithHarmfulItemID:(CHHarmfulItemID)itemID;
 
 @end

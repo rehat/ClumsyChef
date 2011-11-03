@@ -8,9 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+#import "CHGameLibrary.h"
 #import "CHItemObject.h"
 
-
 @interface CHRecipeItemObject : CHItemObject 
+
++ (id)nodeWithRecipeItemID:(CHRecipeItemID)itemID;
 
 @end

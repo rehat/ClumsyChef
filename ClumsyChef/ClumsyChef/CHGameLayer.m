@@ -23,7 +23,6 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 
 @implementation CHGameLayer
 {
-	CCLabelBMFont *_debugLabel;
 	CHChefObject *_chefObj;
 	
 	float _bottomWorldOffset;
@@ -40,13 +39,6 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 - (CGPoint)positionForChef
 {
 	return CGPointMake(_chefObj.position.x, CHGetWinHeight() - kChefYOffset);
-}
-
-- (void)setDebugDisplayText:(NSString *)text
-{
-	[_debugLabel setString:text];
-	_debugLabel.anchorPoint = ccp(1, 1);
-	_debugLabel.position = CHGetWinPointTR(20, 20);
 }
 
 - (CGFloat)generateItemsAtY:(CGFloat)y	// Return the interval after which the next generation takes place
@@ -87,11 +79,6 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 		
 		_bottomWorldOffset = CHGetWinHeight();
 		_nextGenItemsOffset = _bottomWorldOffset;
-		
-		_debugLabel = [[[CCLabelBMFont alloc] initWithString:@"" fntFile:@"font-testFont.fnt"] autorelease];
-		[_debugLabel setColor:ccGREEN];
-		
-		[self addChild:_debugLabel];
 
 		[[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
 		[self scheduleUpdate];
@@ -104,13 +91,17 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 	[super dealloc];
 }
 
++ (id)nodeWithStageInfo:(CHStageInfo *)stageInfo
+{
+	return nil;
+}
 
 #pragma mark -
 #pragma mark xxx
 
 - (void)update:(ccTime)dt
 {
-	//CHGameScene *gsParent = [self gameSceneParent];
+	CHGameScene *gsParent = [self gameSceneParent];
 	
 	// Update objects
 	CGFloat oldOffset = _chefObj.position.y;
@@ -164,7 +155,7 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 	_bottomWorldOffset += pullUp;
 	
 	// Notify the parent
-//	[gsParent worldOffsetDidChange:_bottomWorldOffset];
+	[gsParent worldOffsetDidChange:_bottomWorldOffset];
 	
 	// Generate new items
 	while (_bottomWorldOffset + kGenObjectRangeDown >= _nextGenItemsOffset)
@@ -175,8 +166,6 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 		// Next round
 		_nextGenItemsOffset += interval;
 	}
-	
-	//[self setDebugDisplayText:[NSString stringWithFormat:@"%d", [_items count]]];
 }
 
 #pragma mark -
@@ -205,21 +194,6 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 
 
 #pragma mark -
-#pragma mark Item API
-
-- (void)chefDidCollectCoin:(CHGameObject *)coinObject
-{
-	
-}
-
-- (void)chefDidTouchHarmfulItem:(CHGameObject *)item
-{
-	
-}
-
-- (void)chefDidCollectReceiptItem:(CHGameObject *)item
-{
-	
-}
+#pragma mark xx
 
 @end

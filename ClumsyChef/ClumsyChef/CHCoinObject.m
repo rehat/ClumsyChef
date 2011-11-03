@@ -26,17 +26,18 @@
 	return self;
 }
 
-+ (void)preloadResources
++ (void)preloadSharedResources
 {
 	// TODO
 }
 
-+ (void)unloadResources
++ (void)unloadSharedResources
 {
 	// TODO
 }
 
 - (void)didCollideWithChef
 {
+	[[self gameSceneParent] addChefMoney:10];
 }
 @end

@@ -7,8 +7,47 @@
 //
 
 #import "CHRecipeItemObject.h"
-
+#import "CHGameScene.h"
 
 @implementation CHRecipeItemObject
+{
+	CHRecipeItemID	_itemID;
+}
+
+- (id)initWithRecipeItemID:(CHRecipeItemID)itemID
+{
+	CHRecipeItemInfo *info = [[CHGameLibrary sharedGameLibrary] recipeItemInfoWithID:itemID];
+	if (self = [super initWithFile:info.spriteFilename])
+	{
+		_itemID = itemID;
+		// TODO
+	}
+	return self;
+}
+
++ (id)nodeWithRecipeItemID:(CHRecipeItemID)itemID
+{
+	return [[[self alloc] initWithRecipeItemID:itemID] autorelease];
+}
+
+- (void)dealloc
+{
+	[super dealloc];
+}
+
++ (void)preloadSharedResources
+{
+	// TODO
+}
+
++ (void)unloadSharedResources
+{
+	// TODO
+}
+
+- (void)didCollideWithChef
+{
+	[[self gameSceneParent] chefDidCollectRecipeItem:_itemID];
+}
 
 @end

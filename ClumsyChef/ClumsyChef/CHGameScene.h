@@ -12,12 +12,25 @@
 @interface CHGameScene : CCScene
 
 
+// For debugging
+- (void)setDebugMessage:(NSString *)format, ...;
+
+// For game layer
+- (void)worldOffsetDidChange:(NSInteger)newOffset;
+- (void)chefDidReachBottom;
+
 // For game objects in game layer to call
 - (void)addChefMoney:(NSInteger)amount;
+- (void)chefDidCollectRecipeItem:(CHRecipeItemID)itemID;
 - (void)deductChefLife:(NSInteger)numLife;
 
 // For HUD
 - (void)pauseGame;
+
+// For Pause layer / game lose layer
+- (void)resumeGame;
+- (void)restartLevel;
+- (void)quitGame;
 
 @end
 

@@ -14,6 +14,8 @@
 @interface CHGameLayer : CCLayer
 
 
++ (id)nodeWithStageInfo:(CHStageInfo *)stageInfo;
+
 
 @end
 

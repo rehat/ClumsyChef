@@ -7,7 +7,18 @@
 //
 
 #import "cocos2d.h"
+#import "CHGameLibrary.h"
+
 
 @interface CHHUDLayer : CCLayer
+
+@property(nonatomic, assign) NSInteger numberOfLife;
+@property(nonatomic, assign) NSInteger moneyAmount;
+
++ (id)nodeWithRequiredRecipeItems:(NSArray *)itemIDs;
+
+- (void)setRecipeItemCollected:(CHRecipeItemID)itemID;
+
+- (BOOL)allItemsCollected;
 
 @end
