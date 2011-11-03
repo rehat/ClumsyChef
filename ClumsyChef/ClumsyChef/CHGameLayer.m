@@ -80,7 +80,7 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 		self.isAccelerometerEnabled = true;
 
 		// Chef objects
-		_chefObj = [[CHChefObject node] retain];
+		_chefObj = [CHChefObject node];
 		_chefObj.position = ccp(CHGetWinWidth() / 2, 0);
 		_chefObj.position = [self positionForChef];
 		[self addChild:_chefObj];
@@ -88,7 +88,7 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 		_bottomWorldOffset = CHGetWinHeight();
 		_nextGenItemsOffset = _bottomWorldOffset;
 		
-		_debugLabel = [[CCLabelBMFont alloc] initWithString:@"" fntFile:@"font-testFont.fnt"];
+		_debugLabel = [[[CCLabelBMFont alloc] initWithString:@"" fntFile:@"font-testFont.fnt"] autorelease];
 		[_debugLabel setColor:ccGREEN];
 		
 		[self addChild:_debugLabel];
@@ -101,8 +101,7 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 
 - (void)dealloc
 {
-	[_debugLabel release];
-	[_chefObj release];
+	[super dealloc];
 }
 
 

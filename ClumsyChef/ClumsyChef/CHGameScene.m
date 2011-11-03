@@ -24,16 +24,16 @@
 {
 	if (self = [super init])
 	{
-		//_bgLayer = [[CHBackgroundLayer alloc] init];
-		_gameLayer = [[CHGameLayer alloc] init];
-		[self addChild:_gameLayer];
+		_bgLayer = [CHBackgroundLayer node];
+		_gameLayer = [CHGameLayer node];
+		[self addChild:_bgLayer z:-1];
+        [self addChild:_gameLayer z:0];
 	}
 	return self;
 }
 
 - (void)dealloc
 {
-	
 	[super dealloc];
 }
 
