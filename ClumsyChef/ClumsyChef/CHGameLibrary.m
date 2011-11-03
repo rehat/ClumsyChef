@@ -7,37 +7,65 @@
 //
 
 #import "CHGameLibrary.h"
-//#import "CHGameObject.h"
 
-@implementation CHGameItemInfo
+
+
+@interface CHRecipeItemInfo ()
+
+@property(nonatomic, assign) CHRecipeItemID itemID;
+@property(nonatomic, retain) NSString *spriteFilename;
+
+@end
+
+@implementation CHRecipeItemInfo
 {
-	CHGameObjectID	_objectID;
-	NSString		*_spritePath;
-	int				_score;
+	CHRecipeItemID	_itemID;
+	NSString		*_spriteFilename;
 }
 
-@synthesize objectID = _objectID;
-@synthesize spritePath = _spritePath;
-@synthesize score = _score;
-
-- (id)initWithObjectID:(CHGameObjectID)objectID 
-			spritePath:(NSString *)spritePath
-				 score:(int)score
-{
-	if (self = [super init])
-	{
-		_objectID = objectID;
-		_spritePath = [spritePath retain];
-		_score = score;
-	}
-	return self;
-}
+@synthesize itemID = _itemID;
+@synthesize spriteFilename = _spriteFilename;
 
 - (void)dealloc
 {
-	[_spritePath release];
+	[_spriteFilename release];
 	[super dealloc];
 }
+
+@end
+
+
+@interface CHHarmfulItemInfo () 
+
+@property(nonatomic, assign) CHHarmfulItemID itemID;
+@property(nonatomic, retain) NSString *spriteFilename;
+
+@end
+
+@implementation CHHarmfulItemInfo
+{
+	CHHarmfulItemID	_itemID;
+	NSString		*_spriteFilename;
+}
+
+@synthesize itemID = _itemID;
+@synthesize spriteFilename = _spriteFilename;
+
+- (void)dealloc
+{
+	[_spriteFilename release];
+	[super dealloc];
+}
+
+@end
+
+
+@interface CHStageInfo ()
+
+@property(nonatomic, assign) CHStageID stageID;
+@property(nonatomic, retain) NSString *backgroundFrontImageFilename;
+@property(nonatomic, retain) NSString *backgroundBackImageFilename;
+@property(nonatomic, assign) NSInteger worldHeight;
 
 @end
 
@@ -45,35 +73,20 @@
 @implementation CHStageInfo
 {
 	CHStageID		_stageID;
-	NSString		*_backgroundImagePath;
-	int				_defaultTime;
-	NSArray		*_receiptItems;
+	NSString		*_backgroundFrontImageFilename;
+	NSString		*_backgroundBackImageFilename;
+	NSInteger		_worldHeight;
 }
 
 @synthesize stageID = _stageID;
-@synthesize backgroundImagePath = _backgroundImagePath;
-@synthesize defaultTime = _defaultTime;
-@synthesize receiptItems = _receiptItems;
-
-- (id)initWithStageID:(CHStageID)stageID 
-  backgroundImagePath:(NSString *)backgroundImagePath
-		  defaultTime:(int)defaultTime
-		 receiptItems:(NSArray *)receiptItems
-{
-	if (self = [super init])
-	{
-		_stageID = stageID;
-		_backgroundImagePath = [backgroundImagePath retain];
-		_defaultTime = defaultTime;
-		_receiptItems = [receiptItems retain];
-	}
-	return self;
-}
+@synthesize backgroundFrontImageFilename = _backgroundFrontImageFilename;
+@synthesize backgroundBackImageFilename = _backgroundBackImageFilename;
+@synthesize worldHeight = _worldHeight;
 
 - (void)dealloc
 {
-	[_backgroundImagePath release];
-	[_receiptItems release];
+	[_backgroundFrontImageFilename release];
+	[_backgroundBackImageFilename release];
 	[super dealloc];
 }
 
@@ -82,43 +95,84 @@
 
 @implementation CHGameLibrary
 {
-	NSArray	*_itemInfo;
+	NSArray	*_recipeItemInfo;
+	NSArray *_harmfulItemInfo;
 	NSArray	*_stageInfo;
+}
+
+#pragma mark -
+#pragma mark Private
+
+- (NSMutableArray *)itemArrayWithcapacity:(NSUInteger)n
+{
+	NSMutableArray *items = [NSMutableArray arrayWithCapacity:n];
+	NSNull *nullValue = [NSNull null];
+	for (int i=0; i<n; i++) 
+	{
+		[items addObject:nullValue];
+	}
+	return items;
+}
+
+- (void)addReceiptItem:(CHRecipeItemID)itemID spriteFilename:(NSString *)filename to:(NSMutableArray *)items
+{
+	CHRecipeItemInfo *info = [[CHRecipeItemInfo alloc] init];
+	info.itemID = itemID;
+	info.spriteFilename = filename;
+	[items replaceObjectAtIndex:(NSUInteger)itemID withObject:info];
+	[info release];
+}
+
+- (void)addHarmfulItem:(CHHarmfulItemID)itemID spriteFilename:(NSString *)filename to:(NSMutableArray *)items
+{
+	CHHarmfulItemInfo *info = [[CHHarmfulItemInfo alloc] init];
+	info.itemID = itemID;
+	info.spriteFilename = filename;
+	[items replaceObjectAtIndex:(NSUInteger)itemID withObject:info];
+	[info release];
 }
 
 #pragma mark -
 #pragma mark Constructor and Destructor
 
-- (void)addItemInfo:(CHGameObjectID)objectID spritePath:(NSString *)spritePath score:(int)score to:(NSMutableArray *)items
-{
-	CHGameItemInfo *info = [[CHGameItemInfo alloc] initWithObjectID:objectID spritePath:spritePath score:score];
-	[items replaceObjectAtIndex:(NSUInteger)objectID withObject:info];
-	[info release];
-}
 
 - (id)init
 {
 	if (self = [super init])
 	{
-		// Allocate the array for storing the items
-		NSMutableArray *items = [[NSMutableArray alloc] initWithCapacity:CHStageIDNumItems];
-		for (int i=0; i<CHStageIDNumItems; i++) 
-		{
-			[items addObject:[NSNull null]];
-		}
+		NSMutableArray *items = [self itemArrayWithcapacity:CHRecipeItemIDNumItems];
 		
-		// Setup item info and stage info
-		[self addItemInfo:CHGameObjectIDTestItem spritePath:@"gameObject-testIcon.png" score:0 to:items];
-		[self addItemInfo:CHGameObjectIDChef spritePath:@"gameObject-testIconBlue.png" score:0 to:items];
+		// Recipe item info
+		//-----------------------------------------------------------
+		[self addReceiptItem:CHRecipeItemTest spriteFilename:@"gameObject-testIcon.png" to:items];
 		
-		_itemInfo = items;
+		//-----------------------------------------------------------
+		_recipeItemInfo = [items retain];
+		
+		items = [self itemArrayWithcapacity:CHHarmfulItemIDNumItems];
+		
+		// Harmful item info and stage info
+		//-----------------------------------------------------------
+		[self addHarmfulItem:CHHarmfulItemTest spriteFilename:@"gameObject-testIcon.png" to:items];
+		
+		//-----------------------------------------------------------
+		_recipeItemInfo = [items retain];
+		
+		items = [self itemArrayWithcapacity:CHStageIDNumItems];
+		
+		// Stage info
+		//-----------------------------------------------------------
+		// TODO
+		//-----------------------------------------------------------
+		_stageInfo = [items retain];
 	}
 	return self;
 }
 
 - (void)dealloc
 {
-	[_itemInfo release];
+	[_recipeItemInfo release];
+	[_harmfulItemInfo release];
 	[_stageInfo release];
 	[super dealloc];
 }
@@ -136,10 +190,14 @@
 	return lib;
 }
 
-- (CHGameItemInfo *)gameObjectInfoWithID:(CHGameObjectID)objectID
+- (CHRecipeItemInfo *)recipeItemInfoWithID:(CHRecipeItemID)itemID
 {
-	NSInteger index = (NSInteger)objectID;
-	return [_itemInfo objectAtIndex:index];
+	return [_recipeItemInfo objectAtIndex:(NSUInteger)itemID];
+}
+
+- (CHHarmfulItemInfo *)harmfulItemInfoWithID:(CHHarmfulItemID)itemID
+{	
+	return [_harmfulItemInfo objectAtIndex:(NSUInteger)itemID];
 }
 
 - (CHStageInfo *)stageInfoWithID:(CHStageID)stageID
@@ -148,12 +206,5 @@
 	return [_stageInfo objectAtIndex:index];
 }
 
-// Create new game object
-- (CHGameObject *)gameObjectWithID:(CHGameObjectID)objectID
-{
-	CHGameItemInfo *info = [self gameObjectInfoWithID:objectID];
-	CHGameObject *object = [[[CHGameObject alloc] initWithRepresentedItem:info] autorelease];
-	return object;
-}
 
 @end	

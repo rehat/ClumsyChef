@@ -9,32 +9,50 @@
 #import <Foundation/Foundation.h>
 #import "CHGameObject.h"
 
+/*-----------------------------------------------------------------
+ Recipe Item
+ -----------------------------------------------------------------*/
 typedef enum
 {
-	CHGameObjectIDTestItem,
-	CHGameObjectIDChef,
+	CHRecipeItemTest,
 	
 	//---------------------
-	CHGameObjectIDNumItems,
-} CHGameObjectID;
+	CHRecipeItemIDNumItems,
+} CHRecipeItemID;
 
 
+@interface CHRecipeItemInfo : NSObject 
 
-@interface CHGameItemInfo : NSObject 
-
-
-@property(nonatomic, readonly) CHGameObjectID objectID;
-@property(nonatomic, readonly) NSString *spritePath;
-@property(nonatomic, readonly) int score;
-// TODO: more information
+@property(nonatomic, readonly, assign) CHRecipeItemID itemID;
+@property(nonatomic, readonly, retain) NSString *spriteFilename;
 
 @end
 
+/*-----------------------------------------------------------------
+ Stage info
+ -----------------------------------------------------------------*/
 
 typedef enum 
 {
-	CHStageIDHamburger,
-	CHStageIDSpaghetti,
+	CHHarmfulItemTest,
+	
+	//--------------------
+	CHHarmfulItemIDNumItems,
+} CHHarmfulItemID;
+
+@interface CHHarmfulItemInfo : NSObject 
+
+@property(nonatomic, readonly, assign) CHHarmfulItemID itemID;
+@property(nonatomic, readonly, retain) NSString *spriteFilename;
+
+@end
+
+/*-----------------------------------------------------------------
+ Stage info
+ -----------------------------------------------------------------*/
+typedef enum 
+{
+	CHStageIDTestStage,
 	// More stage name
 	
 	//--------------------
@@ -43,12 +61,12 @@ typedef enum
 
 @interface CHStageInfo : NSObject 
 
-
 // Background information
-@property(nonatomic, readonly) CHStageID stageID;
-@property(nonatomic, readonly) NSString *backgroundImagePath;
-@property(nonatomic, readonly) int defaultTime;
-@property(nonatomic, readonly) NSArray *receiptItems;
+@property(nonatomic, readonly, assign) CHStageID stageID;
+@property(nonatomic, readonly, retain) NSString *backgroundFrontImageFilename;
+@property(nonatomic, readonly, retain) NSString *backgroundBackImageFilename;
+@property(nonatomic, readonly, assign) NSInteger worldHeight;
+// TODO: More
 
 @end
 
@@ -67,13 +85,11 @@ typedef enum
 + (CHGameLibrary *)sharedGameLibrary;		// Singleton object
 
 // Obtain game item info
-- (CHGameItemInfo *)gameObjectInfoWithID:(CHGameObjectID)objectID;
+- (CHRecipeItemInfo *)recipeItemInfoWithID:(CHRecipeItemID)itemID;
+- (CHHarmfulItemInfo *)harmfulItemInfoWithID:(CHHarmfulItemID)itemID;
 
 // Obtain stage info
 - (CHStageInfo *)stageInfoWithID:(CHStageID)stageID;
-
-// Create new game object
-- (CHGameObject *)gameObjectWithID:(CHGameObjectID)objectID;
 
 
 @end

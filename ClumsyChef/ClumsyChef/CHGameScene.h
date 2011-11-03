@@ -12,9 +12,12 @@
 @interface CHGameScene : CCScene
 
 
-// For game layer to calls
-- (void)chefDidCollideWithItem:(CHGameObject *)object;
-- (void)worldOffsetDidChange:(CGFloat)offset;
+// For game objects in game layer to call
+- (void)addChefMoney:(NSInteger)amount;
+- (void)deductChefLife:(NSInteger)numLife;
+
+// For HUD
+- (void)pauseGame;
 
 @end
 

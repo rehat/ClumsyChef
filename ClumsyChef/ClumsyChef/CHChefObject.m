@@ -21,15 +21,14 @@ static CGFloat const kFallDeceleration = -130;
 	float _horizontalAcc;
 }
 
-+ (CHChefObject *)chefObject
++ (id)node
 {
-	CHGameItemInfo *info = [[CHGameLibrary sharedGameLibrary] gameObjectInfoWithID:CHGameObjectIDChef];
-	return [[[CHChefObject alloc] initWithRepresentedItem:info] autorelease];
+	return [[[self alloc] initWithFile:@"gameObject-testIconBlue.png"] autorelease];
 }
 
-- (id)initWithRepresentedItem:(CHGameItemInfo *)item
+- (id)initWithFile:(NSString *)filename
 {
-	if (self = [super initWithRepresentedItem:item])
+	if (self = [super initWithFile:filename])
 	{
 		self.verticalSpeed = kNormalSpeed;
 	}

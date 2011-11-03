@@ -10,6 +10,8 @@
 #import "CHGameLibrary.h"
 #import "CHChefObject.h"
 #import "CHGameScene.h"
+#import "CHCoinObject.h"
+
 
 static CGFloat const kChefYOffset = 100.f;
 
@@ -22,12 +24,11 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 @implementation CHGameLayer
 {
 	CCLabelBMFont *_debugLabel;
-	
 	CHChefObject *_chefObj;
-	CCArray *_items;
 	
 	float _bottomWorldOffset;
 	float _nextGenItemsOffset;
+
 	
 	// TODO: shared particle effects, sound effects
 }
@@ -51,11 +52,10 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 - (CGFloat)generateItemsAtY:(CGFloat)y	// Return the interval after which the next generation takes place
 {
 	CGPoint p = ccp(CCRANDOM_0_1() * CHGetWinWidth(), y);
-	CHGameObject *item = [[CHGameLibrary sharedGameLibrary] gameObjectWithID:CHGameObjectIDTestItem];
+	CHGameObject *item = [CHCoinObject node];//[[CHGameLibrary sharedGameLibrary] gameObjectWithID:CHRecipeItemTest];
 	item.position = p;
 	item.verticalSpeed = CCRANDOM_0_1() * 30.f;
 	[self addChild:item];
-	[_items addObject:item];
 	
 	return 30;
 }
@@ -78,20 +78,15 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 		// Sensors
 		self.isTouchEnabled = true;
 		self.isAccelerometerEnabled = true;
-		
-		
-		
+
 		// Chef objects
-		_chefObj = [[CHChefObject chefObject] retain];
+		_chefObj = [[CHChefObject node] retain];
 		_chefObj.position = ccp(CHGetWinWidth() / 2, 0);
 		_chefObj.position = [self positionForChef];
 		[self addChild:_chefObj];
 		
 		_bottomWorldOffset = CHGetWinHeight();
 		_nextGenItemsOffset = _bottomWorldOffset;
-		
-		// Items
-		_items = [[CCArray alloc] initWithCapacity:64];
 		
 		_debugLabel = [[CCLabelBMFont alloc] initWithString:@"" fntFile:@"font-testFont.fnt"];
 		[_debugLabel setColor:ccGREEN];
@@ -107,7 +102,6 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 - (void)dealloc
 {
 	[_debugLabel release];
-	[_items release];
 	[_chefObj release];
 }
 
@@ -117,7 +111,7 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 
 - (void)update:(ccTime)dt
 {
-	CHGameScene *gsParent = [self gameSceneParent];
+	//CHGameScene *gsParent = [self gameSceneParent];
 	
 	// Update objects
 	CGFloat oldOffset = _chefObj.position.y;
@@ -130,12 +124,21 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 	
 	_chefObj.position = ccpAdd(_chefObj.position, delta);
 	CGFloat cullThresh = CHGetWinHeight() + kObjectActiveRangeUp;
-	
-	CCArray *toBeRemoved = nil;
 	CGFloat chefRadius = MAX(_chefObj.contentSize.width, _chefObj.contentSize.height) * 0.5f;
 	
-	for (CHGameObject *item in _items) 
+	CHItemObject *item;
+	
+	// A array shouldn't be mutabled (cased by [CCNode removeFromParentAndCleanup:YES] 
+	// during enumeration or it will crash
+	// So here we made a copy
+	CCArray *copyOfChildren = [self.children copy];
+	CCARRAY_FOREACH(copyOfChildren, item)
 	{
+		if (![item isKindOfClass:[CHItemObject class]])
+		{
+			continue;
+		}
+		
 		// Update the item
 		[item update:dt];
 		CGPoint p = ccpAdd(item.position, delta);
@@ -144,13 +147,6 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 		if (p.y >= cullThresh)
 		{
 			[item removeFromParentAndCleanup:YES];
-			// Do not mutate _items during enumeration, so 
-			// add it to a separate array for further actions
-			if (toBeRemoved == nil)
-			{
-				toBeRemoved = [[CCArray alloc] initWithCapacity:16];
-			}
-			[toBeRemoved addObject:item];
 		}
 		else
 		{
@@ -161,21 +157,15 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 			CGFloat dist = ccpDistance(_chefObj.position, item.position);
 			if (dist < chefRadius + itemRadius)
 			{
-				[gsParent chefDidCollideWithItem:item];
+				[item didCollideWithChef];
 			}
-		}
-	}
-	
-	// Remove items
-	if (toBeRemoved != nil)
-	{
-		[_items removeObjectsInArray:toBeRemoved];
+		}		
 	}
 	
 	_bottomWorldOffset += pullUp;
 	
 	// Notify the parent
-	[gsParent worldOffsetDidChange:_bottomWorldOffset];
+//	[gsParent worldOffsetDidChange:_bottomWorldOffset];
 	
 	// Generate new items
 	while (_bottomWorldOffset + kGenObjectRangeDown >= _nextGenItemsOffset)
@@ -187,7 +177,7 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 		_nextGenItemsOffset += interval;
 	}
 	
-	[self setDebugDisplayText:[NSString stringWithFormat:@"%d", [_items count]]];
+	//[self setDebugDisplayText:[NSString stringWithFormat:@"%d", [_items count]]];
 }
 
 #pragma mark -

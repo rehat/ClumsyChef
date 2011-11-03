@@ -39,15 +39,24 @@
 }
 
 #pragma mark -
-#pragma mark Game Scene
+#pragma mark Game Object Calls
 
-- (void)chefDidCollideWithItem:(CHGameObject *)object
+- (void)addChefMoney:(NSInteger)amount
 {
-	CCLOG(@"chefDidCollideWithItem");
+	
 }
 
-- (void)worldOffsetDidChange:(CGFloat)offset
+- (void)deductChefLife:(NSInteger)numLife
 {
-	CCLOG(@"offset = %f", offset);
+	
 }
+
+#pragma mark - 
+#pragma mark HUD calls
+
+- (void)pauseGame
+{
+	
+}
+
 @end

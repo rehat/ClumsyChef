@@ -16,7 +16,7 @@
  */
 @interface CHChefObject : CHGameObject 
 
-+ (CHChefObject *)chefObject;
++ (id)node;
 
 - (void)startAccelerating;
 - (void)stopAccelerating;

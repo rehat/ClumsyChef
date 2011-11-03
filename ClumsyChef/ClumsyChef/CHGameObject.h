@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 
-@class CHGameItemInfo;
+@class CHRecipeItemInfo;
 
 /**
  * CHGameObject
@@ -17,16 +17,8 @@
  */
 @interface CHGameObject : CCSprite
 
-
-// The corresponding item in the game library represented by this game object
-@property(nonatomic, readonly) CHGameItemInfo *representedItem;
-
 @property(nonatomic, assign) float verticalSpeed;	// +ve is downward
-
 @property(nonatomic, assign) float horizontalSpeed;	// +ve is right
-
-
-- (id)initWithRepresentedItem:(CHGameItemInfo *)item;
 
 // Update the location, rotation
 - (void)update:(float)dt;

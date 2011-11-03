@@ -11,26 +11,16 @@
 
 @implementation CHGameObject
 {
-	CHGameItemInfo *_representedItem;
+	CHRecipeItemInfo *_representedItem;
 	float _verticalSpeed;
 	float _horizontalSpeed;
 }
 
-@synthesize representedItem = _representedItem;
 @synthesize verticalSpeed = _verticalSpeed;
 @synthesize horizontalSpeed = _horizontalSpeed;
 
 #pragma mark -
 #pragma mark Constructor
-
-- (id)initWithRepresentedItem:(CHGameItemInfo *)item
-{
-	if (self = [super initWithFile:item.spritePath])
-	{
-		_representedItem = [item retain];
-	}
-	return self;
-}
 
 - (void)dealloc
 {
