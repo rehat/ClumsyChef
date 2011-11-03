@@ -33,8 +33,7 @@
 
 - (void)dealloc
 {
-	[_bgLayer release];
-	[_gameLayer release];
+	
 	[super dealloc];
 }
 

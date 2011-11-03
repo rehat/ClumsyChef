@@ -9,7 +9,48 @@
 #import "CHBackgroundLayer.h"
 
 
+
 @implementation CHBackgroundLayer
+{
+    CCSprite *background1;
+    CCSprite *background2;
+    CCSprite *sideBuilding;
+    
+    float speed1;
+    float speed2;
+    CGFloat worldHeight;
+    
+    CGSize screenSize;
+}
+
+-(void)initWithInfo:(CGFloat) worldHeight{
+    if ((self = [super init])) {
+
+        
+        CCLayerColor *sky = [CCLayerColor layerWithColor:ccc4(127, 142, 251, 255)];
+        [self addChild:sky];
+        
+        background1 = [CCSprite spriteWithFile:@"clouds.png"];
+        background1.position = CGPointMake(screenSize.width - background1.contentSize.width/2,screenSize.height-background1.contentSize.height/2);
+        [self addChild:background1];
+        
+        
+        background2 = [CCSprite spriteWithFile:@"backB.png"];
+        background2.position = CGPointMake(screenSize.width - background2.contentSize.width/2,screenSize.height-background2.contentSize.height/2);
+        [self addChild:background2];
+        sideBuilding = [CCSprite spriteWithFile:@"sideB.png"];
+        sideBuilding.position = CGPointMake(screenSize.width - sideBuilding.contentSize.width/2, 0);
+        [self addChild:sideBuilding];
+        
+        speed1 = 0.05f;
+        speed2 = 4.0f;
+        
+        
+        [self scheduleUpdate];
+    }
+   
+}
+
 
 -(id) init
 {
