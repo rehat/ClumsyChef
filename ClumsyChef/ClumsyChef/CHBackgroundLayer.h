@@ -15,7 +15,7 @@
 @interface CHBackgroundLayer : CCNode 
 
 
-
-
+-(void)setWorldHeight:(CGFloat) height;
+-(void)updatePull:(CGFloat)pull;
 -(void)initWithInfo:(CGFloat) worldHeight;
 @end

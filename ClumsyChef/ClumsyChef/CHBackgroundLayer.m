@@ -12,43 +12,22 @@
 
 @implementation CHBackgroundLayer
 {
-    CCSprite *background1;
-    CCSprite *background2;
+    CCSprite *clouds;
+    CCSprite *background;
     CCSprite *sideBuilding;
+    CCSprite *bottom;
     
     float speed1;
     float speed2;
     CGFloat worldHeight;
+    CGFloat oldHeight;
     
     CGSize screenSize;
 }
 
--(void)initWithInfo:(CGFloat) worldHeight{
-    if ((self = [super init])) {
-
-        
-        CCLayerColor *sky = [CCLayerColor layerWithColor:ccc4(127, 142, 251, 255)];
-        [self addChild:sky];
-        
-        background1 = [CCSprite spriteWithFile:@"clouds.png"];
-        background1.position = CGPointMake(screenSize.width - background1.contentSize.width/2,screenSize.height-background1.contentSize.height/2);
-        [self addChild:background1];
-        
-        
-        background2 = [CCSprite spriteWithFile:@"backB.png"];
-        background2.position = CGPointMake(screenSize.width - background2.contentSize.width/2,screenSize.height-background2.contentSize.height/2);
-        [self addChild:background2];
-        sideBuilding = [CCSprite spriteWithFile:@"sideB.png"];
-        sideBuilding.position = CGPointMake(screenSize.width - sideBuilding.contentSize.width/2, 0);
-        [self addChild:sideBuilding];
-        
-        speed1 = 0.05f;
-        speed2 = 4.0f;
-        
-        
-        [self scheduleUpdate];
-    }
-   
+-(void)setWorldHeight:(CGFloat) height{
+    
+    worldHeight = height;
 }
 
 
@@ -57,23 +36,44 @@
 	if ((self = [super init]))
 	{
 		screenSize = [[CCDirector sharedDirector] winSize];
+        oldHeight = 480;
         
+        //Blue sky color
         CCLayerColor *sky = [CCLayerColor layerWithColor:ccc4(127, 142, 251, 255)];
+        
         [self addChild:sky];
         
-        background1 = [CCSprite spriteWithFile:@"clouds.png"];
-        background1.position = CGPointMake(screenSize.width - background1.contentSize.width/2,screenSize.height-background1.contentSize.height/2);
-        [self addChild:background1];
+        //Moving clouds
+        clouds = [CCSprite spriteWithFile:@"backgroundLayer-clouds.png" rect:CGRectMake(0, 0, screenSize.width*50, screenSize.height)];
+        ccTexParams paramsClouds = {GL_LINEAR, GL_LINEAR, GL_REPEAT, GL_LINEAR};
+        [clouds.texture setTexParameters:&paramsClouds];
+        clouds.position = CGPointMake(screenSize.width - clouds.contentSize.width/2,screenSize.height-clouds.contentSize.height/2);
+        [self addChild:clouds];
         
+        //Main Background
+        background = [CCSprite spriteWithFile:@"backgroundLayer-mainBG.png"];
+        background.position = CGPointMake(background.contentSize.width/2,background.contentSize.height/2);
+        [self addChild:background];
         
-        background2 = [CCSprite spriteWithFile:@"backB.png"];
-        background2.position = CGPointMake(screenSize.width - background2.contentSize.width/2,screenSize.height-background2.contentSize.height/2);
-        [self addChild:background2];
-        sideBuilding = [CCSprite spriteWithFile:@"sideB2.png"];
+        //Side building in the foreground 
+        sideBuilding = [CCSprite spriteWithFile:@"backgroundLayer-sideBuilding.png" rect:CGRectMake(0, 0, 32, screenSize.height *300)]; 
+        ccTexParams paramsSide = {GL_LINEAR, GL_LINEAR, GL_LINEAR, GL_REPEAT};
+        [sideBuilding.texture setTexParameters:&paramsSide];
         sideBuilding.position = CGPointMake(screenSize.width - sideBuilding.contentSize.width/2, 0);
         [self addChild:sideBuilding];
         
-        speed1 = 0.05f;
+        
+        //Bottom game win scene
+        //bottom = [CCSprite spriteWithFile:@"backgroundLayer-bottom.png"];
+        
+        
+        //TODO:  Need to find out how game win will occur 1) once reached max stage height and all items collected or
+        //                                                2) once all items are collected regardless of stage height.
+        
+        
+        
+        
+        speed1 = 0.07f;
         speed2 = 4.0f;
         
         
@@ -83,26 +83,40 @@
 	return self;
 }
 
--(void) update:(ccTime)delta
-{   
-    CGPoint pos0 =  background1.position;
-    pos0.y += speed1 + background1.zOrder;
-    pos0.x += speed1 +.05f + background1.zOrder;
-    background1.position = pos0;
-    
-    CGPoint pos1 =  background2.position;
-    pos1.y += speed1 + background2.zOrder;
-    background2.position = pos1;
-    
+-(void) updatePull:(CGFloat)pull {
+        
+    CGFloat pullUp = pull - oldHeight;
     CGPoint pos2 =  sideBuilding.position;
-    pos2.y += speed2 + sideBuilding.zOrder;
+    pos2.y += pullUp + sideBuilding.zOrder;
+    oldHeight = pull;
+
+    
     sideBuilding.position = pos2;
     
-    if (sideBuilding.position.y > sideBuilding.contentSize.height/2) {
-        sideBuilding.position = ccp(screenSize.width - sideBuilding.contentSize.width/2, screenSize.height/2);
-    }
+}
+
+
+
+-(void) update:(ccTime)delta
+{   
+    
+    
+    CGPoint pos0 =  clouds.position;
+    //pos0.y += speed1 + clouds.zOrder;
+    pos0.x += speed1 +.05f + clouds.zOrder;
+    clouds.position = pos0;
+    
+//    CGPoint pos1 =  background.position;
+//    pos1.y += speed1 + background.zOrder;
+//    background.position = pos1;
+    
+    //[self showGround];
     
     
 }
+
+//-(void)showGround{
+
+//}
 
 @end

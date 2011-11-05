@@ -11,6 +11,7 @@
 #import "CHChefObject.h"
 #import "CHGameScene.h"
 #import "CHCoinObject.h"
+#import "CHBackgroundLayer.h"
 
 
 static CGFloat const kChefYOffset = 100.f;
@@ -24,7 +25,7 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 @implementation CHGameLayer
 {
 	CHChefObject *_chefObj;
-	
+    
 	float _bottomWorldOffset;
 	float _nextGenItemsOffset;
 
@@ -38,6 +39,7 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 
 - (CGPoint)positionForChef
 {
+    NSLog(@"MEE  !!!  chefx %f and CHgetWin %f  koffset %f",_chefObj.position.x, CHGetWinHeight(), kChefYOffset);
 	return CGPointMake(_chefObj.position.x, CHGetWinHeight() - kChefYOffset);
 }
 
@@ -76,6 +78,8 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 		_chefObj.position = ccp(CHGetWinWidth() / 2, 0);
 		_chefObj.position = [self positionForChef];
 		[self addChild:_chefObj];
+        
+        
 		
 		_bottomWorldOffset = CHGetWinHeight();
 		_nextGenItemsOffset = _bottomWorldOffset;
@@ -102,18 +106,24 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 - (void)update:(ccTime)dt
 {
 	CHGameScene *gsParent = [self gameSceneParent];
-	
+	CHBackgroundLayer *background = (CHBackgroundLayer *)[gsParent getChildByTag:11111];
+    
 	// Update objects
-	CGFloat oldOffset = _chefObj.position.y;
+	CGFloat oldOffset = _chefObj.position.y;    
+
 	[_chefObj update:dt];
 	
 	CGFloat pullUp = oldOffset - _chefObj.position.y;
 	
+    
 	// Pull everything up
 	CGPoint delta = ccp(0, pullUp);
+    
 	
 	_chefObj.position = ccpAdd(_chefObj.position, delta);
 	CGFloat cullThresh = CHGetWinHeight() + kObjectActiveRangeUp;
+
+    
 	CGFloat chefRadius = MAX(_chefObj.contentSize.width, _chefObj.contentSize.height) * 0.5f;
 	
 	CHItemObject *item;
@@ -121,7 +131,7 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 	// A array shouldn't be mutabled (cased by [CCNode removeFromParentAndCleanup:YES] 
 	// during enumeration or it will crash
 	// So here we made a copy
-	CCArray *copyOfChildren = [self.children copy];
+	CCArray *copyOfChildren = self.children ;
 	CCARRAY_FOREACH(copyOfChildren, item)
 	{
 		if (![item isKindOfClass:[CHItemObject class]])
@@ -148,21 +158,27 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 			if (dist < chefRadius + itemRadius)
 			{
 				[item didCollideWithChef];
+                [item removeFromParentAndCleanup:YES];
 			}
 		}		
 	}
 	
 	_bottomWorldOffset += pullUp;
-	
+    
+    [background updatePull:_bottomWorldOffset];	
+    
+    
 	// Notify the parent
 	[gsParent worldOffsetDidChange:_bottomWorldOffset];
 	
 	// Generate new items
+    
+    
 	while (_bottomWorldOffset + kGenObjectRangeDown >= _nextGenItemsOffset)
-	{
+	{   
+       
 		CGFloat y = -(_nextGenItemsOffset - _bottomWorldOffset);
 		float interval = [self generateItemsAtY:y];
-		
 		// Next round
 		_nextGenItemsOffset += interval;
 	}
