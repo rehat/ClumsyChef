@@ -8,7 +8,6 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
-#import "CHGameObject.h"
 
 @class CHGameLayer;
 @class CHGameScene;
@@ -17,8 +16,7 @@
  * CHItemObject
  * Base class for all the items (everything but the chef) in the game layer
  */
-@interface CHItemObject : CHGameObject
-
+@interface CHItemObject : CCNode
 - (CHGameLayer *)gameLayerParent;
 - (CHGameScene *)gameSceneParent;
 
