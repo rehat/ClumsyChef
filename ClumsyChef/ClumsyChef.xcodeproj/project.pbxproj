@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BC58885F1466342F00ED3B97 /* coinP-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC58885E1466342F00ED3B97 /* coinP-hd.plist */; };
-		BC5888601466342F00ED3B97 /* coinP-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC58885E1466342F00ED3B97 /* coinP-hd.plist */; };
-		BC5888631466351C00ED3B97 /* coinP.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC5888621466351C00ED3B97 /* coinP.plist */; };
-		BC5888641466351C00ED3B97 /* coinP.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC5888621466351C00ED3B97 /* coinP.plist */; };
 		BC5CA83A145D4B21001B8B46 /* backB.png in Resources */ = {isa = PBXBuildFile; fileRef = BC5CA839145D4B21001B8B46 /* backB.png */; };
 		BC6229F71463362A0016DFA0 /* CCAction.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A903AE144F7799002A1F6C /* CCAction.m */; };
 		BC6229F81463362A0016DFA0 /* CCActionCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A903B1144F7799002A1F6C /* CCActionCamera.m */; };
@@ -410,8 +406,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BC58885E1466342F00ED3B97 /* coinP-hd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "coinP-hd.plist"; sourceTree = "<group>"; };
-		BC5888621466351C00ED3B97 /* coinP.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = coinP.plist; sourceTree = "<group>"; };
 		BC5CA839145D4B21001B8B46 /* backB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backB.png; sourceTree = "<group>"; };
 		BC622ABB1463362A0016DFA0 /* ClumsyChef copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ClumsyChef copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC622ABE1463362A0016DFA0 /* ClumsyChef copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ClumsyChef copy-Info.plist"; path = "/Users/rehat/Documents/iuci/ClumsyChef/ClumsyChef copy-Info.plist"; sourceTree = "<absolute>"; };
@@ -830,8 +824,6 @@
 		E511C2911459258B008BCFF8 /* Test Materials */ = {
 			isa = PBXGroup;
 			children = (
-				BC5888621466351C00ED3B97 /* coinP.plist */,
-				BC58885E1466342F00ED3B97 /* coinP-hd.plist */,
 				BCC2F6891465FA4000438050 /* coin.caf */,
 				BCE9001C1465349B00179F06 /* backgroundLayer-mainBG-hd.png */,
 				BCE9001D1465349B00179F06 /* backgroundLayer-mainBG.png */,
@@ -1593,8 +1585,6 @@
 				BCC2F69414661B7F00438050 /* chefObject-chef-hd.png in Resources */,
 				BCC2F69614661B7F00438050 /* chefObject-chef.png in Resources */,
 				BC6589E514662FD3008EF0FB /* fps_images.png in Resources */,
-				BC5888601466342F00ED3B97 /* coinP-hd.plist in Resources */,
-				BC5888641466351C00ED3B97 /* coinP.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1638,8 +1628,6 @@
 				BCC2F69314661B7F00438050 /* chefObject-chef-hd.png in Resources */,
 				BCC2F69514661B7F00438050 /* chefObject-chef.png in Resources */,
 				BC6589E414662FD3008EF0FB /* fps_images.png in Resources */,
-				BC58885F1466342F00ED3B97 /* coinP-hd.plist in Resources */,
-				BC5888631466351C00ED3B97 /* coinP.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
