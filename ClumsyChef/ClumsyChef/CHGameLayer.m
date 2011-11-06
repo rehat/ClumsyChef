@@ -12,7 +12,11 @@
 #import "CHGameScene.h"
 #import "CHCoinObject.h"
 #import "CHBackgroundLayer.h"
+#import "CCParticleSystemPoint.h"
 
+
+
+CCParticleSystemQuad *emitter;
 
 static CGFloat const kChefYOffset = 100.f;
 
@@ -38,7 +42,6 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 
 - (CGPoint)positionForChef
 {
-    NSLog(@"MEE  !!!  chefx %f and CHgetWin %f  koffset %f",_chefObj.position.x, CHGetWinHeight(), kChefYOffset);
 	return CGPointMake(_chefObj.position.x, CHGetWinHeight() - kChefYOffset);
 }
 
@@ -155,8 +158,12 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 			CGFloat dist = ccpDistance(_chefObj.position, item.position);
 			if (dist < chefRadius + itemRadius)
 			{
-				[item didCollideWithChef];
-                
+				
+                emitter = [CCParticleSystemQuad particleWithFile:@"coinObject-particle.plist"];
+                emitter.position = item.position;
+                emitter.autoRemoveOnFinish = YES;
+                [self addChild:emitter];
+                [item didCollideWithChef];
                
 			}
 		}		
