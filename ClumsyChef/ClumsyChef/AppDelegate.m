@@ -121,7 +121,7 @@
     
     //Preload sounds!
     [[SimpleAudioEngine sharedEngine] preloadEffect:@"coin.caf"];
-    
+    [[SimpleAudioEngine sharedEngine] preloadEffect:@"Oowh.caf"];
     
 	
 	// Run the intro Scene

@@ -11,6 +11,7 @@
 #import "CHChefObject.h"
 #import "CHGameScene.h"
 #import "CHCoinObject.h"
+#import "CHHarmfulObject.h"
 #import "CHBackgroundLayer.h"
 
 
@@ -48,15 +49,23 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 - (CGFloat)generateItemsAtY:(CGFloat)y	// Return the interval after which the next generation takes place
 {
 	CGPoint p = ccp(CCRANDOM_0_1() * CHGetWinWidth(), y);
-	CHItemObject *item = [CHCoinObject node];//[[CHGameLibrary sharedGameLibrary] gameObjectWithID:CHRecipeItemTest];
+	
+    CHItemObject *item;
+    CGFloat x = CCRANDOM_0_1();
+    if (x > .2f) {
+        item = [CHCoinObject node];
+    }
+    else
+        item = [CHHarmfulObject node];
+    
 	item.position = p;
 	//item.verticalSpeed = CCRANDOM_0_1() * 30.f;
 	
-    //if ([itemsArray count] == 0) {
-        [itemsArray addObject:item];
-        [self addChild:item];
+    
+    [itemsArray addObject:item];
+    [self addChild:item];
 
-    //}
+    
 	
 	return 30;
 }
@@ -138,8 +147,7 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 	// A array shouldn't be mutabled (cased by [CCNode removeFromParentAndCleanup:YES] 
 	// during enumeration or it will crash
 	// So here we made a copy
-	CCArray *copyOfChildren = self.children ;
-    NSLog(@"layer count %d", copyOfChildren.count);
+	//CCArray *copyOfChildren = self.children ;
 	CCARRAY_FOREACH(itemsArray, item)
 	{
 		if (![item isKindOfClass:[CHItemObject class]])
@@ -151,9 +159,7 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 		//[item update:dt];   //This doesn't do anything
 		CGPoint p = ccpAdd(item.position, delta);
 		
-        
-        //NSLog(@"%f", item.position.y);
-        
+                
 		// Perform culling
 		if (p.y >= cullThresh)
 		{

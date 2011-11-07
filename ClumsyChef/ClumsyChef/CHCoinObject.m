@@ -9,7 +9,6 @@
 #import "CHCoinObject.h"
 #import "CHGameScene.h"
 #import "SimpleAudioEngine.h"
-#import "CCParticleSystemPoint.h"
 
 @implementation CHCoinObject
 {
@@ -24,8 +23,8 @@
 	if (self = [super init])
 	{
         coin = [CCSprite spriteWithFile:@"gameObject-testIcon.png"];
+        emitter = [CCParticleSystemQuad particleWithFile:@"coinObject-particle.plist"];
         [self addChild:coin];
-        
     }
 	return self;
 }
@@ -47,7 +46,7 @@
 }
 
 -(void)coinLabel{
-    CCLabelTTF *amount = [CCLabelTTF labelWithString:@"10" fontName:@"Marker Felt" fontSize:14];
+    CCLabelTTF *amount = [CCLabelTTF labelWithString:@"+10" fontName:@"Marker Felt" fontSize:14];
     amount.position = coin.position;
     [emitter addChild:amount];
 }
@@ -55,7 +54,6 @@
 
 - (void)didCollideWithChef
 {   
-    emitter = [CCParticleSystemQuad particleWithFile:@"coinObject-particle.plist"];
     emitter.position = coin.position;
     emitter.autoRemoveOnFinish = YES;
     [self addChild:emitter];

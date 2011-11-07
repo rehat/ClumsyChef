@@ -200,6 +200,18 @@
 		BC622AB41463362A0016DFA0 /* backB.png in Resources */ = {isa = PBXBuildFile; fileRef = BC5CA839145D4B21001B8B46 /* backB.png */; };
 		BC6589E414662FD3008EF0FB /* fps_images.png in Resources */ = {isa = PBXBuildFile; fileRef = BC6589E314662FD3008EF0FB /* fps_images.png */; };
 		BC6589E514662FD3008EF0FB /* fps_images.png in Resources */ = {isa = PBXBuildFile; fileRef = BC6589E314662FD3008EF0FB /* fps_images.png */; };
+		BCB9042F14678A3300FC96D2 /* harmfulObject-smallKnife-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BCB9042D14678A3300FC96D2 /* harmfulObject-smallKnife-hd.png */; };
+		BCB9043014678A3300FC96D2 /* harmfulObject-smallKnife-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BCB9042D14678A3300FC96D2 /* harmfulObject-smallKnife-hd.png */; };
+		BCB9043114678A3300FC96D2 /* harmfulObject-smallKnife.png in Resources */ = {isa = PBXBuildFile; fileRef = BCB9042E14678A3300FC96D2 /* harmfulObject-smallKnife.png */; };
+		BCB9043214678A3300FC96D2 /* harmfulObject-smallKnife.png in Resources */ = {isa = PBXBuildFile; fileRef = BCB9042E14678A3300FC96D2 /* harmfulObject-smallKnife.png */; };
+		BCB9044314679A0200FC96D2 /* harmfulObject-particle.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCB9044014679A0200FC96D2 /* harmfulObject-particle.plist */; };
+		BCB9044414679A0200FC96D2 /* harmfulObject-particle.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCB9044014679A0200FC96D2 /* harmfulObject-particle.plist */; };
+		BCB9044514679A0200FC96D2 /* harmfulObject-particle-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCB9044114679A0200FC96D2 /* harmfulObject-particle-hd.plist */; };
+		BCB9044614679A0200FC96D2 /* harmfulObject-particle-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCB9044114679A0200FC96D2 /* harmfulObject-particle-hd.plist */; };
+		BCB9044714679A0200FC96D2 /* skull.png in Resources */ = {isa = PBXBuildFile; fileRef = BCB9044214679A0200FC96D2 /* skull.png */; };
+		BCB9044814679A0200FC96D2 /* skull.png in Resources */ = {isa = PBXBuildFile; fileRef = BCB9044214679A0200FC96D2 /* skull.png */; };
+		BCB9044A1467A7A600FC96D2 /* Oowh.caf in Resources */ = {isa = PBXBuildFile; fileRef = BCB904491467A7A600FC96D2 /* Oowh.caf */; };
+		BCB9044B1467A7A600FC96D2 /* Oowh.caf in Resources */ = {isa = PBXBuildFile; fileRef = BCB904491467A7A600FC96D2 /* Oowh.caf */; };
 		BCC2F68A1465FA4000438050 /* coin.caf in Resources */ = {isa = PBXBuildFile; fileRef = BCC2F6891465FA4000438050 /* coin.caf */; };
 		BCC2F68B1465FA4000438050 /* coin.caf in Resources */ = {isa = PBXBuildFile; fileRef = BCC2F6891465FA4000438050 /* coin.caf */; };
 		BCC2F69314661B7F00438050 /* chefObject-chef-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BCC2F69114661B7F00438050 /* chefObject-chef-hd.png */; };
@@ -416,6 +428,12 @@
 		BC622ABB1463362A0016DFA0 /* ClumsyChef copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ClumsyChef copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC622ABE1463362A0016DFA0 /* ClumsyChef copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ClumsyChef copy-Info.plist"; path = "/Users/rehat/Documents/iuci/ClumsyChef/ClumsyChef copy-Info.plist"; sourceTree = "<absolute>"; };
 		BC6589E314662FD3008EF0FB /* fps_images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fps_images.png; sourceTree = "<group>"; };
+		BCB9042D14678A3300FC96D2 /* harmfulObject-smallKnife-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "harmfulObject-smallKnife-hd.png"; sourceTree = "<group>"; };
+		BCB9042E14678A3300FC96D2 /* harmfulObject-smallKnife.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "harmfulObject-smallKnife.png"; sourceTree = "<group>"; };
+		BCB9044014679A0200FC96D2 /* harmfulObject-particle.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "harmfulObject-particle.plist"; sourceTree = "<group>"; };
+		BCB9044114679A0200FC96D2 /* harmfulObject-particle-hd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "harmfulObject-particle-hd.plist"; sourceTree = "<group>"; };
+		BCB9044214679A0200FC96D2 /* skull.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skull.png; sourceTree = "<group>"; };
+		BCB904491467A7A600FC96D2 /* Oowh.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Oowh.caf; sourceTree = "<group>"; };
 		BCC2F6891465FA4000438050 /* coin.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = coin.caf; sourceTree = "<group>"; };
 		BCC2F69114661B7F00438050 /* chefObject-chef-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chefObject-chef-hd.png"; sourceTree = "<group>"; };
 		BCC2F69214661B7F00438050 /* chefObject-chef.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chefObject-chef.png"; sourceTree = "<group>"; };
@@ -833,12 +851,18 @@
 				BCC2F6891465FA4000438050 /* coin.caf */,
 				BC22F7311467329B00103918 /* coinObject-particle-hd.plist */,
 				BC22F7321467329B00103918 /* coinObject-particle.plist */,
+				BCB904491467A7A600FC96D2 /* Oowh.caf */,
+				BCB9044014679A0200FC96D2 /* harmfulObject-particle.plist */,
+				BCB9044114679A0200FC96D2 /* harmfulObject-particle-hd.plist */,
+				BCB9044214679A0200FC96D2 /* skull.png */,
 				BCE9001C1465349B00179F06 /* backgroundLayer-mainBG-hd.png */,
 				BCE9001D1465349B00179F06 /* backgroundLayer-mainBG.png */,
 				BCE9001614652B4A00179F06 /* backgroundLayer-clouds-hd.png */,
 				BCE9001714652B4A00179F06 /* backgroundLayer-clouds.png */,
 				BCE900101465200600179F06 /* backgroundLayer-bottom.png */,
 				BCE900111465200600179F06 /* backgroundLayer-bottom-hd.png */,
+				BCB9042D14678A3300FC96D2 /* harmfulObject-smallKnife-hd.png */,
+				BCB9042E14678A3300FC96D2 /* harmfulObject-smallKnife.png */,
 				BCC2F69114661B7F00438050 /* chefObject-chef-hd.png */,
 				BCC2F69214661B7F00438050 /* chefObject-chef.png */,
 				BC5CA839145D4B21001B8B46 /* backB.png */,
@@ -1595,6 +1619,12 @@
 				BC6589E514662FD3008EF0FB /* fps_images.png in Resources */,
 				BC22F7341467329B00103918 /* coinObject-particle-hd.plist in Resources */,
 				BC22F7361467329B00103918 /* coinObject-particle.plist in Resources */,
+				BCB9043014678A3300FC96D2 /* harmfulObject-smallKnife-hd.png in Resources */,
+				BCB9043214678A3300FC96D2 /* harmfulObject-smallKnife.png in Resources */,
+				BCB9044414679A0200FC96D2 /* harmfulObject-particle.plist in Resources */,
+				BCB9044614679A0200FC96D2 /* harmfulObject-particle-hd.plist in Resources */,
+				BCB9044814679A0200FC96D2 /* skull.png in Resources */,
+				BCB9044B1467A7A600FC96D2 /* Oowh.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1640,6 +1670,12 @@
 				BC6589E414662FD3008EF0FB /* fps_images.png in Resources */,
 				BC22F7331467329B00103918 /* coinObject-particle-hd.plist in Resources */,
 				BC22F7351467329B00103918 /* coinObject-particle.plist in Resources */,
+				BCB9042F14678A3300FC96D2 /* harmfulObject-smallKnife-hd.png in Resources */,
+				BCB9043114678A3300FC96D2 /* harmfulObject-smallKnife.png in Resources */,
+				BCB9044314679A0200FC96D2 /* harmfulObject-particle.plist in Resources */,
+				BCB9044514679A0200FC96D2 /* harmfulObject-particle-hd.plist in Resources */,
+				BCB9044714679A0200FC96D2 /* skull.png in Resources */,
+				BCB9044A1467A7A600FC96D2 /* Oowh.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
