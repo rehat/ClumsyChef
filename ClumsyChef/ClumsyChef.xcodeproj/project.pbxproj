@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		85149B001468788B00BF5AC3 /* sound-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 85149AFD1468788B00BF5AC3 /* sound-icon.png */; };
-		85149B021468788B00BF5AC3 /* sound-off-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 85149AFE1468788B00BF5AC3 /* sound-off-icon.png */; };
 		85CEB0B714685F330099409C /* MainMenuBackground-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 85CEB0B114685F320099409C /* MainMenuBackground-hd.png */; };
 		85CEB0B814685F330099409C /* MainMenuBackground-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 85CEB0B114685F320099409C /* MainMenuBackground-hd.png */; };
 		85CEB0B914685F330099409C /* MainMenuBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 85CEB0B214685F330099409C /* MainMenuBackground.png */; };
