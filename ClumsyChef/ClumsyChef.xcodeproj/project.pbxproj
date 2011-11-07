@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		85149AFF1468788B00BF5AC3 /* sound-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 85149AFD1468788B00BF5AC3 /* sound-icon.png */; };
 		85149B001468788B00BF5AC3 /* sound-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 85149AFD1468788B00BF5AC3 /* sound-icon.png */; };
-		85149B011468788B00BF5AC3 /* sound-off-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 85149AFE1468788B00BF5AC3 /* sound-off-icon.png */; };
 		85149B021468788B00BF5AC3 /* sound-off-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 85149AFE1468788B00BF5AC3 /* sound-off-icon.png */; };
 		85CEB0B714685F330099409C /* MainMenuBackground-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 85CEB0B114685F320099409C /* MainMenuBackground-hd.png */; };
 		85CEB0B814685F330099409C /* MainMenuBackground-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 85CEB0B114685F320099409C /* MainMenuBackground-hd.png */; };
@@ -1674,8 +1672,26 @@
 				85CEB0BD14685F330099409C /* play.png in Resources */,
 				85CEB0BF14685F330099409C /* play2-hd.png in Resources */,
 				85CEB0C114685F330099409C /* play2.png in Resources */,
-				85149AFF1468788B00BF5AC3 /* sound-icon.png in Resources */,
-				85149B011468788B00BF5AC3 /* sound-off-icon.png in Resources */,
+				E522B30C1468645A0049D367 /* chefObject-chef-hd.png in Resources */,
+				E522B30D1468645A0049D367 /* chefObject-chef.png in Resources */,
+				E522B30E1468645A0049D367 /* coin.caf in Resources */,
+				E522B30F1468645A0049D367 /* coinObject-particle-hd.plist in Resources */,
+				E522B3101468645A0049D367 /* coinObject-particle.plist in Resources */,
+				E522B3111468645A0049D367 /* fps_images.png in Resources */,
+				E522B3121468645A0049D367 /* harmfulObject-particle-hd.plist in Resources */,
+				E522B3131468645A0049D367 /* harmfulObject-particle.plist in Resources */,
+				E522B3141468645A0049D367 /* harmfulObject-smallKnife-hd.png in Resources */,
+				E522B3151468645A0049D367 /* harmfulObject-smallKnife.png in Resources */,
+				E522B3161468645A0049D367 /* Oowh.caf in Resources */,
+				E522B3171468645A0049D367 /* skull.png in Resources */,
+				E522B3221468646A0049D367 /* backgroundLayer-bottom-hd.png in Resources */,
+				E522B3231468646A0049D367 /* backgroundLayer-bottom.png in Resources */,
+				E522B3241468646A0049D367 /* backgroundLayer-clouds-hd.png in Resources */,
+				E522B3251468646A0049D367 /* backgroundLayer-clouds.png in Resources */,
+				E522B3261468646A0049D367 /* backgroundLayer-mainBG-hd.png in Resources */,
+				E522B3271468646A0049D367 /* backgroundLayer-mainBG.png in Resources */,
+				E522B3281468646A0049D367 /* backgroundLayer-sideBuilding-hd.png in Resources */,
+				E522B3291468646A0049D367 /* backgroundLayer-sideBuilding.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
