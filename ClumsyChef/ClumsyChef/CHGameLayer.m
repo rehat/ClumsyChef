@@ -12,11 +12,9 @@
 #import "CHGameScene.h"
 #import "CHCoinObject.h"
 #import "CHBackgroundLayer.h"
-#import "CCParticleSystemPoint.h"
 
 
 
-CCParticleSystemQuad *emitter;
 
 static CGFloat const kChefYOffset = 100.f;
 
@@ -32,6 +30,8 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
     
 	float _bottomWorldOffset;
 	float _nextGenItemsOffset;
+    
+    CCArray *itemsArray;
 	
 	// TODO: shared particle effects, sound effects
 }
@@ -51,7 +51,12 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 	CHItemObject *item = [CHCoinObject node];//[[CHGameLibrary sharedGameLibrary] gameObjectWithID:CHRecipeItemTest];
 	item.position = p;
 	//item.verticalSpeed = CCRANDOM_0_1() * 30.f;
-	[self addChild:item];
+	
+    //if ([itemsArray count] == 0) {
+        [itemsArray addObject:item];
+        [self addChild:item];
+
+    //}
 	
 	return 30;
 }
@@ -81,6 +86,7 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 		_chefObj.position = [self positionForChef];
 		[self addChild:_chefObj];
         
+        itemsArray = [[CCArray alloc ] initWithCapacity:100];
         
 		_bottomWorldOffset = CHGetWinHeight();
 		_nextGenItemsOffset = _bottomWorldOffset;
@@ -133,7 +139,8 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 	// during enumeration or it will crash
 	// So here we made a copy
 	CCArray *copyOfChildren = self.children ;
-	CCARRAY_FOREACH(copyOfChildren, item)
+    NSLog(@"layer count %d", copyOfChildren.count);
+	CCARRAY_FOREACH(itemsArray, item)
 	{
 		if (![item isKindOfClass:[CHItemObject class]])
 		{
@@ -144,10 +151,14 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 		//[item update:dt];   //This doesn't do anything
 		CGPoint p = ccpAdd(item.position, delta);
 		
+        
+        //NSLog(@"%f", item.position.y);
+        
 		// Perform culling
 		if (p.y >= cullThresh)
 		{
 			[item removeFromParentAndCleanup:YES];
+            [itemsArray removeObject:item];
 		}
 		else
 		{
@@ -158,13 +169,8 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 			CGFloat dist = ccpDistance(_chefObj.position, item.position);
 			if (dist < chefRadius + itemRadius)
 			{
-				
-                emitter = [CCParticleSystemQuad particleWithFile:@"coinObject-particle.plist"];
-                emitter.position = item.position;
-                emitter.autoRemoveOnFinish = YES;
-                [self addChild:emitter];
                 [item didCollideWithChef];
-               
+                [itemsArray removeObject:item];
 			}
 		}		
 	}
@@ -188,6 +194,7 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 		// Next round
 		_nextGenItemsOffset += interval;
 	}
+    
 }
 
 #pragma mark -

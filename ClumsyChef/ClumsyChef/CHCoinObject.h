@@ -13,6 +13,6 @@
 
 @interface CHCoinObject : CHItemObject 
 
-
+-(void)removeFromParent;
 
 @end

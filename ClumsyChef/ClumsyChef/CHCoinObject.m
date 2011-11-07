@@ -9,16 +9,15 @@
 #import "CHCoinObject.h"
 #import "CHGameScene.h"
 #import "SimpleAudioEngine.h"
+#import "CCParticleSystemPoint.h"
 
 @implementation CHCoinObject
 {
     CCSprite *coin;
+    CCParticleSystemQuad *emitter;
+
 }
 
-//+ (id)node
-//{
-//	return [[[self alloc] initWithFile:@"gameObject-testIcon.png"] autorelease];
-//}
 
 - (id)init
 {
@@ -47,10 +46,30 @@
 	// TODO
 }
 
+-(void)coinLabel{
+    CCLabelTTF *amount = [CCLabelTTF labelWithString:@"10" fontName:@"Marker Felt" fontSize:14];
+    amount.position = coin.position;
+    [emitter addChild:amount];
+}
+
+
 - (void)didCollideWithChef
 {   
+    emitter = [CCParticleSystemQuad particleWithFile:@"coinObject-particle.plist"];
+    emitter.position = coin.position;
+    emitter.autoRemoveOnFinish = YES;
+    [self addChild:emitter];
+    
+    [self coinLabel];
+    
     [[SimpleAudioEngine sharedEngine] playEffect:@"coin.caf"];
 	[[self gameSceneParent] addChefMoney:10];
+    [self removeChild:coin cleanup:YES];
+    [self schedule: @selector(removeFromParent) interval:.8];
+}
+
+
+-(void)removeFromParent{
     [[self gameLayerParent] removeChild:self cleanup:YES];
 }
 @end
