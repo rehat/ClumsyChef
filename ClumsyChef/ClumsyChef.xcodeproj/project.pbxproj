@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		85149B001468788B00BF5AC3 /* sound-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 85149AFD1468788B00BF5AC3 /* sound-icon.png */; };
+		85149B021468788B00BF5AC3 /* sound-off-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 85149AFE1468788B00BF5AC3 /* sound-off-icon.png */; };
 		85CEB0B714685F330099409C /* MainMenuBackground-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 85CEB0B114685F320099409C /* MainMenuBackground-hd.png */; };
 		85CEB0B814685F330099409C /* MainMenuBackground-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 85CEB0B114685F320099409C /* MainMenuBackground-hd.png */; };
 		85CEB0B914685F330099409C /* MainMenuBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 85CEB0B214685F330099409C /* MainMenuBackground.png */; };
@@ -430,6 +432,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		85149AFD1468788B00BF5AC3 /* sound-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sound-icon.png"; sourceTree = "<group>"; };
+		85149AFE1468788B00BF5AC3 /* sound-off-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sound-off-icon.png"; sourceTree = "<group>"; };
 		85CEB0B114685F320099409C /* MainMenuBackground-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "MainMenuBackground-hd.png"; path = "Resources/MainMenuBackground-hd.png"; sourceTree = "<group>"; };
 		85CEB0B214685F330099409C /* MainMenuBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MainMenuBackground.png; path = Resources/MainMenuBackground.png; sourceTree = "<group>"; };
 		85CEB0B314685F330099409C /* play-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "play-hd.png"; path = "Resources/play-hd.png"; sourceTree = "<group>"; };
@@ -860,6 +864,8 @@
 		85CEB0AF14685EC70099409C /* Main Menu */ = {
 			isa = PBXGroup;
 			children = (
+				85149AFD1468788B00BF5AC3 /* sound-icon.png */,
+				85149AFE1468788B00BF5AC3 /* sound-off-icon.png */,
 				85CEB0B114685F320099409C /* MainMenuBackground-hd.png */,
 				85CEB0B214685F330099409C /* MainMenuBackground.png */,
 				85CEB0B314685F330099409C /* play-hd.png */,

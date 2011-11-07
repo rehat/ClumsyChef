@@ -7,6 +7,7 @@
 //
 
 #import "CHMainMenuLayer.h"
+#import "SimpleAudioEngine.h"
 
 // private methods are declared in this manner to avoid "may not respond to ..." compiler warnings
 @interface CHMainMenuLayer (PrivateMethods)
@@ -52,12 +53,18 @@ CCSprite *background;
         CCSprite* normal = [CCSprite spriteWithFile:@"play.png"];
         CCSprite* selected = [CCSprite spriteWithFile:@"play2.png"];
         CCMenuItemSprite* item2 = [CCMenuItemSprite itemFromNormalSprite:normal selectedSprite:selected target:self selector:@selector(menuItem2Touched:)];
-        
+//        CCMenuItemSprite *item2_x = [CCMenuItemSprite itemFromNormalSprite:normal selectedSprite:selected block:^(id sender)
+//                                     {
+//                                         CCLOG(@"xxx"); 
+//                                     }];
         // create a toggle item using two other menu items (toggle works with images, too) 	 [CCMenuItemFont setFontName:@"STHeitiJ-Light"];
         
-        CCMenuItemFont* toggleOn = [CCMenuItemFont itemFromString:@"I'm ON!"];
-        CCMenuItemFont* toggleOff = [CCMenuItemFont itemFromString:@"I'm OFF!"];
+        CCMenuItemImage* toggleOn = [CCMenuItemImage itemFromNormalImage:@"sound-icon.png" selectedImage:@"sound-icon.png"];
+        CCMenuItemImage* toggleOff = [CCMenuItemImage itemFromNormalImage:@"sound-off-icon.png" selectedImage:@"sound-off-icon.png"];
         CCMenuItemToggle* item3 = [CCMenuItemToggle itemWithTarget:self selector:@selector(menuItem3Touched:) items:toggleOn, toggleOff, nil];
+        
+        BOOL isMute = [[SimpleAudioEngine sharedEngine] mute];
+        item3.selectedIndex = (isMute? 1 : 0);
         
         CCMenu* menu = [CCMenu menuWithItems:item1, item2, item3, nil];
         menu.anchorPoint = CGPointZero;
@@ -115,6 +122,9 @@ CCSprite *background;
 	int index = [toggleItem selectedIndex];
 	
 	CCLOG(@"item 3 touched: %@ - selected index: %i", sender, index);
+    
+    SimpleAudioEngine *e = [SimpleAudioEngine sharedEngine];
+    [e setMute:![e mute]];
 }
 
 -(void) dealloc
