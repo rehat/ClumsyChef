@@ -12,6 +12,8 @@
 #import "GameConfig.h"
 #import "RootViewController.h"
 #import "TestMenuLayer.h"
+#import "SimpleAudioEngine.h"
+
 
 @implementation AppDelegate
 
@@ -115,6 +117,12 @@
 	
 	// Disable idle timer so the LCD backlight won't dim
 	application.idleTimerDisabled = YES;
+    
+    
+    //Preload sounds!
+    [[SimpleAudioEngine sharedEngine] preloadEffect:@"coin.caf"];
+    [[SimpleAudioEngine sharedEngine] preloadEffect:@"Oowh.caf"];
+    
 	
 	// Run the intro Scene
 	[[CCDirector sharedDirector] runWithScene: [TestMenuLayer layerAsScene]];

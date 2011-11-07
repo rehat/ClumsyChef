@@ -14,26 +14,38 @@ static CGFloat const kNormalSpeed = 100;
 static CGFloat const kFallAcceleration = 100;
 static CGFloat const kFallDeceleration = -130;
 
+NSInteger const chefTag = 45;
 
 @implementation CHChefObject
 {
+    CCSprite *chef;
 	float _verticalAcc;
 	float _horizontalAcc;
+    float _verticalSpeed;
+	float _horizontalSpeed;
+    
+    
+    
 }
 
-+ (id)node
-{
-	return [[[self alloc] initWithFile:@"gameObject-testIconBlue.png"] autorelease];
-}
+@synthesize verticalSpeed = _verticalSpeed;
+@synthesize horizontalSpeed = _horizontalSpeed;
 
-- (id)initWithFile:(NSString *)filename
+
+
+- (id)init
 {
-	if (self = [super initWithFile:filename])
+	if ((self = [super init]))
 	{
+        chef = [CCSprite spriteWithFile:@"chefObject-chef.png"];
 		self.verticalSpeed = kNormalSpeed;
+        [self addChild:chef z:0 tag:chefTag];
 	}
 	return self;
 }
+
+
+
 
 - (void)dealloc
 {
@@ -46,11 +58,29 @@ static CGFloat const kFallDeceleration = -130;
 	vSpeed = clampf(vSpeed, kNormalSpeed, kMaxSpeed);
 	self.verticalSpeed = vSpeed;
 	
-	[super update:dt];
+    CGPoint p = self.position;
+	p.x += _horizontalSpeed * dt;
+	p.y -= _verticalSpeed * dt;
 	
+	self.position = p;
+    
+    
+    //rotate chef based on direction
+    if(self.horizontalSpeed > 0){
+        [self getChildByTag:chefTag].rotation = 15;
+    }
+    else if(self.horizontalSpeed < 0){
+        [self getChildByTag:chefTag].rotation = -15;
+    }
+    else{
+        [self getChildByTag:chefTag].rotation = 0;
+    }
+    
+    
 	// Correct coordinate so that it doesn't go out of bounds
-	CGFloat halfWidth = 0.5f * self.contentSize.width;
-	CGPoint p = self.position;
+	CGFloat halfWidth = 0.5f * [self getChildByTag:chefTag].contentSize.width;
+    
+    p = self.position;
 	p.x = clampf(p.x, halfWidth, CHGetWinWidth() - halfWidth);
 	self.position = p;
 }
@@ -86,6 +116,10 @@ static CGFloat const kFallDeceleration = -130;
 	{
 		self.horizontalSpeed = 0;
 	}
+}
+
+- (CGSize) contentSize{
+    return chef.contentSize;
 }
 
 @end

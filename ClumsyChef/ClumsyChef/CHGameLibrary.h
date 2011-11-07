@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "CHGameObject.h"
 
 /*-----------------------------------------------------------------
  Recipe Item

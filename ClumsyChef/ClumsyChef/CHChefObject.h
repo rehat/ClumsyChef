@@ -8,15 +8,19 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
-#import "CHGameObject.h"
 
 /**
  * CHChefObject
  * Class for the chef object
  */
-@interface CHChefObject : CHGameObject 
+@interface CHChefObject : CCNode 
 
-+ (id)node;
+@property(nonatomic, assign) float verticalSpeed;	// +ve is downward
+@property(nonatomic, assign) float horizontalSpeed;	// +ve is right
+
+- (void)update:(float)dt;
+
+
 
 - (void)startAccelerating;
 - (void)stopAccelerating;

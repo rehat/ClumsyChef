@@ -13,6 +13,5 @@
 
 @interface CHCoinObject : CHItemObject 
 
-+ (id)node;
 
 @end

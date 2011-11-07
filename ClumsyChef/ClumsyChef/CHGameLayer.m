@@ -11,14 +11,17 @@
 #import "CHChefObject.h"
 #import "CHGameScene.h"
 #import "CHCoinObject.h"
+#import "CHHarmfulObject.h"
 #import "CHBackgroundLayer.h"
+
+
 
 
 static CGFloat const kChefYOffset = 100.f;
 
 // When objected go out of the screen at the top and beyond this distance,
 // They get removed
-static float const kObjectActiveRangeUp = 400.f;
+static float const kObjectActiveRangeUp = 100.f;
 static float const kGenObjectRangeDown = 100.f;		// For generating objects before they appears
 
 
@@ -28,7 +31,8 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
     
 	float _bottomWorldOffset;
 	float _nextGenItemsOffset;
-
+    
+    CCArray *itemsArray;
 	
 	// TODO: shared particle effects, sound effects
 }
@@ -39,17 +43,29 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 
 - (CGPoint)positionForChef
 {
-    NSLog(@"MEE  !!!  chefx %f and CHgetWin %f  koffset %f",_chefObj.position.x, CHGetWinHeight(), kChefYOffset);
 	return CGPointMake(_chefObj.position.x, CHGetWinHeight() - kChefYOffset);
 }
 
 - (CGFloat)generateItemsAtY:(CGFloat)y	// Return the interval after which the next generation takes place
 {
 	CGPoint p = ccp(CCRANDOM_0_1() * CHGetWinWidth(), y);
-	CHGameObject *item = [CHCoinObject node];//[[CHGameLibrary sharedGameLibrary] gameObjectWithID:CHRecipeItemTest];
+	
+    CHItemObject *item;
+    CGFloat x = CCRANDOM_0_1();
+    if (x > .2f) {
+        item = [CHCoinObject node];
+    }
+    else
+        item = [CHHarmfulObject node];
+    
 	item.position = p;
-	item.verticalSpeed = CCRANDOM_0_1() * 30.f;
-	[self addChild:item];
+	//item.verticalSpeed = CCRANDOM_0_1() * 30.f;
+	
+    
+    [itemsArray addObject:item];
+    [self addChild:item];
+
+    
 	
 	return 30;
 }
@@ -79,8 +95,8 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 		_chefObj.position = [self positionForChef];
 		[self addChild:_chefObj];
         
+        itemsArray = [[CCArray alloc ] initWithCapacity:100];
         
-		
 		_bottomWorldOffset = CHGetWinHeight();
 		_nextGenItemsOffset = _bottomWorldOffset;
 
@@ -119,20 +135,20 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 	// Pull everything up
 	CGPoint delta = ccp(0, pullUp);
     
-	
+    	
 	_chefObj.position = ccpAdd(_chefObj.position, delta);
 	CGFloat cullThresh = CHGetWinHeight() + kObjectActiveRangeUp;
 
     
-	CGFloat chefRadius = MAX(_chefObj.contentSize.width, _chefObj.contentSize.height) * 0.5f;
+	CGFloat chefRadius = MIN(_chefObj.contentSize.width, _chefObj.contentSize.height) * 0.5f;
 	
 	CHItemObject *item;
 	
 	// A array shouldn't be mutabled (cased by [CCNode removeFromParentAndCleanup:YES] 
 	// during enumeration or it will crash
 	// So here we made a copy
-	CCArray *copyOfChildren = self.children ;
-	CCARRAY_FOREACH(copyOfChildren, item)
+	//CCArray *copyOfChildren = self.children ;
+	CCARRAY_FOREACH(itemsArray, item)
 	{
 		if (![item isKindOfClass:[CHItemObject class]])
 		{
@@ -140,13 +156,15 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 		}
 		
 		// Update the item
-		[item update:dt];
+		//[item update:dt];   //This doesn't do anything
 		CGPoint p = ccpAdd(item.position, delta);
 		
+                
 		// Perform culling
 		if (p.y >= cullThresh)
 		{
 			[item removeFromParentAndCleanup:YES];
+            [itemsArray removeObject:item];
 		}
 		else
 		{
@@ -157,8 +175,8 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 			CGFloat dist = ccpDistance(_chefObj.position, item.position);
 			if (dist < chefRadius + itemRadius)
 			{
-				[item didCollideWithChef];
-                [item removeFromParentAndCleanup:YES];
+                [item didCollideWithChef];
+                [itemsArray removeObject:item];
 			}
 		}		
 	}
@@ -182,6 +200,7 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 		// Next round
 		_nextGenItemsOffset += interval;
 	}
+    
 }
 
 #pragma mark -
