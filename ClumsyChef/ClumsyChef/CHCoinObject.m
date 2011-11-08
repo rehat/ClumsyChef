@@ -24,6 +24,7 @@
 	{
         coin = [CCSprite spriteWithFile:@"gameObject-testIcon.png"];
         emitter = [CCParticleSystemQuad particleWithFile:@"coinObject-particle.plist"];
+        //emitter.rotation = 180;
         [self addChild:coin];
     }
 	return self;

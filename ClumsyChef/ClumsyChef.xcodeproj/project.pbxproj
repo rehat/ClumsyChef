@@ -203,6 +203,10 @@
 		BC622AB11463362A0016DFA0 /* font-testFont-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E58ABB5D145A7EB6002CC4EE /* font-testFont-hd.png */; };
 		BC622AB21463362A0016DFA0 /* gameObject-testIconBlue-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E5F2342D145BBF820026799C /* gameObject-testIconBlue-hd.png */; };
 		BC622AB31463362A0016DFA0 /* gameObject-testIconBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = E5F2342E145BBF820026799C /* gameObject-testIconBlue.png */; };
+		BCD008EF1468B1A700EA7E30 /* harmfulObject-knife2-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BCD008ED1468B1A700EA7E30 /* harmfulObject-knife2-hd.png */; };
+		BCD008F01468B1A700EA7E30 /* harmfulObject-knife2-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BCD008ED1468B1A700EA7E30 /* harmfulObject-knife2-hd.png */; };
+		BCD008F11468B1A700EA7E30 /* harmfulObject-knife2.png in Resources */ = {isa = PBXBuildFile; fileRef = BCD008EE1468B1A700EA7E30 /* harmfulObject-knife2.png */; };
+		BCD008F21468B1A700EA7E30 /* harmfulObject-knife2.png in Resources */ = {isa = PBXBuildFile; fileRef = BCD008EE1468B1A700EA7E30 /* harmfulObject-knife2.png */; };
 		E511C294145925B3008BCFF8 /* testLayer-backButton.png in Resources */ = {isa = PBXBuildFile; fileRef = E511C293145925B3008BCFF8 /* testLayer-backButton.png */; };
 		E511C298145925BC008BCFF8 /* testLayer-backButton-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E511C295145925BC008BCFF8 /* testLayer-backButton-hd.png */; };
 		E511C299145925BC008BCFF8 /* testLayer-backButton-highlighted-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E511C296145925BC008BCFF8 /* testLayer-backButton-highlighted-hd.png */; };
@@ -440,6 +444,8 @@
 		85CEB0B614685F330099409C /* play2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = play2.png; path = Resources/play2.png; sourceTree = "<group>"; };
 		BC622ABB1463362A0016DFA0 /* ClumsyChef copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ClumsyChef copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC622ABE1463362A0016DFA0 /* ClumsyChef copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ClumsyChef copy-Info.plist"; path = "/Users/rehat/Documents/iuci/ClumsyChef/ClumsyChef copy-Info.plist"; sourceTree = "<absolute>"; };
+		BCD008ED1468B1A700EA7E30 /* harmfulObject-knife2-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "harmfulObject-knife2-hd.png"; sourceTree = "<group>"; };
+		BCD008EE1468B1A700EA7E30 /* harmfulObject-knife2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "harmfulObject-knife2.png"; sourceTree = "<group>"; };
 		E511C293145925B3008BCFF8 /* testLayer-backButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "testLayer-backButton.png"; path = "Resources/testLayer-backButton.png"; sourceTree = "<group>"; };
 		E511C295145925BC008BCFF8 /* testLayer-backButton-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "testLayer-backButton-hd.png"; path = "Resources/testLayer-backButton-hd.png"; sourceTree = "<group>"; };
 		E511C296145925BC008BCFF8 /* testLayer-backButton-highlighted-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "testLayer-backButton-highlighted-hd.png"; path = "Resources/testLayer-backButton-highlighted-hd.png"; sourceTree = "<group>"; };
@@ -922,6 +928,8 @@
 		E522B2FF146863950049D367 /* Game Layer */ = {
 			isa = PBXGroup;
 			children = (
+				BCD008ED1468B1A700EA7E30 /* harmfulObject-knife2-hd.png */,
+				BCD008EE1468B1A700EA7E30 /* harmfulObject-knife2.png */,
 				E599003C14687E3B00458316 /* chefObject-chef-hd.png */,
 				E599003D14687E3B00458316 /* chefObject-chef.png */,
 				E599003E14687E3B00458316 /* coin.caf */,
@@ -1673,6 +1681,8 @@
 				E599005B14687E3B00458316 /* harmfulObject-smallKnife.png in Resources */,
 				E599005D14687E3B00458316 /* Oowh.caf in Resources */,
 				E599005F14687E3B00458316 /* skull.png in Resources */,
+				BCD008F01468B1A700EA7E30 /* harmfulObject-knife2-hd.png in Resources */,
+				BCD008F21468B1A700EA7E30 /* harmfulObject-knife2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1728,6 +1738,8 @@
 				E599005A14687E3B00458316 /* harmfulObject-smallKnife.png in Resources */,
 				E599005C14687E3B00458316 /* Oowh.caf in Resources */,
 				E599005E14687E3B00458316 /* skull.png in Resources */,
+				BCD008EF1468B1A700EA7E30 /* harmfulObject-knife2-hd.png in Resources */,
+				BCD008F11468B1A700EA7E30 /* harmfulObject-knife2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

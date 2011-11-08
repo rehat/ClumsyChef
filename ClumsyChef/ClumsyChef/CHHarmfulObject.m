@@ -26,7 +26,15 @@ NSInteger const knifeTag = 666;
 {
 	if (self = [super init])
 	{
-        knife = [CCSprite spriteWithFile:@"harmfulObject-smallKnife.png"];
+        
+        if(CCRANDOM_0_1()>.5)
+            knife = [CCSprite spriteWithFile:@"harmfulObject-smallKnife.png"];
+        else
+            knife = [CCSprite spriteWithFile:@"harmfulObject-knife2.png"];
+
+        
+        
+        
         emitter = [CCParticleSystemQuad particleWithFile:@"harmfulObject-particle.plist"];
         [self addChild:knife z:1 tag:knifeTag];
         [self scheduleUpdate];
