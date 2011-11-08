@@ -26,6 +26,7 @@
 - (void)stopAccelerating;
 
 -(void) chefDamaged;
+-(BOOL) recentlyHit;
 
 - (void)setHorizontalAcceleration:(float)a;
 

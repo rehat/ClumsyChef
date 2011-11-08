@@ -13,7 +13,7 @@
 #import "CHCoinObject.h"
 #import "CHHarmfulObject.h"
 #import "CHBackgroundLayer.h"
-
+#import "CHRecipeItemObject.h"
 
 
 
@@ -33,6 +33,7 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 	float _nextGenItemsOffset;
     
     CCArray *itemsArray;
+    CCArray *goalItemsArray;
 	
 	// TODO: shared particle effects, sound effects
 }
@@ -52,18 +53,32 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 	
     CHItemObject *item;
     CGFloat x = CCRANDOM_0_1();
-    if (x > .2f) {
-        item = [CHCoinObject node];
-    }
-    else
+    if (x > .1f && x < .4f) {
         item = [CHHarmfulObject node];
-    
+        [self addChild:item];
+    }
+    else if(x <= .1f && [goalItemsArray count] != 0){
+        item = [goalItemsArray objectAtIndex:0];
+        if([self getChildByTag:711] == item){
+            item = [CHCoinObject node];
+            [self addChild:item];
+        }
+        else{
+            [self addChild:item z:2 tag:711];
+            [goalItemsArray removeObjectAtIndex:0];
+        }    
+    }
+    else{
+        item = [CHCoinObject node];
+        [self addChild:item];
+
+    }
 	item.position = p;
 	//item.verticalSpeed = CCRANDOM_0_1() * 30.f;
 	
     
     [itemsArray addObject:item];
-    [self addChild:item];
+    //[self addChild:item];
 
     
 	
@@ -97,6 +112,20 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
         
         itemsArray = [[CCArray alloc ] initWithCapacity:100];
         
+        
+        CHGameLibrary *stageLibrary = [CHGameLibrary node ];
+        
+        [stageLibrary  withFile:@"Stage1"];
+         
+        //goalItemsArray = [CCArray arrayWithArray:[stageLibrary getRecipeItems]];
+        goalItemsArray = [stageLibrary getRecipeItems];
+        
+        
+//        CHItemObject *wee = [goalItemsArray objectAtIndex:0];
+//        wee.position = ccp(CHGetWinWidth() / 2, CHGetWinHeight()/2);
+//        [itemsArray addObject:wee];
+//        [self addChild:wee];
+        
 		_bottomWorldOffset = CHGetWinHeight();
 		_nextGenItemsOffset = _bottomWorldOffset;
 
@@ -111,10 +140,7 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 	[super dealloc];
 }
 
-+ (id)nodeWithStageInfo:(CHStageInfo *)stageInfo
-{
-	return nil;
-}
+
 
 #pragma mark -
 #pragma mark xxx
@@ -171,7 +197,15 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 			{
                 [item collected];
                 if ([item isKindOfClass:[CHHarmfulObject class]]) {
-                    [_chefObj chefDamaged];
+                    
+                    if (![_chefObj recentlyHit]) 
+                    {
+                       
+                        [_chefObj chefDamaged];
+
+                    }
+                                       
+                    
                     //TODO:Take off one health
                 }
                 else if([item isKindOfClass:[CHCoinObject class]]){

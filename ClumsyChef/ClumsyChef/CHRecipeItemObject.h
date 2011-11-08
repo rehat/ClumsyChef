@@ -13,6 +13,7 @@
 
 @interface CHRecipeItemObject : CHItemObject 
 
-+ (id)nodeWithRecipeItemID:(CHRecipeItemID)itemID;
+-(void) buildMe:(NSString*)itemID;
+-(NSString*)itemID;
 
 @end

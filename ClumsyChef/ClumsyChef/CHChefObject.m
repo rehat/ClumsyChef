@@ -122,6 +122,11 @@ NSInteger const chefTag = 45;
     return chef.contentSize;
 }
 
+-(BOOL) recentlyHit{
+    return [chef numberOfRunningActions]>0;
+}
+
+
 -(void) chefDamaged{
     
     [chef setOpacity:1.0];
@@ -131,6 +136,7 @@ NSInteger const chefTag = 45;
     CCSequence *pulseSequence = [CCSequence actionOne:fadeIn two:fadeOut];
     
     CCSequence *pulseSequence2 = [CCSequence actionOne:pulseSequence two:pulseSequence];
+    pulseSequence2.tag = 5;
     [chef runAction:pulseSequence2];
 }
 

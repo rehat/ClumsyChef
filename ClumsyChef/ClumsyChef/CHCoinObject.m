@@ -22,7 +22,7 @@
 {
 	if (self = [super init])
 	{
-        coin = [CCSprite spriteWithFile:@"gameObject-testIcon.png"];
+        coin = [CCSprite spriteWithFile:@"coinObject-coin.png"];
         emitter = [CCParticleSystemQuad particleWithFile:@"coinObject-particle.plist"];
         //emitter.rotation = 180;
         [self addChild:coin];

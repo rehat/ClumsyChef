@@ -8,27 +8,60 @@
 
 #import "CHRecipeItemObject.h"
 #import "CHGameScene.h"
+#import "SimpleAudioEngine.h"
+
 
 @implementation CHRecipeItemObject
 {
-	CHRecipeItemID	_itemID;
+	CCSprite *ingredient;
+    NSString *ingredientLabel;
+    
+    
 }
 
-- (id)initWithRecipeItemID:(CHRecipeItemID)itemID
+-(NSString*)itemID
 {
-	CHRecipeItemInfo *info = [[CHGameLibrary sharedGameLibrary] recipeItemInfoWithID:itemID];
-	if (self = [super initWithFile:info.spriteFilename])
+    return ingredientLabel;
+}
+
+
+
+
+- (id)init
+{
+	if (self = [super init])
 	{
-		_itemID = itemID;
-		// TODO
-	}
+        
+        
+        
+    }
 	return self;
 }
 
-+ (id)nodeWithRecipeItemID:(CHRecipeItemID)itemID
-{
-	return [[[self alloc] initWithRecipeItemID:itemID] autorelease];
+-(void) buildMe:(NSString*)itemID{
+    ingredientLabel = itemID;
+    
+    NSBundle *bundle = [NSBundle mainBundle];
+    NSDictionary *ingredientSprites = [[NSDictionary alloc]initWithContentsOfFile:[bundle pathForResource:@"Ingredients" ofType:@"plist"]];
+    
+    NSString *file = [ingredientSprites objectForKey:ingredientLabel];
+    
+    NSLog(@"%@", file);
+
+    ingredient = [CCSprite spriteWithFile:file];
+    [self addChild:ingredient];
 }
+
+
+
+
+- (CGSize) contentSize{
+    
+    return ingredient.contentSize;
+}
+
+
+
 
 - (void)dealloc
 {
@@ -47,7 +80,12 @@
 
 - (void)collected
 {
-	[[self gameSceneParent] chefDidCollectRecipeItem:_itemID];
+	//[[self gameSceneParent] chefDidCollectRecipeItem:_itemID];
+    [self schedule: @selector(removeFromParent) interval:.8];
+}
+
+-(void)removeFromParent{
+    [[self gameLayerParent] removeChild:self cleanup:YES];
 }
 
 @end
