@@ -58,14 +58,14 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
         [self addChild:item];
     }
     else if(x <= .1f && [goalItemsArray count] != 0){
-        item = [goalItemsArray objectAtIndex:0];
-        if([self getChildByTag:711] == item){
+        item = [goalItemsArray objectAtIndex:(CCRANDOM_0_1() > .5 ? 0:1)];
+        if([self getChildByTag:711] != nil){
             item = [CHCoinObject node];
             [self addChild:item];
         }
         else{
             [self addChild:item z:2 tag:711];
-            [goalItemsArray removeObjectAtIndex:0];
+            //[goalItemsArray removeObjectAtIndex:0];
         }    
     }
     else{
