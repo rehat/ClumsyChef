@@ -170,9 +170,18 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 			if (dist < chefRadius + itemRadius)
 			{
                 [item collected];
+                if ([item isKindOfClass:[CHHarmfulObject class]]) {
+                    [_chefObj chefDamaged];
+                    //TODO:Take off one health
+                }
+                else if([item isKindOfClass:[CHCoinObject class]]){
+                    //TODO:add to player's score
+                }
+                else{
                 
-                //TODO:  check what kind of item it is and update score, life, or goal items
+                    //Should be a recipe item
                 
+                }
                 
                 [itemsArray removeObject:item];
 			}

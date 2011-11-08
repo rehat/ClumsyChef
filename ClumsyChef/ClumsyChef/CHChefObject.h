@@ -25,6 +25,8 @@
 - (void)startAccelerating;
 - (void)stopAccelerating;
 
+-(void) chefDamaged;
+
 - (void)setHorizontalAcceleration:(float)a;
 
 @end
