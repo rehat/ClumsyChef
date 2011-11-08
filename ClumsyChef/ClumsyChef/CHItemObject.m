@@ -41,7 +41,7 @@
 {
 }
 
-- (void)didCollideWithChef
+- (void)collected
 {
 }
 

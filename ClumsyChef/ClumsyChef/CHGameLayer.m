@@ -147,16 +147,10 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 	// A array shouldn't be mutabled (cased by [CCNode removeFromParentAndCleanup:YES] 
 	// during enumeration or it will crash
 	// So here we made a copy
-	//CCArray *copyOfChildren = self.children ;
 	CCARRAY_FOREACH(itemsArray, item)
 	{
-		if (![item isKindOfClass:[CHItemObject class]])
-		{
-			continue;
-		}
 		
-		// Update the item
-		//[item update:dt];   //This doesn't do anything
+		
 		CGPoint p = ccpAdd(item.position, delta);
 		
                 
@@ -175,7 +169,11 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 			CGFloat dist = ccpDistance(_chefObj.position, item.position);
 			if (dist < chefRadius + itemRadius)
 			{
-                [item didCollideWithChef];
+                [item collected];
+                
+                //TODO:  check what kind of item it is and update score, life, or goal items
+                
+                
                 [itemsArray removeObject:item];
 			}
 		}		

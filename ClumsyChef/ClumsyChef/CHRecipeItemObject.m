@@ -45,7 +45,7 @@
 	// TODO
 }
 
-- (void)didCollideWithChef
+- (void)collected
 {
 	[[self gameSceneParent] chefDidCollectRecipeItem:_itemID];
 }

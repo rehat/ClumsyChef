@@ -69,7 +69,7 @@ NSInteger const knifeTag = 666;
 }
 
 
-- (void)didCollideWithChef
+- (void)collected
 {   
     
     emitter.position = knife.position;
@@ -79,7 +79,6 @@ NSInteger const knifeTag = 666;
     [self damageLabel];
     
     [[SimpleAudioEngine sharedEngine] playEffect:@"Oowh.caf"];
-	[[self gameSceneParent] deductChefLife:1];
     [self removeChild:knife cleanup:YES];
     [self schedule: @selector(removeFromParent) interval:1];
 }
