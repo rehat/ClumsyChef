@@ -13,6 +13,7 @@
 //  item1 = (NUMBER) stage height
 //  item2 = (ARRAY) recipe item names which are keys to recipeObject's plist for sprites
 //  item3 = (NUMBER) number of lives for this stage
+//  item4 = (STRING) name of image file used by SelectLevelLayer
 
 #import "CHGameLibrary.h"
 #import "CHRecipeItemObject.h"
@@ -76,6 +77,8 @@
     stageHeight = (NSInteger)[stageInfo objectAtIndex:1];
     recipeItemKeys =[[CCArray alloc] initWithNSArray:[stageInfo objectAtIndex:2]];
     lives = (NSInteger)[stageInfo objectAtIndex:3];
+    
+        [stages release];
     }
     return self;
 }

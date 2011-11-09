@@ -18,6 +18,5 @@
 
 +(id)node:(NSString*)ingredient;
 
--(id)initWithFile:(NSString*)item;
 
 @end

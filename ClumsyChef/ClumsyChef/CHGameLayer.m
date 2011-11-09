@@ -14,6 +14,7 @@
 #import "CHHarmfulObject.h"
 #import "CHBackgroundLayer.h"
 #import "CHRecipeItemObject.h"
+#import "SimpleAudioEngine.h"
 
 
 
@@ -67,6 +68,8 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
             item = [CHRecipeItemObject node:[goalItemsArray objectAtIndex:randomIndex]];
             [self addChild:item z:2 tag:711];
         }    
+
+
     }
     else{
         item = [CHCoinObject node];
@@ -118,6 +121,14 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
          
         goalItemsArray = [stageLibrary getRecipeItems];
         
+        [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"gameLayer-music.caf" loop:YES];
+        
+        if ([SimpleAudioEngine sharedEngine].willPlayBackgroundMusic) {
+            [SimpleAudioEngine sharedEngine].backgroundMusicVolume = 0.4f;
+        }
+        
+        
+
         
 		_bottomWorldOffset = CHGetWinHeight();
 		_nextGenItemsOffset = _bottomWorldOffset;
@@ -166,6 +177,7 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 	// A array shouldn't be mutabled (cased by [CCNode removeFromParentAndCleanup:YES] 
 	// during enumeration or it will crash
 	// So here we made a copy
+   
 	CCARRAY_FOREACH(itemsArray, item)
 	{
 		

@@ -32,16 +32,22 @@
         
         NSBundle *bundle = [NSBundle mainBundle];
         NSDictionary *ingredientSprites = [[NSDictionary alloc]initWithContentsOfFile:[bundle pathForResource:@"Ingredients" ofType:@"plist"]];
-        
         NSString *file = [ingredientSprites objectForKey:ingredientLabel];
         
+
         
         ingredient = [CCSprite spriteWithFile:file];
         emitter = [CCParticleSystemQuad particleWithFile:@"recipeItem-particle.plist"];
-        [self addChild:ingredient];
-        emitter.position = ingredient.position;
+       
+        //this is nasty :(
+        emitter.position = ccpAdd(ingredient.position, ccp(15, 20));
+        emitter.rotation = 180;  //based on the particle effect used.  Makes it look like it's falling (kinda);
+        
+        
         [ingredient addChild:emitter z:-1];
+        [self addChild:ingredient];
 
+        [ingredientSprites release];
     }
     return self;
 }
@@ -64,7 +70,8 @@
 
 - (void)dealloc
 {
-	[super dealloc];
+	
+    [super dealloc];
 }
 
 + (void)preloadSharedResources
@@ -80,6 +87,7 @@
 - (void)collected
 {
 	//[[self gameSceneParent] chefDidCollectRecipeItem:_itemID];
+    [[SimpleAudioEngine sharedEngine] playEffect:@"recipeItem-sound.caf"];
 
     [[self gameLayerParent] removeChild:self cleanup:YES];
 }
