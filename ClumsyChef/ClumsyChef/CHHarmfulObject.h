@@ -14,6 +14,5 @@
 
 @interface CHHarmfulObject : CHItemObject
 
-+ (id)nodeWithHarmfulItemID:(CHHarmfulItemID)itemID;
 
 @end

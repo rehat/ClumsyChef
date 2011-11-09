@@ -152,7 +152,7 @@
 #pragma mark -
 #pragma mark Public
 
-- (void)setRecipeItemCollected:(CHRecipeItemID)itemID
+- (void)setRecipeItemCollected:(NSString*)itemID
 {
 	
 }

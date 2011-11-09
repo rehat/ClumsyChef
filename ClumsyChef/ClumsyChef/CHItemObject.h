@@ -26,6 +26,10 @@
 
 // To be overridden by subclass
 // Typically, it play the sound, particle effect and remove itself from parent node
-- (void)didCollideWithChef;
+- (void)collected;
+
+-(id)initWithFile:(NSString*)item;
+
+
 
 @end

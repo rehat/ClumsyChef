@@ -85,10 +85,10 @@
 	
 }
 
-- (void)chefDidCollectRecipeItem:(CHRecipeItemID)itemID
-{
-	
-}
+//- (void)chefDidCollectRecipeItem:(CHRecipeItemID)itemID
+//{
+//	
+//}
 
 - (void)deductChefLife:(NSInteger)numLife
 {

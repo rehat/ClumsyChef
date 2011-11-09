@@ -17,7 +17,7 @@
 
 + (id)nodeWithRequiredRecipeItems:(NSArray *)itemIDs;
 
-- (void)setRecipeItemCollected:(CHRecipeItemID)itemID;
+- (void)setRecipeItemCollected:(NSString*)itemID;
 
 - (BOOL)allItemsCollected;
 

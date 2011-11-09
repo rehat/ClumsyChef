@@ -8,28 +8,48 @@
 
 #import "CHHarmfulObject.h"
 #import "CHGameScene.h"
+#import "SimpleAudioEngine.h"
+#import "CCParticleSystemPoint.h"
+
+NSInteger const knifeTag = 666;
+
 
 @implementation CHHarmfulObject
 {
+    CCSprite *knife;
+    CCParticleSystemQuad *emitter;
+    
 }
 
-- (id)initWithHarmfulItemID:(CHHarmfulItemID)itemID
+
+- (id)init
 {
-	CHHarmfulItemInfo *info = [[CHGameLibrary sharedGameLibrary] harmfulItemInfoWithID:itemID];
-	if (self = [super initWithFile:info.spriteFilename])
+	if (self = [super init])
 	{
-	}
+        
+        if(CCRANDOM_0_1()>.5)
+            knife = [CCSprite spriteWithFile:@"harmfulObject-smallKnife.png"];
+        else
+            knife = [CCSprite spriteWithFile:@"harmfulObject-knife2.png"];
+
+        
+        
+        
+        emitter = [CCParticleSystemQuad particleWithFile:@"harmfulObject-particle.plist"];
+        [self addChild:knife z:1 tag:knifeTag];
+        [self scheduleUpdate];
+    }
 	return self;
 }
 
-+ (id)nodeWithHarmfulItemID:(CHHarmfulItemID)itemID
-{
-	return [[[self alloc] initWithHarmfulItemID:itemID] autorelease];
+- (CGSize) contentSize{
+    
+    return knife.contentSize;
 }
 
-- (void)dealloc
-{
-	[super dealloc];
+-(void) update:(ccTime)delta
+{   
+    [self getChildByTag:knifeTag].rotation += 2;
 }
 
 + (void)preloadSharedResources
@@ -42,8 +62,29 @@
 	// TODO
 }
 
-- (void)didCollideWithChef
-{
-	[[self gameSceneParent] deductChefLife:1];
+-(void)damageLabel{
+    CCLabelTTF *amount = [CCLabelTTF labelWithString:@"-1" fontName:@"Marker Felt" fontSize:20];
+    amount.position = knife.position;
+    [emitter addChild:amount];
+}
+
+
+- (void)collected
+{   
+    
+    emitter.position = knife.position;
+    emitter.autoRemoveOnFinish = YES;
+    [self addChild:emitter];
+    
+    [self damageLabel];
+    
+    [[SimpleAudioEngine sharedEngine] playEffect:@"Oowh.caf"];
+    [self removeChild:knife cleanup:YES];
+    [self schedule: @selector(removeFromParent) interval:1];
+}
+
+
+-(void)removeFromParent{
+    [[self gameLayerParent] removeChild:self cleanup:YES];
 }
 @end
