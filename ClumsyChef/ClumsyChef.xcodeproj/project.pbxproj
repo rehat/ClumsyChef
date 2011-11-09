@@ -215,6 +215,10 @@
 		BCD0090114692FB900EA7E30 /* coinObject-coin.png in Resources */ = {isa = PBXBuildFile; fileRef = BCD008FE14692FB900EA7E30 /* coinObject-coin.png */; };
 		BCD0090214692FB900EA7E30 /* coinObject-coin-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BCD008FF14692FB900EA7E30 /* coinObject-coin-hd.png */; };
 		BCD0090314692FB900EA7E30 /* coinObject-coin-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BCD008FF14692FB900EA7E30 /* coinObject-coin-hd.png */; };
+		BCF7113F1469D34A004E9D33 /* recipeItem-particle-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCF7113D1469D34A004E9D33 /* recipeItem-particle-hd.plist */; };
+		BCF711401469D34A004E9D33 /* recipeItem-particle-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCF7113D1469D34A004E9D33 /* recipeItem-particle-hd.plist */; };
+		BCF711411469D34A004E9D33 /* recipeItem-particle.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCF7113E1469D34A004E9D33 /* recipeItem-particle.plist */; };
+		BCF711421469D34A004E9D33 /* recipeItem-particle.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCF7113E1469D34A004E9D33 /* recipeItem-particle.plist */; };
 		E511C294145925B3008BCFF8 /* testLayer-backButton.png in Resources */ = {isa = PBXBuildFile; fileRef = E511C293145925B3008BCFF8 /* testLayer-backButton.png */; };
 		E511C298145925BC008BCFF8 /* testLayer-backButton-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E511C295145925BC008BCFF8 /* testLayer-backButton-hd.png */; };
 		E511C299145925BC008BCFF8 /* testLayer-backButton-highlighted-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E511C296145925BC008BCFF8 /* testLayer-backButton-highlighted-hd.png */; };
@@ -458,6 +462,8 @@
 		BCD008FB1469077600EA7E30 /* Ingredients.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Ingredients.plist; sourceTree = "<group>"; };
 		BCD008FE14692FB900EA7E30 /* coinObject-coin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "coinObject-coin.png"; sourceTree = "<group>"; };
 		BCD008FF14692FB900EA7E30 /* coinObject-coin-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "coinObject-coin-hd.png"; sourceTree = "<group>"; };
+		BCF7113D1469D34A004E9D33 /* recipeItem-particle-hd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "recipeItem-particle-hd.plist"; sourceTree = "<group>"; };
+		BCF7113E1469D34A004E9D33 /* recipeItem-particle.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "recipeItem-particle.plist"; sourceTree = "<group>"; };
 		E511C293145925B3008BCFF8 /* testLayer-backButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "testLayer-backButton.png"; path = "Resources/testLayer-backButton.png"; sourceTree = "<group>"; };
 		E511C295145925BC008BCFF8 /* testLayer-backButton-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "testLayer-backButton-hd.png"; path = "Resources/testLayer-backButton-hd.png"; sourceTree = "<group>"; };
 		E511C296145925BC008BCFF8 /* testLayer-backButton-highlighted-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "testLayer-backButton-highlighted-hd.png"; path = "Resources/testLayer-backButton-highlighted-hd.png"; sourceTree = "<group>"; };
@@ -944,6 +950,8 @@
 				BCD008FF14692FB900EA7E30 /* coinObject-coin-hd.png */,
 				BCD008ED1468B1A700EA7E30 /* harmfulObject-knife2-hd.png */,
 				BCD008EE1468B1A700EA7E30 /* harmfulObject-knife2.png */,
+				BCF7113D1469D34A004E9D33 /* recipeItem-particle-hd.plist */,
+				BCF7113E1469D34A004E9D33 /* recipeItem-particle.plist */,
 				E599003C14687E3B00458316 /* chefObject-chef-hd.png */,
 				E599003D14687E3B00458316 /* chefObject-chef.png */,
 				E599003E14687E3B00458316 /* coin.caf */,
@@ -1703,6 +1711,8 @@
 				BCD008FD1469077600EA7E30 /* Ingredients.plist in Resources */,
 				BCD0090114692FB900EA7E30 /* coinObject-coin.png in Resources */,
 				BCD0090314692FB900EA7E30 /* coinObject-coin-hd.png in Resources */,
+				BCF711401469D34A004E9D33 /* recipeItem-particle-hd.plist in Resources */,
+				BCF711421469D34A004E9D33 /* recipeItem-particle.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1764,6 +1774,8 @@
 				BCD008FC1469077600EA7E30 /* Ingredients.plist in Resources */,
 				BCD0090014692FB900EA7E30 /* coinObject-coin.png in Resources */,
 				BCD0090214692FB900EA7E30 /* coinObject-coin-hd.png in Resources */,
+				BCF7113F1469D34A004E9D33 /* recipeItem-particle-hd.plist in Resources */,
+				BCF711411469D34A004E9D33 /* recipeItem-particle.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

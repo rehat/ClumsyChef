@@ -15,7 +15,8 @@
 {
 	CCSprite *ingredient;
     NSString *ingredientLabel;
-    
+    CCParticleSystemQuad *emitter;
+
     
 }
 
@@ -24,32 +25,30 @@
     return ingredientLabel;
 }
 
-
-
-
-- (id)init
-{
-	if (self = [super init])
-	{
+-(id)initWithFile:(NSString*)item{
+    if (self = [super init]){
+        
+        ingredientLabel = item;
+        
+        NSBundle *bundle = [NSBundle mainBundle];
+        NSDictionary *ingredientSprites = [[NSDictionary alloc]initWithContentsOfFile:[bundle pathForResource:@"Ingredients" ofType:@"plist"]];
+        
+        NSString *file = [ingredientSprites objectForKey:ingredientLabel];
         
         
-        
+        ingredient = [CCSprite spriteWithFile:file];
+        emitter = [CCParticleSystemQuad particleWithFile:@"recipeItem-particle.plist"];
+        [self addChild:ingredient];
+        emitter.position = ingredient.position;
+        [ingredient addChild:emitter z:-1];
+
     }
-	return self;
+    return self;
 }
 
--(void) buildMe:(NSString*)itemID{
-    ingredientLabel = itemID;
-    
-    NSBundle *bundle = [NSBundle mainBundle];
-    NSDictionary *ingredientSprites = [[NSDictionary alloc]initWithContentsOfFile:[bundle pathForResource:@"Ingredients" ofType:@"plist"]];
-    
-    NSString *file = [ingredientSprites objectForKey:ingredientLabel];
-    
-    NSLog(@"%@", file);
++(id)node:(NSString*)ingredient{
+    return [[[self alloc] initWithFile:ingredient] autorelease];
 
-    ingredient = [CCSprite spriteWithFile:file];
-    [self addChild:ingredient];
 }
 
 
@@ -81,7 +80,8 @@
 - (void)collected
 {
 	//[[self gameSceneParent] chefDidCollectRecipeItem:_itemID];
-    [self schedule: @selector(removeFromParent) interval:.8];
+
+    [[self gameLayerParent] removeChild:self cleanup:YES];
 }
 
 -(void)removeFromParent{

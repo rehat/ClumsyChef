@@ -27,6 +27,12 @@
 }
 
 
++(id)node:(NSString*)stage{
+    return [[[self alloc] initWithFile:stage] autorelease];
+    
+}
+
+
 -(NSInteger)getlives
 {
     return lives;
@@ -39,27 +45,26 @@
 
 -(CCArray*)getRecipeItems
 {
-    CCArray *items = [[CCArray alloc] initWithCapacity:[recipeItemKeys  count]];
-    for (NSString *ingridient in recipeItemKeys) {
-        NSLog(@"%@", ingridient);
-        CHRecipeItemObject *recipeItem = [CHRecipeItemObject node];
-        [recipeItem buildMe:ingridient];
-        [items addObject:recipeItem];
-    }
+//    CCArray *items = [[CCArray alloc] initWithCapacity:[recipeItemKeys  count]];
+//    for (NSString *ingridient in recipeItemKeys) {
+//        NSLog(@"%@", ingridient);
+//    
+//        //CHRecipeItemObject *recipeItem = [CHRecipeItemObject node];
+//        CHRecipeItemObject *recipeItem = [CHRecipeItemObject node:ingridient ];
+//        
+//        //[recipeItem buildMe:ingridient];
+//        [items addObject:recipeItem];
+//    }
     
     
-    return items;
+    return recipeItemKeys;
 }
 
 
-
-
-
-
-- (void)withFile:(NSString*)name
+- (id)initWithFile:(NSString*)stage
 {
-    
-    stageKey = name;
+    if(self = [super init]){
+    stageKey = stage;
     
     NSBundle *bundle = [NSBundle mainBundle];
     NSDictionary *stages = [[NSDictionary alloc]initWithContentsOfFile:[bundle pathForResource:@"Stages" ofType:@"plist"]];
@@ -71,21 +76,12 @@
     stageHeight = (NSInteger)[stageInfo objectAtIndex:1];
     recipeItemKeys =[[CCArray alloc] initWithNSArray:[stageInfo objectAtIndex:2]];
     lives = (NSInteger)[stageInfo objectAtIndex:3];
-   
-    
-}
-
-
-- (id)init
-{
-    if (self = [super init])
-	{
-    
-    
     }
     return self;
-                          
 }
+
+
+
                           
 -(void)dealloc
 {

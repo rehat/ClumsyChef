@@ -28,4 +28,8 @@
 // Typically, it play the sound, particle effect and remove itself from parent node
 - (void)collected;
 
+-(id)initWithFile:(NSString*)item;
+
+
+
 @end

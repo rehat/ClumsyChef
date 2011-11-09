@@ -14,7 +14,7 @@
 
 + (CHGameLibrary *)sharedGameLibrary;		// Singleton object
 
-- (void)withFile:(NSString*)name;
++ (id)node:(NSString*)stage;
 
 -(NSInteger)getlives;
 -(NSInteger)getStageHeight;

@@ -58,14 +58,14 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
         [self addChild:item];
     }
     else if(x <= .1f && [goalItemsArray count] != 0){
-        item = [goalItemsArray objectAtIndex:(CCRANDOM_0_1() > .5 ? 0:1)];
-        if([self getChildByTag:711] != nil){
+        NSUInteger randomIndex = (NSUInteger)arc4random() % [goalItemsArray count];
+        if([self getChildByTag:711] != nil){ //checks to see if recipe item is already in the game
             item = [CHCoinObject node];
             [self addChild:item];
         }
         else{
+            item = [CHRecipeItemObject node:[goalItemsArray objectAtIndex:randomIndex]];
             [self addChild:item z:2 tag:711];
-            //[goalItemsArray removeObjectAtIndex:0];
         }    
     }
     else{
@@ -113,18 +113,11 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
         itemsArray = [[CCArray alloc ] initWithCapacity:100];
         
         
-        CHGameLibrary *stageLibrary = [CHGameLibrary node ];
+        CHGameLibrary *stageLibrary = [CHGameLibrary node:@"Stage1" ];
         
-        [stageLibrary  withFile:@"Stage1"];
          
-        //goalItemsArray = [CCArray arrayWithArray:[stageLibrary getRecipeItems]];
         goalItemsArray = [stageLibrary getRecipeItems];
         
-        
-//        CHItemObject *wee = [goalItemsArray objectAtIndex:0];
-//        wee.position = ccp(CHGetWinWidth() / 2, CHGetWinHeight()/2);
-//        [itemsArray addObject:wee];
-//        [self addChild:wee];
         
 		_bottomWorldOffset = CHGetWinHeight();
 		_nextGenItemsOffset = _bottomWorldOffset;
@@ -176,7 +169,6 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 	CCARRAY_FOREACH(itemsArray, item)
 	{
 		
-		
 		CGPoint p = ccpAdd(item.position, delta);
 		
                 
@@ -196,24 +188,25 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 			if (dist < chefRadius + itemRadius)
 			{
                 [item collected];
+                
+                        //Harmful: Update health and check if it's game over
                 if ([item isKindOfClass:[CHHarmfulObject class]]) {
                     
+                        //prevents chef getting hit twice in a row
                     if (![_chefObj recentlyHit]) 
-                    {
-                       
+                    {   
                         [_chefObj chefDamaged];
-
-                    }
-                                       
+                        //TODO:Take off one health and check if chef still has lives left
+                    }                                       
                     
-                    //TODO:Take off one health
-                }
-                else if([item isKindOfClass:[CHCoinObject class]]){
-                    //TODO:add to player's score
-                }
-                else{
+                        //Coin:  Update player's score (maybe play a sound for every 1000)    
+                }else if([item isKindOfClass:[CHCoinObject class]]){
+                        //TODO:add to player's score
                 
-                    //Should be a recipe item
+                        //Recipe:  Update HUD and left over itmes needed.  Then check if its game win
+                }else{
+                
+                        //Should be a recipe item
                 
                 }
                 
@@ -228,7 +221,7 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
     
     
 	// Notify the parent
-	[gsParent worldOffsetDidChange:_bottomWorldOffset];
+	[gsParent worldOffsetDidChange:_bottomWorldOffset]; 
 	
 	// Generate new items
     
