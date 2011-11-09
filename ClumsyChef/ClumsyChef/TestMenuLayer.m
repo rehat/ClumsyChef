@@ -14,6 +14,7 @@
 #import "CHGameLayer.h"
 #import "CHGameScene.h"
 #import "CHMainMenuLayer.h"
+#import "CHHUDLayer.h"
 //-----------------------------------
 
 
@@ -65,8 +66,12 @@ NSInteger const TestBackButtonTag = -9999;
 		CCMenuItem *itemTest4 = [self menuItemWithTitle:@"Game Scene" block:^(id sender) {
 			[self runScene:[CHGameScene node]];
 		}];
+        
+        CCMenuItem *itemTest5 = [self menuItemWithTitle:@"HUD Layer" block:^(id sender) {
+			[self runLayer:[CHHUDLayer node]];
+		}];
 		
-		CCMenu *testMenu = [CCMenu menuWithItems:itemTest1, itemTest2, itemTest3, itemTest4, nil];
+		CCMenu *testMenu = [CCMenu menuWithItems:itemTest1, itemTest2, itemTest3, itemTest4, itemTest5, nil];
 		
 		// ----------------------------------
 		
