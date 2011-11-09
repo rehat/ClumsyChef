@@ -21,7 +21,7 @@
 
 // For game objects in game layer to call
 - (void)addChefMoney:(NSInteger)amount;
-- (void)chefDidCollectRecipeItem:(CHRecipeItemID)itemID;
+//- (void)chefDidCollectRecipeItem:(CHRecipeItemID)itemID;
 - (void)deductChefLife:(NSInteger)numLife;
 
 // For HUD

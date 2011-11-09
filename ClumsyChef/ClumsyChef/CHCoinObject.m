@@ -22,8 +22,9 @@
 {
 	if (self = [super init])
 	{
-        coin = [CCSprite spriteWithFile:@"gameObject-testIcon.png"];
+        coin = [CCSprite spriteWithFile:@"coinObject-coin.png"];
         emitter = [CCParticleSystemQuad particleWithFile:@"coinObject-particle.plist"];
+        //emitter.rotation = 180;
         [self addChild:coin];
     }
 	return self;
@@ -52,7 +53,7 @@
 }
 
 
-- (void)didCollideWithChef
+- (void)collected
 {   
     emitter.position = coin.position;
     emitter.autoRemoveOnFinish = YES;
@@ -61,7 +62,6 @@
     [self coinLabel];
     
     [[SimpleAudioEngine sharedEngine] playEffect:@"coin.caf"];
-	[[self gameSceneParent] addChefMoney:10];
     [self removeChild:coin cleanup:YES];
     [self schedule: @selector(removeFromParent) interval:.8];
 }

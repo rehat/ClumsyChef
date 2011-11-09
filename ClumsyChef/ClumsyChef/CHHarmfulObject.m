@@ -26,7 +26,15 @@ NSInteger const knifeTag = 666;
 {
 	if (self = [super init])
 	{
-        knife = [CCSprite spriteWithFile:@"harmfulObject-smallKnife.png"];
+        
+        if(CCRANDOM_0_1()>.5)
+            knife = [CCSprite spriteWithFile:@"harmfulObject-smallKnife.png"];
+        else
+            knife = [CCSprite spriteWithFile:@"harmfulObject-knife2.png"];
+
+        
+        
+        
         emitter = [CCParticleSystemQuad particleWithFile:@"harmfulObject-particle.plist"];
         [self addChild:knife z:1 tag:knifeTag];
         [self scheduleUpdate];
@@ -61,7 +69,7 @@ NSInteger const knifeTag = 666;
 }
 
 
-- (void)didCollideWithChef
+- (void)collected
 {   
     
     emitter.position = knife.position;
@@ -71,7 +79,6 @@ NSInteger const knifeTag = 666;
     [self damageLabel];
     
     [[SimpleAudioEngine sharedEngine] playEffect:@"Oowh.caf"];
-	[[self gameSceneParent] deductChefLife:1];
     [self removeChild:knife cleanup:YES];
     [self schedule: @selector(removeFromParent) interval:1];
 }

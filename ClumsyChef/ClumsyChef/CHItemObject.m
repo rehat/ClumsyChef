@@ -41,8 +41,15 @@
 {
 }
 
-- (void)didCollideWithChef
+- (void)collected
 {
+}
+
+-(id)initWithFile:(NSString*)item{
+    if(self = [super initWithFile:item]){
+    
+    }
+    return self;
 }
 
 @end
