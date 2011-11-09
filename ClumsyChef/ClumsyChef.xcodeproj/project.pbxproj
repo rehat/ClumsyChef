@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4036D1591467944A00B141AA /* PauseSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 4036D1571467944800B141AA /* PauseSelected.png */; };
+		4036D15A1467944A00B141AA /* PauseSelected.png in Resources */ = {isa = PBXBuildFile; fileRef = 4036D1571467944800B141AA /* PauseSelected.png */; };
+		4036D15B1467944A00B141AA /* Pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 4036D1581467944900B141AA /* Pause.png */; };
+		4036D15C1467944A00B141AA /* Pause.png in Resources */ = {isa = PBXBuildFile; fileRef = 4036D1581467944900B141AA /* Pause.png */; };
 		BC22F7331467329B00103918 /* coinObject-particle-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC22F7311467329B00103918 /* coinObject-particle-hd.plist */; };
 		BC22F7341467329B00103918 /* coinObject-particle-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC22F7311467329B00103918 /* coinObject-particle-hd.plist */; };
 		BC22F7351467329B00103918 /* coinObject-particle.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC22F7321467329B00103918 /* coinObject-particle.plist */; };
@@ -410,6 +414,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4036D1571467944800B141AA /* PauseSelected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PauseSelected.png; sourceTree = "<group>"; };
+		4036D1581467944900B141AA /* Pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pause.png; sourceTree = "<group>"; };
 		BC22F7311467329B00103918 /* coinObject-particle-hd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "coinObject-particle-hd.plist"; sourceTree = "<group>"; };
 		BC22F7321467329B00103918 /* coinObject-particle.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "coinObject-particle.plist"; sourceTree = "<group>"; };
 		BC5CA839145D4B21001B8B46 /* backB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backB.png; sourceTree = "<group>"; };
@@ -846,6 +852,8 @@
 				BCE9000A1465168E00179F06 /* backgroundLayer-sideBuilding.png */,
 				BCE9000B1465168E00179F06 /* backgroundLayer-sideBuilding-hd.png */,
 				E58ABB5D145A7EB6002CC4EE /* font-testFont-hd.png */,
+				4036D1571467944800B141AA /* PauseSelected.png */,
+				4036D1581467944900B141AA /* Pause.png */,
 				E58ABB58145A7B15002CC4EE /* font-testFont.fnt */,
 				E58ABB59145A7B15002CC4EE /* font-testFont.png */,
 				E52FECB61458C6EB0015B37E /* gameObject-testIcon-hd.png */,
@@ -1595,6 +1603,8 @@
 				BC6589E514662FD3008EF0FB /* fps_images.png in Resources */,
 				BC22F7341467329B00103918 /* coinObject-particle-hd.plist in Resources */,
 				BC22F7361467329B00103918 /* coinObject-particle.plist in Resources */,
+				4036D15A1467944A00B141AA /* PauseSelected.png in Resources */,
+				4036D15C1467944A00B141AA /* Pause.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1640,6 +1650,8 @@
 				BC6589E414662FD3008EF0FB /* fps_images.png in Resources */,
 				BC22F7331467329B00103918 /* coinObject-particle-hd.plist in Resources */,
 				BC22F7351467329B00103918 /* coinObject-particle.plist in Resources */,
+				4036D1591467944A00B141AA /* PauseSelected.png in Resources */,
+				4036D15B1467944A00B141AA /* Pause.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
