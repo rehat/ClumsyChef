@@ -141,6 +141,7 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 
 - (void)dealloc
 {
+    [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
 	[super dealloc];
 }
 
