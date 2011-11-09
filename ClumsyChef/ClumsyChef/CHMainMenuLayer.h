@@ -10,9 +10,6 @@
 #import "cocos2d.h"
 
 @interface CHMainMenuLayer : CCLayer 
-{
-    
-}
 
 +(id) scene;
 
