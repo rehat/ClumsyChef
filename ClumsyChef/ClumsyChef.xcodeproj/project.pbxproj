@@ -203,26 +203,26 @@
 		BC622AB11463362A0016DFA0 /* font-testFont-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E58ABB5D145A7EB6002CC4EE /* font-testFont-hd.png */; };
 		BC622AB21463362A0016DFA0 /* gameObject-testIconBlue-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E5F2342D145BBF820026799C /* gameObject-testIconBlue-hd.png */; };
 		BC622AB31463362A0016DFA0 /* gameObject-testIconBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = E5F2342E145BBF820026799C /* gameObject-testIconBlue.png */; };
-		BCD008EF1468B1A700EA7E30 /* harmfulObject-knife2-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BCD008ED1468B1A700EA7E30 /* harmfulObject-knife2-hd.png */; };
-		BCD008F01468B1A700EA7E30 /* harmfulObject-knife2-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BCD008ED1468B1A700EA7E30 /* harmfulObject-knife2-hd.png */; };
-		BCD008F11468B1A700EA7E30 /* harmfulObject-knife2.png in Resources */ = {isa = PBXBuildFile; fileRef = BCD008EE1468B1A700EA7E30 /* harmfulObject-knife2.png */; };
-		BCD008F21468B1A700EA7E30 /* harmfulObject-knife2.png in Resources */ = {isa = PBXBuildFile; fileRef = BCD008EE1468B1A700EA7E30 /* harmfulObject-knife2.png */; };
+		BCC06AAC146B2DB60068103A /* coinObject-coin-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BCC06AA4146B2DB60068103A /* coinObject-coin-hd.png */; };
+		BCC06AAD146B2DB60068103A /* coinObject-coin-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BCC06AA4146B2DB60068103A /* coinObject-coin-hd.png */; };
+		BCC06AAE146B2DB60068103A /* coinObject-coin.png in Resources */ = {isa = PBXBuildFile; fileRef = BCC06AA5146B2DB60068103A /* coinObject-coin.png */; };
+		BCC06AAF146B2DB60068103A /* coinObject-coin.png in Resources */ = {isa = PBXBuildFile; fileRef = BCC06AA5146B2DB60068103A /* coinObject-coin.png */; };
+		BCC06AB0146B2DB60068103A /* gameLayer-music.caf in Resources */ = {isa = PBXBuildFile; fileRef = BCC06AA6146B2DB60068103A /* gameLayer-music.caf */; };
+		BCC06AB1146B2DB60068103A /* gameLayer-music.caf in Resources */ = {isa = PBXBuildFile; fileRef = BCC06AA6146B2DB60068103A /* gameLayer-music.caf */; };
+		BCC06AB2146B2DB60068103A /* harmfulObject-knife2-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BCC06AA7146B2DB60068103A /* harmfulObject-knife2-hd.png */; };
+		BCC06AB3146B2DB60068103A /* harmfulObject-knife2-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BCC06AA7146B2DB60068103A /* harmfulObject-knife2-hd.png */; };
+		BCC06AB4146B2DB60068103A /* harmfulObject-knife2.png in Resources */ = {isa = PBXBuildFile; fileRef = BCC06AA8146B2DB60068103A /* harmfulObject-knife2.png */; };
+		BCC06AB5146B2DB60068103A /* harmfulObject-knife2.png in Resources */ = {isa = PBXBuildFile; fileRef = BCC06AA8146B2DB60068103A /* harmfulObject-knife2.png */; };
+		BCC06AB6146B2DB60068103A /* recipeItem-particle-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCC06AA9146B2DB60068103A /* recipeItem-particle-hd.plist */; };
+		BCC06AB7146B2DB60068103A /* recipeItem-particle-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCC06AA9146B2DB60068103A /* recipeItem-particle-hd.plist */; };
+		BCC06AB8146B2DB60068103A /* recipeItem-particle.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCC06AAA146B2DB60068103A /* recipeItem-particle.plist */; };
+		BCC06AB9146B2DB60068103A /* recipeItem-particle.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCC06AAA146B2DB60068103A /* recipeItem-particle.plist */; };
+		BCC06ABA146B2DB60068103A /* recipeItem-sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = BCC06AAB146B2DB60068103A /* recipeItem-sound.caf */; };
+		BCC06ABB146B2DB60068103A /* recipeItem-sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = BCC06AAB146B2DB60068103A /* recipeItem-sound.caf */; };
 		BCD008F91468CF4E00EA7E30 /* Stages.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCD008F81468CF4E00EA7E30 /* Stages.plist */; };
 		BCD008FA1468CF4E00EA7E30 /* Stages.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCD008F81468CF4E00EA7E30 /* Stages.plist */; };
 		BCD008FC1469077600EA7E30 /* Ingredients.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCD008FB1469077600EA7E30 /* Ingredients.plist */; };
 		BCD008FD1469077600EA7E30 /* Ingredients.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCD008FB1469077600EA7E30 /* Ingredients.plist */; };
-		BCD0090014692FB900EA7E30 /* coinObject-coin.png in Resources */ = {isa = PBXBuildFile; fileRef = BCD008FE14692FB900EA7E30 /* coinObject-coin.png */; };
-		BCD0090114692FB900EA7E30 /* coinObject-coin.png in Resources */ = {isa = PBXBuildFile; fileRef = BCD008FE14692FB900EA7E30 /* coinObject-coin.png */; };
-		BCD0090214692FB900EA7E30 /* coinObject-coin-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BCD008FF14692FB900EA7E30 /* coinObject-coin-hd.png */; };
-		BCD0090314692FB900EA7E30 /* coinObject-coin-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BCD008FF14692FB900EA7E30 /* coinObject-coin-hd.png */; };
-		BCF71146146A5D7A004E9D33 /* recipeItem-particle-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCF71144146A5D7A004E9D33 /* recipeItem-particle-hd.plist */; };
-		BCF71147146A5D7A004E9D33 /* recipeItem-particle-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCF71144146A5D7A004E9D33 /* recipeItem-particle-hd.plist */; };
-		BCF71148146A5D7A004E9D33 /* recipeItem-particle.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCF71145146A5D7A004E9D33 /* recipeItem-particle.plist */; };
-		BCF71149146A5D7A004E9D33 /* recipeItem-particle.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCF71145146A5D7A004E9D33 /* recipeItem-particle.plist */; };
-		BCF7114C146A6E53004E9D33 /* recipeItem-sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = BCF7114A146A6E53004E9D33 /* recipeItem-sound.caf */; };
-		BCF7114D146A6E53004E9D33 /* recipeItem-sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = BCF7114A146A6E53004E9D33 /* recipeItem-sound.caf */; };
-		BCF7114E146A6E53004E9D33 /* gameLayer-music.caf in Resources */ = {isa = PBXBuildFile; fileRef = BCF7114B146A6E53004E9D33 /* gameLayer-music.caf */; };
-		BCF7114F146A6E53004E9D33 /* gameLayer-music.caf in Resources */ = {isa = PBXBuildFile; fileRef = BCF7114B146A6E53004E9D33 /* gameLayer-music.caf */; };
 		E511C294145925B3008BCFF8 /* testLayer-backButton.png in Resources */ = {isa = PBXBuildFile; fileRef = E511C293145925B3008BCFF8 /* testLayer-backButton.png */; };
 		E511C298145925BC008BCFF8 /* testLayer-backButton-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E511C295145925BC008BCFF8 /* testLayer-backButton-hd.png */; };
 		E511C299145925BC008BCFF8 /* testLayer-backButton-highlighted-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E511C296145925BC008BCFF8 /* testLayer-backButton-highlighted-hd.png */; };
@@ -460,16 +460,16 @@
 		85CEB0B614685F330099409C /* play2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = play2.png; path = Resources/play2.png; sourceTree = "<group>"; };
 		BC622ABB1463362A0016DFA0 /* ClumsyChef copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ClumsyChef copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC622ABE1463362A0016DFA0 /* ClumsyChef copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "ClumsyChef copy-Info.plist"; path = "/Users/rehat/Documents/iuci/ClumsyChef/ClumsyChef copy-Info.plist"; sourceTree = "<absolute>"; };
-		BCD008ED1468B1A700EA7E30 /* harmfulObject-knife2-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "harmfulObject-knife2-hd.png"; sourceTree = "<group>"; };
-		BCD008EE1468B1A700EA7E30 /* harmfulObject-knife2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "harmfulObject-knife2.png"; sourceTree = "<group>"; };
+		BCC06AA4146B2DB60068103A /* coinObject-coin-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "coinObject-coin-hd.png"; path = "Resources/coinObject-coin-hd.png"; sourceTree = "<group>"; };
+		BCC06AA5146B2DB60068103A /* coinObject-coin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "coinObject-coin.png"; path = "Resources/coinObject-coin.png"; sourceTree = "<group>"; };
+		BCC06AA6146B2DB60068103A /* gameLayer-music.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "gameLayer-music.caf"; path = "Resources/gameLayer-music.caf"; sourceTree = "<group>"; };
+		BCC06AA7146B2DB60068103A /* harmfulObject-knife2-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "harmfulObject-knife2-hd.png"; path = "Resources/harmfulObject-knife2-hd.png"; sourceTree = "<group>"; };
+		BCC06AA8146B2DB60068103A /* harmfulObject-knife2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "harmfulObject-knife2.png"; path = "Resources/harmfulObject-knife2.png"; sourceTree = "<group>"; };
+		BCC06AA9146B2DB60068103A /* recipeItem-particle-hd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "recipeItem-particle-hd.plist"; path = "Resources/recipeItem-particle-hd.plist"; sourceTree = "<group>"; };
+		BCC06AAA146B2DB60068103A /* recipeItem-particle.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "recipeItem-particle.plist"; path = "Resources/recipeItem-particle.plist"; sourceTree = "<group>"; };
+		BCC06AAB146B2DB60068103A /* recipeItem-sound.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "recipeItem-sound.caf"; path = "Resources/recipeItem-sound.caf"; sourceTree = "<group>"; };
 		BCD008F81468CF4E00EA7E30 /* Stages.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Stages.plist; sourceTree = "<group>"; };
 		BCD008FB1469077600EA7E30 /* Ingredients.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Ingredients.plist; sourceTree = "<group>"; };
-		BCD008FE14692FB900EA7E30 /* coinObject-coin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "coinObject-coin.png"; sourceTree = "<group>"; };
-		BCD008FF14692FB900EA7E30 /* coinObject-coin-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "coinObject-coin-hd.png"; sourceTree = "<group>"; };
-		BCF71144146A5D7A004E9D33 /* recipeItem-particle-hd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "recipeItem-particle-hd.plist"; sourceTree = "<group>"; };
-		BCF71145146A5D7A004E9D33 /* recipeItem-particle.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "recipeItem-particle.plist"; sourceTree = "<group>"; };
-		BCF7114A146A6E53004E9D33 /* recipeItem-sound.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "recipeItem-sound.caf"; sourceTree = "<group>"; };
-		BCF7114B146A6E53004E9D33 /* gameLayer-music.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "gameLayer-music.caf"; sourceTree = "<group>"; };
 		E511C293145925B3008BCFF8 /* testLayer-backButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "testLayer-backButton.png"; path = "Resources/testLayer-backButton.png"; sourceTree = "<group>"; };
 		E511C295145925BC008BCFF8 /* testLayer-backButton-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "testLayer-backButton-hd.png"; path = "Resources/testLayer-backButton-hd.png"; sourceTree = "<group>"; };
 		E511C296145925BC008BCFF8 /* testLayer-backButton-highlighted-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "testLayer-backButton-highlighted-hd.png"; path = "Resources/testLayer-backButton-highlighted-hd.png"; sourceTree = "<group>"; };
@@ -952,15 +952,15 @@
 		E522B2FF146863950049D367 /* Game Layer */ = {
 			isa = PBXGroup;
 			children = (
-				BCF7114A146A6E53004E9D33 /* recipeItem-sound.caf */,
-				BCF7114B146A6E53004E9D33 /* gameLayer-music.caf */,
-				BCD008FE14692FB900EA7E30 /* coinObject-coin.png */,
-				BCD008FF14692FB900EA7E30 /* coinObject-coin-hd.png */,
-				BCD008ED1468B1A700EA7E30 /* harmfulObject-knife2-hd.png */,
-				BCD008EE1468B1A700EA7E30 /* harmfulObject-knife2.png */,
+				BCC06AA4146B2DB60068103A /* coinObject-coin-hd.png */,
+				BCC06AA5146B2DB60068103A /* coinObject-coin.png */,
+				BCC06AA6146B2DB60068103A /* gameLayer-music.caf */,
+				BCC06AA7146B2DB60068103A /* harmfulObject-knife2-hd.png */,
+				BCC06AA8146B2DB60068103A /* harmfulObject-knife2.png */,
+				BCC06AA9146B2DB60068103A /* recipeItem-particle-hd.plist */,
+				BCC06AAA146B2DB60068103A /* recipeItem-particle.plist */,
+				BCC06AAB146B2DB60068103A /* recipeItem-sound.caf */,
 				E599003C14687E3B00458316 /* chefObject-chef-hd.png */,
-				BCF71144146A5D7A004E9D33 /* recipeItem-particle-hd.plist */,
-				BCF71145146A5D7A004E9D33 /* recipeItem-particle.plist */,
 				E599003D14687E3B00458316 /* chefObject-chef.png */,
 				E599003E14687E3B00458316 /* coin.caf */,
 				E599003F14687E3B00458316 /* coinObject-particle-hd.plist */,
@@ -1713,16 +1713,16 @@
 				E599005B14687E3B00458316 /* harmfulObject-smallKnife.png in Resources */,
 				E599005D14687E3B00458316 /* Oowh.caf in Resources */,
 				E599005F14687E3B00458316 /* skull.png in Resources */,
-				BCD008F01468B1A700EA7E30 /* harmfulObject-knife2-hd.png in Resources */,
-				BCD008F21468B1A700EA7E30 /* harmfulObject-knife2.png in Resources */,
 				BCD008FA1468CF4E00EA7E30 /* Stages.plist in Resources */,
 				BCD008FD1469077600EA7E30 /* Ingredients.plist in Resources */,
-				BCD0090114692FB900EA7E30 /* coinObject-coin.png in Resources */,
-				BCD0090314692FB900EA7E30 /* coinObject-coin-hd.png in Resources */,
-				BCF71147146A5D7A004E9D33 /* recipeItem-particle-hd.plist in Resources */,
-				BCF71149146A5D7A004E9D33 /* recipeItem-particle.plist in Resources */,
-				BCF7114D146A6E53004E9D33 /* recipeItem-sound.caf in Resources */,
-				BCF7114F146A6E53004E9D33 /* gameLayer-music.caf in Resources */,
+				BCC06AAD146B2DB60068103A /* coinObject-coin-hd.png in Resources */,
+				BCC06AAF146B2DB60068103A /* coinObject-coin.png in Resources */,
+				BCC06AB1146B2DB60068103A /* gameLayer-music.caf in Resources */,
+				BCC06AB3146B2DB60068103A /* harmfulObject-knife2-hd.png in Resources */,
+				BCC06AB5146B2DB60068103A /* harmfulObject-knife2.png in Resources */,
+				BCC06AB7146B2DB60068103A /* recipeItem-particle-hd.plist in Resources */,
+				BCC06AB9146B2DB60068103A /* recipeItem-particle.plist in Resources */,
+				BCC06ABB146B2DB60068103A /* recipeItem-sound.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1778,16 +1778,16 @@
 				E599005A14687E3B00458316 /* harmfulObject-smallKnife.png in Resources */,
 				E599005C14687E3B00458316 /* Oowh.caf in Resources */,
 				E599005E14687E3B00458316 /* skull.png in Resources */,
-				BCD008EF1468B1A700EA7E30 /* harmfulObject-knife2-hd.png in Resources */,
-				BCD008F11468B1A700EA7E30 /* harmfulObject-knife2.png in Resources */,
 				BCD008F91468CF4E00EA7E30 /* Stages.plist in Resources */,
 				BCD008FC1469077600EA7E30 /* Ingredients.plist in Resources */,
-				BCD0090014692FB900EA7E30 /* coinObject-coin.png in Resources */,
-				BCD0090214692FB900EA7E30 /* coinObject-coin-hd.png in Resources */,
-				BCF71146146A5D7A004E9D33 /* recipeItem-particle-hd.plist in Resources */,
-				BCF71148146A5D7A004E9D33 /* recipeItem-particle.plist in Resources */,
-				BCF7114C146A6E53004E9D33 /* recipeItem-sound.caf in Resources */,
-				BCF7114E146A6E53004E9D33 /* gameLayer-music.caf in Resources */,
+				BCC06AAC146B2DB60068103A /* coinObject-coin-hd.png in Resources */,
+				BCC06AAE146B2DB60068103A /* coinObject-coin.png in Resources */,
+				BCC06AB0146B2DB60068103A /* gameLayer-music.caf in Resources */,
+				BCC06AB2146B2DB60068103A /* harmfulObject-knife2-hd.png in Resources */,
+				BCC06AB4146B2DB60068103A /* harmfulObject-knife2.png in Resources */,
+				BCC06AB6146B2DB60068103A /* recipeItem-particle-hd.plist in Resources */,
+				BCC06AB8146B2DB60068103A /* recipeItem-particle.plist in Resources */,
+				BCC06ABA146B2DB60068103A /* recipeItem-sound.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
