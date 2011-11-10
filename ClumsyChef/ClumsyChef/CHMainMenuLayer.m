@@ -49,7 +49,7 @@ CCSprite *background;
         
         // set CCMenuItemFont default properties
         [CCMenuItemFont setFontName:@"Helvetica-BoldOblique"];
-        [CCMenuItemFont setFontSize:20];
+        [CCMenuItemFont setFontSize:10];
         
         // create a few labels with text and selector
         CCMenuItemFont* item1 = [CCMenuItemFont itemFromString:@"High Scores!" target:self selector:@selector(menuItem1Touched:)];
@@ -70,19 +70,22 @@ CCSprite *background;
         CCMenuItemImage* toggleOff = [CCMenuItemImage itemFromNormalImage:@"Speaker-Off.png" selectedImage:@"Speaker-Off.png"];
         CCMenuItemToggle* item3 = [CCMenuItemToggle itemWithTarget:self selector:@selector(menuItem3Touched:) items:toggleOn, toggleOff, nil];
         
+        CCMenuItemFont* item4 = [CCMenuItemFont itemFromString:@"Credits!" target:self selector:@selector(menuItem4Touched:)];
+        
         BOOL isMute = [[SimpleAudioEngine sharedEngine] mute];
         item3.selectedIndex = (isMute? 1 : 0);
         
-        CCMenu* menu = [CCMenu menuWithItems:item1, item2, item3, nil];
+        CCMenu* menu = [CCMenu menuWithItems:item1, item2, item3, item4, nil];
         menu.anchorPoint = CGPointZero;
         menu.position = CGPointZero;
         
         menu.tag = 100;
         
         // create the menu using the items
-        item1.position = ccp(20, 160);
-        item2.position = ccp(170, 220);
-        item3.position = ccp(item2.position.x-5, 93);
+        item1.position = ccp(35, 208);
+        item2.position = ccp(170, 210);
+        item3.position = ccp(item2.position.x-5, 82);
+        item4.position = ccp(288, 208);
         
         [self addChild:menu];
 	}
@@ -110,6 +113,12 @@ CCSprite *background;
     
     SimpleAudioEngine *e = [SimpleAudioEngine sharedEngine];
     [e setMute:![e mute]];
+}
+
+-(void) menuItem4Touched:(id)sender
+{
+	CCLOG(@"item 4 touched: %@", sender);
+	//[self goBackToPreviousScene];
 }
 
 -(void) dealloc
