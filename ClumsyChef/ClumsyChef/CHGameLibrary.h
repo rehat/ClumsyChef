@@ -23,3 +23,77 @@
 
 
 @end
+
+
+
+
+
+
+
+/*-----------------------------------------------------------------
+ Recipe Item
+ -----------------------------------------------------------------*/
+
+@interface CHRecipeItemInfo : NSObject 
+
+@property(nonatomic, readonly, retain) NSString *itemName;
+@property(nonatomic, readonly, retain) NSString *spriteFilename;
+
+@end
+
+/*-----------------------------------------------------------------
+ Harmful item info
+ -----------------------------------------------------------------*/
+
+@interface CHHarmfulItemInfo : NSObject 
+
+@property(nonatomic, readonly, retain) NSString *itemName;
+@property(nonatomic, readonly, retain) NSString *spriteFilename;
+
+@end
+
+/*-----------------------------------------------------------------
+ Level info
+ -----------------------------------------------------------------*/
+
+@interface CHLevelInfo : NSObject 
+
+// Background information
+@property(nonatomic, readonly, retain) NSString *levelName;
+@property(nonatomic, readonly, retain) NSString *previewImage;
+@property(nonatomic, readonly, assign) NSUInteger worldHeight;
+@property(nonatomic, readonly, retain) NSString *backgroundSideBuildingImage;
+@property(nonatomic, readonly, retain) NSString *backgroundBackImage;
+
+@property(nonatomic, readonly, retain) NSArray *recipeItems;
+
+// TODO: More
+
+@end
+
+
+/**
+ * CHGameLibrary
+ * A centralized place to look for:
+ *    - stage info
+ *    - receipt item info
+ */
+@interface CHGameLibraryNew : NSObject
+
+
++ (CHGameLibrary *)sharedGameLibrary;		// Singleton object
+
+// Obtain game item info
+- (CHRecipeItemInfo *)recipeItemInfoWithName:(NSString *)itemName;
+
+- (CHHarmfulItemInfo *)randomHarmfulItem;
+
+//- (CHHarmfulItemInfo *)harmfulItemInfoWithID:(NSString *)itemName;
+
+// Obtain stage info
+- (NSArray *)allLevelInfo;
+- (CHLevelInfo *)levelInfoWithName:(NSString *)levelName;
+
++ (void)test;
+
+@end

@@ -14,6 +14,7 @@
 #import "CHGameLayer.h"
 #import "CHGameScene.h"
 #import "CHMainMenuLayer.h"
+#import "CHGameLibrary.h"
 //-----------------------------------
 
 
@@ -94,6 +95,9 @@ NSInteger const TestBackButtonTag = -9999;
 		[self addChild:layer];
 		layer.position = ccp(0, -CHGetWinHeight());
 		[layer runAction:[CCEaseElasticOut actionWithAction:[CCMoveBy actionWithDuration:2.f position:ccp(0, 480)]]];
+	
+	
+		[CHGameLibraryNew test];
 	}
 	return self;
 }
