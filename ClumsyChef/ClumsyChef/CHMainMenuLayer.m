@@ -8,12 +8,18 @@
 
 #import "CHMainMenuLayer.h"
 #import "SimpleAudioEngine.h"
+#import "TestMenuLayer.h"
+#import "CHUtilities.h"
+
+#import "CHBackgroundLayer.h"
+#import "CHGameLayer.h"
+#import "CHGameScene.h"
+#import "CHMainMenuLayer.h"
+
 
 // private methods are declared in this manner to avoid "may not respond to ..." compiler warnings
 @interface CHMainMenuLayer (PrivateMethods)
 -(void) createMenu:(ccTime)delta;
--(void) goBackToPreviousScene;
--(void) changeScene:(id)sender;
 -(void) menuItem1Touched:(id)sender;
 -(void) menuItem2Touched:(id)sender;
 -(void) menuItem3Touched:(id)sender;
@@ -23,13 +29,12 @@
 
 CCSprite *background;
 
-+(id) scene
+- (void)runScene:(CCScene *)scene
 {
-	CCScene* scene = [CCScene node];
-	CCLayer* layer = [CHMainMenuLayer node];
-	[scene addChild:layer];
-	return scene;
+        [scene addChild:[TestMenuLayer backButton]];
+		[[CCDirector sharedDirector] pushScene:scene];
 }
+
 
 -(id) init
 {
@@ -44,7 +49,7 @@ CCSprite *background;
         
         // set CCMenuItemFont default properties
         [CCMenuItemFont setFontName:@"Helvetica-BoldOblique"];
-        [CCMenuItemFont setFontSize:20];
+        [CCMenuItemFont setFontSize:10];
         
         // create a few labels with text and selector
         CCMenuItemFont* item1 = [CCMenuItemFont itemFromString:@"High Scores!" target:self selector:@selector(menuItem1Touched:)];
@@ -52,62 +57,45 @@ CCSprite *background;
         // create a menu item using existing sprites
         CCSprite* normal = [CCSprite spriteWithFile:@"play.png"];
         CCSprite* selected = [CCSprite spriteWithFile:@"play2.png"];
-        CCMenuItemSprite* item2 = [CCMenuItemSprite itemFromNormalSprite:normal selectedSprite:selected target:self selector:@selector(menuItem2Touched:)];
-//        CCMenuItemSprite *item2_x = [CCMenuItemSprite itemFromNormalSprite:normal selectedSprite:selected block:^(id sender)
-//                                     {
-//                                         CCLOG(@"xxx"); 
-//                                     }];
+        //CCMenuItemSprite* item2 = [CCMenuItemSprite itemFromNormalSprite:normal selectedSprite:selected target:self selector:@selector(menuItem2Touched:)];
+        CCMenuItemSprite *item2 = [CCMenuItemSprite itemFromNormalSprite:normal selectedSprite:selected block:^(id sender)
+                                     {
+                                         CCLOG(@"xxx");
+                                        [self runScene:[CHGameScene node]];
+                                     }];
+ 
         // create a toggle item using two other menu items (toggle works with images, too) 	 [CCMenuItemFont setFontName:@"STHeitiJ-Light"];
         
-        CCMenuItemImage* toggleOn = [CCMenuItemImage itemFromNormalImage:@"sound-icon.png" selectedImage:@"sound-icon.png"];
-        CCMenuItemImage* toggleOff = [CCMenuItemImage itemFromNormalImage:@"sound-off-icon.png" selectedImage:@"sound-off-icon.png"];
+        CCMenuItemImage* toggleOn = [CCMenuItemImage itemFromNormalImage:@"Speaker-On.png" selectedImage:@"Speaker-On.png"];
+        CCMenuItemImage* toggleOff = [CCMenuItemImage itemFromNormalImage:@"Speaker-Off.png" selectedImage:@"Speaker-Off.png"];
         CCMenuItemToggle* item3 = [CCMenuItemToggle itemWithTarget:self selector:@selector(menuItem3Touched:) items:toggleOn, toggleOff, nil];
+        
+        CCMenuItemFont* item4 = [CCMenuItemFont itemFromString:@"Credits!" target:self selector:@selector(menuItem4Touched:)];
         
         BOOL isMute = [[SimpleAudioEngine sharedEngine] mute];
         item3.selectedIndex = (isMute? 1 : 0);
         
-        CCMenu* menu = [CCMenu menuWithItems:item1, item2, item3, nil];
+        CCMenu* menu = [CCMenu menuWithItems:item1, item2, item3, item4, nil];
         menu.anchorPoint = CGPointZero;
         menu.position = CGPointZero;
         
         menu.tag = 100;
         
         // create the menu using the items
-        item1.position = ccp(20, 160);
-        item2.position = ccp(170, 220);
-        item3.position = ccp(item2.position.x, 100);
+        item1.position = ccp(35, 208);
+        item2.position = ccp(170, 210);
+        item3.position = ccp(item2.position.x-5, 82);
+        item4.position = ccp(288, 208);
         
         [self addChild:menu];
 	}
 	return self;
 }
 
--(void) goBackToPreviousScene
-{
-	// get the menu back
-	CCNode* node = [self getChildByTag:100];
-	NSAssert([node isKindOfClass:[CCMenu class]], @"node is not a CCMenu!");
-    
-	CCMenu* menu = (CCMenu*)node;
-    
-	// lets move the menu out using a sequence
-	CGSize size = [[CCDirector sharedDirector] winSize];
-	CCMoveTo* move = [CCMoveTo actionWithDuration:1 position:CGPointMake(-(size.width / 2), size.height / 2)];
-	CCEaseBackInOut* ease = [CCEaseBackInOut actionWithAction:move];
-	CCCallFunc* func = [CCCallFunc actionWithTarget:self selector:@selector(changeScene:)];
-	CCSequence* sequence = [CCSequence actions:ease, func, nil];
-	[menu runAction:sequence];
-}
-
--(void) changeScene:(id)send
-{
-	//[[CCDirector sharedDirector] replaceScene:[HelloWorld scene]];
-}
-
 -(void) menuItem1Touched:(id)sender
 {
 	CCLOG(@"item 1 touched: %@", sender);
-	[self goBackToPreviousScene];
+	//[self goBackToPreviousScene];
 }
 
 -(void) menuItem2Touched:(id)sender
@@ -125,6 +113,12 @@ CCSprite *background;
     
     SimpleAudioEngine *e = [SimpleAudioEngine sharedEngine];
     [e setMute:![e mute]];
+}
+
+-(void) menuItem4Touched:(id)sender
+{
+	CCLOG(@"item 4 touched: %@", sender);
+	//[self goBackToPreviousScene];
 }
 
 -(void) dealloc
