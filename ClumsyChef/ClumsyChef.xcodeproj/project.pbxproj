@@ -250,6 +250,12 @@
 		E55D60EC1451373A00C9D237 /* CHGameLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E55D60EB1451373A00C9D237 /* CHGameLayer.m */; };
 		E55D60EF1451376F00C9D237 /* CHHUDLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E55D60EE1451376F00C9D237 /* CHHUDLayer.m */; };
 		E55D60F21451378B00C9D237 /* CHPauseLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E55D60F11451378B00C9D237 /* CHPauseLayer.m */; };
+		E5631EA3146B790000DACD3E /* gameLibrary-harmfulItems.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5631EA0146B790000DACD3E /* gameLibrary-harmfulItems.plist */; };
+		E5631EA4146B790000DACD3E /* gameLibrary-harmfulItems.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5631EA0146B790000DACD3E /* gameLibrary-harmfulItems.plist */; };
+		E5631EA5146B790000DACD3E /* gameLibrary-levels.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5631EA1146B790000DACD3E /* gameLibrary-levels.plist */; };
+		E5631EA6146B790000DACD3E /* gameLibrary-levels.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5631EA1146B790000DACD3E /* gameLibrary-levels.plist */; };
+		E5631EA7146B790000DACD3E /* gameLibrary-recipeItems.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5631EA2146B790000DACD3E /* gameLibrary-recipeItems.plist */; };
+		E5631EA8146B790000DACD3E /* gameLibrary-recipeItems.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5631EA2146B790000DACD3E /* gameLibrary-recipeItems.plist */; };
 		E565162C1461FD3800F89149 /* CHItemObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E565162B1461FD3800F89149 /* CHItemObject.m */; };
 		E5651631146200C900F89149 /* CHCoinObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E5651630146200C800F89149 /* CHCoinObject.m */; };
 		E56516341462010600F89149 /* CHRecipeItemObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E56516331462010600F89149 /* CHRecipeItemObject.m */; };
@@ -511,9 +517,9 @@
 		E55D60EE1451376F00C9D237 /* CHHUDLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHHUDLayer.m; sourceTree = "<group>"; };
 		E55D60F01451378B00C9D237 /* CHPauseLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHPauseLayer.h; sourceTree = "<group>"; };
 		E55D60F11451378B00C9D237 /* CHPauseLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHPauseLayer.m; sourceTree = "<group>"; };
-		E5631E8B146B4C0400DACD3E /* gameLibrary-harmfulItems.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "gameLibrary-harmfulItems.plist"; path = "Resources/gameLibrary-harmfulItems.plist"; sourceTree = "<group>"; };
-		E5631E8C146B4C0400DACD3E /* gameLibrary-levels.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "gameLibrary-levels.plist"; path = "Resources/gameLibrary-levels.plist"; sourceTree = "<group>"; };
-		E5631E8D146B4C0400DACD3E /* gameLibrary-recipeItems.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "gameLibrary-recipeItems.plist"; path = "Resources/gameLibrary-recipeItems.plist"; sourceTree = "<group>"; };
+		E5631EA0146B790000DACD3E /* gameLibrary-harmfulItems.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "gameLibrary-harmfulItems.plist"; path = "Resources/gameLibrary-harmfulItems.plist"; sourceTree = "<group>"; };
+		E5631EA1146B790000DACD3E /* gameLibrary-levels.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "gameLibrary-levels.plist"; path = "Resources/gameLibrary-levels.plist"; sourceTree = "<group>"; };
+		E5631EA2146B790000DACD3E /* gameLibrary-recipeItems.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "gameLibrary-recipeItems.plist"; path = "Resources/gameLibrary-recipeItems.plist"; sourceTree = "<group>"; };
 		E565162A1461FD3800F89149 /* CHItemObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHItemObject.h; sourceTree = "<group>"; };
 		E565162B1461FD3800F89149 /* CHItemObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHItemObject.m; sourceTree = "<group>"; };
 		E565162F146200C800F89149 /* CHCoinObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHCoinObject.h; sourceTree = "<group>"; };
@@ -1037,9 +1043,9 @@
 		E5631E8A146B4BA000DACD3E /* Game Library */ = {
 			isa = PBXGroup;
 			children = (
-				E5631E8B146B4C0400DACD3E /* gameLibrary-harmfulItems.plist */,
-				E5631E8C146B4C0400DACD3E /* gameLibrary-levels.plist */,
-				E5631E8D146B4C0400DACD3E /* gameLibrary-recipeItems.plist */,
+				E5631EA0146B790000DACD3E /* gameLibrary-harmfulItems.plist */,
+				E5631EA1146B790000DACD3E /* gameLibrary-levels.plist */,
+				E5631EA2146B790000DACD3E /* gameLibrary-recipeItems.plist */,
 			);
 			name = "Game Library";
 			sourceTree = "<group>";
@@ -1751,6 +1757,9 @@
 				85F6CE78146B4BC500290595 /* Speaker-Off.png in Resources */,
 				85F6CE7A146B4BC500290595 /* Speaker-On-hd.png in Resources */,
 				85F6CE7C146B4BC500290595 /* Speaker-Off-hd.png in Resources */,
+				E5631EA4146B790000DACD3E /* gameLibrary-harmfulItems.plist in Resources */,
+				E5631EA6146B790000DACD3E /* gameLibrary-levels.plist in Resources */,
+				E5631EA8146B790000DACD3E /* gameLibrary-recipeItems.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1820,6 +1829,9 @@
 				85F6CE77146B4BC500290595 /* Speaker-Off.png in Resources */,
 				85F6CE79146B4BC500290595 /* Speaker-On-hd.png in Resources */,
 				85F6CE7B146B4BC500290595 /* Speaker-Off-hd.png in Resources */,
+				E5631EA3146B790000DACD3E /* gameLibrary-harmfulItems.plist in Resources */,
+				E5631EA5146B790000DACD3E /* gameLibrary-levels.plist in Resources */,
+				E5631EA7146B790000DACD3E /* gameLibrary-recipeItems.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
