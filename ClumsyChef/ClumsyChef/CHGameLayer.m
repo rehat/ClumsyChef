@@ -23,8 +23,7 @@ static CGFloat const kChefYOffset = 100.f;
 // When objected go out of the screen at the top and beyond this distance,
 // They get removed
 static float const kObjectActiveRangeUp = 100.f;
-static float const kGenObjectRangeDown = 100.f;		// For generating objects before they appears
-
+static float const kGenObjectRangeDown = 100.f;		
 
 @implementation CHGameLayer
 {
@@ -35,8 +34,10 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
     
     CCArray *itemsArray;
     CCArray *goalItemsArray;
-	
-	// TODO: shared particle effects, sound effects
+    
+    NSInteger lives;
+    NSInteger score;
+	NSInteger levelHeight;
 }
 
 
@@ -81,7 +82,6 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
 	
     
     [itemsArray addObject:item];
-    //[self addChild:item];
 
     
 	
@@ -210,15 +210,20 @@ static float const kGenObjectRangeDown = 100.f;		// For generating objects befor
                     {   
                         [_chefObj chefDamaged];
                         //TODO:Take off one health and check if chef still has lives left
+                        lives --;
+                            //TODO: tell HUD to update lives
+                        if (lives <1) {
+                            //TODO: game over
+                        }
                     }                                       
                     
                         //Coin:  Update player's score (maybe play a sound for every 1000)    
                 }else if([item isKindOfClass:[CHCoinObject class]]){
                         //TODO:add to player's score
-                
+                    score += 10;
                         //Recipe:  Update HUD and left over itmes needed.  Then check if its game win
                 }else{
-                
+                        
                         //Should be a recipe item
                 
                 }
