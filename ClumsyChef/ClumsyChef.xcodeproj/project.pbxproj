@@ -250,12 +250,6 @@
 		E55D60EC1451373A00C9D237 /* CHGameLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E55D60EB1451373A00C9D237 /* CHGameLayer.m */; };
 		E55D60EF1451376F00C9D237 /* CHHUDLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E55D60EE1451376F00C9D237 /* CHHUDLayer.m */; };
 		E55D60F21451378B00C9D237 /* CHPauseLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E55D60F11451378B00C9D237 /* CHPauseLayer.m */; };
-		E5631E8E146B4C0400DACD3E /* gameLibrary-harmfulItems.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5631E8B146B4C0400DACD3E /* gameLibrary-harmfulItems.plist */; };
-		E5631E8F146B4C0400DACD3E /* gameLibrary-harmfulItems.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5631E8B146B4C0400DACD3E /* gameLibrary-harmfulItems.plist */; };
-		E5631E90146B4C0400DACD3E /* gameLibrary-levels.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5631E8C146B4C0400DACD3E /* gameLibrary-levels.plist */; };
-		E5631E91146B4C0400DACD3E /* gameLibrary-levels.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5631E8C146B4C0400DACD3E /* gameLibrary-levels.plist */; };
-		E5631E92146B4C0400DACD3E /* gameLibrary-recipeItems.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5631E8D146B4C0400DACD3E /* gameLibrary-recipeItems.plist */; };
-		E5631E93146B4C0400DACD3E /* gameLibrary-recipeItems.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5631E8D146B4C0400DACD3E /* gameLibrary-recipeItems.plist */; };
 		E565162C1461FD3800F89149 /* CHItemObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E565162B1461FD3800F89149 /* CHItemObject.m */; };
 		E5651631146200C900F89149 /* CHCoinObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E5651630146200C800F89149 /* CHCoinObject.m */; };
 		E56516341462010600F89149 /* CHRecipeItemObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E56516331462010600F89149 /* CHRecipeItemObject.m */; };
@@ -1753,9 +1747,10 @@
 				BCC06AB7146B2DB60068103A /* recipeItem-particle-hd.plist in Resources */,
 				BCC06AB9146B2DB60068103A /* recipeItem-particle.plist in Resources */,
 				BCC06ABB146B2DB60068103A /* recipeItem-sound.caf in Resources */,
-				E5631E8F146B4C0400DACD3E /* gameLibrary-harmfulItems.plist in Resources */,
-				E5631E91146B4C0400DACD3E /* gameLibrary-levels.plist in Resources */,
-				E5631E93146B4C0400DACD3E /* gameLibrary-recipeItems.plist in Resources */,
+				85F6CE76146B4BC500290595 /* Speaker-On.png in Resources */,
+				85F6CE78146B4BC500290595 /* Speaker-Off.png in Resources */,
+				85F6CE7A146B4BC500290595 /* Speaker-On-hd.png in Resources */,
+				85F6CE7C146B4BC500290595 /* Speaker-Off-hd.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1821,9 +1816,10 @@
 				BCC06AB6146B2DB60068103A /* recipeItem-particle-hd.plist in Resources */,
 				BCC06AB8146B2DB60068103A /* recipeItem-particle.plist in Resources */,
 				BCC06ABA146B2DB60068103A /* recipeItem-sound.caf in Resources */,
-				E5631E8E146B4C0400DACD3E /* gameLibrary-harmfulItems.plist in Resources */,
-				E5631E90146B4C0400DACD3E /* gameLibrary-levels.plist in Resources */,
-				E5631E92146B4C0400DACD3E /* gameLibrary-recipeItems.plist in Resources */,
+				85F6CE75146B4BC500290595 /* Speaker-On.png in Resources */,
+				85F6CE77146B4BC500290595 /* Speaker-Off.png in Resources */,
+				85F6CE79146B4BC500290595 /* Speaker-On-hd.png in Resources */,
+				85F6CE7B146B4BC500290595 /* Speaker-Off-hd.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
