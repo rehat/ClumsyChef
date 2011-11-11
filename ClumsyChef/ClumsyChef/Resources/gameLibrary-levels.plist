@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>levelName</key>
+		<string>Test Level</string>
+		<key>previewImage</key>
+		<string>test.png</string>
+		<key>worldHeight</key>
+		<integer>3000</integer>
+		<key>backgroundSideBuildingImage</key>
+		<string>back.png</string>
+		<key>backgroundBackImage</key>
+		<string>side.png</string>
+		<key>recipeItems</key>
+		<array>
+			<string>hotDog</string>
+			<string>beef</string>
+		</array>
+	</dict>
+</array>
+</plist>
