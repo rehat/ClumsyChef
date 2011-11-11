@@ -10,6 +10,7 @@
 #import "CHBackgroundLayer.h"
 #import "CHGameLayer.h"
 #import "CHGameLibrary.h"
+#import "CHGameWinLayer.h"
 
 @implementation CHGameScene
 {
@@ -98,13 +99,22 @@
 #pragma mark - 
 #pragma mark HUD calls
 
+- (void)showWin
+{
+	[self removeChild:_bgLayer cleanup:YES];
+    [self removeChild:_gameLayer cleanup:YES];
+    CHGameWinLayer *winLayer = [CHGameWinLayer nodeWithMoneyAmount:100];
+    [self addChild:winLayer];
+}
+
+#pragma mark -
+#pragma mark Pause
+
 - (void)pauseGame
 {
 	
 }
 
-#pragma mark -
-#pragma mark Pause
 
 - (void)resumeGame
 {

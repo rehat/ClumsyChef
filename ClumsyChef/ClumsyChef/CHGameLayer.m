@@ -127,7 +127,9 @@ static float const kGenObjectRangeDown = 100.f;
             [SimpleAudioEngine sharedEngine].backgroundMusicVolume = 0.4f;
         }
         
-        
+        lives = 3;
+        score = 0;
+        levelHeight = 15000;
 
         
 		_bottomWorldOffset = CHGetWinHeight();
@@ -213,7 +215,7 @@ static float const kGenObjectRangeDown = 100.f;
                         lives --;
                             //TODO: tell HUD to update lives
                         if (lives <1) {
-                            //TODO: game over
+                            [[self gameSceneParent] showWin];
                         }
                     }                                       
                     
