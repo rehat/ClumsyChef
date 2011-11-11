@@ -11,6 +11,4 @@
 
 @interface CHMainMenuLayer : CCLayer 
 
-+(id) scene;
-
 @end

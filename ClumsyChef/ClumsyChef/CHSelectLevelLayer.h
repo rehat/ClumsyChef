@@ -9,8 +9,6 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 
-@interface CHSelectLevelLayer : CCLayer {
-    
-}
+@interface CHSelectLevelLayer : CCLayer
 
 @end

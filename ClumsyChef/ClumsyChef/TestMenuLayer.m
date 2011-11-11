@@ -16,6 +16,7 @@
 #import "CHMainMenuLayer.h"
 #import "CHGameLibrary.h"
 #import "CHHUDLayer.h"
+#import "CHSelectLevelLayer.h"
 //-----------------------------------
 
 
@@ -52,27 +53,33 @@ NSInteger const TestBackButtonTag = -9999;
 	{
 		// Add the tests menu item here
 		//-----------------------------------
-		CCMenuItem *itemTest1 = [self menuItemWithTitle:@"Background Layer" block:^(id sender) {
+		CCMenuItem *itemTestBg = [self menuItemWithTitle:@"Background Layer" block:^(id sender) {
 			[self runLayer:[CHBackgroundLayer node]];
 		}];
 
-		CCMenuItem *itemTest2 = [self menuItemWithTitle:@"Game Layer" block:^(id sender) {
+		CCMenuItem *itemTestGameLayer = [self menuItemWithTitle:@"Game Layer" block:^(id sender) {
 			[self runLayer:[CHGameLayer node]];
 		}];
 
-		CCMenuItem *itemTest3 = [self menuItemWithTitle:@"Main Menu" block:^(id sender) {
+		CCMenuItem *itemTestMainMenu = [self menuItemWithTitle:@"Main Menu" block:^(id sender) {
 			[self runLayer:[CHMainMenuLayer node]];
 		}];
 		
-		CCMenuItem *itemTest4 = [self menuItemWithTitle:@"Game Scene" block:^(id sender) {
+		CCMenuItem *itemTestGameScene = [self menuItemWithTitle:@"Game Scene" block:^(id sender) {
 			[self runScene:[CHGameScene node]];
 		}];
         
-        CCMenuItem *itemTest5 = [self menuItemWithTitle:@"HUD Layer" block:^(id sender) {
+        CCMenuItem *itemTestHUD = [self menuItemWithTitle:@"HUD Layer" block:^(id sender) {
 			[self runLayer:[CHHUDLayer node]];
 		}];
 		
-		CCMenu *testMenu = [CCMenu menuWithItems:itemTest1, itemTest2, itemTest3, itemTest4, itemTest5, nil];
+		CCMenuItem *itemTestSelectLevel = [self menuItemWithTitle:@"Select Level" block:^(id sender) {
+			[self runLayer:[CHSelectLevelLayer node]];
+		}];
+		
+		CCMenu *testMenu = [CCMenu menuWithItems:itemTestBg, itemTestGameLayer, 
+							itemTestMainMenu, itemTestGameScene, itemTestHUD, 
+							itemTestSelectLevel, nil];
 		
 		// ----------------------------------
 		

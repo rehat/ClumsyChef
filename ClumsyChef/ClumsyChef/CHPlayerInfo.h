@@ -21,6 +21,10 @@
 - (BOOL)canEnterHighScores:(NSUInteger)scores;
 - (void)addHighScoreWithPlayerName:(NSString *)name scores:(NSUInteger)scores;
 
+#ifdef COCOS2D_DEBUG
++ (void)test;
+#endif
+
 @end
 
 extern NSUInteger const CHPlayerInfoMaxNumHighScores;

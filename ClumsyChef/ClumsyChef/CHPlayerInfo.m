@@ -96,4 +96,43 @@ static NSString* const kKeyHighScores = @"highScores";
 	[[NSUserDefaults standardUserDefaults] setObject:a forKey:kKeyHighScores];
 }
 
+#pragma mark - 
+#pragma mark Testing
+
+#ifdef COCOS2D_DEBUG
+
+- (void)resetPlayerInfo
+{
+	NSUserDefaults *d = [NSUserDefaults standardUserDefaults];
+	[d setObject:[NSNumber numberWithUnsignedInteger:0] forKey:kKeyNumClearedLevels];
+	[d setObject:[NSArray array] forKey:kKeyHighScores];
+}
+
++ (void)test
+{
+	CHPlayerInfo *p = [CHPlayerInfo sharedPlayerInfo];
+	
+	NSLog(@"Number of completed levels: %u", p.numClearedLevels);
+	NSArray *a = p.highScores;
+	NSLog(@"Number of high scores: %u", [a count]);
+	
+	for (NSDictionary *s in a) 
+	{
+		NSLog(@"Name: %@; Score: %@", 
+			  [s objectForKey:CHPlayerInfoScoreEntryKeyPlyerName],
+			  [s objectForKey:CHPlayerInfoScoreEntryKeyScore]);
+	}
+	
+	if ([p canEnterHighScores:1000])
+	{
+		NSLog(@"Adding high score");
+		[p addHighScoreWithPlayerName:@"Tong" scores:1000];
+	}
+	else
+	{
+		NSLog(@"Score can't enter high scores list");
+	}
+}
+
+#endif
 @end

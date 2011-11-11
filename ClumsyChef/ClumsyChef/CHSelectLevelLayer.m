@@ -7,8 +7,22 @@
 //
 
 #import "CHSelectLevelLayer.h"
+#import "CHPlayerInfo.h"
 
 
 @implementation CHSelectLevelLayer
+
+- (id)init
+{
+	if (self = [super init])
+	{
+		// Test code, delete this when done testing
+		//-----------------------------
+		[CHPlayerInfo test];
+		// ----------------------------
+	}
+	return self;
+}
+
 
 @end
