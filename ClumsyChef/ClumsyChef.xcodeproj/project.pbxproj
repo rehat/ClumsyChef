@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40641D52146D0BDD00E00E73 /* PauseSelected2.png in Resources */ = {isa = PBXBuildFile; fileRef = 40641D50146D0BDD00E00E73 /* PauseSelected2.png */; };
+		40641D53146D0BDD00E00E73 /* Pause2.png in Resources */ = {isa = PBXBuildFile; fileRef = 40641D51146D0BDD00E00E73 /* Pause2.png */; };
 		85CEB0B714685F330099409C /* MainMenuBackground-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 85CEB0B114685F320099409C /* MainMenuBackground-hd.png */; };
 		85CEB0B814685F330099409C /* MainMenuBackground-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 85CEB0B114685F320099409C /* MainMenuBackground-hd.png */; };
 		85CEB0B914685F330099409C /* MainMenuBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 85CEB0B214685F330099409C /* MainMenuBackground.png */; };
@@ -231,14 +233,6 @@
 		BCD008FA1468CF4E00EA7E30 /* Stages.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCD008F81468CF4E00EA7E30 /* Stages.plist */; };
 		BCD008FC1469077600EA7E30 /* Ingredients.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCD008FB1469077600EA7E30 /* Ingredients.plist */; };
 		BCD008FD1469077600EA7E30 /* Ingredients.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCD008FB1469077600EA7E30 /* Ingredients.plist */; };
-		BCD0090014692FB900EA7E30 /* coinObject-coin.png in Resources */ = {isa = PBXBuildFile; fileRef = BCD008FE14692FB900EA7E30 /* coinObject-coin.png */; };
-		BCD0090114692FB900EA7E30 /* coinObject-coin.png in Resources */ = {isa = PBXBuildFile; fileRef = BCD008FE14692FB900EA7E30 /* coinObject-coin.png */; };
-		BCD0090214692FB900EA7E30 /* coinObject-coin-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BCD008FF14692FB900EA7E30 /* coinObject-coin-hd.png */; };
-		BCD0090314692FB900EA7E30 /* coinObject-coin-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BCD008FF14692FB900EA7E30 /* coinObject-coin-hd.png */; };
-		BCF71146146A5D7A004E9D33 /* recipeItem-particle-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCF71144146A5D7A004E9D33 /* recipeItem-particle-hd.plist */; };
-		BCF71147146A5D7A004E9D33 /* recipeItem-particle-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCF71144146A5D7A004E9D33 /* recipeItem-particle-hd.plist */; };
-		BCF71148146A5D7A004E9D33 /* recipeItem-particle.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCF71145146A5D7A004E9D33 /* recipeItem-particle.plist */; };
-		BCF71149146A5D7A004E9D33 /* recipeItem-particle.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCF71145146A5D7A004E9D33 /* recipeItem-particle.plist */; };
 		E511C294145925B3008BCFF8 /* testLayer-backButton.png in Resources */ = {isa = PBXBuildFile; fileRef = E511C293145925B3008BCFF8 /* testLayer-backButton.png */; };
 		E511C298145925BC008BCFF8 /* testLayer-backButton-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E511C295145925BC008BCFF8 /* testLayer-backButton-hd.png */; };
 		E511C299145925BC008BCFF8 /* testLayer-backButton-highlighted-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E511C296145925BC008BCFF8 /* testLayer-backButton-highlighted-hd.png */; };
@@ -472,6 +466,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		40641D50146D0BDD00E00E73 /* PauseSelected2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PauseSelected2.png; sourceTree = "<group>"; };
+		40641D51146D0BDD00E00E73 /* Pause2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pause2.png; sourceTree = "<group>"; };
 		85CEB0B114685F320099409C /* MainMenuBackground-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "MainMenuBackground-hd.png"; path = "Resources/MainMenuBackground-hd.png"; sourceTree = "<group>"; };
 		85CEB0B214685F330099409C /* MainMenuBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MainMenuBackground.png; path = Resources/MainMenuBackground.png; sourceTree = "<group>"; };
 		85CEB0B314685F330099409C /* play-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "play-hd.png"; path = "Resources/play-hd.png"; sourceTree = "<group>"; };
@@ -493,10 +489,6 @@
 		BCC06AAB146B2DB60068103A /* recipeItem-sound.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "recipeItem-sound.caf"; path = "Resources/recipeItem-sound.caf"; sourceTree = "<group>"; };
 		BCD008F81468CF4E00EA7E30 /* Stages.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Stages.plist; sourceTree = "<group>"; };
 		BCD008FB1469077600EA7E30 /* Ingredients.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Ingredients.plist; sourceTree = "<group>"; };
-		BCD008FE14692FB900EA7E30 /* coinObject-coin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "coinObject-coin.png"; sourceTree = "<group>"; };
-		BCD008FF14692FB900EA7E30 /* coinObject-coin-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "coinObject-coin-hd.png"; sourceTree = "<group>"; };
-		BCF71144146A5D7A004E9D33 /* recipeItem-particle-hd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "recipeItem-particle-hd.plist"; sourceTree = "<group>"; };
-		BCF71145146A5D7A004E9D33 /* recipeItem-particle.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "recipeItem-particle.plist"; sourceTree = "<group>"; };
 		E511C293145925B3008BCFF8 /* testLayer-backButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "testLayer-backButton.png"; path = "Resources/testLayer-backButton.png"; sourceTree = "<group>"; };
 		E511C295145925BC008BCFF8 /* testLayer-backButton-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "testLayer-backButton-hd.png"; path = "Resources/testLayer-backButton-hd.png"; sourceTree = "<group>"; };
 		E511C296145925BC008BCFF8 /* testLayer-backButton-highlighted-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "testLayer-backButton-highlighted-hd.png"; path = "Resources/testLayer-backButton-highlighted-hd.png"; sourceTree = "<group>"; };
@@ -1139,6 +1131,8 @@
 		E5A90397144F7799002A1F6C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				40641D50146D0BDD00E00E73 /* PauseSelected2.png */,
+				40641D51146D0BDD00E00E73 /* Pause2.png */,
 				E5631E8A146B4BA000DACD3E /* Game Library */,
 				E522B2FE146863820049D367 /* Background Layer */,
 				E5A90398144F7799002A1F6C /* Default.png */,
@@ -1844,6 +1838,8 @@
 				E5631EA3146B790000DACD3E /* gameLibrary-harmfulItems.plist in Resources */,
 				E5631EA5146B790000DACD3E /* gameLibrary-levels.plist in Resources */,
 				E5631EA7146B790000DACD3E /* gameLibrary-recipeItems.plist in Resources */,
+				40641D52146D0BDD00E00E73 /* PauseSelected2.png in Resources */,
+				40641D53146D0BDD00E00E73 /* Pause2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

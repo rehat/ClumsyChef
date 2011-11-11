@@ -14,6 +14,7 @@
 #import "CHGameLayer.h"
 #import "CHGameScene.h"
 #import "CHMainMenuLayer.h"
+#import "CHGameLibrary.h"
 #import "CHHUDLayer.h"
 //-----------------------------------
 

@@ -87,7 +87,7 @@
         
         //windowSize = [[CCDirector sharedDirector] winSize];
         
-        CCMenuItemImage *pauseButton = [CCMenuItemImage itemFromNormalImage:@"Pause.png" selectedImage:@"PauseSelected.png" target:self selector:@selector(gamePaused:)];
+        CCMenuItemImage *pauseButton = [CCMenuItemImage itemFromNormalImage:@"Pause2.png" selectedImage:@"PauseSelected2.png" target:self selector:@selector(gamePaused:)];
         [pauseButton setAnchorPoint:ccp(1, 0)];
         pauseButton.position = ccp(90, 90);
         
