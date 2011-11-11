@@ -12,10 +12,17 @@
 
 @interface CHPlayerInfo : NSObject
 
-//@property(nonatomic, readonly) NSInteger	*numClearedLevels;
-//@property(nonatomic, readonly) NSArray	*highestScores;	// NSDictionary {name, score}
+@property(nonatomic) NSUInteger	numClearedLevels;
+// NSDictionary {CHPlayerInfoScoreEntryKeyPlyerName, CHPlayerInfoScoreEntryKeyScore}
+@property(nonatomic, readonly) NSArray		*highScores;
 
 + (CHPlayerInfo *)sharedPlayerInfo;
 
+- (BOOL)canEnterHighScores:(NSUInteger)scores;
+- (void)addHighScoreWithPlayerName:(NSString *)name scores:(NSUInteger)scores;
 
 @end
+
+extern NSUInteger const CHPlayerInfoMaxNumHighScores;
+extern NSString* const CHPlayerInfoScoreEntryKeyPlyerName;
+extern NSString* const CHPlayerInfoScoreEntryKeyScore;

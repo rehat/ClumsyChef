@@ -377,7 +377,7 @@ NSString* const kHarmfulItemPlistFilename = @"gameLibrary-harmfulItems.plist";
 
 + (void)test
 {
-	CHGameLibraryNew *g = [CHGameLibraryNew sharedGameLibrary];
+	CHGameLibraryNew *g = (CHGameLibraryNew *)[CHGameLibraryNew sharedGameLibrary];
 	CHLevelInfo *info = [g levelInfoWithName:@"Test Level"];
 	NSLog(@"info = %@", info);
 }
