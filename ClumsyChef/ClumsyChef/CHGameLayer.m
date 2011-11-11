@@ -15,6 +15,7 @@
 #import "CHBackgroundLayer.h"
 #import "CHRecipeItemObject.h"
 #import "SimpleAudioEngine.h"
+#import "CHHUDLayer.h"
 
 
 
@@ -117,6 +118,10 @@ static float const kGenObjectRangeDown = 100.f;
         
         
         CHGameLibrary *stageLibrary = [CHGameLibrary node:@"Stage1" ];
+        
+        CHHUDLayer *hudLayer = [CHHUDLayer node];
+        [self addChild:hudLayer];
+        
         
          
         goalItemsArray = [stageLibrary getRecipeItems];
