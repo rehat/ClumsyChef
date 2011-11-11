@@ -87,9 +87,17 @@
         
         //windowSize = [[CCDirector sharedDirector] winSize];
         
+        CGSize screenSize = [[CCDirector sharedDirector] winSize];
+        CCSprite *menuBar = [CCSprite spriteWithFile:@"HUDBar.png"];
+        //[menuBar setAnchorPoint:ccp(1, 0)];
+        menuBar.position = ccp(10, 468);
+       // menuBar.position = CGPointMake(screenSize.width - menuBar.contentSize.width/2,screenSize.height-menuBar.contentSize.height/2);
+        [self addChild:menuBar];
+        
+        
         CCMenuItemImage *pauseButton = [CCMenuItemImage itemFromNormalImage:@"Pause2.png" selectedImage:@"PauseSelected2.png" target:self selector:@selector(gamePaused:)];
-        [pauseButton setAnchorPoint:ccp(1, 0)];
-        pauseButton.position = ccp(90, 90);
+        //[pauseButton setAnchorPoint:ccp(1, 0)];
+        pauseButton.position = ccp(145, 222);
         
         CCMenu *menu = [CCMenu menuWithItems:pauseButton, nil];
         //[menu addChild:pauseButton z:1 tag:1];
