@@ -120,7 +120,7 @@ static float const kGenObjectRangeDown = 100.f;
         CHGameLibrary *stageLibrary = [CHGameLibrary node:@"Stage1" ];
         
         CHHUDLayer *hudLayer = [CHHUDLayer node];
-        [self addChild:hudLayer];
+        [self addChild:hudLayer z:5];
         
         
          
@@ -220,18 +220,33 @@ static float const kGenObjectRangeDown = 100.f;
                         lives --;
                             //TODO: tell HUD to update lives
                         if (lives <1) {
-                            [[self gameSceneParent] showWin];
+                            //TODO: update player info with score and cleared level
+                            
+                            [[self gameSceneParent] showGameOver];
                         }
                     }                                       
                     
                         //Coin:  Update player's score (maybe play a sound for every 1000)    
                 }else if([item isKindOfClass:[CHCoinObject class]]){
-                        //TODO:add to player's score
                     score += 10;
                         //Recipe:  Update HUD and left over itmes needed.  Then check if its game win
                 }else{
-                        
-                        //Should be a recipe item
+                    if ([item isKindOfClass:[CHRecipeItemObject class]]) {
+                        NSLog(@"Take off");
+                        NSString *checkRecipe;
+                        CHRecipeItemObject *checkMe = (CHRecipeItemObject*)item;
+                        CCARRAY_FOREACH(goalItemsArray, checkRecipe){
+                            if( [checkRecipe isEqualToString:[checkMe recipeID]]){
+                                [goalItemsArray removeObject:checkRecipe];
+                                
+                            }
+                                
+                        }
+                        if([goalItemsArray count] == 0){
+                            [[self gameSceneParent] showWin];
+
+                        }
+                    }
                 
                 }
                 

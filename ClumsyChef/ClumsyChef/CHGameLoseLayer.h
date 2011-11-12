@@ -11,4 +11,6 @@
 
 @interface CHGameLoseLayer : CCLayer
 
+
+
 @end

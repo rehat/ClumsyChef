@@ -11,6 +11,7 @@
 #import "CHGameLayer.h"
 #import "CHGameLibrary.h"
 #import "CHGameWinLayer.h"
+#import "CHGameLoseLayer.h"
 
 @implementation CHGameScene
 {
@@ -105,6 +106,13 @@
     [self removeChild:_gameLayer cleanup:YES];
     CHGameWinLayer *winLayer = [CHGameWinLayer nodeWithMoneyAmount:100];
     [self addChild:winLayer];
+}
+
+-(void)showGameOver{
+    [self removeChild:_bgLayer cleanup:YES];
+    [self removeChild:_gameLayer cleanup:YES];
+    CHGameLoseLayer *loseLayer = [CHGameLoseLayer node];
+    [self addChild:loseLayer];
 }
 
 #pragma mark -

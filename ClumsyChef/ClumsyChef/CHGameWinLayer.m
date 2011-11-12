@@ -22,10 +22,11 @@
         win.position = ccp(screenSize.width/2, screenSize.height/2);
         [self addChild:win];
         CCMenuItemFont *item = [CCMenuItemFont itemFromString:@"Main Menu" block:^(id sender) {
-            [[CCDirector sharedDirector] popScene];}];                                                             
+            [[CCDirector sharedDirector] popScene];}];  
+        item.fontSize = 16;
         CCMenu *menu = [CCMenu menuWithItems:item, nil];
-        [menu setPositionSharp:CHGetWinPointTL(40, 40)];
-
+        [menu setPositionSharp:CHGetWinPointTL(screenSize.width/2, screenSize.height/2+40)];
+        [self addChild:menu];
         
 	}
 	return self;

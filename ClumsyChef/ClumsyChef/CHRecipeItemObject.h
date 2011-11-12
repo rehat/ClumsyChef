@@ -14,7 +14,7 @@
 @interface CHRecipeItemObject : CHItemObject 
 
 
--(NSString*)itemID;
+-(NSString*)recipeID;
 
 +(id)node:(NSString*)ingredient;
 

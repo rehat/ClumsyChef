@@ -32,5 +32,8 @@
 - (void)restartLevel;
 - (void)quitGame;
 
+//Game States
+-(void)showWin;
+-(void)showGameOver;
 @end
 
