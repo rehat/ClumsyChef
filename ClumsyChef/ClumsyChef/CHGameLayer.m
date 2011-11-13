@@ -33,12 +33,12 @@ static float const kGenObjectRangeDown = 100.f;
 	float _bottomWorldOffset;
 	float _nextGenItemsOffset;
     
-    CCArray *itemsArray;
-    CCArray *goalItemsArray;
+    CCArray *_liveGameObjects;
+    CCArray *_goalRecipeItemIDs;
     
-    NSInteger lives;
-    NSInteger score;
-	NSInteger levelHeight;
+    NSInteger _chefNumLives;
+    NSInteger _chefScore;
+	NSInteger _levelHeight;
 }
 
 
@@ -60,14 +60,14 @@ static float const kGenObjectRangeDown = 100.f;
         item = [CHHarmfulObject node];
         [self addChild:item];
     }
-    else if(x <= .1f && [goalItemsArray count] != 0){
-        NSUInteger randomIndex = (NSUInteger)arc4random() % [goalItemsArray count];
+    else if(x <= .1f && [_goalRecipeItemIDs count] != 0){
+        NSUInteger randomIndex = (NSUInteger)arc4random() % [_goalRecipeItemIDs count];
         if([self getChildByTag:711] != nil){ //checks to see if recipe item is already in the game
             item = [CHCoinObject node];
             [self addChild:item];
         }
         else{
-            item = [CHRecipeItemObject nodeWithItemID:[goalItemsArray objectAtIndex:randomIndex]];
+            item = [CHRecipeItemObject nodeWithItemID:[_goalRecipeItemIDs objectAtIndex:randomIndex]];
             [self addChild:item z:2 tag:711];
         }    
 
@@ -79,12 +79,7 @@ static float const kGenObjectRangeDown = 100.f;
 
     }
 	item.position = p;
-	//item.verticalSpeed = CCRANDOM_0_1() * 30.f;
-	
-    
-    [itemsArray addObject:item];
-
-    
+    [_liveGameObjects addObject:item];
 	
 	return 30;
 }
@@ -114,40 +109,38 @@ static float const kGenObjectRangeDown = 100.f;
 		_chefObj.position = [self positionForChef];
 		[self addChild:_chefObj];
         
-        itemsArray = [[CCArray alloc ] initWithCapacity:100];
+        _liveGameObjects = [[CCArray alloc ] initWithCapacity:100];
 
         CHHUDLayer *hudLayer = [CHHUDLayer node];
         [self addChild:hudLayer z:5];
         
         // Get stage
 		CHLevelInfo *levelInfo = [[CHGameLibrary sharedGameLibrary] levelInfoAtIndex:0];
-		goalItemsArray = [[CCArray alloc] initWithNSArray:[levelInfo.recipeItems retain]];
-        		
-		// Bg music
-		
-        [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"gameLayer-music.caf" loop:YES];
-        
-        if ([SimpleAudioEngine sharedEngine].willPlayBackgroundMusic) {
-            [SimpleAudioEngine sharedEngine].backgroundMusicVolume = 0.4f;
-        }
-        
-        lives = 3;
-        score = 0;
-        levelHeight = 15000;
-
+		_goalRecipeItemIDs = [[CCArray alloc] initWithNSArray:[levelInfo.recipeItems retain]];
+        		        
+        _chefNumLives = 3;
+        _chefScore = 0;
+        _levelHeight = levelInfo.worldHeight;
         
 		_bottomWorldOffset = CHGetWinHeight();
 		_nextGenItemsOffset = _bottomWorldOffset;
 
 		[[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
 		[self scheduleUpdate];
+		
+		// Bg music
+        [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"gameLayer-music.caf" loop:YES];
+        
+        if ([SimpleAudioEngine sharedEngine].willPlayBackgroundMusic) {
+            [SimpleAudioEngine sharedEngine].backgroundMusicVolume = 0.4f;
+        }
 	}
 	return self;
 }
 
 - (void)dealloc
 {
-	[goalItemsArray release];
+	[_goalRecipeItemIDs release];
     [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
 	[super dealloc];
 }
@@ -186,7 +179,7 @@ static float const kGenObjectRangeDown = 100.f;
 	// during enumeration or it will crash
 	// So here we made a copy
    
-	CCARRAY_FOREACH(itemsArray, item)
+	CCARRAY_FOREACH(_liveGameObjects, item)
 	{
 		
 		CGPoint p = ccpAdd(item.position, delta);
@@ -196,7 +189,7 @@ static float const kGenObjectRangeDown = 100.f;
 		if (p.y >= cullThresh)
 		{
 			[item removeFromParentAndCleanup:YES];
-            [itemsArray removeObject:item];
+            [_liveGameObjects removeObject:item];
 		}
 		else
 		{
@@ -217,9 +210,9 @@ static float const kGenObjectRangeDown = 100.f;
                     {   
                         [_chefObj chefDamaged];
                         //TODO:Take off one health and check if chef still has lives left
-                        lives --;
+                        _chefNumLives --;
                             //TODO: tell HUD to update lives
-                        if (lives <1) {
+                        if (_chefNumLives <1) {
                             //TODO: update player info with score and cleared level
                             
                             [[self gameSceneParent] showGameOver];
@@ -228,20 +221,20 @@ static float const kGenObjectRangeDown = 100.f;
                     
                         //Coin:  Update player's score (maybe play a sound for every 1000)    
                 }else if([item isKindOfClass:[CHCoinObject class]]){
-                    score += 10;
+                    _chefScore += 10;
                         //Recipe:  Update HUD and left over itmes needed.  Then check if its game win
                 }else{
                     if ([item isKindOfClass:[CHRecipeItemObject class]]) {
                         NSLog(@"Take off");
                         NSString *checkRecipe;
                         CHRecipeItemObject *checkMe = (CHRecipeItemObject*)item;
-                        CCARRAY_FOREACH(goalItemsArray, checkRecipe){
+                        CCARRAY_FOREACH(_goalRecipeItemIDs, checkRecipe){
                             if( [checkRecipe isEqualToString:checkMe.itemID]){
-                                [goalItemsArray removeObject:checkRecipe];
+                                [_goalRecipeItemIDs removeObject:checkRecipe];
 								break;
                             }
                         }
-                        if([goalItemsArray count] == 0){
+                        if([_goalRecipeItemIDs count] == 0){
                             [[self gameSceneParent] showWin];
 
                         }
@@ -249,7 +242,7 @@ static float const kGenObjectRangeDown = 100.f;
                 
                 }
                 
-                [itemsArray removeObject:item];
+                [_liveGameObjects removeObject:item];
 			}
 		}		
 	}
