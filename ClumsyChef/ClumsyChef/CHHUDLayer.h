@@ -17,8 +17,10 @@
 
 + (id)nodeWithRequiredRecipeItems:(NSArray *)itemIDs;
 
-- (void)setRecipeItemCollected:(NSString*)itemID;
-
-- (BOOL)allItemsCollected;
+//update HUD methods
+- (void) setRecipeItemCollected:(NSString*)itemID;
+- (void) updateScore:(NSInteger)amount;
+- (void) updateLives;
+- (void) updateHeight;
 
 @end

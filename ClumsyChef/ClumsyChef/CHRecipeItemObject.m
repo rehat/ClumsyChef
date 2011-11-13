@@ -20,7 +20,7 @@
     
 }
 
--(NSString*)itemID
+-(NSString*)recipeID
 {
     return ingredientLabel;
 }

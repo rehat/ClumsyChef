@@ -16,10 +16,18 @@
 {
 	if (self = [super init])
 	{
-		// Set up the sprites, labels, buttons
-		// Set the contents according amount
 		
-		// 
+        CCLabelTTF *win = [CCLabelTTF labelWithString:@"YOU WIN!" fontName:@"Marker Felt" fontSize:30];
+        CGSize screenSize = [[CCDirector sharedDirector]winSize];
+        win.position = ccp(screenSize.width/2, screenSize.height/2);
+        [self addChild:win];
+        CCMenuItemFont *item = [CCMenuItemFont itemFromString:@"Main Menu" block:^(id sender) {
+            [[CCDirector sharedDirector] popScene];}];  
+        item.fontSize = 16;
+        CCMenu *menu = [CCMenu menuWithItems:item, nil];
+        [menu setPositionSharp:CHGetWinPointTL(screenSize.width/2, screenSize.height/2+40)];
+        [self addChild:menu];
+        
 	}
 	return self;
 }
@@ -33,5 +41,9 @@
 {
 	// run like "pop-up" animation to show this layer
 }
+
+
+
+
 
 @end

@@ -162,13 +162,27 @@
 
 - (void)setRecipeItemCollected:(NSString*)itemID
 {
-	
+    
 }
 
-- (BOOL)allItemsCollected
+- (void) updateScore:(NSInteger)amount
 {
-	return NO;
+    _moneyAmount +=amount;
+    //TODO: update score label
 }
+
+-(void) updateLives
+{
+    _numberOfLife -=1;
+    //TODO: update lives label
+}
+
+-(void) updateHeight
+{
+    
+}
+
+
 
 #pragma mark -
 #pragma mark User interactions

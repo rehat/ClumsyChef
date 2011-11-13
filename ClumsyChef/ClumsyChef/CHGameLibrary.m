@@ -51,16 +51,7 @@ NSString* const kHarmfulItemPlistFilename = @"gameLibrary-harmfulItems.plist";
 
 -(CCArray*)getRecipeItems
 {
-//    CCArray *items = [[CCArray alloc] initWithCapacity:[recipeItemKeys  count]];
-//    for (NSString *ingridient in recipeItemKeys) {
-//        NSLog(@"%@", ingridient);
-//    
-//        //CHRecipeItemObject *recipeItem = [CHRecipeItemObject node];
-//        CHRecipeItemObject *recipeItem = [CHRecipeItemObject node:ingridient ];
-//        
-//        //[recipeItem buildMe:ingridient];
-//        [items addObject:recipeItem];
-//    }
+
     
     
     return recipeItemKeys;
