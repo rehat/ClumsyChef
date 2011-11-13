@@ -9,70 +9,60 @@
 #import "CHRecipeItemObject.h"
 #import "CHGameScene.h"
 #import "SimpleAudioEngine.h"
+#import "CHGameLibrary.h"
 
 
 @implementation CHRecipeItemObject
 {
-	CCSprite *ingredient;
-    NSString *ingredientLabel;
+	CCSprite *itemSprite;
     CCParticleSystemQuad *emitter;
 
-    
+    NSString *_itemID;
 }
 
--(NSString*)recipeID
+@synthesize itemID = _itemID;
+
+#pragma mark -
+#pragma mark Constructor and destructor
+
+
+- (id)initWithItemID:(NSString *)itemID
 {
-    return ingredientLabel;
-}
-
--(id)initWithFile:(NSString*)item{
-    if (self = [super init]){
-        
-        ingredientLabel = item;
-        
-        NSBundle *bundle = [NSBundle mainBundle];
-        NSDictionary *ingredientSprites = [[NSDictionary alloc]initWithContentsOfFile:[bundle pathForResource:@"Ingredients" ofType:@"plist"]];
-        NSString *file = [ingredientSprites objectForKey:ingredientLabel];
-        
-
-        
-        ingredient = [CCSprite spriteWithFile:file];
-        emitter = [CCParticleSystemQuad particleWithFile:@"recipeItem-particle.plist"];
-       
-        //this is nasty :(
-        emitter.position = ccpAdd(ingredient.position, ccp(15, 20));
+	if (self = [super init])
+	{
+		_itemID = [itemID retain];
+		CHRecipeItemInfo *info = [[CHGameLibrary sharedGameLibrary] recipeItemInfoWithName:_itemID];
+		
+		itemSprite = [CCSprite spriteWithFile:info.spriteFilename];
+		emitter = [CCParticleSystemQuad particleWithFile:@"recipeItem-particle.plist"];
+		
+		//this is nasty :(
+        emitter.position = ccpAdd(itemSprite.position, ccp(15, 20));
         emitter.rotation = 180;  //based on the particle effect used.  Makes it look like it's falling (kinda);
-        
-        
-        [ingredient addChild:emitter z:-1];
-        [self addChild:ingredient];
-
-        [ingredientSprites release];
-    }
-    return self;
+		
+		[itemSprite addChild:emitter z:-1];
+        [self addChild:itemSprite];
+	}
+	return self;
 }
-
-+(id)node:(NSString*)ingredient{
-    return [[[self alloc] initWithFile:ingredient] autorelease];
-
-}
-
-
-
-
-- (CGSize) contentSize{
-    
-    return ingredient.contentSize;
-}
-
-
-
 
 - (void)dealloc
 {
-	
-    [super dealloc];
+	[_itemID release];
+	[super dealloc];
 }
+
++ (id)nodeWithItemID:(NSString *)itemID
+{
+	return [[[self alloc] initWithItemID:itemID] autorelease];
+}
+
+
+- (CGSize)contentSize
+{    
+    return itemSprite.contentSize;
+}
+
 
 + (void)preloadSharedResources
 {

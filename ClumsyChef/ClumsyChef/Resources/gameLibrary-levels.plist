@@ -4,7 +4,7 @@
 <array>
 	<dict>
 		<key>levelName</key>
-		<string>Test Level</string>
+		<string>Hot Dog</string>
 		<key>previewImage</key>
 		<string>test.png</string>
 		<key>worldHeight</key>
@@ -15,8 +15,8 @@
 		<string>side.png</string>
 		<key>recipeItems</key>
 		<array>
-			<string>hotDog</string>
-			<string>beef</string>
+			<string>HotDogBun</string>
+			<string>HotDog</string>
 		</array>
 	</dict>
 </array>

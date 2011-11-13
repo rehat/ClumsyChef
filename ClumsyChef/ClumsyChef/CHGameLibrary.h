@@ -7,26 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-@interface CHGameLibrary : CCNode
-
-
-
-
-+ (CHGameLibrary *)sharedGameLibrary;		// Singleton object
-
-+ (id)node:(NSString*)stage;
-
--(NSInteger)getlives;
--(NSInteger)getStageHeight;
--(CCArray*)getRecipeItems;
-
-
-
-@end
-
-
-
-
 
 
 
@@ -78,7 +58,7 @@
  *    - stage info
  *    - receipt item info
  */
-@interface CHGameLibraryNew : NSObject
+@interface CHGameLibrary : NSObject
 
 
 + (CHGameLibrary *)sharedGameLibrary;		// Singleton object
@@ -92,8 +72,10 @@
 
 // Obtain stage info
 - (NSArray *)allLevelInfo;
-- (CHLevelInfo *)levelInfoWithName:(NSString *)levelName;
+- (CHLevelInfo *)levelInfoAtIndex:(NSUInteger)index;
 
 + (void)test;
 
 @end
+
+

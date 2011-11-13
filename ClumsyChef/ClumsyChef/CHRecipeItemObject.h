@@ -8,15 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
-#import "CHGameLibrary.h"
 #import "CHItemObject.h"
 
 @interface CHRecipeItemObject : CHItemObject 
 
+@property(nonatomic, readonly) NSString *itemID;
 
--(NSString*)recipeID;
-
-+(id)node:(NSString*)ingredient;
-
++ (id)nodeWithItemID:(NSString *)itemID;
 
 @end

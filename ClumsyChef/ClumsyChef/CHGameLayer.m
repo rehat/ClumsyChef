@@ -67,7 +67,7 @@ static float const kGenObjectRangeDown = 100.f;
             [self addChild:item];
         }
         else{
-            item = [CHRecipeItemObject node:[goalItemsArray objectAtIndex:randomIndex]];
+            item = [CHRecipeItemObject nodeWithItemID:[goalItemsArray objectAtIndex:randomIndex]];
             [self addChild:item z:2 tag:711];
         }    
 
@@ -115,17 +115,16 @@ static float const kGenObjectRangeDown = 100.f;
 		[self addChild:_chefObj];
         
         itemsArray = [[CCArray alloc ] initWithCapacity:100];
-        
-        
-        CHGameLibrary *stageLibrary = [CHGameLibrary node:@"Stage1" ];
-        
+
         CHHUDLayer *hudLayer = [CHHUDLayer node];
         [self addChild:hudLayer z:5];
         
-        
-         
-        goalItemsArray = [stageLibrary getRecipeItems];
-        
+        // Get stage
+		CHLevelInfo *levelInfo = [[CHGameLibrary sharedGameLibrary] levelInfoAtIndex:0];
+		goalItemsArray = [[CCArray alloc] initWithNSArray:[levelInfo.recipeItems retain]];
+        		
+		// Bg music
+		
         [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"gameLayer-music.caf" loop:YES];
         
         if ([SimpleAudioEngine sharedEngine].willPlayBackgroundMusic) {
@@ -148,6 +147,7 @@ static float const kGenObjectRangeDown = 100.f;
 
 - (void)dealloc
 {
+	[goalItemsArray release];
     [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
 	[super dealloc];
 }
@@ -236,11 +236,10 @@ static float const kGenObjectRangeDown = 100.f;
                         NSString *checkRecipe;
                         CHRecipeItemObject *checkMe = (CHRecipeItemObject*)item;
                         CCARRAY_FOREACH(goalItemsArray, checkRecipe){
-                            if( [checkRecipe isEqualToString:[checkMe recipeID]]){
+                            if( [checkRecipe isEqualToString:checkMe.itemID]){
                                 [goalItemsArray removeObject:checkRecipe];
-                                
+								break;
                             }
-                                
                         }
                         if([goalItemsArray count] == 0){
                             [[self gameSceneParent] showWin];
