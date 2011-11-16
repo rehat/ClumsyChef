@@ -29,6 +29,8 @@ static float const kGenObjectRangeDown = 100.f;
 @implementation CHGameLayer
 {
 	CHChefObject *_chefObj;
+    CHHUDLayer *_hudLayer;
+    
     
 	float _bottomWorldOffset;
 	float _nextGenItemsOffset;
@@ -114,17 +116,18 @@ static float const kGenObjectRangeDown = 100.f;
 		_chefObj.position = [self positionForChef];
 		[self addChild:_chefObj];
         
+        //Array of items in play
         itemsArray = [[CCArray alloc ] initWithCapacity:100];
-
-        CHHUDLayer *hudLayer = [CHHUDLayer node];
-        [self addChild:hudLayer z:5];
+        
+        //HUD
+        _hudLayer = [CHHUDLayer node];
+        [self addChild:_hudLayer z:5];
         
         // Get stage
 		CHLevelInfo *levelInfo = [[CHGameLibrary sharedGameLibrary] levelInfoAtIndex:0];
 		goalItemsArray = [[CCArray alloc] initWithNSArray:[levelInfo.recipeItems retain]];
         		
 		// Bg music
-		
         [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"gameLayer-music.caf" loop:YES];
         
         if ([SimpleAudioEngine sharedEngine].willPlayBackgroundMusic) {
@@ -133,7 +136,7 @@ static float const kGenObjectRangeDown = 100.f;
         
         lives = 3;
         score = 0;
-        levelHeight = 15000;
+        levelHeight = levelInfo.worldHeight;
 
         
 		_bottomWorldOffset = CHGetWinHeight();
@@ -215,13 +218,10 @@ static float const kGenObjectRangeDown = 100.f;
                         //prevents chef getting hit twice in a row
                     if (![_chefObj recentlyHit]) 
                     {   
-                        [_chefObj chefDamaged];
-                        //TODO:Take off one health and check if chef still has lives left
+                        [_chefObj chefDamaged];   //fadding in/out 
                         lives --;
-                            //TODO: tell HUD to update lives
-                        if (lives <1) {
-                            //TODO: update player info with score and cleared level
-                            
+                        [_hudLayer updateLives];  //updating HUD
+                        if (lives <1) {                            
                             [[self gameSceneParent] showGameOver];
                         }
                     }                                       
@@ -229,10 +229,10 @@ static float const kGenObjectRangeDown = 100.f;
                         //Coin:  Update player's score (maybe play a sound for every 1000)    
                 }else if([item isKindOfClass:[CHCoinObject class]]){
                     score += 10;
+                    [_hudLayer updateScore:10];
                         //Recipe:  Update HUD and left over itmes needed.  Then check if its game win
                 }else{
                     if ([item isKindOfClass:[CHRecipeItemObject class]]) {
-                        NSLog(@"Take off");
                         NSString *checkRecipe;
                         CHRecipeItemObject *checkMe = (CHRecipeItemObject*)item;
                         CCARRAY_FOREACH(goalItemsArray, checkRecipe){
@@ -242,6 +242,8 @@ static float const kGenObjectRangeDown = 100.f;
                             }
                         }
                         if([goalItemsArray count] == 0){
+                            
+                            //TODO: update player info with score and level cleared
                             [[self gameSceneParent] showWin];
 
                         }
@@ -258,6 +260,9 @@ static float const kGenObjectRangeDown = 100.f;
     
     [background updatePull:_bottomWorldOffset];	
     
+    if(_bottomWorldOffset > levelHeight){
+        [[self gameSceneParent] showGameOver];
+    }
     
 	// Notify the parent
 	[gsParent worldOffsetDidChange:_bottomWorldOffset]; 
