@@ -35,12 +35,12 @@ static float const kGenObjectRangeDown = 100.f;
 	float _bottomWorldOffset;
 	float _nextGenItemsOffset;
     
-    CCArray *itemsArray;
-    CCArray *goalItemsArray;
+    CCArray *_liveGameObjects;
+    CCArray *_goalRecipeItemIDs;
     
-    NSInteger lives;
-    NSInteger score;
-	NSInteger levelHeight;
+    NSInteger _chefNumLives;
+    NSInteger _chefScore;
+	NSInteger _levelHeight;
 }
 
 
@@ -62,14 +62,14 @@ static float const kGenObjectRangeDown = 100.f;
         item = [CHHarmfulObject node];
         [self addChild:item];
     }
-    else if(x <= .1f && [goalItemsArray count] != 0){
-        NSUInteger randomIndex = (NSUInteger)arc4random() % [goalItemsArray count];
+    else if(x <= .1f && [_goalRecipeItemIDs count] != 0){
+        NSUInteger randomIndex = (NSUInteger)arc4random() % [_goalRecipeItemIDs count];
         if([self getChildByTag:711] != nil){ //checks to see if recipe item is already in the game
             item = [CHCoinObject node];
             [self addChild:item];
         }
         else{
-            item = [CHRecipeItemObject nodeWithItemID:[goalItemsArray objectAtIndex:randomIndex]];
+            item = [CHRecipeItemObject nodeWithItemID:[_goalRecipeItemIDs objectAtIndex:randomIndex]];
             [self addChild:item z:2 tag:711];
         }    
 
@@ -81,12 +81,7 @@ static float const kGenObjectRangeDown = 100.f;
 
     }
 	item.position = p;
-	//item.verticalSpeed = CCRANDOM_0_1() * 30.f;
-	
-    
-    [itemsArray addObject:item];
-
-    
+    [_liveGameObjects addObject:item];
 	
 	return 30;
 }
@@ -144,13 +139,20 @@ static float const kGenObjectRangeDown = 100.f;
 
 		[[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
 		[self scheduleUpdate];
+		
+		// Bg music
+        [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"gameLayer-music.caf" loop:YES];
+        
+        if ([SimpleAudioEngine sharedEngine].willPlayBackgroundMusic) {
+            [SimpleAudioEngine sharedEngine].backgroundMusicVolume = 0.4f;
+        }
 	}
 	return self;
 }
 
 - (void)dealloc
 {
-	[goalItemsArray release];
+	[_goalRecipeItemIDs release];
     [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
 	[super dealloc];
 }
@@ -189,7 +191,7 @@ static float const kGenObjectRangeDown = 100.f;
 	// during enumeration or it will crash
 	// So here we made a copy
    
-	CCARRAY_FOREACH(itemsArray, item)
+	CCARRAY_FOREACH(_liveGameObjects, item)
 	{
 		
 		CGPoint p = ccpAdd(item.position, delta);
@@ -199,7 +201,7 @@ static float const kGenObjectRangeDown = 100.f;
 		if (p.y >= cullThresh)
 		{
 			[item removeFromParentAndCleanup:YES];
-            [itemsArray removeObject:item];
+            [_liveGameObjects removeObject:item];
 		}
 		else
 		{
@@ -235,9 +237,9 @@ static float const kGenObjectRangeDown = 100.f;
                     if ([item isKindOfClass:[CHRecipeItemObject class]]) {
                         NSString *checkRecipe;
                         CHRecipeItemObject *checkMe = (CHRecipeItemObject*)item;
-                        CCARRAY_FOREACH(goalItemsArray, checkRecipe){
+                        CCARRAY_FOREACH(_goalRecipeItemIDs, checkRecipe){
                             if( [checkRecipe isEqualToString:checkMe.itemID]){
-                                [goalItemsArray removeObject:checkRecipe];
+                                [_goalRecipeItemIDs removeObject:checkRecipe];
 								break;
                             }
                         }
@@ -251,7 +253,7 @@ static float const kGenObjectRangeDown = 100.f;
                 
                 }
                 
-                [itemsArray removeObject:item];
+                [_liveGameObjects removeObject:item];
 			}
 		}		
 	}

@@ -45,11 +45,4 @@
 {
 }
 
--(id)initWithFile:(NSString*)item{
-    if(self = [super initWithFile:item]){
-    
-    }
-    return self;
-}
-
 @end
