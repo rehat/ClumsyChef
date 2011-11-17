@@ -12,39 +12,41 @@
 #import "CCParticleSystemPoint.h"
 #import "CHSharedResHolder.h"
 
-
-NSInteger const knifeTag = 666;
-
-
 @implementation CHHarmfulObject
 {
-    CCSprite *knife;
+    CCSprite *_knife;
+	CGFloat _rotationSpeed;
 }
 
 - (id)init
 {
 	if (self = [super init])
 	{
-        if (CCRANDOM_0_1() > 0.5f)
-            knife = [CCSprite spriteWithFile:@"harmfulObject-smallKnife.png"];
-        else
-            knife = [CCSprite spriteWithFile:@"harmfulObject-knife2.png"];
-
-        
-        [self addChild:knife z:1 tag:knifeTag];
+		NSString *filename = ((CCRANDOM_0_1() > 0.5f)? @"harmfulObject-smallKnife.png" : @"harmfulObject-knife2.png");
+		_knife = [[CCSprite alloc] initWithFile:filename];
+		_rotationSpeed = 80.f + CCRANDOM_0_1() * 60.f;
+		
+		[self addChild:_knife];
         [self scheduleUpdate];
     }
 	return self;
 }
 
+- (void)dealloc
+{
+	[_knife release];
+	[super dealloc];
+}
+
 - (CGSize)contentSize
 {    
-    return knife.contentSize;
+    return _knife.contentSize;
 }
 
 - (void)update:(ccTime)delta
 {   
-    [self getChildByTag:knifeTag].rotation += 2;
+	// Update rotation
+	_knife.rotation += _rotationSpeed * delta;
 }
 
 - (void)collected
@@ -52,20 +54,20 @@ NSInteger const knifeTag = 666;
 	// Craete the particle effect
 	NSDictionary *dict = [[CHSharedResHolder sharedResHolder] harmfulParticleEffectDict];
 	CCParticleSystemQuad *emitter = [[[CCParticleSystemQuad alloc] initWithDictionary:dict] autorelease];
-	emitter.position = knife.position;
+	emitter.position = _knife.position;
     emitter.autoRemoveOnFinish = YES;
     
 	// Insert damage label
 	// TODO: optimize using Bitmap font instead of TTF
 	CCLabelTTF *amount = [CCLabelTTF labelWithString:@"-1" fontName:@"Marker Felt" fontSize:20];
-    amount.position = knife.position;
+    amount.position = _knife.position;
     [emitter addChild:amount];
 	
 	[self addChild:emitter];
     
 	// Play sound
     [[SimpleAudioEngine sharedEngine] playEffect:@"Oowh.caf"];
-    [self removeChild:knife cleanup:YES];
+    [self removeChild:_knife cleanup:YES];
     [self schedule: @selector(removeFromParent) interval:1];
 }
 
