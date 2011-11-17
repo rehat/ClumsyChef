@@ -10,6 +10,7 @@
 #import "CHGameScene.h"
 #import "SimpleAudioEngine.h"
 #import "CHGameLibrary.h"
+#import "CHSharedResHolder.h"
 
 
 @implementation CHRecipeItemObject
@@ -34,7 +35,9 @@
 		CHRecipeItemInfo *info = [[CHGameLibrary sharedGameLibrary] recipeItemInfoWithName:_itemID];
 		
 		itemSprite = [CCSprite spriteWithFile:info.spriteFilename];
-		emitter = [CCParticleSystemQuad particleWithFile:@"recipeItem-particle.plist"];
+		
+		NSDictionary *dict = [[CHSharedResHolder sharedResHolder] recipeParticleEffectDict];
+		emitter = [[[CCParticleSystemQuad alloc] initWithDictionary:dict] autorelease];
 		
 		//this is nasty :(
         emitter.position = ccpAdd(itemSprite.position, ccp(15, 20));
