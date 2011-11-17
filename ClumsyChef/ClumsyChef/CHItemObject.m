@@ -33,14 +33,6 @@
 	return nil;	
 }
 
-+ (void)preloadSharedResources
-{
-}
-
-+ (void)unloadSharedResources
-{
-}
-
 - (void)collected
 {
 }

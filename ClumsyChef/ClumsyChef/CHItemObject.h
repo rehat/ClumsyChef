@@ -21,10 +21,6 @@
 - (CHGameScene *)gameSceneParent;
 
 // To be overridden by subclass
-+ (void)preloadSharedResources;
-+ (void)unloadSharedResources;
-
-// To be overridden by subclass
 // Typically, it play the sound, particle effect and remove itself from parent node
 - (void)collected;
 

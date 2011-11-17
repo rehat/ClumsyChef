@@ -227,8 +227,6 @@
 		BCC06AB3146B2DB60068103A /* harmfulObject-knife2-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BCC06AA7146B2DB60068103A /* harmfulObject-knife2-hd.png */; };
 		BCC06AB4146B2DB60068103A /* harmfulObject-knife2.png in Resources */ = {isa = PBXBuildFile; fileRef = BCC06AA8146B2DB60068103A /* harmfulObject-knife2.png */; };
 		BCC06AB5146B2DB60068103A /* harmfulObject-knife2.png in Resources */ = {isa = PBXBuildFile; fileRef = BCC06AA8146B2DB60068103A /* harmfulObject-knife2.png */; };
-		BCC06AB6146B2DB60068103A /* recipeItem-particle-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCC06AA9146B2DB60068103A /* recipeItem-particle-hd.plist */; };
-		BCC06AB7146B2DB60068103A /* recipeItem-particle-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCC06AA9146B2DB60068103A /* recipeItem-particle-hd.plist */; };
 		BCC06AB8146B2DB60068103A /* recipeItem-particle.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCC06AAA146B2DB60068103A /* recipeItem-particle.plist */; };
 		BCC06AB9146B2DB60068103A /* recipeItem-particle.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCC06AAA146B2DB60068103A /* recipeItem-particle.plist */; };
 		BCC06ABA146B2DB60068103A /* recipeItem-sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = BCC06AAB146B2DB60068103A /* recipeItem-sound.caf */; };
@@ -288,14 +286,10 @@
 		E599004B14687E3B00458316 /* chefObject-chef.png in Resources */ = {isa = PBXBuildFile; fileRef = E599003D14687E3B00458316 /* chefObject-chef.png */; };
 		E599004C14687E3B00458316 /* coin.caf in Resources */ = {isa = PBXBuildFile; fileRef = E599003E14687E3B00458316 /* coin.caf */; };
 		E599004D14687E3B00458316 /* coin.caf in Resources */ = {isa = PBXBuildFile; fileRef = E599003E14687E3B00458316 /* coin.caf */; };
-		E599004E14687E3B00458316 /* coinObject-particle-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = E599003F14687E3B00458316 /* coinObject-particle-hd.plist */; };
-		E599004F14687E3B00458316 /* coinObject-particle-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = E599003F14687E3B00458316 /* coinObject-particle-hd.plist */; };
 		E599005014687E3B00458316 /* coinObject-particle.plist in Resources */ = {isa = PBXBuildFile; fileRef = E599004014687E3B00458316 /* coinObject-particle.plist */; };
 		E599005114687E3B00458316 /* coinObject-particle.plist in Resources */ = {isa = PBXBuildFile; fileRef = E599004014687E3B00458316 /* coinObject-particle.plist */; };
 		E599005214687E3B00458316 /* fps_images.png in Resources */ = {isa = PBXBuildFile; fileRef = E599004114687E3B00458316 /* fps_images.png */; };
 		E599005314687E3B00458316 /* fps_images.png in Resources */ = {isa = PBXBuildFile; fileRef = E599004114687E3B00458316 /* fps_images.png */; };
-		E599005414687E3B00458316 /* harmfulObject-particle-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = E599004214687E3B00458316 /* harmfulObject-particle-hd.plist */; };
-		E599005514687E3B00458316 /* harmfulObject-particle-hd.plist in Resources */ = {isa = PBXBuildFile; fileRef = E599004214687E3B00458316 /* harmfulObject-particle-hd.plist */; };
 		E599005614687E3B00458316 /* harmfulObject-particle.plist in Resources */ = {isa = PBXBuildFile; fileRef = E599004314687E3B00458316 /* harmfulObject-particle.plist */; };
 		E599005714687E3B00458316 /* harmfulObject-particle.plist in Resources */ = {isa = PBXBuildFile; fileRef = E599004314687E3B00458316 /* harmfulObject-particle.plist */; };
 		E599005814687E3B00458316 /* harmfulObject-smallKnife-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E599004414687E3B00458316 /* harmfulObject-smallKnife-hd.png */; };
@@ -455,6 +449,10 @@
 		E5A9055D144F779D002A1F6C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9055C144F779D002A1F6C /* AppDelegate.m */; };
 		E5A90560144F779D002A1F6C /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9055F144F779D002A1F6C /* RootViewController.m */; };
 		E5B234BE145F1C1000BED350 /* CCNode+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B234BD145F1C1000BED350 /* CCNode+Utilities.m */; };
+		E5BED0161474C3280003D6F2 /* CHSharedResHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = E5BED0151474C3280003D6F2 /* CHSharedResHolder.m */; };
+		E5BED0171474C3280003D6F2 /* CHSharedResHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = E5BED0151474C3280003D6F2 /* CHSharedResHolder.m */; };
+		E5BED0191474CC5E0003D6F2 /* skull-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E5BED0181474CC5E0003D6F2 /* skull-hd.png */; };
+		E5BED01A1474CC5E0003D6F2 /* skull-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E5BED0181474CC5E0003D6F2 /* skull-hd.png */; };
 		E5C8E190145B4144003372F2 /* CHChefObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C8E18F145B4144003372F2 /* CHChefObject.m */; };
 		E5F2342F145BBF820026799C /* gameObject-testIconBlue-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E5F2342D145BBF820026799C /* gameObject-testIconBlue-hd.png */; };
 		E5F23430145BBF820026799C /* gameObject-testIconBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = E5F2342E145BBF820026799C /* gameObject-testIconBlue.png */; };
@@ -485,7 +483,6 @@
 		BCC06AA6146B2DB60068103A /* gameLayer-music.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "gameLayer-music.caf"; path = "Resources/gameLayer-music.caf"; sourceTree = "<group>"; };
 		BCC06AA7146B2DB60068103A /* harmfulObject-knife2-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "harmfulObject-knife2-hd.png"; path = "Resources/harmfulObject-knife2-hd.png"; sourceTree = "<group>"; };
 		BCC06AA8146B2DB60068103A /* harmfulObject-knife2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "harmfulObject-knife2.png"; path = "Resources/harmfulObject-knife2.png"; sourceTree = "<group>"; };
-		BCC06AA9146B2DB60068103A /* recipeItem-particle-hd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "recipeItem-particle-hd.plist"; path = "Resources/recipeItem-particle-hd.plist"; sourceTree = "<group>"; };
 		BCC06AAA146B2DB60068103A /* recipeItem-particle.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "recipeItem-particle.plist"; path = "Resources/recipeItem-particle.plist"; sourceTree = "<group>"; };
 		BCC06AAB146B2DB60068103A /* recipeItem-sound.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "recipeItem-sound.caf"; path = "Resources/recipeItem-sound.caf"; sourceTree = "<group>"; };
 		E511C293145925B3008BCFF8 /* testLayer-backButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "testLayer-backButton.png"; path = "Resources/testLayer-backButton.png"; sourceTree = "<group>"; };
@@ -546,10 +543,8 @@
 		E599003C14687E3B00458316 /* chefObject-chef-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "chefObject-chef-hd.png"; path = "Resources/chefObject-chef-hd.png"; sourceTree = "<group>"; };
 		E599003D14687E3B00458316 /* chefObject-chef.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "chefObject-chef.png"; path = "Resources/chefObject-chef.png"; sourceTree = "<group>"; };
 		E599003E14687E3B00458316 /* coin.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = coin.caf; path = Resources/coin.caf; sourceTree = "<group>"; };
-		E599003F14687E3B00458316 /* coinObject-particle-hd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "coinObject-particle-hd.plist"; path = "Resources/coinObject-particle-hd.plist"; sourceTree = "<group>"; };
 		E599004014687E3B00458316 /* coinObject-particle.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "coinObject-particle.plist"; path = "Resources/coinObject-particle.plist"; sourceTree = "<group>"; };
 		E599004114687E3B00458316 /* fps_images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fps_images.png; path = Resources/fps_images.png; sourceTree = "<group>"; };
-		E599004214687E3B00458316 /* harmfulObject-particle-hd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "harmfulObject-particle-hd.plist"; path = "Resources/harmfulObject-particle-hd.plist"; sourceTree = "<group>"; };
 		E599004314687E3B00458316 /* harmfulObject-particle.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "harmfulObject-particle.plist"; path = "Resources/harmfulObject-particle.plist"; sourceTree = "<group>"; };
 		E599004414687E3B00458316 /* harmfulObject-smallKnife-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "harmfulObject-smallKnife-hd.png"; path = "Resources/harmfulObject-smallKnife-hd.png"; sourceTree = "<group>"; };
 		E599004514687E3B00458316 /* harmfulObject-smallKnife.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "harmfulObject-smallKnife.png"; path = "Resources/harmfulObject-smallKnife.png"; sourceTree = "<group>"; };
@@ -862,6 +857,9 @@
 		E5A90567144F779D002A1F6C /* GameConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
 		E5B234BC145F1C1000BED350 /* CCNode+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CCNode+Utilities.h"; sourceTree = "<group>"; };
 		E5B234BD145F1C1000BED350 /* CCNode+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CCNode+Utilities.m"; sourceTree = "<group>"; };
+		E5BED0141474C3280003D6F2 /* CHSharedResHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHSharedResHolder.h; sourceTree = "<group>"; };
+		E5BED0151474C3280003D6F2 /* CHSharedResHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHSharedResHolder.m; sourceTree = "<group>"; };
+		E5BED0181474CC5E0003D6F2 /* skull-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "skull-hd.png"; path = "Resources/skull-hd.png"; sourceTree = "<group>"; };
 		E5C8E18E145B4144003372F2 /* CHChefObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHChefObject.h; sourceTree = "<group>"; };
 		E5C8E18F145B4144003372F2 /* CHChefObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHChefObject.m; sourceTree = "<group>"; };
 		E5F2342D145BBF820026799C /* gameObject-testIconBlue-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gameObject-testIconBlue-hd.png"; path = "Resources/gameObject-testIconBlue-hd.png"; sourceTree = "<group>"; };
@@ -975,26 +973,24 @@
 		E522B2FF146863950049D367 /* Game Layer */ = {
 			isa = PBXGroup;
 			children = (
-				BCC06AA4146B2DB60068103A /* coinObject-coin-hd.png */,
-				BCC06AA5146B2DB60068103A /* coinObject-coin.png */,
-				BCC06AA6146B2DB60068103A /* gameLayer-music.caf */,
-				BCC06AA7146B2DB60068103A /* harmfulObject-knife2-hd.png */,
-				BCC06AA8146B2DB60068103A /* harmfulObject-knife2.png */,
-				BCC06AA9146B2DB60068103A /* recipeItem-particle-hd.plist */,
-				BCC06AAA146B2DB60068103A /* recipeItem-particle.plist */,
-				BCC06AAB146B2DB60068103A /* recipeItem-sound.caf */,
 				E599003C14687E3B00458316 /* chefObject-chef-hd.png */,
 				E599003D14687E3B00458316 /* chefObject-chef.png */,
 				E599003E14687E3B00458316 /* coin.caf */,
-				E599003F14687E3B00458316 /* coinObject-particle-hd.plist */,
+				BCC06AA4146B2DB60068103A /* coinObject-coin-hd.png */,
+				BCC06AA5146B2DB60068103A /* coinObject-coin.png */,
 				E599004014687E3B00458316 /* coinObject-particle.plist */,
 				E599004114687E3B00458316 /* fps_images.png */,
-				E599004214687E3B00458316 /* harmfulObject-particle-hd.plist */,
+				BCC06AA6146B2DB60068103A /* gameLayer-music.caf */,
+				BCC06AA7146B2DB60068103A /* harmfulObject-knife2-hd.png */,
+				BCC06AA8146B2DB60068103A /* harmfulObject-knife2.png */,
 				E599004314687E3B00458316 /* harmfulObject-particle.plist */,
 				E599004414687E3B00458316 /* harmfulObject-smallKnife-hd.png */,
 				E599004514687E3B00458316 /* harmfulObject-smallKnife.png */,
 				E599004614687E3B00458316 /* Oowh.caf */,
+				BCC06AAA146B2DB60068103A /* recipeItem-particle.plist */,
+				BCC06AAB146B2DB60068103A /* recipeItem-sound.caf */,
 				E599004714687E3B00458316 /* skull.png */,
+				E5BED0181474CC5E0003D6F2 /* skull-hd.png */,
 			);
 			name = "Game Layer";
 			sourceTree = "<group>";
@@ -1059,6 +1055,8 @@
 				E55D60EA1451373A00C9D237 /* CHGameLayer.h */,
 				E55D60EB1451373A00C9D237 /* CHGameLayer.m */,
 				E5F410BC1455E2D900FBEE4B /* Game Objects */,
+				E5BED0141474C3280003D6F2 /* CHSharedResHolder.h */,
+				E5BED0151474C3280003D6F2 /* CHSharedResHolder.m */,
 			);
 			name = "Game Layer";
 			sourceTree = "<group>";
@@ -1738,10 +1736,8 @@
 				E599004914687E3B00458316 /* chefObject-chef-hd.png in Resources */,
 				E599004B14687E3B00458316 /* chefObject-chef.png in Resources */,
 				E599004D14687E3B00458316 /* coin.caf in Resources */,
-				E599004F14687E3B00458316 /* coinObject-particle-hd.plist in Resources */,
 				E599005114687E3B00458316 /* coinObject-particle.plist in Resources */,
 				E599005314687E3B00458316 /* fps_images.png in Resources */,
-				E599005514687E3B00458316 /* harmfulObject-particle-hd.plist in Resources */,
 				E599005714687E3B00458316 /* harmfulObject-particle.plist in Resources */,
 				E599005914687E3B00458316 /* harmfulObject-smallKnife-hd.png in Resources */,
 				E599005B14687E3B00458316 /* harmfulObject-smallKnife.png in Resources */,
@@ -1752,7 +1748,6 @@
 				BCC06AB1146B2DB60068103A /* gameLayer-music.caf in Resources */,
 				BCC06AB3146B2DB60068103A /* harmfulObject-knife2-hd.png in Resources */,
 				BCC06AB5146B2DB60068103A /* harmfulObject-knife2.png in Resources */,
-				BCC06AB7146B2DB60068103A /* recipeItem-particle-hd.plist in Resources */,
 				BCC06AB9146B2DB60068103A /* recipeItem-particle.plist in Resources */,
 				BCC06ABB146B2DB60068103A /* recipeItem-sound.caf in Resources */,
 				85F6CE76146B4BC500290595 /* Speaker-On.png in Resources */,
@@ -1765,6 +1760,7 @@
 				40641D59146D11E600E00E73 /* HUDBar.png in Resources */,
 				BCB515B3146EFE8000F1092E /* Pause2.png in Resources */,
 				BCB515B5146EFE8000F1092E /* PauseSelected2.png in Resources */,
+				E5BED01A1474CC5E0003D6F2 /* skull-hd.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1811,10 +1807,8 @@
 				E599004814687E3B00458316 /* chefObject-chef-hd.png in Resources */,
 				E599004A14687E3B00458316 /* chefObject-chef.png in Resources */,
 				E599004C14687E3B00458316 /* coin.caf in Resources */,
-				E599004E14687E3B00458316 /* coinObject-particle-hd.plist in Resources */,
 				E599005014687E3B00458316 /* coinObject-particle.plist in Resources */,
 				E599005214687E3B00458316 /* fps_images.png in Resources */,
-				E599005414687E3B00458316 /* harmfulObject-particle-hd.plist in Resources */,
 				E599005614687E3B00458316 /* harmfulObject-particle.plist in Resources */,
 				E599005814687E3B00458316 /* harmfulObject-smallKnife-hd.png in Resources */,
 				E599005A14687E3B00458316 /* harmfulObject-smallKnife.png in Resources */,
@@ -1825,7 +1819,6 @@
 				BCC06AB0146B2DB60068103A /* gameLayer-music.caf in Resources */,
 				BCC06AB2146B2DB60068103A /* harmfulObject-knife2-hd.png in Resources */,
 				BCC06AB4146B2DB60068103A /* harmfulObject-knife2.png in Resources */,
-				BCC06AB6146B2DB60068103A /* recipeItem-particle-hd.plist in Resources */,
 				BCC06AB8146B2DB60068103A /* recipeItem-particle.plist in Resources */,
 				BCC06ABA146B2DB60068103A /* recipeItem-sound.caf in Resources */,
 				85F6CE75146B4BC500290595 /* Speaker-On.png in Resources */,
@@ -1838,6 +1831,7 @@
 				40641D58146D11E600E00E73 /* HUDBar.png in Resources */,
 				BCB515B2146EFE8000F1092E /* Pause2.png in Resources */,
 				BCB515B4146EFE8000F1092E /* PauseSelected2.png in Resources */,
+				E5BED0191474CC5E0003D6F2 /* skull-hd.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2031,6 +2025,7 @@
 				BC622A8F1463362A0016DFA0 /* CHHighScoresLayer.m in Sources */,
 				BC622A901463362A0016DFA0 /* CHSelectLevelLayer.m in Sources */,
 				BC622A911463362A0016DFA0 /* CCLayer+Utilities.m in Sources */,
+				E5BED0171474C3280003D6F2 /* CHSharedResHolder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2192,6 +2187,7 @@
 				E552D248146319E6005EBBB1 /* CHHighScoresLayer.m in Sources */,
 				E552D24E14631A34005EBBB1 /* CHSelectLevelLayer.m in Sources */,
 				E552D25114631C89005EBBB1 /* CCLayer+Utilities.m in Sources */,
+				E5BED0161474C3280003D6F2 /* CHSharedResHolder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

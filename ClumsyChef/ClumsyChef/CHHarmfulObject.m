@@ -52,16 +52,6 @@ NSInteger const knifeTag = 666;
     [self getChildByTag:knifeTag].rotation += 2;
 }
 
-+ (void)preloadSharedResources
-{
-	// TODO
-}
-
-+ (void)unloadSharedResources
-{
-	// TODO
-}
-
 -(void)damageLabel{
     CCLabelTTF *amount = [CCLabelTTF labelWithString:@"-1" fontName:@"Marker Felt" fontSize:20];
     amount.position = knife.position;

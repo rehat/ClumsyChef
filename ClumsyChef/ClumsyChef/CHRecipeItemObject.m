@@ -63,17 +63,6 @@
     return itemSprite.contentSize;
 }
 
-
-+ (void)preloadSharedResources
-{
-	// TODO
-}
-
-+ (void)unloadSharedResources
-{
-	// TODO
-}
-
 - (void)collected
 {
 	//[[self gameSceneParent] chefDidCollectRecipeItem:_itemID];

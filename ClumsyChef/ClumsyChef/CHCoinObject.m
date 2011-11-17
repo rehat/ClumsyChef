@@ -35,17 +35,6 @@
     return coin.contentSize;
 }
 
-
-+ (void)preloadSharedResources
-{
-	// TODO
-}
-
-+ (void)unloadSharedResources
-{
-	// TODO
-}
-
 -(void)coinLabel{
     CCLabelTTF *amount = [CCLabelTTF labelWithString:@"+10" fontName:@"Marker Felt" fontSize:14];
     amount.position = coin.position;
