@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		40641D58146D11E600E00E73 /* HUDBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 40641D57146D11E600E00E73 /* HUDBar.png */; };
 		40641D59146D11E600E00E73 /* HUDBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 40641D57146D11E600E00E73 /* HUDBar.png */; };
+		854352B51473211200C4937C /* HUDBar-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 854352B21473211200C4937C /* HUDBar-hd.png */; };
+		854352B61473211200C4937C /* HUDBar-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 854352B21473211200C4937C /* HUDBar-hd.png */; };
+		854352B71473211200C4937C /* Pause-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 854352B31473211200C4937C /* Pause-hd.png */; };
+		854352B81473211200C4937C /* Pause-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 854352B31473211200C4937C /* Pause-hd.png */; };
+		854352B91473211200C4937C /* PauseSelected-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 854352B41473211200C4937C /* PauseSelected-hd.png */; };
+		854352BA1473211200C4937C /* PauseSelected-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 854352B41473211200C4937C /* PauseSelected-hd.png */; };
 		85CEB0B714685F330099409C /* MainMenuBackground-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 85CEB0B114685F320099409C /* MainMenuBackground-hd.png */; };
 		85CEB0B814685F330099409C /* MainMenuBackground-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 85CEB0B114685F320099409C /* MainMenuBackground-hd.png */; };
 		85CEB0B914685F330099409C /* MainMenuBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 85CEB0B214685F330099409C /* MainMenuBackground.png */; };
@@ -467,6 +473,9 @@
 
 /* Begin PBXFileReference section */
 		40641D57146D11E600E00E73 /* HUDBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HUDBar.png; sourceTree = "<group>"; };
+		854352B21473211200C4937C /* HUDBar-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "HUDBar-hd.png"; sourceTree = "<group>"; };
+		854352B31473211200C4937C /* Pause-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Pause-hd.png"; sourceTree = "<group>"; };
+		854352B41473211200C4937C /* PauseSelected-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PauseSelected-hd.png"; sourceTree = "<group>"; };
 		85CEB0B114685F320099409C /* MainMenuBackground-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "MainMenuBackground-hd.png"; path = "Resources/MainMenuBackground-hd.png"; sourceTree = "<group>"; };
 		85CEB0B214685F330099409C /* MainMenuBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MainMenuBackground.png; path = Resources/MainMenuBackground.png; sourceTree = "<group>"; };
 		85CEB0B314685F330099409C /* play-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "play-hd.png"; path = "Resources/play-hd.png"; sourceTree = "<group>"; };
@@ -975,6 +984,10 @@
 		E522B2FF146863950049D367 /* Game Layer */ = {
 			isa = PBXGroup;
 			children = (
+				854352B21473211200C4937C /* HUDBar-hd.png */,
+				854352B31473211200C4937C /* Pause-hd.png */,
+				854352B41473211200C4937C /* PauseSelected-hd.png */,
+				40641D57146D11E600E00E73 /* HUDBar.png */,
 				BCC06AA4146B2DB60068103A /* coinObject-coin-hd.png */,
 				BCC06AA5146B2DB60068103A /* coinObject-coin.png */,
 				BCC06AA6146B2DB60068103A /* gameLayer-music.caf */,
@@ -1130,7 +1143,6 @@
 		E5A90397144F7799002A1F6C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				40641D57146D11E600E00E73 /* HUDBar.png */,
 				E5631E8A146B4BA000DACD3E /* Game Library */,
 				E522B2FE146863820049D367 /* Background Layer */,
 				E5A90398144F7799002A1F6C /* Default.png */,
@@ -1765,6 +1777,9 @@
 				40641D59146D11E600E00E73 /* HUDBar.png in Resources */,
 				BCB515B3146EFE8000F1092E /* Pause2.png in Resources */,
 				BCB515B5146EFE8000F1092E /* PauseSelected2.png in Resources */,
+				854352B61473211200C4937C /* HUDBar-hd.png in Resources */,
+				854352B81473211200C4937C /* Pause-hd.png in Resources */,
+				854352BA1473211200C4937C /* PauseSelected-hd.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1838,6 +1853,9 @@
 				40641D58146D11E600E00E73 /* HUDBar.png in Resources */,
 				BCB515B2146EFE8000F1092E /* Pause2.png in Resources */,
 				BCB515B4146EFE8000F1092E /* PauseSelected2.png in Resources */,
+				854352B51473211200C4937C /* HUDBar-hd.png in Resources */,
+				854352B71473211200C4937C /* Pause-hd.png in Resources */,
+				854352B91473211200C4937C /* PauseSelected-hd.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2211,12 +2229,12 @@
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				GCC_VERSION = "";
 				INFOPLIST_FILE = "ClumsyChef copy-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "ClumsyChef copy";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = 2;
 				USER_HEADER_SEARCH_PATHS = "\"ClumsyChef/libs\"";
 				WRAPPER_EXTENSION = app;
 			};
@@ -2234,12 +2252,12 @@
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				GCC_VERSION = "";
 				INFOPLIST_FILE = "ClumsyChef copy-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "ClumsyChef copy";
 				PROVISIONING_PROFILE = "";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = 2;
 				USER_HEADER_SEARCH_PATHS = "\"ClumsyChef/libs\"";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
@@ -2261,7 +2279,7 @@
 				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos5.0;
 			};
 			name = Debug;
@@ -2276,7 +2294,7 @@
 				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos5.0;
 			};
@@ -2294,7 +2312,7 @@
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				GCC_VERSION = "";
 				INFOPLIST_FILE = ClumsyChef/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -2314,7 +2332,7 @@
 				"GCC_THUMB_SUPPORT[arch=armv6]" = "";
 				GCC_VERSION = "";
 				INFOPLIST_FILE = ClumsyChef/Resources/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_LDFLAGS = "-lz";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
