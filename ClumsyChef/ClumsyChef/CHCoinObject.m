@@ -9,12 +9,12 @@
 #import "CHCoinObject.h"
 #import "CHGameScene.h"
 #import "SimpleAudioEngine.h"
+#import "CHSharedResHolder.h"
+
 
 @implementation CHCoinObject
 {
     CCSprite *coin;
-    CCParticleSystemQuad *emitter;
-
 }
 
 
@@ -23,40 +23,41 @@
 	if (self = [super init])
 	{
         coin = [CCSprite spriteWithFile:@"coinObject-coin.png"];
-        emitter = [CCParticleSystemQuad particleWithFile:@"coinObject-particle.plist"];
-        //emitter.rotation = 180;
         [self addChild:coin];
     }
 	return self;
 }
 
-- (CGSize) contentSize{
-    
+- (CGSize)contentSize
+{
     return coin.contentSize;
 }
 
--(void)coinLabel{
-    CCLabelTTF *amount = [CCLabelTTF labelWithString:@"+10" fontName:@"Marker Felt" fontSize:14];
-    amount.position = coin.position;
-    [emitter addChild:amount];
-}
-
-
 - (void)collected
 {   
-    emitter.position = coin.position;
+	// Craete the particle effect
+	NSDictionary *dict = [[CHSharedResHolder sharedResHolder] coinParticleEffectDict];
+	CCParticleSystemQuad *emitter = [[[CCParticleSystemQuad alloc] initWithDictionary:dict] autorelease];
+	emitter.position = coin.position;
     emitter.autoRemoveOnFinish = YES;
-    [self addChild:emitter];
     
-    [self coinLabel];
+	// Insert score label
+	// TODO: optimize using Bitmap font instead of TTF
+	CCLabelTTF *amount = [CCLabelTTF labelWithString:@"+10" fontName:@"Marker Felt" fontSize:14];
+    amount.position = coin.position;
+    [emitter addChild:amount];
+	
+	[self addChild:emitter];
     
+	// Play sound
     [[SimpleAudioEngine sharedEngine] playEffect:@"coin.caf"];
     [self removeChild:coin cleanup:YES];
     [self schedule: @selector(removeFromParent) interval:.8];
 }
 
-
--(void)removeFromParent{
+- (void)removeFromParent
+{
     [[self gameLayerParent] removeChild:self cleanup:YES];
 }
+
 @end

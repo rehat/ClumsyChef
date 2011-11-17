@@ -979,7 +979,6 @@
 				BCC06AA4146B2DB60068103A /* coinObject-coin-hd.png */,
 				BCC06AA5146B2DB60068103A /* coinObject-coin.png */,
 				E599004014687E3B00458316 /* coinObject-particle.plist */,
-				E599004114687E3B00458316 /* fps_images.png */,
 				BCC06AA6146B2DB60068103A /* gameLayer-music.caf */,
 				BCC06AA7146B2DB60068103A /* harmfulObject-knife2-hd.png */,
 				BCC06AA8146B2DB60068103A /* harmfulObject-knife2.png */,
@@ -1128,22 +1127,23 @@
 		E5A90397144F7799002A1F6C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				40641D57146D11E600E00E73 /* HUDBar.png */,
-				E5631E8A146B4BA000DACD3E /* Game Library */,
 				E522B2FE146863820049D367 /* Background Layer */,
 				E5A90398144F7799002A1F6C /* Default.png */,
+				E599004114687E3B00458316 /* fps_images.png */,
 				E522B2FF146863950049D367 /* Game Layer */,
+				E5631E8A146B4BA000DACD3E /* Game Library */,
+				40641D57146D11E600E00E73 /* HUDBar.png */,
 				E5A9039C144F7799002A1F6C /* Icon-72.png */,
 				E5A9039E144F7799002A1F6C /* Icon-Small-50.png */,
 				E5A903A0144F7799002A1F6C /* Icon-Small.png */,
-				BCB515B0146EFE8000F1092E /* Pause2.png */,
-				BCB515B1146EFE8000F1092E /* PauseSelected2.png */,
 				E5A903A2144F7799002A1F6C /* Icon-Small@2x.png */,
 				E5A903A4144F7799002A1F6C /* Icon.png */,
 				E5A903A6144F7799002A1F6C /* Icon@2x.png */,
 				E5A903A8144F7799002A1F6C /* Info.plist */,
 				E5A903A9144F7799002A1F6C /* iTunesArtwork */,
 				85CEB0AF14685EC70099409C /* Main Menu */,
+				BCB515B0146EFE8000F1092E /* Pause2.png */,
+				BCB515B1146EFE8000F1092E /* PauseSelected2.png */,
 				E511C2911459258B008BCFF8 /* Test Materials */,
 			);
 			name = Resources;

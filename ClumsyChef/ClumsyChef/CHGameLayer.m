@@ -16,7 +16,7 @@
 #import "CHRecipeItemObject.h"
 #import "SimpleAudioEngine.h"
 #import "CHHUDLayer.h"
-
+#import "CHSharedResHolder.h"
 
 
 static CGFloat const kChefYOffset = 100.f;
@@ -105,7 +105,14 @@ static float const kGenObjectRangeDown = 100.f;
 		self.isTouchEnabled = true;
 		self.isAccelerometerEnabled = true;
 
+		//-------------------------------------------
+		// Prepare game object's shared resources
+		//-------------------------------------------
+		[CHSharedResHolder loadSharedResources];
+		
+		//-------------------------------------------
 		// Chef objects
+		//-------------------------------------------
 		_chefObj = [CHChefObject node];
 		_chefObj.position = ccp(CHGetWinWidth() / 2, 0);
 		_chefObj.position = [self positionForChef];
@@ -114,44 +121,46 @@ static float const kGenObjectRangeDown = 100.f;
         //Array of items in play
         _liveGameObjects = [[CCArray alloc ] initWithCapacity:100];
         
-        //HUD
-        _hudLayer = [CHHUDLayer node];
-        [self addChild:_hudLayer z:5];
-        
-        // Get stage
+		//-------------------------------------------		
+        // Set up the layer according to the stage info
+		//-------------------------------------------
+
 		CHLevelInfo *levelInfo = [[CHGameLibrary sharedGameLibrary] levelInfoAtIndex:0];
 		_goalRecipeItemIDs = [[CCArray alloc] initWithNSArray:[levelInfo.recipeItems retain]];
-        		
-		// Bg music
-        [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"gameLayer-music.caf" loop:YES];
-        
-        if ([SimpleAudioEngine sharedEngine].willPlayBackgroundMusic) {
-            [SimpleAudioEngine sharedEngine].backgroundMusicVolume = 0.4f;
-        }
         
         _chefNumLives = 3;
         _chefScore = 0;
         _levelHeight = levelInfo.worldHeight;
 
-        
 		_bottomWorldOffset = CHGetWinHeight();
 		_nextGenItemsOffset = _bottomWorldOffset;
 
-		[[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
-		[self scheduleUpdate];
+		//-------------------------------------------
+		// HUD
+		//-------------------------------------------
+        _hudLayer = [CHHUDLayer node];
+        [self addChild:_hudLayer z:5];
 		
+		//-------------------------------------------
 		// Bg music
+		//-------------------------------------------
         [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"gameLayer-music.caf" loop:YES];
         
         if ([SimpleAudioEngine sharedEngine].willPlayBackgroundMusic) {
             [SimpleAudioEngine sharedEngine].backgroundMusicVolume = 0.4f;
         }
+		
+		
+		[[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
+		[self scheduleUpdate];
 	}
 	return self;
 }
 
 - (void)dealloc
 {
+	[CHSharedResHolder unloadSharedResources];	// Unload
+	
 	[_goalRecipeItemIDs release];
     [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
 	[super dealloc];
