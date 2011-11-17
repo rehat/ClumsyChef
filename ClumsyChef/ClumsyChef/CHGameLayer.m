@@ -16,7 +16,7 @@
 #import "CHRecipeItemObject.h"
 #import "SimpleAudioEngine.h"
 #import "CHHUDLayer.h"
-
+#import "CHSharedResHolder.h"
 
 
 static CGFloat const kChefYOffset = 100.f;
@@ -29,6 +29,8 @@ static float const kGenObjectRangeDown = 100.f;
 @implementation CHGameLayer
 {
 	CHChefObject *_chefObj;
+    CHHUDLayer *_hudLayer;
+    
     
 	float _bottomWorldOffset;
 	float _nextGenItemsOffset;
@@ -103,43 +105,62 @@ static float const kGenObjectRangeDown = 100.f;
 		self.isTouchEnabled = true;
 		self.isAccelerometerEnabled = true;
 
+		//-------------------------------------------
+		// Prepare game object's shared resources
+		//-------------------------------------------
+		[CHSharedResHolder loadSharedResources];
+		
+		//-------------------------------------------
 		// Chef objects
+		//-------------------------------------------
 		_chefObj = [CHChefObject node];
 		_chefObj.position = ccp(CHGetWinWidth() / 2, 0);
 		_chefObj.position = [self positionForChef];
 		[self addChild:_chefObj];
         
+        //Array of items in play
         _liveGameObjects = [[CCArray alloc ] initWithCapacity:100];
-
-        CHHUDLayer *hudLayer = [CHHUDLayer node];
-        [self addChild:hudLayer z:5];
         
-        // Get stage
+		//-------------------------------------------		
+        // Set up the layer according to the stage info
+		//-------------------------------------------
+
 		CHLevelInfo *levelInfo = [[CHGameLibrary sharedGameLibrary] levelInfoAtIndex:0];
 		_goalRecipeItemIDs = [[CCArray alloc] initWithNSArray:[levelInfo.recipeItems retain]];
-        		        
+        
         _chefNumLives = 3;
         _chefScore = 0;
         _levelHeight = levelInfo.worldHeight;
-        
+
 		_bottomWorldOffset = CHGetWinHeight();
 		_nextGenItemsOffset = _bottomWorldOffset;
 
-		[[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
-		[self scheduleUpdate];
+		//-------------------------------------------
+		// HUD
+		//-------------------------------------------
+        _hudLayer = [CHHUDLayer node];
+        [self addChild:_hudLayer z:5];
 		
+		//-------------------------------------------
 		// Bg music
+		//-------------------------------------------
         [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"gameLayer-music.caf" loop:YES];
         
         if ([SimpleAudioEngine sharedEngine].willPlayBackgroundMusic) {
             [SimpleAudioEngine sharedEngine].backgroundMusicVolume = 0.4f;
         }
+		
+		
+		[[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
+		[self scheduleUpdate];
 	}
 	return self;
 }
 
 - (void)dealloc
 {
+	[CHSharedResHolder unloadSharedResources];	// Unload
+	
 	[_goalRecipeItemIDs release];
     [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
 	[super dealloc];
@@ -208,13 +229,10 @@ static float const kGenObjectRangeDown = 100.f;
                         //prevents chef getting hit twice in a row
                     if (![_chefObj recentlyHit]) 
                     {   
-                        [_chefObj chefDamaged];
-                        //TODO:Take off one health and check if chef still has lives left
+                        [_chefObj chefDamaged];   //fadding in/out 
                         _chefNumLives --;
-                            //TODO: tell HUD to update lives
-                        if (_chefNumLives <1) {
-                            //TODO: update player info with score and cleared level
-                            
+                        [_hudLayer updateLives];  //updating HUD
+                        if (_chefNumLives <1) {                            
                             [[self gameSceneParent] showGameOver];
                         }
                     }                                       
@@ -222,10 +240,10 @@ static float const kGenObjectRangeDown = 100.f;
                         //Coin:  Update player's score (maybe play a sound for every 1000)    
                 }else if([item isKindOfClass:[CHCoinObject class]]){
                     _chefScore += 10;
+                    [_hudLayer updateScore:10];
                         //Recipe:  Update HUD and left over itmes needed.  Then check if its game win
                 }else{
                     if ([item isKindOfClass:[CHRecipeItemObject class]]) {
-                        NSLog(@"Take off");
                         NSString *checkRecipe;
                         CHRecipeItemObject *checkMe = (CHRecipeItemObject*)item;
                         CCARRAY_FOREACH(_goalRecipeItemIDs, checkRecipe){
@@ -235,6 +253,8 @@ static float const kGenObjectRangeDown = 100.f;
                             }
                         }
                         if([_goalRecipeItemIDs count] == 0){
+                            
+                            //TODO: update player info with score and level cleared
                             [[self gameSceneParent] showWin];
 
                         }
@@ -251,6 +271,9 @@ static float const kGenObjectRangeDown = 100.f;
     
     [background updatePull:_bottomWorldOffset];	
     
+    if(_bottomWorldOffset > _levelHeight){
+        [[self gameSceneParent] showGameOver];
+    }
     
 	// Notify the parent
 	[gsParent worldOffsetDidChange:_bottomWorldOffset]; 
