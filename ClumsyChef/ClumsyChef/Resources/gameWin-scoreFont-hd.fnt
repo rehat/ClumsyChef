@@ -1,0 +1,38 @@
+info face="MarkerFelt-Thin" size=72 bold=0 italic=0 charset="" unicode=0 stretchH=100 smooth=1 aa=1 padding=0,0,0,0 spacing=2,2
+common lineHeight=78 base=62 scaleW=256 scaleH=256 pages=1 packed=0
+page id=0 file="gameWin-scoreFont-hd.png"
+chars count=13
+char id=55 x=2 y=2 width=46 height=73 xoffset=2 yoffset=2 xadvance=41 page=0 chnl=0 letter="7"
+char id=52 x=50 y=2 width=50 height=72 xoffset=1 yoffset=2 xadvance=41 page=0 chnl=0 letter="4"
+char id=53 x=102 y=2 width=47 height=72 xoffset=2 yoffset=4 xadvance=41 page=0 chnl=0 letter="5"
+char id=51 x=151 y=2 width=44 height=72 xoffset=4 yoffset=1 xadvance=41 page=0 chnl=0 letter="3"
+char id=54 x=197 y=2 width=42 height=72 xoffset=5 yoffset=2 xadvance=41 page=0 chnl=0 letter="6"
+char id=57 x=2 y=77 width=42 height=72 xoffset=4 yoffset=2 xadvance=41 page=0 chnl=0 letter="9"
+char id=56 x=46 y=77 width=39 height=72 xoffset=5 yoffset=2 xadvance=41 page=0 chnl=0 letter="8"
+char id=49 x=87 y=77 width=30 height=72 xoffset=8 yoffset=2 xadvance=41 page=0 chnl=0 letter="1"
+char id=50 x=119 y=77 width=48 height=71 xoffset=2 yoffset=2 xadvance=41 page=0 chnl=0 letter="2"
+char id=36 x=169 y=77 width=43 height=71 xoffset=2 yoffset=3 xadvance=38 page=0 chnl=0 letter="$"
+char id=48 x=2 y=151 width=42 height=71 xoffset=4 yoffset=4 xadvance=41 page=0 chnl=0 letter="0"
+char id=44 x=46 y=151 width=24 height=27 xoffset=-2 yoffset=54 xadvance=14 page=0 chnl=0 letter=","
+char id=32 x=72 y=151 width=0 height=0 xoffset=18 yoffset=82 xadvance=18 page=0 chnl=0 letter="space"
+kernings count=20
+kerning first=55 second=44 amount=-14
+kerning first=52 second=44 amount=-6
+kerning first=53 second=44 amount=-12
+kerning first=51 second=44 amount=-12
+kerning first=54 second=44 amount=-6
+kerning first=57 second=44 amount=-8
+kerning first=56 second=44 amount=-8
+kerning first=49 second=44 amount=-8
+kerning first=48 second=44 amount=-6
+kerning first=44 second=55 amount=2
+kerning first=44 second=52 amount=-7
+kerning first=44 second=51 amount=-3
+kerning first=44 second=54 amount=-6
+kerning first=44 second=57 amount=-5
+kerning first=44 second=56 amount=-3
+kerning first=44 second=49 amount=-9
+kerning first=44 second=50 amount=3
+kerning first=44 second=48 amount=-4
+kerning first=44 second=44 amount=3
+kerning first=32 second=53 amount=-3
