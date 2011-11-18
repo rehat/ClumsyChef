@@ -7,6 +7,8 @@
 //
 
 #import "CHHUDLayer.h"
+#import "CHGameLibrary.h"
+
 
 @implementation CHHUDLayer
 {
@@ -87,12 +89,38 @@
         
         //windowSize = [[CCDirector sharedDirector] winSize];
         
+        //Recipe Items
+        NSArray *itemNameArray = [NSArray arrayWithObjects:@"HotDog", @"HotDogBun", @"HotDog", @"HotDogBun", nil];
+        NSMutableArray *itemInfoArray = [NSMutableArray arrayWithCapacity:6];
+        
+        //test
+        for (NSString *itemName in itemNameArray) {
+            NSLog(itemName);
+        }
+        
+        for (NSString *itemName in itemNameArray) {
+            CHRecipeItemInfo *item = [[CHGameLibrary sharedGameLibrary] recipeItemInfoWithName:itemName];
+            [itemInfoArray addObject:item];
+            NSLog([item itemName]);
+        }
+        
+        //Create Menu Bar at top of HUD Layer
         CGSize screenSize = [[CCDirector sharedDirector] winSize];
         CCSprite *menuBar = [CCSprite spriteWithFile:@"HUDBar.png"];
+        
         //[menuBar setAnchorPoint:ccp(1, 0)];
         menuBar.position = ccp(10, 468);
        // menuBar.position = CGPointMake(screenSize.width - menuBar.contentSize.width/2,screenSize.height-menuBar.contentSize.height/2);
         [self addChild:menuBar];
+        
+        //Create Recipe Items at top of HUD Layer in front of Menu Bar
+        CGFloat horizontalPosition = 23;
+        for (CHRecipeItemInfo *itemInfo in itemInfoArray) {
+            CCSprite *tempSprite = [CCSprite spriteWithFile:[itemInfo spriteFilename]];
+            tempSprite.position = ccp(horizontalPosition, 462);
+            horizontalPosition = horizontalPosition + 45;
+            [self addChild:tempSprite];
+        }
         
         
         CCMenuItemImage *pauseButton = [CCMenuItemImage itemFromNormalImage:@"Pause2.png" selectedImage:@"PauseSelected2.png" target:self selector:@selector(gamePaused:)];
