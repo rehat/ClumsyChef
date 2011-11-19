@@ -250,10 +250,6 @@
 		BC622AB11463362A0016DFA0 /* font-testFont-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E58ABB5D145A7EB6002CC4EE /* font-testFont-hd.png */; };
 		BC622AB21463362A0016DFA0 /* gameObject-testIconBlue-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E5F2342D145BBF820026799C /* gameObject-testIconBlue-hd.png */; };
 		BC622AB31463362A0016DFA0 /* gameObject-testIconBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = E5F2342E145BBF820026799C /* gameObject-testIconBlue.png */; };
-		BCB515B2146EFE8000F1092E /* Pause2.png in Resources */ = {isa = PBXBuildFile; fileRef = BCB515B0146EFE8000F1092E /* Pause2.png */; };
-		BCB515B3146EFE8000F1092E /* Pause2.png in Resources */ = {isa = PBXBuildFile; fileRef = BCB515B0146EFE8000F1092E /* Pause2.png */; };
-		BCB515B4146EFE8000F1092E /* PauseSelected2.png in Resources */ = {isa = PBXBuildFile; fileRef = BCB515B1146EFE8000F1092E /* PauseSelected2.png */; };
-		BCB515B5146EFE8000F1092E /* PauseSelected2.png in Resources */ = {isa = PBXBuildFile; fileRef = BCB515B1146EFE8000F1092E /* PauseSelected2.png */; };
 		BCC06AAC146B2DB60068103A /* coinObject-coin-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BCC06AA4146B2DB60068103A /* coinObject-coin-hd.png */; };
 		BCC06AAD146B2DB60068103A /* coinObject-coin-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BCC06AA4146B2DB60068103A /* coinObject-coin-hd.png */; };
 		BCC06AAE146B2DB60068103A /* coinObject-coin.png in Resources */ = {isa = PBXBuildFile; fileRef = BCC06AA5146B2DB60068103A /* coinObject-coin.png */; };
@@ -284,8 +280,8 @@
 		E5085F7114779BAB005844C9 /* pause-gameLayerButton-high-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E5085F6314779BAB005844C9 /* pause-gameLayerButton-high-hd.png */; };
 		E5085F7214779BAB005844C9 /* pause-gameLayerButton-high.png in Resources */ = {isa = PBXBuildFile; fileRef = E5085F6414779BAB005844C9 /* pause-gameLayerButton-high.png */; };
 		E5085F7314779BAB005844C9 /* pause-gameLayerButton-high.png in Resources */ = {isa = PBXBuildFile; fileRef = E5085F6414779BAB005844C9 /* pause-gameLayerButton-high.png */; };
-		E5085F7414779BAB005844C9 /* pause-gameLayerButton-pause.png in Resources */ = {isa = PBXBuildFile; fileRef = E5085F6514779BAB005844C9 /* pause-gameLayerButton-pause.png */; };
-		E5085F7514779BAB005844C9 /* pause-gameLayerButton-pause.png in Resources */ = {isa = PBXBuildFile; fileRef = E5085F6514779BAB005844C9 /* pause-gameLayerButton-pause.png */; };
+		E5085F7414779BAB005844C9 /* pause-gameLayerButton.png in Resources */ = {isa = PBXBuildFile; fileRef = E5085F6514779BAB005844C9 /* pause-gameLayerButton.png */; };
+		E5085F7514779BAB005844C9 /* pause-gameLayerButton.png in Resources */ = {isa = PBXBuildFile; fileRef = E5085F6514779BAB005844C9 /* pause-gameLayerButton.png */; };
 		E5085F7A14779EB4005844C9 /* hud-numberFont-hd.fnt in Resources */ = {isa = PBXBuildFile; fileRef = E5085F7614779EB3005844C9 /* hud-numberFont-hd.fnt */; };
 		E5085F7B14779EB4005844C9 /* hud-numberFont-hd.fnt in Resources */ = {isa = PBXBuildFile; fileRef = E5085F7614779EB3005844C9 /* hud-numberFont-hd.fnt */; };
 		E5085F7C14779EB4005844C9 /* hud-numberFont-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E5085F7714779EB3005844C9 /* hud-numberFont-hd.png */; };
@@ -647,8 +643,6 @@
 		BC03E84F14773C9200E34189 /* recipeItem_tortilla-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recipeItem_tortilla-hd.png"; path = "Resources/recipeItem_tortilla-hd.png"; sourceTree = "<group>"; };
 		BC03E85014773C9200E34189 /* recipeItem_tortilla.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = recipeItem_tortilla.png; path = Resources/recipeItem_tortilla.png; sourceTree = "<group>"; };
 		BC622ABB1463362A0016DFA0 /* ClumsyChef copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ClumsyChef copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BCB515B0146EFE8000F1092E /* Pause2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pause2.png; sourceTree = "<group>"; };
-		BCB515B1146EFE8000F1092E /* PauseSelected2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PauseSelected2.png; sourceTree = "<group>"; };
 		BCC06AA4146B2DB60068103A /* coinObject-coin-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "coinObject-coin-hd.png"; path = "Resources/coinObject-coin-hd.png"; sourceTree = "<group>"; };
 		BCC06AA5146B2DB60068103A /* coinObject-coin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "coinObject-coin.png"; path = "Resources/coinObject-coin.png"; sourceTree = "<group>"; };
 		BCC06AA6146B2DB60068103A /* gameLayer-music.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "gameLayer-music.caf"; path = "Resources/gameLayer-music.caf"; sourceTree = "<group>"; };
@@ -665,7 +659,7 @@
 		E5085F6214779BAB005844C9 /* pause-gameLayerButton-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pause-gameLayerButton-hd.png"; path = "Resources/pause-gameLayerButton-hd.png"; sourceTree = "<group>"; };
 		E5085F6314779BAB005844C9 /* pause-gameLayerButton-high-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pause-gameLayerButton-high-hd.png"; path = "Resources/pause-gameLayerButton-high-hd.png"; sourceTree = "<group>"; };
 		E5085F6414779BAB005844C9 /* pause-gameLayerButton-high.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pause-gameLayerButton-high.png"; path = "Resources/pause-gameLayerButton-high.png"; sourceTree = "<group>"; };
-		E5085F6514779BAB005844C9 /* pause-gameLayerButton-pause.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pause-gameLayerButton-pause.png"; path = "Resources/pause-gameLayerButton-pause.png"; sourceTree = "<group>"; };
+		E5085F6514779BAB005844C9 /* pause-gameLayerButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pause-gameLayerButton.png"; path = "Resources/pause-gameLayerButton.png"; sourceTree = "<group>"; };
 		E5085F7614779EB3005844C9 /* hud-numberFont-hd.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "hud-numberFont-hd.fnt"; path = "Resources/hud-numberFont-hd.fnt"; sourceTree = "<group>"; };
 		E5085F7714779EB3005844C9 /* hud-numberFont-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "hud-numberFont-hd.png"; path = "Resources/hud-numberFont-hd.png"; sourceTree = "<group>"; };
 		E5085F7814779EB3005844C9 /* hud-numberFont.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "hud-numberFont.fnt"; path = "Resources/hud-numberFont.fnt"; sourceTree = "<group>"; };
@@ -1275,7 +1269,7 @@
 				E5085F6214779BAB005844C9 /* pause-gameLayerButton-hd.png */,
 				E5085F6314779BAB005844C9 /* pause-gameLayerButton-high-hd.png */,
 				E5085F6414779BAB005844C9 /* pause-gameLayerButton-high.png */,
-				E5085F6514779BAB005844C9 /* pause-gameLayerButton-pause.png */,
+				E5085F6514779BAB005844C9 /* pause-gameLayerButton.png */,
 				E52E5F1A1474E0E600FD9C4D /* pause-quit-hd.png */,
 				E52E5F1B1474E0E600FD9C4D /* pause-quit.png */,
 				E52E5F1C1474E0E600FD9C4D /* pause-restart-hd.png */,
@@ -1508,8 +1502,6 @@
 				85CEB0AF14685EC70099409C /* Main Menu */,
 				E52E5F4F1474E12900FD9C4D /* Menu-Shared */,
 				E52E5ED61474E02200FD9C4D /* Pause */,
-				BCB515B0146EFE8000F1092E /* Pause2.png */,
-				BCB515B1146EFE8000F1092E /* PauseSelected2.png */,
 				BC03E83B14773C3C00E34189 /* Recipe Items */,
 				E511C2911459258B008BCFF8 /* Test Materials */,
 			);
@@ -2141,8 +2133,6 @@
 				E5631EA4146B790000DACD3E /* gameLibrary-harmfulItems.plist in Resources */,
 				E5631EA6146B790000DACD3E /* gameLibrary-levels.plist in Resources */,
 				E5631EA8146B790000DACD3E /* gameLibrary-recipeItems.plist in Resources */,
-				BCB515B3146EFE8000F1092E /* Pause2.png in Resources */,
-				BCB515B5146EFE8000F1092E /* PauseSelected2.png in Resources */,
 				E5BED01A1474CC5E0003D6F2 /* skull-hd.png in Resources */,
 				E5BED0211474D7B10003D6F2 /* Default@2x.png in Resources */,
 				E52E5EDF1474E08F00FD9C4D /* gameOver-title-hd.png in Resources */,
@@ -2214,7 +2204,7 @@
 				E5085F6F14779BAB005844C9 /* pause-gameLayerButton-hd.png in Resources */,
 				E5085F7114779BAB005844C9 /* pause-gameLayerButton-high-hd.png in Resources */,
 				E5085F7314779BAB005844C9 /* pause-gameLayerButton-high.png in Resources */,
-				E5085F7514779BAB005844C9 /* pause-gameLayerButton-pause.png in Resources */,
+				E5085F7514779BAB005844C9 /* pause-gameLayerButton.png in Resources */,
 				E5085F7B14779EB4005844C9 /* hud-numberFont-hd.fnt in Resources */,
 				E5085F7D14779EB4005844C9 /* hud-numberFont-hd.png in Resources */,
 				E5085F7F14779EB4005844C9 /* hud-numberFont.fnt in Resources */,
@@ -2288,8 +2278,6 @@
 				E5631EA3146B790000DACD3E /* gameLibrary-harmfulItems.plist in Resources */,
 				E5631EA5146B790000DACD3E /* gameLibrary-levels.plist in Resources */,
 				E5631EA7146B790000DACD3E /* gameLibrary-recipeItems.plist in Resources */,
-				BCB515B2146EFE8000F1092E /* Pause2.png in Resources */,
-				BCB515B4146EFE8000F1092E /* PauseSelected2.png in Resources */,
 				E5BED0191474CC5E0003D6F2 /* skull-hd.png in Resources */,
 				E5BED0201474D7B10003D6F2 /* Default@2x.png in Resources */,
 				E52E5EDE1474E08F00FD9C4D /* gameOver-title-hd.png in Resources */,
@@ -2361,7 +2349,7 @@
 				E5085F6E14779BAB005844C9 /* pause-gameLayerButton-hd.png in Resources */,
 				E5085F7014779BAB005844C9 /* pause-gameLayerButton-high-hd.png in Resources */,
 				E5085F7214779BAB005844C9 /* pause-gameLayerButton-high.png in Resources */,
-				E5085F7414779BAB005844C9 /* pause-gameLayerButton-pause.png in Resources */,
+				E5085F7414779BAB005844C9 /* pause-gameLayerButton.png in Resources */,
 				E5085F7A14779EB4005844C9 /* hud-numberFont-hd.fnt in Resources */,
 				E5085F7C14779EB4005844C9 /* hud-numberFont-hd.png in Resources */,
 				E5085F7E14779EB4005844C9 /* hud-numberFont.fnt in Resources */,

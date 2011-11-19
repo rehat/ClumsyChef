@@ -39,8 +39,6 @@ static float const kGenObjectRangeDown = 100.f;
     CCArray *_liveGameObjects;
     CCArray *_goalRecipeItemIDs;
     
-    NSInteger _chefNumLives;
-    NSInteger _chefScore;
 	NSInteger _levelHeight;
 }
 
@@ -95,6 +93,18 @@ static float const kGenObjectRangeDown = 100.f;
 	return nil;
 }
 
+- (CCMenu *)pauseButton
+{
+	CCMenuItemImage *item = [CCMenuItemImage itemFromNormalImage:@"pause-gameLayerButton.png" 
+												   selectedImage:@"pause-gameLayerButton-high.png" 
+														   block:^(id sender) {
+															   [[self gameSceneParent] pauseGame];
+														   }];
+	CCMenu *menu = [CCMenu menuWithItems:item, nil];
+	[menu setPositionSharp:ccp(26, 27)];
+	return menu;
+}
+
 #pragma mark - 
 #pragma mark Constructor and destructor
 
@@ -136,8 +146,6 @@ static float const kGenObjectRangeDown = 100.f;
 		CHLevelInfo *levelInfo = [[CHGameLibrary sharedGameLibrary] levelInfoAtIndex:1];
 		_goalRecipeItemIDs = [[CCArray alloc] initWithNSArray:[levelInfo.recipeItems retain]];
         
-        _chefNumLives = 3;
-        _chefScore = 0;
         _levelHeight = levelInfo.worldHeight;
 
 		_bottomWorldOffset = CHGetWinHeight();
@@ -148,6 +156,12 @@ static float const kGenObjectRangeDown = 100.f;
 		//-------------------------------------------
         _hudLayer = [CHHUDLayer nodeWithRequiredRecipeItems:levelInfo.recipeItems numberOfLifes:3 moneyAmount:0];
         [self addChild:_hudLayer z:5];
+
+		//-------------------------------------------
+		// PAUSE button
+		//-------------------------------------------
+        CCMenu *pauseButton = [self pauseButton];
+        [self addChild:pauseButton z:5];
 		
 		//-------------------------------------------
 		// Bg music
@@ -237,17 +251,15 @@ static float const kGenObjectRangeDown = 100.f;
                     if (![_chefObj recentlyHit]) 
                     {   
                         [_chefObj chefDamaged];   //fadding in/out 
-                        _chefNumLives --;
-                        _hudLayer.numberOfLifes = _chefNumLives;  //updating HUD
-                        if (_chefNumLives <1) {                            
+                        _hudLayer.numberOfLifes--;  //updating HUD
+                        if (_hudLayer.numberOfLifes <1) {                            
                             [[self gameSceneParent] showGameOver];
                         }
                     }                                       
                     
                         //Coin:  Update player's score (maybe play a sound for every 1000)    
                 }else if([item isKindOfClass:[CHCoinObject class]]){
-                    _chefScore += 10;
-					_hudLayer.moneyAmount = _chefScore;
+					_hudLayer.moneyAmount += 10;
                         //Recipe:  Update HUD and left over itmes needed.  Then check if its game win
                 }else{
                     if ([item isKindOfClass:[CHRecipeItemObject class]]) {
