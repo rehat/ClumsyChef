@@ -17,7 +17,6 @@
 {
 	CCLabelBMFont *_debugLabel;
 
-	CHBackgroundLayer	*_bgLayer;
 	CHGameLayer			*_gameLayer;
     
 }
@@ -29,12 +28,10 @@
 {
 	if (self = [super init])
 	{
-		_bgLayer = [CHBackgroundLayer node];
-        [_bgLayer setWorldHeight:30000];  //TODO: Need to get this from stage info 
+		
         
         
 		_gameLayer = [CHGameLayer node];
-		[self addChild:_bgLayer z:-1 tag:11111];
         [self addChild:_gameLayer z:0];
 		
 		_debugLabel = [[[CCLabelBMFont alloc] initWithString:@"" fntFile:@"font-testFont.fnt"] autorelease];
@@ -102,14 +99,12 @@
 
 - (void)showWin
 {
-	[self removeChild:_bgLayer cleanup:YES];
     [self removeChild:_gameLayer cleanup:YES];
     CHGameWinLayer *winLayer = [CHGameWinLayer nodeWithMoneyAmount:100];
     [self addChild:winLayer];
 }
 
 -(void)showGameOver{
-    [self removeChild:_bgLayer cleanup:YES];
     [self removeChild:_gameLayer cleanup:YES];
     CHGameLoseLayer *loseLayer = [CHGameLoseLayer node];
     [self addChild:loseLayer];
