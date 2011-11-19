@@ -54,3 +54,7 @@ static inline ccColor4B ccc4Hex(uint32_t hexValue)
 {
 	return ccc3To4(ccc3Hex(hexValue));
 }
+
+// Number utilities
+NSString* CHFormatDecimalNumber(NSNumber *num);
+

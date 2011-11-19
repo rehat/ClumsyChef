@@ -68,7 +68,7 @@
 - (void)worldOffsetDidChange:(NSInteger)newOffset
 {
   
-	[self setDebugMessage:@"%d", newOffset];
+	//[self setDebugMessage:@"%d", newOffset];
 }
 
 - (void)chefDidReachBottom

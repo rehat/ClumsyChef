@@ -2,157 +2,208 @@
 //  CHHUDLayer.m
 //  ClumsyChef
 //
-//  Created by Tong on 20/10/11.
-//  Copyright (c) 2011 Team iUCI. All rights reserved.
+//  Created by Tong on 18/11/11.
+//  Copyright 2011 Team iUCI. All rights reserved.
 //
 
 #import "CHHUDLayer.h"
 #import "CHGameLibrary.h"
 
+static CGFloat const kItemWidth = 23;
+static CGFloat const kItemGap = 12;
+
+
+/**
+ * HUDItemSprite
+ */
+@interface HUDItemSprite : CCNode 
+
+@property(nonatomic, assign) BOOL checkMarkHidden;
+
++ (id)nodeWithRecipeItem:(NSString *)itemID;
+
+@end
+
+
+@implementation HUDItemSprite
+{
+	CCSprite	*_checkMark;
+}
+
+- (id)initWithRecipeItem:(NSString *)itemID
+{
+	if (self = [super init])
+	{
+		CHRecipeItemInfo *info = [[CHGameLibrary sharedGameLibrary] recipeItemInfoWithName:itemID];
+		CCSprite *itemSprite = [CCSprite spriteWithFile:info.spriteFilename];
+		[itemSprite setPositionSharp:ccp(0, 0)];
+		itemSprite.scale = 0.6969696969697f;
+		[self addChild:itemSprite];
+		
+		_checkMark = [CCSprite spriteWithFile:@"hud-checkMark.png"];
+		[_checkMark setPositionSharp:ccp(10, -4)];
+		[self addChild:_checkMark];
+		_checkMark.visible = NO;
+	}
+	return self;
+}
+
++ (id)nodeWithRecipeItem:(NSString *)itemID
+{
+	return [[[HUDItemSprite alloc] initWithRecipeItem:itemID] autorelease];
+}
+
+- (BOOL)checkMarkHidden
+{
+	return !_checkMark.visible;
+}
+
+- (void)setCheckMarkHidden:(BOOL)hidden
+{
+	_checkMark.visible = !hidden;
+}
+
+@end
+
 
 @implementation CHHUDLayer
 {
-	NSInteger	_numberOfLife;
+	NSInteger	_numberOfLifes;
 	NSInteger	_moneyAmount;
-    NSArray     *_goalItems;
-    NSMutableDictionary *_hudGoalItems;
-    
-    CCLabelTTF *_lives;
-    CCLabelTTF *_score;
-    
+	
+	NSDictionary	*_itemSprites;
+	CCLabelBMFont	*_lifeLabel;
+	CCLabelBMFont	*_moneyLabel;
 }
 
-@synthesize numberOfLife = _numberOfLife;
+@synthesize numberOfLifes = _numberOfLifes;
 @synthesize moneyAmount = _moneyAmount;
 
+
+#pragma mark -
+#pragma mark Private
+
+- (CGPoint)positionForItemAtIndex:(NSUInteger)index
+{
+	CGPoint p = CHGetWinPointTL(11 + index * (kItemWidth + kItemGap) + 0.5f * kItemWidth, 21);
+	return p;
+}
+
+- (NSString *)stringForMoneyAmount:(NSInteger)amount
+{
+	return [NSString stringWithFormat:@"%d", amount];
+}
 
 #pragma mark -
 #pragma mark Constructor and destructor
 
 
-
-
-
-- (id)initWithRequiredRecipeItems:(CCArray *)itemIDs
+- (id)initWithRequiredRecipeItems:(NSArray *)itemIDs 
+					numberOfLifes:(NSInteger)numLifes 
+					  moneyAmount:(NSInteger)amount;
 {
 	if (self = [super init])
 	{
-        _numberOfLife = 3;
-        _moneyAmount = 0;
-        
-        _hudGoalItems = [[NSMutableDictionary alloc] initWithCapacity:[itemIDs count] ];
+        _numberOfLifes = numLifes;
+        _moneyAmount = amount;
 
-        
-        //Create Menu Bar at top of HUD Layer
-        CGSize screenSize = [[CCDirector sharedDirector] winSize];
-        CCSprite *menuBar = [CCSprite spriteWithFile:@"HUDBar.png"];
-        
-        menuBar.position = ccp(screenSize.width/2, screenSize.height - menuBar.contentSize.height/2);
-        [self addChild:menuBar];
-        
-        
-        //-------------------------------------------
-		// Recipe Goal Items
-		//-------------------------------------------
-        CGFloat horizontalPosition = 0;
-        for (NSString *itemName in itemIDs) {
-            CHRecipeItemInfo *item = [[CHGameLibrary sharedGameLibrary] recipeItemInfoWithName:itemName];
-            CCSprite *tempSprite = [CCSprite spriteWithFile:[item spriteFilename]];
-            horizontalPosition += tempSprite.contentSize.width/2;
-            tempSprite.position = ccp(horizontalPosition, menuBar.position.y );
-            horizontalPosition += tempSprite.contentSize.width;
-            [_hudGoalItems setObject:tempSprite forKey:itemName];
-        
-            [self addChild:[_hudGoalItems objectForKey:itemName]];
-            
-        }
-        
-        //-------------------------------------------
-		// Lives Label
-		//-------------------------------------------
-        CCSprite *chefHat = [CCSprite spriteWithFile:@"HUDLives.png"];
-        _lives = [CCLabelTTF labelWithString:[NSString stringWithFormat:@"x %d", _numberOfLife] fontName:@"Marker Felt" fontSize:20];
-		[_lives setColor:ccBLACK];
-        chefHat.position = ccp(20, screenSize.height - menuBar.contentSize.height/2 - 35 );
-		_lives.position = ccp(chefHat.contentSize.width +20, screenSize.height - menuBar.contentSize.height/2 - 35 );
-		[self addChild:chefHat];
-        [self addChild:_lives];
-
-        //-------------------------------------------
-		// Score Label
-		//-------------------------------------------
-        _score = [CCLabelTTF labelWithString:[NSString stringWithFormat:@"$ %d", _moneyAmount] fontName:@"Marker Felt" fontSize:20];
-		[_score setColor:ccBLACK];
-        _score.position = ccp(screenSize.width/2, screenSize.height - menuBar.contentSize.height/2 - 35 );
-        [self addChild:_score];
-        
-        
-        
-        CCMenuItemImage *pauseButton = [CCMenuItemImage itemFromNormalImage:@"Pause2.png" selectedImage:@"PauseSelected2.png" target:self selector:@selector(gamePaused:)];
-        //[pauseButton setAnchorPoint:ccp(1, 0)];
-        pauseButton.position = ccp(145, 222);
-        
-        CCMenu *menu = [CCMenu menuWithItems:pauseButton, nil];
-        //[menu addChild:pauseButton z:1 tag:1];
-        [self addChild:menu];
-        
-        
-        
-        	}
+		//----------------------------------
+		// Items
+		//----------------------------------
+		NSMutableDictionary *dict = [[NSMutableDictionary alloc] initWithCapacity:[itemIDs count]];
+		
+		[itemIDs enumerateObjectsUsingBlock:^(id obj, NSUInteger index, BOOL *stop) {
+			NSString *itemID = obj;
+			HUDItemSprite *s = [HUDItemSprite nodeWithRecipeItem:itemID];
+			CGPoint p = [self positionForItemAtIndex:index];
+			[s setPositionSharp:p];
+			[self addChild:s];
+			
+			[dict setObject:s forKey:itemID];
+		}];
+		
+		_itemSprites = dict;
+		
+		//----------------------------------
+		// life
+		//----------------------------------
+		CCSprite *chefLife = [CCSprite spriteWithFile:@"hud-chefLive.png"];
+		[chefLife setPositionSharp:CHGetWinPointTR(118, 20)];
+		[self addChild:chefLife];
+		
+		_lifeLabel = [CCLabelBMFont labelWithString:[NSString stringWithFormat:@"%d", _numberOfLifes]
+											 fntFile:@"hud-numberFont.fnt"];
+		_lifeLabel.anchorPoint = ccp(0, 1.f);
+		[_lifeLabel setPositionSharp:CHGetWinPointTR(106, 14)];
+		[self addChild:_lifeLabel];
+		
+		//----------------------------------
+		// Money
+		//----------------------------------
+		
+		CCSprite *coin = [CCSprite spriteWithFile:@"hud-coin.png"];
+		[coin setPositionSharp:CHGetWinPointTR(74, 20)];
+		[self addChild:coin];
+		
+		_moneyLabel = [CCLabelBMFont labelWithString:[self stringForMoneyAmount:_moneyAmount] 
+											 fntFile:@"hud-numberFont.fnt"];
+		_moneyLabel.anchorPoint = ccp(0, 1.f);
+		[_moneyLabel setPositionSharp:CHGetWinPointTR(61, 14)];
+		[_moneyLabel setColor:ccc3Hex(0xface1f)];
+		[self addChild:_moneyLabel];
+	}
 	return self;
 }
 
-- (void) gamePaused:(id)sender {
-    
-}
-
 - (void)dealloc
-{   
-    [_hudGoalItems release];
+{
+	[_itemSprites release];
 	[super dealloc];
 }
-
-+ (id)nodeWithRequiredRecipeItems:(CCArray *)itemIDs
-{
-	return [[[self alloc] initWithRequiredRecipeItems:itemIDs] autorelease];
-}
-
 
 #pragma mark -
 #pragma mark Public
 
++ (id)nodeWithRequiredRecipeItems:(NSArray *)itemIDs numberOfLifes:(NSInteger)numLifes moneyAmount:(NSInteger)amount
+{
+	return [[[CHHUDLayer alloc] initWithRequiredRecipeItems:itemIDs 
+											   numberOfLifes:numLifes 
+												 moneyAmount:amount] autorelease];
+}
+
++ (id)nodeForTesting
+{
+	NSArray *itemIDs = [NSArray arrayWithObjects:@"HotDog", @"Beef", @"Tomato", nil];
+	CHHUDLayer *hud = [CHHUDLayer nodeWithRequiredRecipeItems:itemIDs 
+												  numberOfLifes:3 
+													moneyAmount:3000];
+	[hud addChild:[CCLayerColor layerWithColor:ccc4Hex(0xc8c8c8)] z:-1];
+	[hud setRecipeItemCollected:@"Tomato"];
+	return hud;
+}
+
+- (void)setNumberOfLifes:(NSInteger)numberOfLifes
+{
+	if (_numberOfLifes != numberOfLifes)
+	{
+		_numberOfLifes = numberOfLifes;
+		[_lifeLabel setString:[NSString stringWithFormat:@"%d", _numberOfLifes]];
+	}
+}
+
+- (void)setMoneyAmount:(NSInteger)moneyAmount
+{
+	if (_moneyAmount != moneyAmount)
+	{
+		_moneyAmount = moneyAmount;
+		[_moneyLabel setString:[self stringForMoneyAmount:_moneyAmount]];
+	}
+}
+
 - (void)setRecipeItemCollected:(NSString*)itemID
 {
-    CCSprite *completed = [_hudGoalItems objectForKey:itemID];
-    if (completed != nil) {
-        CCSprite *check = [CCSprite spriteWithFile:@"HUDItemCheck.png"];
-        check.position = completed.position;
-        [self addChild:check ];
-    }
+	HUDItemSprite *s = [_itemSprites objectForKey:itemID];
+	s.checkMarkHidden = NO;
 }
-
-- (void) updateScore:(NSInteger)amount
-{
-    _moneyAmount +=amount;
-    [_score setString:[NSString stringWithFormat:@"$ %d", _moneyAmount]];
-}
-
--(void) updateLives
-{
-    _numberOfLife -=1;
-    [_lives setString:[NSString stringWithFormat:@"x %d", _numberOfLife]];
-     
-}
-
--(void) updateHeight
-{
-    
-}
-
-
-
-#pragma mark -
-#pragma mark User interactions
-
 
 @end

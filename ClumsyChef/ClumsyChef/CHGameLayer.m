@@ -146,7 +146,7 @@ static float const kGenObjectRangeDown = 100.f;
 		//-------------------------------------------
 		// HUD
 		//-------------------------------------------
-        _hudLayer = [CHHUDLayer nodeWithRequiredRecipeItems:_goalRecipeItemIDs];
+        _hudLayer = [CHHUDLayer nodeWithRequiredRecipeItems:levelInfo.recipeItems numberOfLifes:3 moneyAmount:0];
         [self addChild:_hudLayer z:5];
 		
 		//-------------------------------------------
@@ -238,7 +238,7 @@ static float const kGenObjectRangeDown = 100.f;
                     {   
                         [_chefObj chefDamaged];   //fadding in/out 
                         _chefNumLives --;
-                        [_hudLayer updateLives];  //updating HUD
+                        _hudLayer.numberOfLifes = _chefNumLives;  //updating HUD
                         if (_chefNumLives <1) {                            
                             [[self gameSceneParent] showGameOver];
                         }
@@ -247,7 +247,7 @@ static float const kGenObjectRangeDown = 100.f;
                         //Coin:  Update player's score (maybe play a sound for every 1000)    
                 }else if([item isKindOfClass:[CHCoinObject class]]){
                     _chefScore += 10;
-                    [_hudLayer updateScore:10];
+					_hudLayer.moneyAmount = _chefScore;
                         //Recipe:  Update HUD and left over itmes needed.  Then check if its game win
                 }else{
                     if ([item isKindOfClass:[CHRecipeItemObject class]]) {
