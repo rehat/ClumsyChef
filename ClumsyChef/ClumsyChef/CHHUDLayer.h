@@ -15,7 +15,7 @@
 @property(nonatomic, assign) NSInteger numberOfLife;
 @property(nonatomic, assign) NSInteger moneyAmount;
 
-+ (id)nodeWithRequiredRecipeItems:(NSArray *)itemIDs;
++ (id)nodeWithRequiredRecipeItems:(CCArray *)itemIDs;
 
 //update HUD methods
 - (void) setRecipeItemCollected:(NSString*)itemID;

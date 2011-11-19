@@ -14,6 +14,12 @@
 {
 	NSInteger	_numberOfLife;
 	NSInteger	_moneyAmount;
+    NSArray     *_goalItems;
+    NSMutableDictionary *_hudGoalItems;
+    
+    CCLabelTTF *_lives;
+    CCLabelTTF *_score;
+    
 }
 
 @synthesize numberOfLife = _numberOfLife;
@@ -23,104 +29,63 @@
 #pragma mark -
 #pragma mark Constructor and destructor
 
-- (id)initWithRequiredRecipeItems
+
+
+
+
+- (id)initWithRequiredRecipeItems:(CCArray *)itemIDs
 {
 	if (self = [super init])
 	{
-        //// Set up sprites, labels and pause button (CCMenu)
+        _numberOfLife = 3;
+        _moneyAmount = 0;
         
-        //windowSize = [[CCDirector sharedDirector] winSize];
-        
-        CCMenuItemImage *pauseButton = [CCMenuItemImage itemFromNormalImage:@"Pause.png" selectedImage:@"PauseSelected.png" target:self selector:@selector(gamePaused:)];
-        [pauseButton setAnchorPoint:ccp(1, 0)];
-        pauseButton.position = ccp(90, 90);
-        
-        CCMenu *menu = [CCMenu menuWithItems:pauseButton, nil];
-        //[menu addChild:pauseButton z:1 tag:1];
-        [self addChild:menu];
-        
-        
-        
-        //CCMenuItem *pauseButton = [CCMenuItemImage itemFromNormalImage:@"Pause.png" selectedImage:@"PauseSelected.png" block:^(id sender) {
-        //    [[CCDirector sharedDirector] popScene];
-        //}]; //}selector:@selector(gamePaused:)];
-        ////pauseButton.position = cpp(100, 100);
-        //CCMenu *pauseMenu = [CCMenu menuWithItems:pauseButton, nil];
-        //[pauseMenu setPositionSharp:CHGetWinPointTL(40, 40)];
-        ////CCLayer *layer = [CCLayer node];
-        ////pauseMenu.position = CGPointZero;
-        ////[self addChild:pauseMenu];
-        
-        ////[layer addChild:pauseMenu];
-		
-		////[self addChild:layer];
-		////layer.position = ccp(0, 0);
-        
-        /*
-         
-         
-         + (CCMenu *)backButton
-         {
-         CCMenuItemImage *item = [CCMenuItemImage itemFromNormalImage:@"testLayer-backButton.png" 
-         selectedImage:@"testLayer-backButton-highlighted.png" 
-         block:^(id sender) {
-         [[CCDirector sharedDirector] popScene];
-         }];
-         CCMenu *menu = [CCMenu menuWithItems:item, nil];
-         [menu setPositionSharp:CHGetWinPointTL(40, 40)];
-         menu.tag = TestBackButtonTag;
-         
-         return menu;
-         }
-         
-         */
-	}
-	return self;
-}
+        _hudGoalItems = [[NSMutableDictionary alloc] initWithCapacity:[itemIDs count] ];
 
-
-
-
-- (id)init
-{
-	if (self = [super init])
-	{
-        //// Set up sprites, labels and pause button (CCMenu)
-        
-        //windowSize = [[CCDirector sharedDirector] winSize];
-        
-        //Recipe Items
-        NSArray *itemNameArray = [NSArray arrayWithObjects:@"HotDog", @"HotDogBun", @"HotDog", @"HotDogBun", nil];
-        NSMutableArray *itemInfoArray = [NSMutableArray arrayWithCapacity:6];
-        
-        //test
-        for (NSString *itemName in itemNameArray) {
-            NSLog(itemName);
-        }
-        
-        for (NSString *itemName in itemNameArray) {
-            CHRecipeItemInfo *item = [[CHGameLibrary sharedGameLibrary] recipeItemInfoWithName:itemName];
-            [itemInfoArray addObject:item];
-            NSLog([item itemName]);
-        }
         
         //Create Menu Bar at top of HUD Layer
         CGSize screenSize = [[CCDirector sharedDirector] winSize];
         CCSprite *menuBar = [CCSprite spriteWithFile:@"HUDBar.png"];
         
-        //[menuBar setAnchorPoint:ccp(1, 0)];
-        menuBar.position = ccp(10, 468);
-       // menuBar.position = CGPointMake(screenSize.width - menuBar.contentSize.width/2,screenSize.height-menuBar.contentSize.height/2);
+        menuBar.position = ccp(screenSize.width/2, screenSize.height - menuBar.contentSize.height/2);
         [self addChild:menuBar];
         
-        //Create Recipe Items at top of HUD Layer in front of Menu Bar
-        CGFloat horizontalPosition = 23;
-        for (CHRecipeItemInfo *itemInfo in itemInfoArray) {
-            CCSprite *tempSprite = [CCSprite spriteWithFile:[itemInfo spriteFilename]];
-            tempSprite.position = ccp(horizontalPosition, 462);
-            horizontalPosition = horizontalPosition + 45;
-            [self addChild:tempSprite];
+        
+        //-------------------------------------------
+		// Recipe Goal Items
+		//-------------------------------------------
+        CGFloat horizontalPosition = 0;
+        for (NSString *itemName in itemIDs) {
+            CHRecipeItemInfo *item = [[CHGameLibrary sharedGameLibrary] recipeItemInfoWithName:itemName];
+            CCSprite *tempSprite = [CCSprite spriteWithFile:[item spriteFilename]];
+            horizontalPosition += tempSprite.contentSize.width/2;
+            tempSprite.position = ccp(horizontalPosition, menuBar.position.y );
+            horizontalPosition += tempSprite.contentSize.width;
+            [_hudGoalItems setObject:tempSprite forKey:itemName];
+        
+            [self addChild:[_hudGoalItems objectForKey:itemName]];
+            
         }
+        
+        //-------------------------------------------
+		// Lives Label
+		//-------------------------------------------
+        CCSprite *chefHat = [CCSprite spriteWithFile:@"HUDLives.png"];
+        _lives = [CCLabelTTF labelWithString:[NSString stringWithFormat:@"x %d", _numberOfLife] fontName:@"Marker Felt" fontSize:20];
+		[_lives setColor:ccBLACK];
+        chefHat.position = ccp(20, screenSize.height - menuBar.contentSize.height/2 - 35 );
+		_lives.position = ccp(chefHat.contentSize.width +20, screenSize.height - menuBar.contentSize.height/2 - 35 );
+		[self addChild:chefHat];
+        [self addChild:_lives];
+
+        //-------------------------------------------
+		// Score Label
+		//-------------------------------------------
+        _score = [CCLabelTTF labelWithString:[NSString stringWithFormat:@"$ %d", _moneyAmount] fontName:@"Marker Felt" fontSize:20];
+		[_score setColor:ccBLACK];
+        _score.position = ccp(screenSize.width/2, screenSize.height - menuBar.contentSize.height/2 - 35 );
+        [self addChild:_score];
+        
         
         
         CCMenuItemImage *pauseButton = [CCMenuItemImage itemFromNormalImage:@"Pause2.png" selectedImage:@"PauseSelected2.png" target:self selector:@selector(gamePaused:)];
@@ -133,40 +98,7 @@
         
         
         
-        //CCMenuItem *pauseButton = [CCMenuItemImage itemFromNormalImage:@"Pause.png" selectedImage:@"PauseSelected.png" block:^(id sender) {
-        //    [[CCDirector sharedDirector] popScene];
-        //}]; //}selector:@selector(gamePaused:)];
-        ////pauseButton.position = cpp(100, 100);
-        //CCMenu *pauseMenu = [CCMenu menuWithItems:pauseButton, nil];
-        //[pauseMenu setPositionSharp:CHGetWinPointTL(40, 40)];
-        ////CCLayer *layer = [CCLayer node];
-        ////pauseMenu.position = CGPointZero;
-        ////[self addChild:pauseMenu];
-        
-        ////[layer addChild:pauseMenu];
-		
-		////[self addChild:layer];
-		////layer.position = ccp(0, 0);
-        
-        /*
-         
-         
-         + (CCMenu *)backButton
-         {
-         CCMenuItemImage *item = [CCMenuItemImage itemFromNormalImage:@"testLayer-backButton.png" 
-         selectedImage:@"testLayer-backButton-highlighted.png" 
-         block:^(id sender) {
-         [[CCDirector sharedDirector] popScene];
-         }];
-         CCMenu *menu = [CCMenu menuWithItems:item, nil];
-         [menu setPositionSharp:CHGetWinPointTL(40, 40)];
-         menu.tag = TestBackButtonTag;
-         
-         return menu;
-         }
-
-         */
-	}
+        	}
 	return self;
 }
 
@@ -175,11 +107,12 @@
 }
 
 - (void)dealloc
-{
+{   
+    [_hudGoalItems release];
 	[super dealloc];
 }
 
-+ (id)nodeWithRequiredRecipeItems:(NSArray *)itemIDs
++ (id)nodeWithRequiredRecipeItems:(CCArray *)itemIDs
 {
 	return [[[self alloc] initWithRequiredRecipeItems:itemIDs] autorelease];
 }
@@ -190,19 +123,25 @@
 
 - (void)setRecipeItemCollected:(NSString*)itemID
 {
-    
+    CCSprite *completed = [_hudGoalItems objectForKey:itemID];
+    if (completed != nil) {
+        CCSprite *check = [CCSprite spriteWithFile:@"HUDItemCheck.png"];
+        check.position = completed.position;
+        [self addChild:check ];
+    }
 }
 
 - (void) updateScore:(NSInteger)amount
 {
     _moneyAmount +=amount;
-    //TODO: update score label
+    [_score setString:[NSString stringWithFormat:@"$ %d", _moneyAmount]];
 }
 
 -(void) updateLives
 {
     _numberOfLife -=1;
-    //TODO: update lives label
+    [_lives setString:[NSString stringWithFormat:@"x %d", _numberOfLife]];
+     
 }
 
 -(void) updateHeight

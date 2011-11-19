@@ -19,7 +19,7 @@
 #import "CHSharedResHolder.h"
 
 
-static CGFloat const kChefYOffset = 100.f;
+static CGFloat const kChefYOffset = 110.f;
 
 // When objected go out of the screen at the top and beyond this distance,
 // They get removed
@@ -30,7 +30,8 @@ static float const kGenObjectRangeDown = 100.f;
 {
 	CHChefObject *_chefObj;
     CHHUDLayer *_hudLayer;
-    
+    CHBackgroundLayer	*_bgLayer;
+
     
 	float _bottomWorldOffset;
 	float _nextGenItemsOffset;
@@ -118,6 +119,13 @@ static float const kGenObjectRangeDown = 100.f;
 		_chefObj.position = [self positionForChef];
 		[self addChild:_chefObj];
         
+        //-------------------------------------------
+		// Background 
+		//-------------------------------------------
+        _bgLayer = [CHBackgroundLayer node];
+        [_bgLayer setWorldHeight:30000];  //TODO: Need to get this from stage info 
+        [self addChild:_bgLayer z:-1 tag:11111];  //do I need this tag?
+
         //Array of items in play
         _liveGameObjects = [[CCArray alloc ] initWithCapacity:100];
         
@@ -138,7 +146,7 @@ static float const kGenObjectRangeDown = 100.f;
 		//-------------------------------------------
 		// HUD
 		//-------------------------------------------
-        _hudLayer = [CHHUDLayer node];
+        _hudLayer = [CHHUDLayer nodeWithRequiredRecipeItems:_goalRecipeItemIDs];
         [self addChild:_hudLayer z:5];
 		
 		//-------------------------------------------
@@ -174,7 +182,6 @@ static float const kGenObjectRangeDown = 100.f;
 - (void)update:(ccTime)dt
 {
 	CHGameScene *gsParent = [self gameSceneParent];
-	CHBackgroundLayer *background = (CHBackgroundLayer *)[gsParent getChildByTag:11111];
     
 	// Update objects
 	CGFloat oldOffset = _chefObj.position.y;    
@@ -249,7 +256,8 @@ static float const kGenObjectRangeDown = 100.f;
                         CCARRAY_FOREACH(_goalRecipeItemIDs, checkRecipe){
                             if( [checkRecipe isEqualToString:checkMe.itemID]){
                                 [_goalRecipeItemIDs removeObject:checkRecipe];
-								break;
+								[_hudLayer setRecipeItemCollected:checkRecipe];
+                                break;
                             }
                         }
                         if([_goalRecipeItemIDs count] == 0){
@@ -269,7 +277,7 @@ static float const kGenObjectRangeDown = 100.f;
 	
 	_bottomWorldOffset += pullUp;
     
-    [background updatePull:_bottomWorldOffset];	
+    [_bgLayer updatePull:_bottomWorldOffset];	
     
     if(_bottomWorldOffset > _levelHeight){
         [[self gameSceneParent] showGameOver];

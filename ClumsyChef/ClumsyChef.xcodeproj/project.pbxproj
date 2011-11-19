@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		40641D58146D11E600E00E73 /* HUDBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 40641D57146D11E600E00E73 /* HUDBar.png */; };
-		40641D59146D11E600E00E73 /* HUDBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 40641D57146D11E600E00E73 /* HUDBar.png */; };
 		85CEB0B714685F330099409C /* MainMenuBackground-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 85CEB0B114685F320099409C /* MainMenuBackground-hd.png */; };
 		85CEB0B814685F330099409C /* MainMenuBackground-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 85CEB0B114685F320099409C /* MainMenuBackground-hd.png */; };
 		85CEB0B914685F330099409C /* MainMenuBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 85CEB0B214685F330099409C /* MainMenuBackground.png */; };
@@ -69,6 +67,10 @@
 		BC03E87614773C9200E34189 /* recipeItem_tortilla-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E84F14773C9200E34189 /* recipeItem_tortilla-hd.png */; };
 		BC03E87714773C9200E34189 /* recipeItem_tortilla.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E85014773C9200E34189 /* recipeItem_tortilla.png */; };
 		BC03E87814773C9200E34189 /* recipeItem_tortilla.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E85014773C9200E34189 /* recipeItem_tortilla.png */; };
+		BC03E8871477551400E34189 /* HUDBar-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E8851477551400E34189 /* HUDBar-hd.png */; };
+		BC03E8881477551400E34189 /* HUDBar-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E8851477551400E34189 /* HUDBar-hd.png */; };
+		BC03E8891477551400E34189 /* HUDBar.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E8861477551400E34189 /* HUDBar.png */; };
+		BC03E88A1477551400E34189 /* HUDBar.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E8861477551400E34189 /* HUDBar.png */; };
 		BC6229F71463362A0016DFA0 /* CCAction.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A903AE144F7799002A1F6C /* CCAction.m */; };
 		BC6229F81463362A0016DFA0 /* CCActionCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A903B1144F7799002A1F6C /* CCActionCamera.m */; };
 		BC6229F91463362A0016DFA0 /* CCActionEase.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A903B4144F7799002A1F6C /* CCActionEase.m */; };
@@ -271,6 +273,14 @@
 		BCC06AB9146B2DB60068103A /* recipeItem-particle.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCC06AAA146B2DB60068103A /* recipeItem-particle.plist */; };
 		BCC06ABA146B2DB60068103A /* recipeItem-sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = BCC06AAB146B2DB60068103A /* recipeItem-sound.caf */; };
 		BCC06ABB146B2DB60068103A /* recipeItem-sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = BCC06AAB146B2DB60068103A /* recipeItem-sound.caf */; };
+		BCC587BB1477758500004C95 /* HUDItemCheck-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BCC587B91477758500004C95 /* HUDItemCheck-hd.png */; };
+		BCC587BC1477758500004C95 /* HUDItemCheck-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BCC587B91477758500004C95 /* HUDItemCheck-hd.png */; };
+		BCC587BD1477758500004C95 /* HUDItemCheck.png in Resources */ = {isa = PBXBuildFile; fileRef = BCC587BA1477758500004C95 /* HUDItemCheck.png */; };
+		BCC587BE1477758500004C95 /* HUDItemCheck.png in Resources */ = {isa = PBXBuildFile; fileRef = BCC587BA1477758500004C95 /* HUDItemCheck.png */; };
+		BCC587C11477821700004C95 /* HUDLives-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BCC587BF1477821700004C95 /* HUDLives-hd.png */; };
+		BCC587C21477821700004C95 /* HUDLives-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BCC587BF1477821700004C95 /* HUDLives-hd.png */; };
+		BCC587C31477821700004C95 /* HUDLives.png in Resources */ = {isa = PBXBuildFile; fileRef = BCC587C01477821700004C95 /* HUDLives.png */; };
+		BCC587C41477821700004C95 /* HUDLives.png in Resources */ = {isa = PBXBuildFile; fileRef = BCC587C01477821700004C95 /* HUDLives.png */; };
 		E511C294145925B3008BCFF8 /* testLayer-backButton.png in Resources */ = {isa = PBXBuildFile; fileRef = E511C293145925B3008BCFF8 /* testLayer-backButton.png */; };
 		E511C298145925BC008BCFF8 /* testLayer-backButton-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E511C295145925BC008BCFF8 /* testLayer-backButton-hd.png */; };
 		E511C299145925BC008BCFF8 /* testLayer-backButton-highlighted-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E511C296145925BC008BCFF8 /* testLayer-backButton-highlighted-hd.png */; };
@@ -590,7 +600,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		40641D57146D11E600E00E73 /* HUDBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HUDBar.png; sourceTree = "<group>"; };
 		85CEB0B114685F320099409C /* MainMenuBackground-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "MainMenuBackground-hd.png"; path = "Resources/MainMenuBackground-hd.png"; sourceTree = "<group>"; };
 		85CEB0B214685F330099409C /* MainMenuBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MainMenuBackground.png; path = Resources/MainMenuBackground.png; sourceTree = "<group>"; };
 		85CEB0B314685F330099409C /* play-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "play-hd.png"; path = "Resources/play-hd.png"; sourceTree = "<group>"; };
@@ -621,6 +630,8 @@
 		BC03E84E14773C9200E34189 /* recipeItem_tomato.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = recipeItem_tomato.png; path = Resources/recipeItem_tomato.png; sourceTree = "<group>"; };
 		BC03E84F14773C9200E34189 /* recipeItem_tortilla-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recipeItem_tortilla-hd.png"; path = "Resources/recipeItem_tortilla-hd.png"; sourceTree = "<group>"; };
 		BC03E85014773C9200E34189 /* recipeItem_tortilla.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = recipeItem_tortilla.png; path = Resources/recipeItem_tortilla.png; sourceTree = "<group>"; };
+		BC03E8851477551400E34189 /* HUDBar-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "HUDBar-hd.png"; path = "Resources/HUDBar-hd.png"; sourceTree = "<group>"; };
+		BC03E8861477551400E34189 /* HUDBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HUDBar.png; path = Resources/HUDBar.png; sourceTree = "<group>"; };
 		BC622ABB1463362A0016DFA0 /* ClumsyChef copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ClumsyChef copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCB515B0146EFE8000F1092E /* Pause2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pause2.png; sourceTree = "<group>"; };
 		BCB515B1146EFE8000F1092E /* PauseSelected2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PauseSelected2.png; sourceTree = "<group>"; };
@@ -631,6 +642,10 @@
 		BCC06AA8146B2DB60068103A /* harmfulObject-knife2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "harmfulObject-knife2.png"; path = "Resources/harmfulObject-knife2.png"; sourceTree = "<group>"; };
 		BCC06AAA146B2DB60068103A /* recipeItem-particle.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "recipeItem-particle.plist"; path = "Resources/recipeItem-particle.plist"; sourceTree = "<group>"; };
 		BCC06AAB146B2DB60068103A /* recipeItem-sound.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "recipeItem-sound.caf"; path = "Resources/recipeItem-sound.caf"; sourceTree = "<group>"; };
+		BCC587B91477758500004C95 /* HUDItemCheck-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "HUDItemCheck-hd.png"; path = "Resources/HUDItemCheck-hd.png"; sourceTree = "<group>"; };
+		BCC587BA1477758500004C95 /* HUDItemCheck.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HUDItemCheck.png; path = Resources/HUDItemCheck.png; sourceTree = "<group>"; };
+		BCC587BF1477821700004C95 /* HUDLives-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "HUDLives-hd.png"; path = "Resources/HUDLives-hd.png"; sourceTree = "<group>"; };
+		BCC587C01477821700004C95 /* HUDLives.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = HUDLives.png; path = Resources/HUDLives.png; sourceTree = "<group>"; };
 		E511C293145925B3008BCFF8 /* testLayer-backButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "testLayer-backButton.png"; path = "Resources/testLayer-backButton.png"; sourceTree = "<group>"; };
 		E511C295145925BC008BCFF8 /* testLayer-backButton-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "testLayer-backButton-hd.png"; path = "Resources/testLayer-backButton-hd.png"; sourceTree = "<group>"; };
 		E511C296145925BC008BCFF8 /* testLayer-backButton-highlighted-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "testLayer-backButton-highlighted-hd.png"; path = "Resources/testLayer-backButton-highlighted-hd.png"; sourceTree = "<group>"; };
@@ -1190,6 +1205,12 @@
 		E522B2FF146863950049D367 /* Game Layer */ = {
 			isa = PBXGroup;
 			children = (
+				BCC587BF1477821700004C95 /* HUDLives-hd.png */,
+				BCC587C01477821700004C95 /* HUDLives.png */,
+				BCC587B91477758500004C95 /* HUDItemCheck-hd.png */,
+				BCC587BA1477758500004C95 /* HUDItemCheck.png */,
+				BC03E8851477551400E34189 /* HUDBar-hd.png */,
+				BC03E8861477551400E34189 /* HUDBar.png */,
 				E599003C14687E3B00458316 /* chefObject-chef-hd.png */,
 				E599003D14687E3B00458316 /* chefObject-chef.png */,
 				E599003E14687E3B00458316 /* coin.caf */,
@@ -1447,7 +1468,6 @@
 				E522B2FE146863820049D367 /* Background Layer */,
 				E522B2FF146863950049D367 /* Game Layer */,
 				E5631E8A146B4BA000DACD3E /* Game Library */,
-				40641D57146D11E600E00E73 /* HUDBar.png */,
 				85CEB0AF14685EC70099409C /* Main Menu */,
 				BCB515B0146EFE8000F1092E /* Pause2.png */,
 				BCB515B1146EFE8000F1092E /* PauseSelected2.png */,
@@ -2081,7 +2101,6 @@
 				E5631EA4146B790000DACD3E /* gameLibrary-harmfulItems.plist in Resources */,
 				E5631EA6146B790000DACD3E /* gameLibrary-levels.plist in Resources */,
 				E5631EA8146B790000DACD3E /* gameLibrary-recipeItems.plist in Resources */,
-				40641D59146D11E600E00E73 /* HUDBar.png in Resources */,
 				BCB515B3146EFE8000F1092E /* Pause2.png in Resources */,
 				BCB515B5146EFE8000F1092E /* PauseSelected2.png in Resources */,
 				E5BED01A1474CC5E0003D6F2 /* skull-hd.png in Resources */,
@@ -2148,6 +2167,12 @@
 				BC03E87414773C9200E34189 /* recipeItem_tomato.png in Resources */,
 				BC03E87614773C9200E34189 /* recipeItem_tortilla-hd.png in Resources */,
 				BC03E87814773C9200E34189 /* recipeItem_tortilla.png in Resources */,
+				BC03E8881477551400E34189 /* HUDBar-hd.png in Resources */,
+				BC03E88A1477551400E34189 /* HUDBar.png in Resources */,
+				BCC587BC1477758500004C95 /* HUDItemCheck-hd.png in Resources */,
+				BCC587BE1477758500004C95 /* HUDItemCheck.png in Resources */,
+				BCC587C21477821700004C95 /* HUDLives-hd.png in Resources */,
+				BCC587C41477821700004C95 /* HUDLives.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2215,7 +2240,6 @@
 				E5631EA3146B790000DACD3E /* gameLibrary-harmfulItems.plist in Resources */,
 				E5631EA5146B790000DACD3E /* gameLibrary-levels.plist in Resources */,
 				E5631EA7146B790000DACD3E /* gameLibrary-recipeItems.plist in Resources */,
-				40641D58146D11E600E00E73 /* HUDBar.png in Resources */,
 				BCB515B2146EFE8000F1092E /* Pause2.png in Resources */,
 				BCB515B4146EFE8000F1092E /* PauseSelected2.png in Resources */,
 				E5BED0191474CC5E0003D6F2 /* skull-hd.png in Resources */,
@@ -2282,6 +2306,12 @@
 				BC03E87314773C9200E34189 /* recipeItem_tomato.png in Resources */,
 				BC03E87514773C9200E34189 /* recipeItem_tortilla-hd.png in Resources */,
 				BC03E87714773C9200E34189 /* recipeItem_tortilla.png in Resources */,
+				BC03E8871477551400E34189 /* HUDBar-hd.png in Resources */,
+				BC03E8891477551400E34189 /* HUDBar.png in Resources */,
+				BCC587BB1477758500004C95 /* HUDItemCheck-hd.png in Resources */,
+				BCC587BD1477758500004C95 /* HUDItemCheck.png in Resources */,
+				BCC587C11477821700004C95 /* HUDLives-hd.png in Resources */,
+				BCC587C31477821700004C95 /* HUDLives.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
