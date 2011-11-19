@@ -125,7 +125,7 @@ static float const kGenObjectRangeDown = 100.f;
         // Set up the layer according to the stage info
 		//-------------------------------------------
 
-		CHLevelInfo *levelInfo = [[CHGameLibrary sharedGameLibrary] levelInfoAtIndex:0];
+		CHLevelInfo *levelInfo = [[CHGameLibrary sharedGameLibrary] levelInfoAtIndex:1];
 		_goalRecipeItemIDs = [[CCArray alloc] initWithNSArray:[levelInfo.recipeItems retain]];
         
         _chefNumLives = 3;

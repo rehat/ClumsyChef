@@ -19,5 +19,44 @@
 			<string>HotDog</string>
 		</array>
 	</dict>
+	<dict>
+		<key>levelName</key>
+		<string>BLT</string>
+		<key>previewImage</key>
+		<string>test.png</string>
+		<key>worldHeight</key>
+		<integer>4000</integer>
+		<key>backgroundSideBuildingImage</key>
+		<string>back.png</string>
+		<key>backgroundBackImage</key>
+		<string>side.png</string>
+		<key>recipeItems</key>
+		<array>
+			<string>Bread</string>
+			<string>Lettuce</string>
+			<string>Tomato</string>
+			<string>Bacon</string>
+		</array>
+	</dict>
+	<dict>
+		<key>levelName</key>
+		<string>Tacos</string>
+		<key>previewImage</key>
+		<string>test.png</string>
+		<key>worldHeight</key>
+		<integer>5000</integer>
+		<key>backgroundSideBuildingImage</key>
+		<string>back.png</string>
+		<key>backgroundBackImage</key>
+		<string>side.png</string>
+		<key>recipeItems</key>
+		<array>
+			<string>Tortilla</string>
+			<string>Lettuce</string>
+			<string>Tomato</string>
+			<string>Beef</string>
+			<string>HotSauce</string>
+		</array>
+	</dict>
 </array>
 </plist>

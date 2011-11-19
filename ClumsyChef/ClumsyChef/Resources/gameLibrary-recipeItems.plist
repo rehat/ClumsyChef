@@ -3,8 +3,24 @@
 <plist version="1.0">
 <dict>
 	<key>HotDogBun</key>
-	<string>gameObject-testIconBlue.png</string>
+	<string>recipeItem_hotdogbun.png</string>
 	<key>HotDog</key>
-	<string>gameObject-testIcon.png</string>
+	<string>recipeItem_hotdog.png</string>
+	<key>Beef</key>
+	<string>recipeItem_beef.png</string>
+	<key>Bacon</key>
+	<string>recipeItem_bacon.png</string>
+	<key>Bread</key>
+	<string>recipeItem_bread.png</string>
+	<key>Cheese</key>
+	<string>recipeItem_cheese.png</string>
+	<key>HotSauce</key>
+	<string>recipeItem_hotSauce.png</string>
+	<key>Lettuce</key>
+	<string>recipeItem_lettuce.png</string>
+	<key>Tomato</key>
+	<string>recipeItem_tomato.png</string>
+	<key>Tortilla</key>
+	<string>recipeItem_tortilla.png</string>
 </dict>
 </plist>

@@ -29,6 +29,46 @@
 		85F6CE7A146B4BC500290595 /* Speaker-On-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 85F6CE73146B4BC500290595 /* Speaker-On-hd.png */; };
 		85F6CE7B146B4BC500290595 /* Speaker-Off-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 85F6CE74146B4BC500290595 /* Speaker-Off-hd.png */; };
 		85F6CE7C146B4BC500290595 /* Speaker-Off-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 85F6CE74146B4BC500290595 /* Speaker-Off-hd.png */; };
+		BC03E85114773C9200E34189 /* recipeItem_bacon-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E83D14773C9200E34189 /* recipeItem_bacon-hd.png */; };
+		BC03E85214773C9200E34189 /* recipeItem_bacon-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E83D14773C9200E34189 /* recipeItem_bacon-hd.png */; };
+		BC03E85314773C9200E34189 /* recipeItem_bacon.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E83E14773C9200E34189 /* recipeItem_bacon.png */; };
+		BC03E85414773C9200E34189 /* recipeItem_bacon.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E83E14773C9200E34189 /* recipeItem_bacon.png */; };
+		BC03E85514773C9200E34189 /* recipeItem_beef-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E83F14773C9200E34189 /* recipeItem_beef-hd.png */; };
+		BC03E85614773C9200E34189 /* recipeItem_beef-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E83F14773C9200E34189 /* recipeItem_beef-hd.png */; };
+		BC03E85714773C9200E34189 /* recipeItem_beef.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E84014773C9200E34189 /* recipeItem_beef.png */; };
+		BC03E85814773C9200E34189 /* recipeItem_beef.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E84014773C9200E34189 /* recipeItem_beef.png */; };
+		BC03E85914773C9200E34189 /* recipeItem_bread-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E84114773C9200E34189 /* recipeItem_bread-hd.png */; };
+		BC03E85A14773C9200E34189 /* recipeItem_bread-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E84114773C9200E34189 /* recipeItem_bread-hd.png */; };
+		BC03E85B14773C9200E34189 /* recipeItem_bread.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E84214773C9200E34189 /* recipeItem_bread.png */; };
+		BC03E85C14773C9200E34189 /* recipeItem_bread.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E84214773C9200E34189 /* recipeItem_bread.png */; };
+		BC03E85D14773C9200E34189 /* recipeItem_cheese-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E84314773C9200E34189 /* recipeItem_cheese-hd.png */; };
+		BC03E85E14773C9200E34189 /* recipeItem_cheese-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E84314773C9200E34189 /* recipeItem_cheese-hd.png */; };
+		BC03E85F14773C9200E34189 /* recipeItem_cheese.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E84414773C9200E34189 /* recipeItem_cheese.png */; };
+		BC03E86014773C9200E34189 /* recipeItem_cheese.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E84414773C9200E34189 /* recipeItem_cheese.png */; };
+		BC03E86114773C9200E34189 /* recipeItem_hotdog-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E84514773C9200E34189 /* recipeItem_hotdog-hd.png */; };
+		BC03E86214773C9200E34189 /* recipeItem_hotdog-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E84514773C9200E34189 /* recipeItem_hotdog-hd.png */; };
+		BC03E86314773C9200E34189 /* recipeItem_hotdog.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E84614773C9200E34189 /* recipeItem_hotdog.png */; };
+		BC03E86414773C9200E34189 /* recipeItem_hotdog.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E84614773C9200E34189 /* recipeItem_hotdog.png */; };
+		BC03E86514773C9200E34189 /* recipeItem_hotdogbun-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E84714773C9200E34189 /* recipeItem_hotdogbun-hd.png */; };
+		BC03E86614773C9200E34189 /* recipeItem_hotdogbun-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E84714773C9200E34189 /* recipeItem_hotdogbun-hd.png */; };
+		BC03E86714773C9200E34189 /* recipeItem_hotdogbun.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E84814773C9200E34189 /* recipeItem_hotdogbun.png */; };
+		BC03E86814773C9200E34189 /* recipeItem_hotdogbun.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E84814773C9200E34189 /* recipeItem_hotdogbun.png */; };
+		BC03E86914773C9200E34189 /* recipeItem_hotSauce-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E84914773C9200E34189 /* recipeItem_hotSauce-hd.png */; };
+		BC03E86A14773C9200E34189 /* recipeItem_hotSauce-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E84914773C9200E34189 /* recipeItem_hotSauce-hd.png */; };
+		BC03E86B14773C9200E34189 /* recipeItem_hotSauce.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E84A14773C9200E34189 /* recipeItem_hotSauce.png */; };
+		BC03E86C14773C9200E34189 /* recipeItem_hotSauce.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E84A14773C9200E34189 /* recipeItem_hotSauce.png */; };
+		BC03E86D14773C9200E34189 /* recipeItem_lettuce-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E84B14773C9200E34189 /* recipeItem_lettuce-hd.png */; };
+		BC03E86E14773C9200E34189 /* recipeItem_lettuce-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E84B14773C9200E34189 /* recipeItem_lettuce-hd.png */; };
+		BC03E86F14773C9200E34189 /* recipeItem_lettuce.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E84C14773C9200E34189 /* recipeItem_lettuce.png */; };
+		BC03E87014773C9200E34189 /* recipeItem_lettuce.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E84C14773C9200E34189 /* recipeItem_lettuce.png */; };
+		BC03E87114773C9200E34189 /* recipeItem_tomato-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E84D14773C9200E34189 /* recipeItem_tomato-hd.png */; };
+		BC03E87214773C9200E34189 /* recipeItem_tomato-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E84D14773C9200E34189 /* recipeItem_tomato-hd.png */; };
+		BC03E87314773C9200E34189 /* recipeItem_tomato.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E84E14773C9200E34189 /* recipeItem_tomato.png */; };
+		BC03E87414773C9200E34189 /* recipeItem_tomato.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E84E14773C9200E34189 /* recipeItem_tomato.png */; };
+		BC03E87514773C9200E34189 /* recipeItem_tortilla-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E84F14773C9200E34189 /* recipeItem_tortilla-hd.png */; };
+		BC03E87614773C9200E34189 /* recipeItem_tortilla-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E84F14773C9200E34189 /* recipeItem_tortilla-hd.png */; };
+		BC03E87714773C9200E34189 /* recipeItem_tortilla.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E85014773C9200E34189 /* recipeItem_tortilla.png */; };
+		BC03E87814773C9200E34189 /* recipeItem_tortilla.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E85014773C9200E34189 /* recipeItem_tortilla.png */; };
 		BC6229F71463362A0016DFA0 /* CCAction.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A903AE144F7799002A1F6C /* CCAction.m */; };
 		BC6229F81463362A0016DFA0 /* CCActionCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A903B1144F7799002A1F6C /* CCActionCamera.m */; };
 		BC6229F91463362A0016DFA0 /* CCActionEase.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A903B4144F7799002A1F6C /* CCActionEase.m */; };
@@ -561,6 +601,26 @@
 		85F6CE72146B4BC500290595 /* Speaker-Off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Speaker-Off.png"; path = "Resources/Speaker-Off.png"; sourceTree = "<group>"; };
 		85F6CE73146B4BC500290595 /* Speaker-On-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Speaker-On-hd.png"; path = "Resources/Speaker-On-hd.png"; sourceTree = "<group>"; };
 		85F6CE74146B4BC500290595 /* Speaker-Off-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Speaker-Off-hd.png"; path = "Resources/Speaker-Off-hd.png"; sourceTree = "<group>"; };
+		BC03E83D14773C9200E34189 /* recipeItem_bacon-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recipeItem_bacon-hd.png"; path = "Resources/recipeItem_bacon-hd.png"; sourceTree = "<group>"; };
+		BC03E83E14773C9200E34189 /* recipeItem_bacon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = recipeItem_bacon.png; path = Resources/recipeItem_bacon.png; sourceTree = "<group>"; };
+		BC03E83F14773C9200E34189 /* recipeItem_beef-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recipeItem_beef-hd.png"; path = "Resources/recipeItem_beef-hd.png"; sourceTree = "<group>"; };
+		BC03E84014773C9200E34189 /* recipeItem_beef.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = recipeItem_beef.png; path = Resources/recipeItem_beef.png; sourceTree = "<group>"; };
+		BC03E84114773C9200E34189 /* recipeItem_bread-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recipeItem_bread-hd.png"; path = "Resources/recipeItem_bread-hd.png"; sourceTree = "<group>"; };
+		BC03E84214773C9200E34189 /* recipeItem_bread.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = recipeItem_bread.png; path = Resources/recipeItem_bread.png; sourceTree = "<group>"; };
+		BC03E84314773C9200E34189 /* recipeItem_cheese-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recipeItem_cheese-hd.png"; path = "Resources/recipeItem_cheese-hd.png"; sourceTree = "<group>"; };
+		BC03E84414773C9200E34189 /* recipeItem_cheese.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = recipeItem_cheese.png; path = Resources/recipeItem_cheese.png; sourceTree = "<group>"; };
+		BC03E84514773C9200E34189 /* recipeItem_hotdog-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recipeItem_hotdog-hd.png"; path = "Resources/recipeItem_hotdog-hd.png"; sourceTree = "<group>"; };
+		BC03E84614773C9200E34189 /* recipeItem_hotdog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = recipeItem_hotdog.png; path = Resources/recipeItem_hotdog.png; sourceTree = "<group>"; };
+		BC03E84714773C9200E34189 /* recipeItem_hotdogbun-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recipeItem_hotdogbun-hd.png"; path = "Resources/recipeItem_hotdogbun-hd.png"; sourceTree = "<group>"; };
+		BC03E84814773C9200E34189 /* recipeItem_hotdogbun.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = recipeItem_hotdogbun.png; path = Resources/recipeItem_hotdogbun.png; sourceTree = "<group>"; };
+		BC03E84914773C9200E34189 /* recipeItem_hotSauce-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recipeItem_hotSauce-hd.png"; path = "Resources/recipeItem_hotSauce-hd.png"; sourceTree = "<group>"; };
+		BC03E84A14773C9200E34189 /* recipeItem_hotSauce.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = recipeItem_hotSauce.png; path = Resources/recipeItem_hotSauce.png; sourceTree = "<group>"; };
+		BC03E84B14773C9200E34189 /* recipeItem_lettuce-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recipeItem_lettuce-hd.png"; path = "Resources/recipeItem_lettuce-hd.png"; sourceTree = "<group>"; };
+		BC03E84C14773C9200E34189 /* recipeItem_lettuce.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = recipeItem_lettuce.png; path = Resources/recipeItem_lettuce.png; sourceTree = "<group>"; };
+		BC03E84D14773C9200E34189 /* recipeItem_tomato-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recipeItem_tomato-hd.png"; path = "Resources/recipeItem_tomato-hd.png"; sourceTree = "<group>"; };
+		BC03E84E14773C9200E34189 /* recipeItem_tomato.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = recipeItem_tomato.png; path = Resources/recipeItem_tomato.png; sourceTree = "<group>"; };
+		BC03E84F14773C9200E34189 /* recipeItem_tortilla-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recipeItem_tortilla-hd.png"; path = "Resources/recipeItem_tortilla-hd.png"; sourceTree = "<group>"; };
+		BC03E85014773C9200E34189 /* recipeItem_tortilla.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = recipeItem_tortilla.png; path = Resources/recipeItem_tortilla.png; sourceTree = "<group>"; };
 		BC622ABB1463362A0016DFA0 /* ClumsyChef copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ClumsyChef copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCB515B0146EFE8000F1092E /* Pause2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pause2.png; sourceTree = "<group>"; };
 		BCB515B1146EFE8000F1092E /* PauseSelected2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PauseSelected2.png; sourceTree = "<group>"; };
@@ -1054,6 +1114,33 @@
 			name = "Main Menu";
 			sourceTree = "<group>";
 		};
+		BC03E83B14773C3C00E34189 /* Recipe Items */ = {
+			isa = PBXGroup;
+			children = (
+				BC03E83D14773C9200E34189 /* recipeItem_bacon-hd.png */,
+				BC03E83E14773C9200E34189 /* recipeItem_bacon.png */,
+				BC03E83F14773C9200E34189 /* recipeItem_beef-hd.png */,
+				BC03E84014773C9200E34189 /* recipeItem_beef.png */,
+				BC03E84114773C9200E34189 /* recipeItem_bread-hd.png */,
+				BC03E84214773C9200E34189 /* recipeItem_bread.png */,
+				BC03E84314773C9200E34189 /* recipeItem_cheese-hd.png */,
+				BC03E84414773C9200E34189 /* recipeItem_cheese.png */,
+				BC03E84514773C9200E34189 /* recipeItem_hotdog-hd.png */,
+				BC03E84614773C9200E34189 /* recipeItem_hotdog.png */,
+				BC03E84714773C9200E34189 /* recipeItem_hotdogbun-hd.png */,
+				BC03E84814773C9200E34189 /* recipeItem_hotdogbun.png */,
+				BC03E84914773C9200E34189 /* recipeItem_hotSauce-hd.png */,
+				BC03E84A14773C9200E34189 /* recipeItem_hotSauce.png */,
+				BC03E84B14773C9200E34189 /* recipeItem_lettuce-hd.png */,
+				BC03E84C14773C9200E34189 /* recipeItem_lettuce.png */,
+				BC03E84D14773C9200E34189 /* recipeItem_tomato-hd.png */,
+				BC03E84E14773C9200E34189 /* recipeItem_tomato.png */,
+				BC03E84F14773C9200E34189 /* recipeItem_tortilla-hd.png */,
+				BC03E85014773C9200E34189 /* recipeItem_tortilla.png */,
+			);
+			name = "Recipe Items";
+			sourceTree = "<group>";
+		};
 		E511C2911459258B008BCFF8 /* Test Materials */ = {
 			isa = PBXGroup;
 			children = (
@@ -1348,6 +1435,7 @@
 		E5A90397144F7799002A1F6C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BC03E83B14773C3C00E34189 /* Recipe Items */,
 				E52E5F4F1474E12900FD9C4D /* Menu-Shared */,
 				E52E5F361474E10200FD9C4D /* Game Win/Lose-Shared */,
 				E52E5EDB1474E05B00FD9C4D /* Game Lose */,
@@ -2040,6 +2128,26 @@
 				E52E5F571474E14400FD9C4D /* menu-backButton-high-hd.png in Resources */,
 				E52E5F591474E14400FD9C4D /* menu-backButton-high.png in Resources */,
 				E52E5F5B1474E14400FD9C4D /* menu-backButton.png in Resources */,
+				BC03E85214773C9200E34189 /* recipeItem_bacon-hd.png in Resources */,
+				BC03E85414773C9200E34189 /* recipeItem_bacon.png in Resources */,
+				BC03E85614773C9200E34189 /* recipeItem_beef-hd.png in Resources */,
+				BC03E85814773C9200E34189 /* recipeItem_beef.png in Resources */,
+				BC03E85A14773C9200E34189 /* recipeItem_bread-hd.png in Resources */,
+				BC03E85C14773C9200E34189 /* recipeItem_bread.png in Resources */,
+				BC03E85E14773C9200E34189 /* recipeItem_cheese-hd.png in Resources */,
+				BC03E86014773C9200E34189 /* recipeItem_cheese.png in Resources */,
+				BC03E86214773C9200E34189 /* recipeItem_hotdog-hd.png in Resources */,
+				BC03E86414773C9200E34189 /* recipeItem_hotdog.png in Resources */,
+				BC03E86614773C9200E34189 /* recipeItem_hotdogbun-hd.png in Resources */,
+				BC03E86814773C9200E34189 /* recipeItem_hotdogbun.png in Resources */,
+				BC03E86A14773C9200E34189 /* recipeItem_hotSauce-hd.png in Resources */,
+				BC03E86C14773C9200E34189 /* recipeItem_hotSauce.png in Resources */,
+				BC03E86E14773C9200E34189 /* recipeItem_lettuce-hd.png in Resources */,
+				BC03E87014773C9200E34189 /* recipeItem_lettuce.png in Resources */,
+				BC03E87214773C9200E34189 /* recipeItem_tomato-hd.png in Resources */,
+				BC03E87414773C9200E34189 /* recipeItem_tomato.png in Resources */,
+				BC03E87614773C9200E34189 /* recipeItem_tortilla-hd.png in Resources */,
+				BC03E87814773C9200E34189 /* recipeItem_tortilla.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2154,6 +2262,26 @@
 				E52E5F561474E14400FD9C4D /* menu-backButton-high-hd.png in Resources */,
 				E52E5F581474E14400FD9C4D /* menu-backButton-high.png in Resources */,
 				E52E5F5A1474E14400FD9C4D /* menu-backButton.png in Resources */,
+				BC03E85114773C9200E34189 /* recipeItem_bacon-hd.png in Resources */,
+				BC03E85314773C9200E34189 /* recipeItem_bacon.png in Resources */,
+				BC03E85514773C9200E34189 /* recipeItem_beef-hd.png in Resources */,
+				BC03E85714773C9200E34189 /* recipeItem_beef.png in Resources */,
+				BC03E85914773C9200E34189 /* recipeItem_bread-hd.png in Resources */,
+				BC03E85B14773C9200E34189 /* recipeItem_bread.png in Resources */,
+				BC03E85D14773C9200E34189 /* recipeItem_cheese-hd.png in Resources */,
+				BC03E85F14773C9200E34189 /* recipeItem_cheese.png in Resources */,
+				BC03E86114773C9200E34189 /* recipeItem_hotdog-hd.png in Resources */,
+				BC03E86314773C9200E34189 /* recipeItem_hotdog.png in Resources */,
+				BC03E86514773C9200E34189 /* recipeItem_hotdogbun-hd.png in Resources */,
+				BC03E86714773C9200E34189 /* recipeItem_hotdogbun.png in Resources */,
+				BC03E86914773C9200E34189 /* recipeItem_hotSauce-hd.png in Resources */,
+				BC03E86B14773C9200E34189 /* recipeItem_hotSauce.png in Resources */,
+				BC03E86D14773C9200E34189 /* recipeItem_lettuce-hd.png in Resources */,
+				BC03E86F14773C9200E34189 /* recipeItem_lettuce.png in Resources */,
+				BC03E87114773C9200E34189 /* recipeItem_tomato-hd.png in Resources */,
+				BC03E87314773C9200E34189 /* recipeItem_tomato.png in Resources */,
+				BC03E87514773C9200E34189 /* recipeItem_tortilla-hd.png in Resources */,
+				BC03E87714773C9200E34189 /* recipeItem_tortilla.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
