@@ -12,7 +12,8 @@
 
 
 static CGFloat const kItemWidth = 23;
-static CGFloat const kItemGap = 12;
+static CGFloat const kItemGap = 11;
+static NSUInteger const kNumItemsPerRow = 9;
 static NSInteger const kTagProgressBarNormal = 0;
 static NSInteger const kTagProgressBarHigh = 1;
 static float const kProgressHighThreshold = 0.9f;
@@ -154,7 +155,10 @@ static float const kProgressHighThreshold = 0.9f;
 
 - (CGPoint)positionForItemAtIndex:(NSUInteger)index
 {
-	CGPoint p = CHGetWinPointTL(11 + index * (kItemWidth + kItemGap) + 0.5f * kItemWidth, 21);
+	NSUInteger row = index / kNumItemsPerRow;
+	NSUInteger col = index % kNumItemsPerRow;
+	CGPoint p = CHGetWinPointTL(11 + col * (kItemWidth + kItemGap) + 0.5f * kItemWidth, 
+								21 + row * (kItemWidth + kItemGap) + 0.5f * kItemWidth);
 	return p;
 }
 
@@ -249,7 +253,9 @@ static float const kProgressHighThreshold = 0.9f;
 
 + (id)nodeForTesting
 {
-	NSArray *itemIDs = [NSArray arrayWithObjects:@"HotDog", @"Beef", @"Tomato", nil];
+	NSArray *itemIDs = [NSArray arrayWithObjects:@"HotDogBun", @"HotDog", @"Beef", 
+						@"Bacon", @"Bread", @"Cheese",
+						@"HotSauce", @"Lettuce", @"Tomato", @"Tortilla", nil];
 	CHHUDLayer *hud = [CHHUDLayer nodeWithRequiredRecipeItems:itemIDs 
 												  numberOfLifes:3 
 													moneyAmount:3000];

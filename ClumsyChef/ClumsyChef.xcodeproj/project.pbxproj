@@ -1443,9 +1443,9 @@
 			children = (
 				E55D60EA1451373A00C9D237 /* CHGameLayer.h */,
 				E55D60EB1451373A00C9D237 /* CHGameLayer.m */,
-				E5F410BC1455E2D900FBEE4B /* Game Objects */,
 				E5BED0141474C3280003D6F2 /* CHSharedResHolder.h */,
 				E5BED0151474C3280003D6F2 /* CHSharedResHolder.m */,
+				E5F410BC1455E2D900FBEE4B /* Game Objects */,
 			);
 			name = "Game Layer";
 			sourceTree = "<group>";

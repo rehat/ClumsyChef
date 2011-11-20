@@ -101,7 +101,7 @@ static float const kGenObjectRangeDown = 100.f;
 															   [[self gameSceneParent] pauseGame];
 														   }];
 	CCMenu *menu = [CCMenu menuWithItems:item, nil];
-	[menu setPositionSharp:ccp(26, 27)];
+	[menu setPositionSharp:CHGetWinPointBR(29, 31)];
 	return menu;
 }
 
