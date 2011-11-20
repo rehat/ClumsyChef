@@ -142,7 +142,7 @@ static float const kGenObjectRangeDown = 100.f;
         // Set up the layer according to the stage info
 		//-------------------------------------------
 
-		CHLevelInfo *levelInfo = [[CHGameLibrary sharedGameLibrary] levelInfoAtIndex:1];
+		CHLevelInfo *levelInfo = [[CHGameLibrary sharedGameLibrary] levelInfoAtIndex:0];
 		_goalRecipeItemIDs = [[CCArray alloc] initWithNSArray:levelInfo.recipeItems];
         
         _levelHeight = levelInfo.worldHeight;
@@ -272,7 +272,7 @@ static float const kGenObjectRangeDown = 100.f;
                         if([_goalRecipeItemIDs count] == 0){
                             
                             //TODO: update player info with score and level cleared
-                            [[self gameSceneParent] showWin];
+                            [[self gameSceneParent] showWin:_hudLayer.moneyAmount];
 
                         }
                     }

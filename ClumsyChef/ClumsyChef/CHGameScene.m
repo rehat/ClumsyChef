@@ -97,10 +97,10 @@
 #pragma mark - 
 #pragma mark HUD calls
 
-- (void)showWin
+- (void)showWin:(NSInteger)score
 {
     [self removeChild:_gameLayer cleanup:YES];
-    CHGameWinLayer *winLayer = [CHGameWinLayer nodeWithMoneyAmount:100];
+    CHGameWinLayer *winLayer = [CHGameWinLayer nodeWithMoneyAmount:score];
     [self addChild:winLayer];
 }
 

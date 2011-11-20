@@ -15,10 +15,12 @@
 {
 	if (self = [super init])
 	{
-		
-        CCLabelTTF *lose = [CCLabelTTF labelWithString:@"YOU LOSE!" fontName:@"Marker Felt" fontSize:30];
+        CCLayerColor *bg = [CCLayerColor layerWithColor:ccc4(160, 160, 160, 255)];
+        [self addChild:bg];
+        
+        CCSprite *lose = [CCSprite spriteWithFile:@"gameOver-title.png" ];
         CGSize screenSize = [[CCDirector sharedDirector]winSize];
-        lose.position = ccp(screenSize.width/2, screenSize.height/2);
+        lose.position = ccp(screenSize.width/2, screenSize.height/2 + 50);
         [self addChild:lose];
         
         
@@ -35,8 +37,9 @@
         
         
         CCMenu *menu = [CCMenu menuWithItems:retry,quit, nil];
-        [menu setPositionSharp:CHGetWinPointTL(screenSize.width/2, screenSize.height/2+40)];
-        [menu alignItemsVertically];
+        menu.position = ccp(screenSize.width/2, screenSize.height/2 - lose.position.y/2  );
+        //[menu setPositionSharp:CHGetWinPointTL(screenSize.width/2, screenSize.height/2+40)];
+        [menu alignItemsHorizontally];
         [self addChild:menu];
         
 	}
