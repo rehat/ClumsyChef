@@ -67,6 +67,10 @@
 		BC03E87614773C9200E34189 /* recipeItem_tortilla-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E84F14773C9200E34189 /* recipeItem_tortilla-hd.png */; };
 		BC03E87714773C9200E34189 /* recipeItem_tortilla.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E85014773C9200E34189 /* recipeItem_tortilla.png */; };
 		BC03E87814773C9200E34189 /* recipeItem_tortilla.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E85014773C9200E34189 /* recipeItem_tortilla.png */; };
+		BC4C06AE1479C22700FE285D /* star-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BC4C06AC1479C22600FE285D /* star-hd.png */; };
+		BC4C06AF1479C22700FE285D /* star-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BC4C06AC1479C22600FE285D /* star-hd.png */; };
+		BC4C06B01479C22700FE285D /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = BC4C06AD1479C22600FE285D /* star.png */; };
+		BC4C06B11479C22700FE285D /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = BC4C06AD1479C22600FE285D /* star.png */; };
 		BC6229F71463362A0016DFA0 /* CCAction.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A903AE144F7799002A1F6C /* CCAction.m */; };
 		BC6229F81463362A0016DFA0 /* CCActionCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A903B1144F7799002A1F6C /* CCActionCamera.m */; };
 		BC6229F91463362A0016DFA0 /* CCActionEase.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A903B4144F7799002A1F6C /* CCActionEase.m */; };
@@ -656,6 +660,8 @@
 		BC03E84E14773C9200E34189 /* recipeItem_tomato.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = recipeItem_tomato.png; path = Resources/recipeItem_tomato.png; sourceTree = "<group>"; };
 		BC03E84F14773C9200E34189 /* recipeItem_tortilla-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recipeItem_tortilla-hd.png"; path = "Resources/recipeItem_tortilla-hd.png"; sourceTree = "<group>"; };
 		BC03E85014773C9200E34189 /* recipeItem_tortilla.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = recipeItem_tortilla.png; path = Resources/recipeItem_tortilla.png; sourceTree = "<group>"; };
+		BC4C06AC1479C22600FE285D /* star-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "star-hd.png"; path = "Resources/star-hd.png"; sourceTree = "<group>"; };
+		BC4C06AD1479C22600FE285D /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = star.png; path = Resources/star.png; sourceTree = "<group>"; };
 		BC622ABB1463362A0016DFA0 /* ClumsyChef copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ClumsyChef copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCC06AA4146B2DB60068103A /* coinObject-coin-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "coinObject-coin-hd.png"; path = "Resources/coinObject-coin-hd.png"; sourceTree = "<group>"; };
 		BCC06AA5146B2DB60068103A /* coinObject-coin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "coinObject-coin.png"; path = "Resources/coinObject-coin.png"; sourceTree = "<group>"; };
@@ -1268,6 +1274,8 @@
 		E522B2FF146863950049D367 /* Game Layer */ = {
 			isa = PBXGroup;
 			children = (
+				BC4C06AC1479C22600FE285D /* star-hd.png */,
+				BC4C06AD1479C22600FE285D /* star.png */,
 				E599003C14687E3B00458316 /* chefObject-chef-hd.png */,
 				E599003D14687E3B00458316 /* chefObject-chef.png */,
 				E599003E14687E3B00458316 /* coin.caf */,
@@ -2247,6 +2255,8 @@
 				E5D0C9EB1478D5F10089E28D /* hud-progressBar-fg.png in Resources */,
 				E5D0C9EF1478DFB50089E28D /* hud-progressBar-fg-high-hd.png in Resources */,
 				E5D0C9F11478DFB50089E28D /* hud-progressBar-fg-high.png in Resources */,
+				BC4C06AF1479C22700FE285D /* star-hd.png in Resources */,
+				BC4C06B11479C22700FE285D /* star.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2398,6 +2408,8 @@
 				E5D0C9EA1478D5F10089E28D /* hud-progressBar-fg.png in Resources */,
 				E5D0C9EE1478DFB50089E28D /* hud-progressBar-fg-high-hd.png in Resources */,
 				E5D0C9F01478DFB50089E28D /* hud-progressBar-fg-high.png in Resources */,
+				BC4C06AE1479C22700FE285D /* star-hd.png in Resources */,
+				BC4C06B01479C22700FE285D /* star.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
