@@ -34,6 +34,8 @@ CGPoint CHGetWinPointTL(CGFloat x, CGFloat y);
 
 CGPoint CHGetWinPointTR(CGFloat x, CGFloat y);
 
+CGPoint CHGetWinPointBR(CGFloat x, CGFloat y);
+
 // Color utilities
 						  
 static inline ccColor3B ccc3Hex(uint32_t hexValue)
