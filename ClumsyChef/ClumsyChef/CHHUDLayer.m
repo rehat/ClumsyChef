@@ -158,7 +158,7 @@ static float const kProgressHighThreshold = 0.9f;
 	NSUInteger row = index / kNumItemsPerRow;
 	NSUInteger col = index % kNumItemsPerRow;
 	CGPoint p = CHGetWinPointTL(11 + col * (kItemWidth + kItemGap) + 0.5f * kItemWidth, 
-								21 + row * (kItemWidth + kItemGap) + 0.5f * kItemWidth);
+								11 + row * (kItemWidth + kItemGap) + 0.5f * kItemWidth);
 	return p;
 }
 

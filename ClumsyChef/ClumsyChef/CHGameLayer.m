@@ -97,9 +97,8 @@ static float const kGenObjectRangeDown = 100.f;
 {
 	CCMenuItemImage *item = [CCMenuItemImage itemFromNormalImage:@"pause-gameLayerButton.png" 
 												   selectedImage:@"pause-gameLayerButton-high.png" 
-														   block:^(id sender) {
-															   [[self gameSceneParent] pauseGame];
-														   }];
+														  target:self 
+														selector:@selector(pauseButtonPressed:)];
 	CCMenu *menu = [CCMenu menuWithItems:item, nil];
 	[menu setPositionSharp:CHGetWinPointBR(29, 31)];
 	return menu;
@@ -144,7 +143,7 @@ static float const kGenObjectRangeDown = 100.f;
 		//-------------------------------------------
 
 		CHLevelInfo *levelInfo = [[CHGameLibrary sharedGameLibrary] levelInfoAtIndex:1];
-		_goalRecipeItemIDs = [[CCArray alloc] initWithNSArray:[levelInfo.recipeItems retain]];
+		_goalRecipeItemIDs = [[CCArray alloc] initWithNSArray:levelInfo.recipeItems];
         
         _levelHeight = levelInfo.worldHeight;
 
@@ -187,8 +186,6 @@ static float const kGenObjectRangeDown = 100.f;
     [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
 	[super dealloc];
 }
-
-
 
 #pragma mark -
 #pragma mark xxx
@@ -336,8 +333,12 @@ static float const kGenObjectRangeDown = 100.f;
 	[_chefObj stopAccelerating];
 }
 
-
 #pragma mark -
-#pragma mark xx
+#pragma mark UI events
+
+- (void)pauseButtonPressed:(id)sender
+{
+	// TODO
+}
 
 @end
