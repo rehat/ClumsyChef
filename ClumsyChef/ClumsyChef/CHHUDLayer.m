@@ -8,10 +8,14 @@
 
 #import "CHHUDLayer.h"
 #import "CHGameLibrary.h"
+#import "CHStretchableSprite.h"
+
 
 static CGFloat const kItemWidth = 23;
 static CGFloat const kItemGap = 12;
-
+static NSInteger const kTagProgressBarNormal = 0;
+static NSInteger const kTagProgressBarHigh = 1;
+static float const kProgressHighThreshold = 0.9f;
 
 /**
  * HUDItemSprite
@@ -66,6 +70,69 @@ static CGFloat const kItemGap = 12;
 @end
 
 
+/*
+ HUDProgressBar
+ Assumption: Assume progress never decreases
+ */
+@interface HUDProgressBar : CCNode 
+{
+	float				_progress;
+	CHStretchableSprite	*_progressFG;
+}
+
+@property(nonatomic, assign) float progress;
+
+@end
+
+
+@implementation HUDProgressBar
+
+@synthesize progress = _progress;
+
+- (CHStretchableSprite *)addBarWithFile:(NSString *)file width:(CGFloat)width
+{
+	CHStretchableSprite *bar;
+	bar = [CHStretchableSprite stretchableSpriteWithFile:file
+											leftCapWidth:1 
+											 topCapWidth:0 
+											 displaySize:CGSizeMake(width, 6)];
+	bar.anchorPoint = CGPointZero;
+	bar.position = CGPointZero;
+	[self addChild:bar];
+	
+	return bar;
+}
+
+- (id)init
+{
+	if (self = [super init])
+	{
+		[self addBarWithFile:@"hud-progressBar-bg.png" width:CHGetWinWidth()];
+		_progressFG = [self addBarWithFile:@"hud-progressBar-fg.png" width:0];
+		_progressFG.tag = kTagProgressBarNormal;
+	}
+	return self;
+}
+
+- (void)setProgress:(float)progress
+{
+	_progress = clampf(progress, 0, 1);
+	CGFloat width = floorf(_progress * CHGetWinWidth());
+	if (_progress >= kProgressHighThreshold && _progressFG.tag != kTagProgressBarHigh)
+	{
+		// Change progress color
+		[_progressFG removeFromParentAndCleanup:YES];
+		_progressFG = [self addBarWithFile:@"hud-progressBar-fg-high.png" width:width];
+	}
+	else
+	{
+		// Just change the width
+		[_progressFG setSpriteDisplaySize:CGSizeMake(width, 6)];
+	}
+}
+
+@end
+
 @implementation CHHUDLayer
 {
 	NSInteger	_numberOfLifes;
@@ -74,11 +141,13 @@ static CGFloat const kItemGap = 12;
 	NSDictionary	*_itemSprites;
 	CCLabelBMFont	*_lifeLabel;
 	CCLabelBMFont	*_moneyLabel;
+	
+	HUDProgressBar	*_progressBar;
+	
 }
 
 @synthesize numberOfLifes = _numberOfLifes;
 @synthesize moneyAmount = _moneyAmount;
-
 
 #pragma mark -
 #pragma mark Private
@@ -128,13 +197,13 @@ static CGFloat const kItemGap = 12;
 		// life
 		//----------------------------------
 		CCSprite *chefLife = [CCSprite spriteWithFile:@"hud-chefLive.png"];
-		[chefLife setPositionSharp:CHGetWinPointTR(118, 20)];
+		[chefLife setPositionSharp:ccp(26, 30)];
 		[self addChild:chefLife];
 		
 		_lifeLabel = [CCLabelBMFont labelWithString:[NSString stringWithFormat:@"%d", _numberOfLifes]
 											 fntFile:@"hud-numberFont.fnt"];
-		_lifeLabel.anchorPoint = ccp(0, 1.f);
-		[_lifeLabel setPositionSharp:CHGetWinPointTR(106, 14)];
+		_lifeLabel.anchorPoint = ccp(0, 0);
+		[_lifeLabel setPositionSharp:ccp(37, 7)];
 		[self addChild:_lifeLabel];
 		
 		//----------------------------------
@@ -142,15 +211,22 @@ static CGFloat const kItemGap = 12;
 		//----------------------------------
 		
 		CCSprite *coin = [CCSprite spriteWithFile:@"hud-coin.png"];
-		[coin setPositionSharp:CHGetWinPointTR(74, 20)];
+		[coin setPositionSharp:ccp(72, 30)];
 		[self addChild:coin];
 		
 		_moneyLabel = [CCLabelBMFont labelWithString:[self stringForMoneyAmount:_moneyAmount] 
 											 fntFile:@"hud-numberFont.fnt"];
-		_moneyLabel.anchorPoint = ccp(0, 1.f);
-		[_moneyLabel setPositionSharp:CHGetWinPointTR(61, 14)];
+		_moneyLabel.anchorPoint = ccp(0, 0);
+		[_moneyLabel setPositionSharp:ccp(84, 7)];
 		[_moneyLabel setColor:ccc3Hex(0xface1f)];
 		[self addChild:_moneyLabel];
+		
+		//----------------------------------
+		// Progress bar
+		//----------------------------------
+		
+		_progressBar = [HUDProgressBar node];
+		[self addChild:_progressBar];
 	}
 	return self;
 }
@@ -179,6 +255,7 @@ static CGFloat const kItemGap = 12;
 													moneyAmount:3000];
 	[hud addChild:[CCLayerColor layerWithColor:ccc4Hex(0xc8c8c8)] z:-1];
 	[hud setRecipeItemCollected:@"Tomato"];
+	[hud setProgress:0.95f];
 	return hud;
 }
 
@@ -198,6 +275,16 @@ static CGFloat const kItemGap = 12;
 		_moneyAmount = moneyAmount;
 		[_moneyLabel setString:[self stringForMoneyAmount:_moneyAmount]];
 	}
+}
+
+- (float)progress
+{
+	return _progressBar.progress;
+}
+
+- (void)setProgress:(float)progress
+{
+	_progressBar.progress = progress;
 }
 
 - (void)setRecipeItemCollected:(NSString*)itemID

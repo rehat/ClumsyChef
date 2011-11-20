@@ -604,6 +604,18 @@
 		E5C8E190145B4144003372F2 /* CHChefObject.m in Sources */ = {isa = PBXBuildFile; fileRef = E5C8E18F145B4144003372F2 /* CHChefObject.m */; };
 		E5D0C9D41478B9F10089E28D /* CHStretchableSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D0C9D31478B9F10089E28D /* CHStretchableSprite.m */; };
 		E5D0C9D51478B9F10089E28D /* CHStretchableSprite.m in Sources */ = {isa = PBXBuildFile; fileRef = E5D0C9D31478B9F10089E28D /* CHStretchableSprite.m */; };
+		E5D0C9E41478D5F10089E28D /* hud-progressBar-bg-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E5D0C9E01478D5F10089E28D /* hud-progressBar-bg-hd.png */; };
+		E5D0C9E51478D5F10089E28D /* hud-progressBar-bg-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E5D0C9E01478D5F10089E28D /* hud-progressBar-bg-hd.png */; };
+		E5D0C9E61478D5F10089E28D /* hud-progressBar-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = E5D0C9E11478D5F10089E28D /* hud-progressBar-bg.png */; };
+		E5D0C9E71478D5F10089E28D /* hud-progressBar-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = E5D0C9E11478D5F10089E28D /* hud-progressBar-bg.png */; };
+		E5D0C9E81478D5F10089E28D /* hud-progressBar-fg-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E5D0C9E21478D5F10089E28D /* hud-progressBar-fg-hd.png */; };
+		E5D0C9E91478D5F10089E28D /* hud-progressBar-fg-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E5D0C9E21478D5F10089E28D /* hud-progressBar-fg-hd.png */; };
+		E5D0C9EA1478D5F10089E28D /* hud-progressBar-fg.png in Resources */ = {isa = PBXBuildFile; fileRef = E5D0C9E31478D5F10089E28D /* hud-progressBar-fg.png */; };
+		E5D0C9EB1478D5F10089E28D /* hud-progressBar-fg.png in Resources */ = {isa = PBXBuildFile; fileRef = E5D0C9E31478D5F10089E28D /* hud-progressBar-fg.png */; };
+		E5D0C9EE1478DFB50089E28D /* hud-progressBar-fg-high-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E5D0C9EC1478DFB50089E28D /* hud-progressBar-fg-high-hd.png */; };
+		E5D0C9EF1478DFB50089E28D /* hud-progressBar-fg-high-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E5D0C9EC1478DFB50089E28D /* hud-progressBar-fg-high-hd.png */; };
+		E5D0C9F01478DFB50089E28D /* hud-progressBar-fg-high.png in Resources */ = {isa = PBXBuildFile; fileRef = E5D0C9ED1478DFB50089E28D /* hud-progressBar-fg-high.png */; };
+		E5D0C9F11478DFB50089E28D /* hud-progressBar-fg-high.png in Resources */ = {isa = PBXBuildFile; fileRef = E5D0C9ED1478DFB50089E28D /* hud-progressBar-fg-high.png */; };
 		E5F2342F145BBF820026799C /* gameObject-testIconBlue-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E5F2342D145BBF820026799C /* gameObject-testIconBlue-hd.png */; };
 		E5F23430145BBF820026799C /* gameObject-testIconBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = E5F2342E145BBF820026799C /* gameObject-testIconBlue.png */; };
 		E5F410BA1455DEBD00FBEE4B /* CHBackgroundLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E5F410B91455DEBD00FBEE4B /* CHBackgroundLayer.m */; };
@@ -1088,6 +1100,12 @@
 		E5C8E18F145B4144003372F2 /* CHChefObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHChefObject.m; sourceTree = "<group>"; };
 		E5D0C9D21478B9F10089E28D /* CHStretchableSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHStretchableSprite.h; sourceTree = "<group>"; };
 		E5D0C9D31478B9F10089E28D /* CHStretchableSprite.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHStretchableSprite.m; sourceTree = "<group>"; };
+		E5D0C9E01478D5F10089E28D /* hud-progressBar-bg-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "hud-progressBar-bg-hd.png"; path = "Resources/hud-progressBar-bg-hd.png"; sourceTree = "<group>"; };
+		E5D0C9E11478D5F10089E28D /* hud-progressBar-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "hud-progressBar-bg.png"; path = "Resources/hud-progressBar-bg.png"; sourceTree = "<group>"; };
+		E5D0C9E21478D5F10089E28D /* hud-progressBar-fg-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "hud-progressBar-fg-hd.png"; path = "Resources/hud-progressBar-fg-hd.png"; sourceTree = "<group>"; };
+		E5D0C9E31478D5F10089E28D /* hud-progressBar-fg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "hud-progressBar-fg.png"; path = "Resources/hud-progressBar-fg.png"; sourceTree = "<group>"; };
+		E5D0C9EC1478DFB50089E28D /* hud-progressBar-fg-high-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "hud-progressBar-fg-high-hd.png"; path = "Resources/hud-progressBar-fg-high-hd.png"; sourceTree = "<group>"; };
+		E5D0C9ED1478DFB50089E28D /* hud-progressBar-fg-high.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "hud-progressBar-fg-high.png"; path = "Resources/hud-progressBar-fg-high.png"; sourceTree = "<group>"; };
 		E5F2342D145BBF820026799C /* gameObject-testIconBlue-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gameObject-testIconBlue-hd.png"; path = "Resources/gameObject-testIconBlue-hd.png"; sourceTree = "<group>"; };
 		E5F2342E145BBF820026799C /* gameObject-testIconBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gameObject-testIconBlue.png"; path = "Resources/gameObject-testIconBlue.png"; sourceTree = "<group>"; };
 		E5F410B81455DEBD00FBEE4B /* CHBackgroundLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = CHBackgroundLayer.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -1191,6 +1209,12 @@
 				E5085F7714779EB3005844C9 /* hud-numberFont-hd.png */,
 				E5085F7814779EB3005844C9 /* hud-numberFont.fnt */,
 				E5085F7914779EB4005844C9 /* hud-numberFont.png */,
+				E5D0C9E01478D5F10089E28D /* hud-progressBar-bg-hd.png */,
+				E5D0C9E11478D5F10089E28D /* hud-progressBar-bg.png */,
+				E5D0C9E21478D5F10089E28D /* hud-progressBar-fg-hd.png */,
+				E5D0C9EC1478DFB50089E28D /* hud-progressBar-fg-high-hd.png */,
+				E5D0C9ED1478DFB50089E28D /* hud-progressBar-fg-high.png */,
+				E5D0C9E31478D5F10089E28D /* hud-progressBar-fg.png */,
 			);
 			name = HUD;
 			sourceTree = "<group>";
@@ -2217,6 +2241,12 @@
 				E5085F8114779EB4005844C9 /* hud-numberFont.png in Resources */,
 				E5085F851477A291005844C9 /* hud-checkMark-hd.png in Resources */,
 				E5085F871477A291005844C9 /* hud-checkMark.png in Resources */,
+				E5D0C9E51478D5F10089E28D /* hud-progressBar-bg-hd.png in Resources */,
+				E5D0C9E71478D5F10089E28D /* hud-progressBar-bg.png in Resources */,
+				E5D0C9E91478D5F10089E28D /* hud-progressBar-fg-hd.png in Resources */,
+				E5D0C9EB1478D5F10089E28D /* hud-progressBar-fg.png in Resources */,
+				E5D0C9EF1478DFB50089E28D /* hud-progressBar-fg-high-hd.png in Resources */,
+				E5D0C9F11478DFB50089E28D /* hud-progressBar-fg-high.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2362,6 +2392,12 @@
 				E5085F8014779EB4005844C9 /* hud-numberFont.png in Resources */,
 				E5085F841477A291005844C9 /* hud-checkMark-hd.png in Resources */,
 				E5085F861477A291005844C9 /* hud-checkMark.png in Resources */,
+				E5D0C9E41478D5F10089E28D /* hud-progressBar-bg-hd.png in Resources */,
+				E5D0C9E61478D5F10089E28D /* hud-progressBar-bg.png in Resources */,
+				E5D0C9E81478D5F10089E28D /* hud-progressBar-fg-hd.png in Resources */,
+				E5D0C9EA1478D5F10089E28D /* hud-progressBar-fg.png in Resources */,
+				E5D0C9EE1478DFB50089E28D /* hud-progressBar-fg-high-hd.png in Resources */,
+				E5D0C9F01478DFB50089E28D /* hud-progressBar-fg-high.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
