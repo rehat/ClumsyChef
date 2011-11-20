@@ -11,11 +11,14 @@
 
 static CGSize winSize = {0, 0};
 static CGPoint centerPoint = {0, 0};
+static NSNumberFormatter *formatter = nil;
 
 void CHUtilitiesInit()
 {
 	winSize = [[CCDirector sharedDirector] winSize];
 	centerPoint = CGPointMake(winSize.width * 0.5f, winSize.height * 0.5f);
+	formatter = [[NSNumberFormatter alloc] init];
+	[formatter setNumberStyle:NSNumberFormatterDecimalStyle];
 }
 
 CGSize CHGetWinSize()
@@ -56,4 +59,17 @@ CGPoint CHGetWinPointTL(CGFloat x, CGFloat y)
 CGPoint CHGetWinPointTR(CGFloat x, CGFloat y)
 {
 	return CGPointMake(winSize.width - x, winSize.height - y);
+}
+
+CGPoint CHGetWinPointBR(CGFloat x, CGFloat y)
+{
+	return CGPointMake(winSize.width - x, y);
+}
+#pragma mark -
+#pragma mark Number utilities
+
+NSString* CHFormatDecimalNumber(NSNumber *num)
+{
+	NSString *s = [formatter stringFromNumber:num];
+	return s;
 }

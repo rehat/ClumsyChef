@@ -70,7 +70,7 @@ NSInteger const TestBackButtonTag = -9999;
 		}];
         
         CCMenuItem *itemTestHUD = [self menuItemWithTitle:@"HUD Layer" block:^(id sender) {
-			[self runLayer:[CHHUDLayer node]];
+			[self runLayer:[CHHUDLayer nodeForTesting]];
 		}];
 		
 		CCMenuItem *itemTestSelectLevel = [self menuItemWithTitle:@"Select Level" block:^(id sender) {
