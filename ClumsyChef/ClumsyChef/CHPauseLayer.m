@@ -37,6 +37,10 @@
 - (void)resumeButtonPressed
 {
 	// TODO
+    [[CCDirector sharedDirector] resume];
+    [[CCDirector sharedDirector] popScene];
+    //[self remove
+
 }
 
 

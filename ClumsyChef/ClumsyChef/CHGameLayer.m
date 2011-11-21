@@ -17,6 +17,8 @@
 #import "SimpleAudioEngine.h"
 #import "CHHUDLayer.h"
 #import "CHSharedResHolder.h"
+#import "CHPauseLayer.h"
+#import "TestMenuLayer.h"
 
 
 static CGFloat const kChefYOffset = 110.f;
@@ -335,10 +337,18 @@ static float const kGenObjectRangeDown = 100.f;
 
 #pragma mark -
 #pragma mark UI events
-
+BOOL paused = false;
 - (void)pauseButtonPressed:(id)sender
 {
-	// TODO
+    if(!paused){
+        [[CCDirector sharedDirector] pause];
+        paused = true;
+    }
+    else{
+        [[CCDirector sharedDirector] resume];
+        paused = false;
+    }
+    //[TestMenuLayer runLayer:[CHPauseLayer node]];
 }
 
 @end
