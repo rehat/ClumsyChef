@@ -61,6 +61,10 @@ CGPoint CHGetWinPointTR(CGFloat x, CGFloat y)
 	return CGPointMake(winSize.width - x, winSize.height - y);
 }
 
+CGPoint CHGetWinPointBR(CGFloat x, CGFloat y)
+{
+	return CGPointMake(winSize.width - x, y);
+}
 #pragma mark -
 #pragma mark Number utilities
 

@@ -13,6 +13,7 @@
 
 @property(nonatomic, assign) NSInteger numberOfLifes;
 @property(nonatomic, assign) NSInteger moneyAmount;
+@property(nonatomic, assign) float progress;
 
 + (id)nodeWithRequiredRecipeItems:(NSArray *)itemIDs 
 					numberOfLifes:(NSInteger)numLifes 
@@ -21,5 +22,5 @@
 + (id)nodeForTesting;
 
 - (void)setRecipeItemCollected:(NSString*)itemID;
-
+- (void)updateHeightProgress:(float) currentHeight;
 @end

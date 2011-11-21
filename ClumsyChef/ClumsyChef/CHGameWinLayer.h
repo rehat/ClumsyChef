@@ -12,7 +12,7 @@
 @interface CHGameWinLayer : CCLayer 
 
 
-+ (id)nodeWithMoneyAmount:(NSInteger)amount;
++ (id)nodeWithMoneyAmount:(NSInteger)score;
 
 - (void)showInNode:(CCNode *)node;
 

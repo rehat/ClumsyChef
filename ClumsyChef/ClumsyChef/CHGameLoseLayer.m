@@ -15,24 +15,31 @@
 {
 	if (self = [super init])
 	{
-		
-        CCLabelTTF *lose = [CCLabelTTF labelWithString:@"YOU LOSE!" fontName:@"Marker Felt" fontSize:30];
+        CCLayerColor *bg = [CCLayerColor layerWithColor:ccc4(160, 160, 160, 255)];
+        [self addChild:bg];
+        
+        CCSprite *lose = [CCSprite spriteWithFile:@"gameOver-title.png" ];
         CGSize screenSize = [[CCDirector sharedDirector]winSize];
-        lose.position = ccp(screenSize.width/2, screenSize.height/2);
+        lose.position = ccp(screenSize.width/2, screenSize.height/2 + 50);
         [self addChild:lose];
         
-        CCMenuItemFont *item1 = [CCMenuItemFont itemFromString:@"Retry" block:^(id sender) {
-            [[CCDirector sharedDirector] replaceScene:[CHGameScene node]];}];  
-        item1.fontSize = 16;
         
-        CCMenuItemFont *item2 = [CCMenuItemFont itemFromString:@"Main Menu" block:^(id sender) {
-            [[CCDirector sharedDirector] popScene];}];  
-        item2.fontSize = 16;
+        CCMenuItemImage *retry = [CCMenuItemImage itemFromNormalImage:@"gameEnd-restart.png" selectedImage:@"gameEnd-restart-high.png" block:^(id sender) {
+            [[CCDirector sharedDirector] replaceScene:[CHGameScene node]];}];
+        
+        CCMenuItemImage *quit = [CCMenuItemImage itemFromNormalImage:@"gameEnd-quit.png" selectedImage:@"gameEnd-quit-high.png" block:^(id sender) {
+            [[CCDirector sharedDirector] popScene];}];
+        
+
         
         
-        CCMenu *menu = [CCMenu menuWithItems:item1,item2, nil];
-        [menu setPositionSharp:CHGetWinPointTL(screenSize.width/2, screenSize.height/2+40)];
-        [menu alignItemsVertically];
+     
+        
+        
+        CCMenu *menu = [CCMenu menuWithItems:retry,quit, nil];
+        menu.position = ccp(screenSize.width/2, screenSize.height/2 - lose.position.y/2  );
+        //[menu setPositionSharp:CHGetWinPointTL(screenSize.width/2, screenSize.height/2+40)];
+        [menu alignItemsHorizontally];
         [self addChild:menu];
         
 	}
