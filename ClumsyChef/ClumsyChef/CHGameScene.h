@@ -33,7 +33,7 @@
 - (void)quitGame;
 
 //Game States
--(void)showWin;
+-(void)showWin:(NSInteger)score;
 -(void)showGameOver;
 @end
 

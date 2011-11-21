@@ -17,6 +17,7 @@
 #import "CHGameLibrary.h"
 #import "CHHUDLayer.h"
 #import "CHSelectLevelLayer.h"
+#import "CHPauseLayer.h"
 //-----------------------------------
 
 
@@ -72,6 +73,10 @@ NSInteger const TestBackButtonTag = -9999;
         CCMenuItem *itemTestHUD = [self menuItemWithTitle:@"HUD Layer" block:^(id sender) {
 			[self runLayer:[CHHUDLayer nodeForTesting]];
 		}];
+        
+        CCMenuItem *itemTestPauseLayer = [self menuItemWithTitle:@"Pause Layer" block:^(id sender) {
+			[self runLayer:[CHPauseLayer node]];
+		}];
 		
 		CCMenuItem *itemTestSelectLevel = [self menuItemWithTitle:@"Select Level" block:^(id sender) {
 			[self runLayer:[CHSelectLevelLayer node]];
@@ -79,7 +84,7 @@ NSInteger const TestBackButtonTag = -9999;
 		
 		CCMenu *testMenu = [CCMenu menuWithItems:itemTestBg, itemTestGameLayer, 
 							itemTestMainMenu, itemTestGameScene, itemTestHUD, 
-							itemTestSelectLevel, nil];
+							itemTestSelectLevel, itemTestPauseLayer, nil];
 		
 		// ----------------------------------
 		

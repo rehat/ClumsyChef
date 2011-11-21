@@ -17,6 +17,8 @@
 #import "SimpleAudioEngine.h"
 #import "CHHUDLayer.h"
 #import "CHSharedResHolder.h"
+#import "CHPauseLayer.h"
+#import "TestMenuLayer.h"
 
 
 static CGFloat const kChefYOffset = 110.f;
@@ -57,7 +59,7 @@ static float const kGenObjectRangeDown = 100.f;
 	
     CHItemObject *item;
     CGFloat x = CCRANDOM_0_1();
-    if (x > .1f && x < .4f) {
+    if (x > .1f && x < .4f) {   //better: (x > .1f && x < .2f)
         item = [CHHarmfulObject node];
         [self addChild:item];
     }
@@ -142,7 +144,7 @@ static float const kGenObjectRangeDown = 100.f;
         // Set up the layer according to the stage info
 		//-------------------------------------------
 
-		CHLevelInfo *levelInfo = [[CHGameLibrary sharedGameLibrary] levelInfoAtIndex:1];
+		CHLevelInfo *levelInfo = [[CHGameLibrary sharedGameLibrary] levelInfoAtIndex:0];
 		_goalRecipeItemIDs = [[CCArray alloc] initWithNSArray:levelInfo.recipeItems];
         
         _levelHeight = levelInfo.worldHeight;
@@ -272,7 +274,7 @@ static float const kGenObjectRangeDown = 100.f;
                         if([_goalRecipeItemIDs count] == 0){
                             
                             //TODO: update player info with score and level cleared
-                            [[self gameSceneParent] showWin];
+                            [[self gameSceneParent] showWin:_hudLayer.moneyAmount];
 
                         }
                     }
@@ -335,10 +337,18 @@ static float const kGenObjectRangeDown = 100.f;
 
 #pragma mark -
 #pragma mark UI events
-
+BOOL paused = false;
 - (void)pauseButtonPressed:(id)sender
 {
-	// TODO
+    if(!paused){
+        [[CCDirector sharedDirector] pause];
+        paused = true;
+    }
+    else{
+        [[CCDirector sharedDirector] resume];
+        paused = false;
+    }
+    //[TestMenuLayer runLayer:[CHPauseLayer node]];
 }
 
 @end

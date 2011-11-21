@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		409428A2147A327A00AA336B /* playbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 409428A1147A327A00AA336B /* playbutton.png */; };
+		409428A3147A327A00AA336B /* playbutton.png in Resources */ = {isa = PBXBuildFile; fileRef = 409428A1147A327A00AA336B /* playbutton.png */; };
+		409428AC147A373000AA336B /* playbuttonselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 409428AB147A373000AA336B /* playbuttonselected.png */; };
+		409428AD147A373000AA336B /* playbuttonselected.png in Resources */ = {isa = PBXBuildFile; fileRef = 409428AB147A373000AA336B /* playbuttonselected.png */; };
 		85CEB0B714685F330099409C /* MainMenuBackground-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 85CEB0B114685F320099409C /* MainMenuBackground-hd.png */; };
 		85CEB0B814685F330099409C /* MainMenuBackground-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 85CEB0B114685F320099409C /* MainMenuBackground-hd.png */; };
 		85CEB0B914685F330099409C /* MainMenuBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 85CEB0B214685F330099409C /* MainMenuBackground.png */; };
@@ -67,6 +71,10 @@
 		BC03E87614773C9200E34189 /* recipeItem_tortilla-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E84F14773C9200E34189 /* recipeItem_tortilla-hd.png */; };
 		BC03E87714773C9200E34189 /* recipeItem_tortilla.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E85014773C9200E34189 /* recipeItem_tortilla.png */; };
 		BC03E87814773C9200E34189 /* recipeItem_tortilla.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E85014773C9200E34189 /* recipeItem_tortilla.png */; };
+		BC4C06AE1479C22700FE285D /* star-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BC4C06AC1479C22600FE285D /* star-hd.png */; };
+		BC4C06AF1479C22700FE285D /* star-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BC4C06AC1479C22600FE285D /* star-hd.png */; };
+		BC4C06B01479C22700FE285D /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = BC4C06AD1479C22600FE285D /* star.png */; };
+		BC4C06B11479C22700FE285D /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = BC4C06AD1479C22600FE285D /* star.png */; };
 		BC6229F71463362A0016DFA0 /* CCAction.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A903AE144F7799002A1F6C /* CCAction.m */; };
 		BC6229F81463362A0016DFA0 /* CCActionCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A903B1144F7799002A1F6C /* CCActionCamera.m */; };
 		BC6229F91463362A0016DFA0 /* CCActionEase.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A903B4144F7799002A1F6C /* CCActionEase.m */; };
@@ -626,6 +634,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		409428A1147A327A00AA336B /* playbutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playbutton.png; sourceTree = "<group>"; };
+		409428AB147A373000AA336B /* playbuttonselected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playbuttonselected.png; sourceTree = "<group>"; };
 		85CEB0B114685F320099409C /* MainMenuBackground-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "MainMenuBackground-hd.png"; path = "Resources/MainMenuBackground-hd.png"; sourceTree = "<group>"; };
 		85CEB0B214685F330099409C /* MainMenuBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MainMenuBackground.png; path = Resources/MainMenuBackground.png; sourceTree = "<group>"; };
 		85CEB0B314685F330099409C /* play-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "play-hd.png"; path = "Resources/play-hd.png"; sourceTree = "<group>"; };
@@ -656,6 +666,8 @@
 		BC03E84E14773C9200E34189 /* recipeItem_tomato.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = recipeItem_tomato.png; path = Resources/recipeItem_tomato.png; sourceTree = "<group>"; };
 		BC03E84F14773C9200E34189 /* recipeItem_tortilla-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recipeItem_tortilla-hd.png"; path = "Resources/recipeItem_tortilla-hd.png"; sourceTree = "<group>"; };
 		BC03E85014773C9200E34189 /* recipeItem_tortilla.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = recipeItem_tortilla.png; path = Resources/recipeItem_tortilla.png; sourceTree = "<group>"; };
+		BC4C06AC1479C22600FE285D /* star-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "star-hd.png"; path = "Resources/star-hd.png"; sourceTree = "<group>"; };
+		BC4C06AD1479C22600FE285D /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = star.png; path = Resources/star.png; sourceTree = "<group>"; };
 		BC622ABB1463362A0016DFA0 /* ClumsyChef copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ClumsyChef copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCC06AA4146B2DB60068103A /* coinObject-coin-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "coinObject-coin-hd.png"; path = "Resources/coinObject-coin-hd.png"; sourceTree = "<group>"; };
 		BCC06AA5146B2DB60068103A /* coinObject-coin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "coinObject-coin.png"; path = "Resources/coinObject-coin.png"; sourceTree = "<group>"; };
@@ -1268,6 +1280,8 @@
 		E522B2FF146863950049D367 /* Game Layer */ = {
 			isa = PBXGroup;
 			children = (
+				BC4C06AC1479C22600FE285D /* star-hd.png */,
+				BC4C06AD1479C22600FE285D /* star.png */,
 				E599003C14687E3B00458316 /* chefObject-chef-hd.png */,
 				E599003D14687E3B00458316 /* chefObject-chef.png */,
 				E599003E14687E3B00458316 /* coin.caf */,
@@ -1292,11 +1306,13 @@
 		E52E5ED61474E02200FD9C4D /* Pause */ = {
 			isa = PBXGroup;
 			children = (
+				409428AB147A373000AA336B /* playbuttonselected.png */,
 				E52E5F181474E0E600FD9C4D /* pause-background-hd.png */,
 				E52E5F191474E0E600FD9C4D /* pause-background.png */,
 				E5085F6214779BAB005844C9 /* pause-gameLayerButton-hd.png */,
 				E5085F6314779BAB005844C9 /* pause-gameLayerButton-high-hd.png */,
 				E5085F6414779BAB005844C9 /* pause-gameLayerButton-high.png */,
+				409428A1147A327A00AA336B /* playbutton.png */,
 				E5085F6514779BAB005844C9 /* pause-gameLayerButton.png */,
 				E52E5F1A1474E0E600FD9C4D /* pause-quit-hd.png */,
 				E52E5F1B1474E0E600FD9C4D /* pause-quit.png */,
@@ -2247,6 +2263,10 @@
 				E5D0C9EB1478D5F10089E28D /* hud-progressBar-fg.png in Resources */,
 				E5D0C9EF1478DFB50089E28D /* hud-progressBar-fg-high-hd.png in Resources */,
 				E5D0C9F11478DFB50089E28D /* hud-progressBar-fg-high.png in Resources */,
+				BC4C06AF1479C22700FE285D /* star-hd.png in Resources */,
+				BC4C06B11479C22700FE285D /* star.png in Resources */,
+				409428A3147A327A00AA336B /* playbutton.png in Resources */,
+				409428AD147A373000AA336B /* playbuttonselected.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2398,6 +2418,10 @@
 				E5D0C9EA1478D5F10089E28D /* hud-progressBar-fg.png in Resources */,
 				E5D0C9EE1478DFB50089E28D /* hud-progressBar-fg-high-hd.png in Resources */,
 				E5D0C9F01478DFB50089E28D /* hud-progressBar-fg-high.png in Resources */,
+				BC4C06AE1479C22700FE285D /* star-hd.png in Resources */,
+				BC4C06B01479C22700FE285D /* star.png in Resources */,
+				409428A2147A327A00AA336B /* playbutton.png in Resources */,
+				409428AC147A373000AA336B /* playbuttonselected.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

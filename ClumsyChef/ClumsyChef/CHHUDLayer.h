@@ -22,5 +22,5 @@
 + (id)nodeForTesting;
 
 - (void)setRecipeItemCollected:(NSString*)itemID;
-
+- (void)updateHeightProgress:(float) currentHeight;
 @end
