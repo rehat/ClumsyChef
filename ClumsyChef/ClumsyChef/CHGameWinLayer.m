@@ -42,7 +42,7 @@
         CCMenuItemImage *retry = [CCMenuItemImage itemFromNormalImage:@"gameEnd-restart.png" selectedImage:@"gameEnd-restart-high.png" block:^(id sender) {
             [[CCDirector sharedDirector] replaceScene:[CHGameScene node]];}];
         
-        CCMenuItemImage *quit = [CCMenuItemImage itemFromNormalImage:@"gameEnd-quit.png" selectedImage:@"gameEnd-quit-high.png" block:^(id sender) {
+        CCMenuItemImage *quit = [CCMenuItemImage itemFromNormalImage:@"gameEnd-menu.png" selectedImage:@"gameEnd-menu-high.png" block:^(id sender) {
             [[CCDirector sharedDirector] popScene];}];
         
         
