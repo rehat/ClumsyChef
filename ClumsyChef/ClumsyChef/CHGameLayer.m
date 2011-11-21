@@ -337,18 +337,20 @@ static float const kGenObjectRangeDown = 100.f;
 
 #pragma mark -
 #pragma mark UI events
-BOOL paused = false;
+//BOOL paused = false;
 - (void)pauseButtonPressed:(id)sender
 {
-    if(!paused){
-        [[CCDirector sharedDirector] pause];
-        paused = true;
-    }
-    else{
-        [[CCDirector sharedDirector] resume];
-        paused = false;
-    }
+    //if(paused){
+    //    [[CCDirector sharedDirector] pause];
+    //    paused = true;
+    //}
+    //else{
+    //    [[CCDirector sharedDirector] resume];
+    //    paused = false;
+    //}
     //[TestMenuLayer runLayer:[CHPauseLayer node]];
+    [[CCDirector sharedDirector] pause];
+    [self addChild:[CHPauseLayer node]];
 }
 
 @end

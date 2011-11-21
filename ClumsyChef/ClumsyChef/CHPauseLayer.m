@@ -11,6 +11,8 @@
 
 @implementation CHPauseLayer
 
+CCMenu *menu;
+
 - (id)init
 {
 	if (self = [super init])
@@ -24,7 +26,7 @@
                                                        selectedImage:@"playbuttonselected.png" 
                                                               target:self 
                                                             selector:@selector(resumeButtonPressed)];
-        CCMenu *menu = [CCMenu menuWithItems:item, nil];
+        menu = [CCMenu menuWithItems:item, nil];
         [menu setPositionSharp:ccp(250, 30)];
         [self addChild:menu];
         
@@ -38,7 +40,8 @@
 {
 	// TODO
     [[CCDirector sharedDirector] resume];
-    [[CCDirector sharedDirector] popScene];
+    [self removeChild:menu cleanup:true];
+    //[[CCDirector sharedDirector] popScene];
     //[self remove
 
 }
