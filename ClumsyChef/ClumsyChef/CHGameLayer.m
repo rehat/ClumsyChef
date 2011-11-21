@@ -59,7 +59,7 @@ static float const kGenObjectRangeDown = 100.f;
 	
     CHItemObject *item;
     CGFloat x = CCRANDOM_0_1();
-    if (x > .1f && x < .4f) {
+    if (x > .1f && x < .4f) {   //better: (x > .1f && x < .2f)
         item = [CHHarmfulObject node];
         [self addChild:item];
     }
