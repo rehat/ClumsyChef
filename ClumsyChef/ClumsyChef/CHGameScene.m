@@ -62,40 +62,8 @@
 	[msg release];
 }
 
-#pragma mark-
-#pragma mark Game Layer
-
-- (void)worldOffsetDidChange:(NSInteger)newOffset
-{
-  
-	//[self setDebugMessage:@"%d", newOffset];
-}
-
-- (void)chefDidReachBottom
-{
-	
-}
-
-#pragma mark -
-#pragma mark Game Object Calls
-
-- (void)addChefMoney:(NSInteger)amount
-{
-	
-}
-
-//- (void)chefDidCollectRecipeItem:(CHRecipeItemID)itemID
-//{
-//	
-//}
-
-- (void)deductChefLife:(NSInteger)numLife
-{
-	
-}
-
 #pragma mark - 
-#pragma mark HUD calls
+#pragma mark Game Win/Game Lose
 
 - (void)showWin:(NSInteger)score
 {

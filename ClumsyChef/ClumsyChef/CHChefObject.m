@@ -9,8 +9,8 @@
 #import "CHChefObject.h"
 #import "CHGameLibrary.h"
 
-static CGFloat const kMaxSpeed = 400; //better 400
-static CGFloat const kNormalSpeed = 300; //better 300
+static CGFloat const kMaxSpeed = 300;
+static CGFloat const kNormalSpeed = 200;
 static CGFloat const kFallAcceleration = 100;
 static CGFloat const kFallDeceleration = -130;
 

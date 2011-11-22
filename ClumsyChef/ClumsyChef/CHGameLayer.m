@@ -194,8 +194,6 @@ static float const kGenObjectRangeDown = 100.f;
 
 - (void)update:(ccTime)dt
 {
-	CHGameScene *gsParent = [self gameSceneParent];
-    
 	// Update objects
 	CGFloat oldOffset = _chefObj.position.y;    
 
@@ -294,8 +292,8 @@ static float const kGenObjectRangeDown = 100.f;
         [[self gameSceneParent] showGameOver];
     }
     
-	// Notify the parent
-	[gsParent worldOffsetDidChange:_bottomWorldOffset]; 
+	// Update the HUD progress
+	[_hudLayer setProgress:(_bottomWorldOffset - CHGetWinHeight()) / (_levelHeight - CHGetWinHeight())];
 	
 	// Generate new items
     
