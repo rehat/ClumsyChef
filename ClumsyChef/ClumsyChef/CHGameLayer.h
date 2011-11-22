@@ -13,7 +13,11 @@
 
 @interface CHGameLayer : CCLayer
 
+@property(nonatomic, assign) BOOL isPaused;
+
 + (id)nodeWithLevelIndex:(NSUInteger)levelIndex;
+
+- (void)resetForLevelIndex:(NSUInteger)levelIndex;
 
 @end
 

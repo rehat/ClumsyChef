@@ -33,8 +33,9 @@ static float const kGenObjectRangeDown = 100.f;
 	CHChefObject *_chefObj;
     CHHUDLayer *_hudLayer;
     CHBackgroundLayer	*_bgLayer;
-
-    
+	BOOL _isPaused;
+    NSUInteger _levelIndex;
+	
 	float _bottomWorldOffset;
 	float _nextGenItemsOffset;
     
@@ -44,6 +45,7 @@ static float const kGenObjectRangeDown = 100.f;
 	NSInteger _levelHeight;
 }
 
+@synthesize isPaused = _isPaused;
 
 #pragma mark -
 #pragma mark Private
@@ -106,6 +108,77 @@ static float const kGenObjectRangeDown = 100.f;
 	return menu;
 }
 
+- (void)prepareInitContents
+{
+	[CHSharedResHolder unloadSharedResources];
+	[_goalRecipeItemIDs release];
+	[_liveGameObjects release];
+	
+	[self removeAllChildrenWithCleanup:YES];
+	[[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
+}
+
+- (void)initContents
+{
+	//-------------------------------------------
+	// Prepare game object's shared resources
+	//-------------------------------------------
+	[CHSharedResHolder loadSharedResources];
+	
+	//-------------------------------------------
+	// Chef objects
+	//-------------------------------------------
+	_chefObj = [CHChefObject node];
+	_chefObj.position = ccp(CHGetWinWidth() / 2, 0);
+	_chefObj.position = [self positionForChef];
+	[self addChild:_chefObj];
+	
+	//-------------------------------------------		
+	// Set up the layer according to the stage info
+	//-------------------------------------------
+	
+	CHLevelInfo *levelInfo = [[CHGameLibrary sharedGameLibrary] levelInfoAtIndex:_levelIndex];
+	_goalRecipeItemIDs = [[CCArray alloc] initWithNSArray:levelInfo.recipeItems];
+	
+	_levelHeight = levelInfo.worldHeight;
+	
+	_bottomWorldOffset = CHGetWinHeight();
+	_nextGenItemsOffset = _bottomWorldOffset;
+	
+	//-------------------------------------------
+	// Background 
+	//-------------------------------------------
+	
+	_bgLayer = [CHBackgroundLayer node];
+	[_bgLayer setWorldHeight:levelInfo.worldHeight];
+	[self addChild:_bgLayer z:-1];
+	
+	//Array of items in play
+	_liveGameObjects = [[CCArray alloc ] initWithCapacity:100];
+	
+	//-------------------------------------------
+	// HUD
+	//-------------------------------------------
+	_hudLayer = [CHHUDLayer nodeWithRequiredRecipeItems:levelInfo.recipeItems numberOfLifes:3 moneyAmount:0];
+	[self addChild:_hudLayer z:5];
+	
+	//-------------------------------------------
+	// PAUSE button
+	//-------------------------------------------
+	CCMenu *pauseButton = [self pauseButton];
+	[self addChild:pauseButton z:5];
+	
+	//-------------------------------------------
+	// Bg music
+	//-------------------------------------------
+	[[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"gameLayer-music.caf" loop:YES];
+	
+	if ([SimpleAudioEngine sharedEngine].willPlayBackgroundMusic) {
+		[SimpleAudioEngine sharedEngine].backgroundMusicVolume = 0.4f;
+	}
+
+}
+
 #pragma mark - 
 #pragma mark Constructor and destructor
 
@@ -113,68 +186,18 @@ static float const kGenObjectRangeDown = 100.f;
 {
 	if (self = [super init])
 	{
+		_levelIndex = levelIndex;
+		
 		// Sensors
 		self.isTouchEnabled = true;
 		self.isAccelerometerEnabled = true;
-
-		//-------------------------------------------
-		// Prepare game object's shared resources
-		//-------------------------------------------
-		[CHSharedResHolder loadSharedResources];
 		
-		//-------------------------------------------
-		// Chef objects
-		//-------------------------------------------
-		_chefObj = [CHChefObject node];
-		_chefObj.position = ccp(CHGetWinWidth() / 2, 0);
-		_chefObj.position = [self positionForChef];
-		[self addChild:_chefObj];
-        
-        //-------------------------------------------
-		// Background 
-		//-------------------------------------------
-        _bgLayer = [CHBackgroundLayer node];
-        [_bgLayer setWorldHeight:30000];  //TODO: Need to get this from stage info 
-        [self addChild:_bgLayer z:-1 tag:11111];  //do I need this tag?
-
-        //Array of items in play
-        _liveGameObjects = [[CCArray alloc ] initWithCapacity:100];
-        
-		//-------------------------------------------		
-        // Set up the layer according to the stage info
-		//-------------------------------------------
-
-		CHLevelInfo *levelInfo = [[CHGameLibrary sharedGameLibrary] levelInfoAtIndex:0];
-		_goalRecipeItemIDs = [[CCArray alloc] initWithNSArray:levelInfo.recipeItems];
-        
-        _levelHeight = levelInfo.worldHeight;
-
-		_bottomWorldOffset = CHGetWinHeight();
-		_nextGenItemsOffset = _bottomWorldOffset;
-
-		//-------------------------------------------
-		// HUD
-		//-------------------------------------------
-        _hudLayer = [CHHUDLayer nodeWithRequiredRecipeItems:levelInfo.recipeItems numberOfLifes:3 moneyAmount:0];
-        [self addChild:_hudLayer z:5];
-
-		//-------------------------------------------
-		// PAUSE button
-		//-------------------------------------------
-        CCMenu *pauseButton = [self pauseButton];
-        [self addChild:pauseButton z:5];
+		[self initContents];
+		_isPaused = NO;
 		
-		//-------------------------------------------
-		// Bg music
-		//-------------------------------------------
-        [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"gameLayer-music.caf" loop:YES];
-        
-        if ([SimpleAudioEngine sharedEngine].willPlayBackgroundMusic) {
-            [SimpleAudioEngine sharedEngine].backgroundMusicVolume = 0.4f;
-        }
-		
-		
-		[[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self priority:0 swallowsTouches:YES];
+		[[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self 
+														 priority:kCCMenuTouchPriority 
+												  swallowsTouches:YES];
 		[self scheduleUpdate];
 	}
 	return self;
@@ -202,10 +225,26 @@ static float const kGenObjectRangeDown = 100.f;
 
 
 #pragma mark -
-#pragma mark xxx
+#pragma mark Suspending/Stopping
+
+- (void)setIsPaused:(BOOL)isPaused
+{
+	if (_isPaused != isPaused)
+	{
+		// So far so good. may need to traverse the hierarchy if needed
+		_isPaused = isPaused;		
+		// TODO: bgm
+	}
+}
+
+#pragma mark -
+#pragma mark Main Update
 
 - (void)update:(ccTime)dt
 {
+	if (_isPaused)
+		return;
+	
 	// Update objects
 	CGFloat oldOffset = _chefObj.position.y;    
 
@@ -318,7 +357,6 @@ static float const kGenObjectRangeDown = 100.f;
 		// Next round
 		_nextGenItemsOffset += interval;
 	}
-    
 }
 
 #pragma mark -
@@ -343,6 +381,16 @@ static float const kGenObjectRangeDown = 100.f;
 - (void)ccTouchCancelled:(UITouch *)touch withEvent:(UIEvent *)event
 {
 	[_chefObj stopAccelerating];
+}
+
+#pragma mark - 
+#pragma mark public
+
+- (void)resetForLevelIndex:(NSUInteger)levelIndex
+{
+	_levelIndex = levelIndex;
+	[self prepareInitContents];
+	[self initContents];
 }
 
 #pragma mark -

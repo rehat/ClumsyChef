@@ -25,7 +25,7 @@
 	{
 		CGFloat screenCenterX = CHGetHalfWinWidth();
 		
-        CCLayerColor *bg = [CCLayerColor layerWithColor:ccc4(160, 160, 160, 255)];
+        CCLayerColor *bg = [CCLayerColor layerWithColor:ccc4(0, 0, 0, 180)];
         [self addChild:bg];
         
         CCSprite *lose = [CCSprite spriteWithFile:@"gameOver-title.png"];
@@ -61,7 +61,9 @@
 
 - (void)restartPressed:(id)sender
 {
-	[[self gameSceneParent] restartLevel];
+	CHGameScene *p = [self gameSceneParent];
+	[self dismissModalLayer];
+	[p restartLevel];
 }
 
 - (void)menuPressed:(id)sender

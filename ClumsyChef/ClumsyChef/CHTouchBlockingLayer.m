@@ -15,6 +15,8 @@
 {
 	if (self = [super init])
 	{
+		self.isTouchEnabled = YES;
+		
 		// Block touch events from delivering to the menus below it by setting it to the same priority
 		// http://www.cocos2d-iphone.org/forum/topic/15228
 		[[CCTouchDispatcher sharedDispatcher] addTargetedDelegate:self 

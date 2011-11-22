@@ -35,7 +35,7 @@
 		[_debugLabel setColor:ccGREEN];
 		_debugLabel.anchorPoint = ccp(1, 1);
 		_debugLabel.position = CHGetWinPointTR(20, 20);
-		[self addChild:_debugLabel];
+		[self addChild:_debugLabel];		
 	}
 	return self;
 }
@@ -75,15 +75,14 @@
 
 - (void)showWin:(NSInteger)score
 {
-    [self removeChild:_gameLayer cleanup:YES];
-    CHGameWinLayer *winLayer = [CHGameWinLayer nodeWithMoneyAmount:score];
-    [self addChild:winLayer];
+	_gameLayer.isPaused = YES;
+	[[CHGameWinLayer nodeWithMoneyAmount:score] showAsModalLayerInNode:self];
 }
 
--(void)showGameOver{
-    [self removeChild:_gameLayer cleanup:YES];
-    CHGameLoseLayer *loseLayer = [CHGameLoseLayer node];
-    [self addChild:loseLayer];
+- (void)showGameOver
+{
+    _gameLayer.isPaused = YES;
+	[[CHGameLoseLayer node] showAsModalLayerInNode:self];
 }
 
 #pragma mark -
@@ -91,6 +90,7 @@
 
 - (void)pauseGame
 {
+	_gameLayer.isPaused = YES;
 	// Pause
 	// Show menu
 }
@@ -98,15 +98,13 @@
 
 - (void)resumeGame
 {
-	
+	_gameLayer.isPaused = NO;
 }
 
 - (void)restartLevel
 {
-	NSUInteger levelIndex = _levelIndex;
-	CCDirector *d = [CCDirector sharedDirector];
-	[d popScene];
-	[d pushScene:[CHGameScene nodeWithLevelIndex:levelIndex]];
+	[_gameLayer resetForLevelIndex:_levelIndex];
+	_gameLayer.isPaused = NO;
 }
 
 - (BOOL)hasNextLevel
@@ -119,9 +117,7 @@
 {
 	NSAssert([self hasNextLevel], @"No next level");
 	NSUInteger next = _levelIndex + 1;
-	CCDirector *d = [CCDirector sharedDirector];
-	[d popScene];
-	[d pushScene:[CHGameScene nodeWithLevelIndex:next]];
+	[_gameLayer resetForLevelIndex:next];
 }
 
 - (void)quitGame
