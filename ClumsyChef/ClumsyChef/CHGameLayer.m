@@ -109,7 +109,7 @@ static float const kGenObjectRangeDown = 100.f;
 #pragma mark - 
 #pragma mark Constructor and destructor
 
-- (id)init	// TODO: Init with scene description
+- (id)initWithLevelIndex:(NSUInteger)levelIndex
 {
 	if (self = [super init])
 	{
@@ -188,6 +188,18 @@ static float const kGenObjectRangeDown = 100.f;
     [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
 	[super dealloc];
 }
+
++ (id)nodeWithLevelIndex:(NSUInteger)levelIndex
+{
+	return [[[self alloc] initWithLevelIndex:levelIndex] autorelease];
+}
+
++ (id)node
+{
+	NSAssert(NO, @"+node no longer used, use +nodeWithLevelIndex");
+	return nil;
+}
+
 
 #pragma mark -
 #pragma mark xxx

@@ -514,6 +514,8 @@
 		E599005D14687E3B00458316 /* Oowh.caf in Resources */ = {isa = PBXBuildFile; fileRef = E599004614687E3B00458316 /* Oowh.caf */; };
 		E599005E14687E3B00458316 /* skull.png in Resources */ = {isa = PBXBuildFile; fileRef = E599004714687E3B00458316 /* skull.png */; };
 		E599005F14687E3B00458316 /* skull.png in Resources */ = {isa = PBXBuildFile; fileRef = E599004714687E3B00458316 /* skull.png */; };
+		E5A51990147B947B0047113A /* CHTouchBlockingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A5198F147B947B0047113A /* CHTouchBlockingLayer.m */; };
+		E5A51991147B947B0047113A /* CHTouchBlockingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A5198F147B947B0047113A /* CHTouchBlockingLayer.m */; };
 		E5A90387144F7799002A1F6C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A90386144F7799002A1F6C /* QuartzCore.framework */; };
 		E5A90389144F7799002A1F6C /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A90388144F7799002A1F6C /* OpenGLES.framework */; };
 		E5A9038B144F7799002A1F6C /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A9038A144F7799002A1F6C /* OpenAL.framework */; };
@@ -887,6 +889,8 @@
 		E599004514687E3B00458316 /* harmfulObject-smallKnife.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "harmfulObject-smallKnife.png"; path = "Resources/harmfulObject-smallKnife.png"; sourceTree = "<group>"; };
 		E599004614687E3B00458316 /* Oowh.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Oowh.caf; path = Resources/Oowh.caf; sourceTree = "<group>"; };
 		E599004714687E3B00458316 /* skull.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = skull.png; path = Resources/skull.png; sourceTree = "<group>"; };
+		E5A5198E147B947B0047113A /* CHTouchBlockingLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTouchBlockingLayer.h; sourceTree = "<group>"; };
+		E5A5198F147B947B0047113A /* CHTouchBlockingLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTouchBlockingLayer.m; sourceTree = "<group>"; };
 		E5A90382144F7799002A1F6C /* ClumsyChef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClumsyChef.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5A90386144F7799002A1F6C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		E5A90388144F7799002A1F6C /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -2170,6 +2174,8 @@
 				E5B234BD145F1C1000BED350 /* CCNode+Utilities.m */,
 				E5D0C9D21478B9F10089E28D /* CHStretchableSprite.h */,
 				E5D0C9D31478B9F10089E28D /* CHStretchableSprite.m */,
+				E5A5198E147B947B0047113A /* CHTouchBlockingLayer.h */,
+				E5A5198F147B947B0047113A /* CHTouchBlockingLayer.m */,
 				E5F410F91455E9A800FBEE4B /* CHUtilities.h */,
 				E5F410FA1455E9A800FBEE4B /* CHUtilities.m */,
 			);
@@ -2805,6 +2811,7 @@
 				E5BED0171474C3280003D6F2 /* CHSharedResHolder.m in Sources */,
 				E5085F5C1477989F005844C9 /* CHHUDLayer.m in Sources */,
 				E5D0C9D51478B9F10089E28D /* CHStretchableSprite.m in Sources */,
+				E5A51991147B947B0047113A /* CHTouchBlockingLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2968,6 +2975,7 @@
 				E5BED0161474C3280003D6F2 /* CHSharedResHolder.m in Sources */,
 				E5085F5B1477989F005844C9 /* CHHUDLayer.m in Sources */,
 				E5D0C9D41478B9F10089E28D /* CHStretchableSprite.m in Sources */,
+				E5A51990147B947B0047113A /* CHTouchBlockingLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

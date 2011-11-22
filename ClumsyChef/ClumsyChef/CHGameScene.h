@@ -11,6 +11,7 @@
 
 @interface CHGameScene : CCScene
 
++ (id)nodeWithLevelIndex:(NSUInteger)levelIndex;
 
 // For debugging
 - (void)setDebugMessage:(NSString *)format, ...;
@@ -21,6 +22,8 @@
 // For Pause layer / game lose layer
 - (void)resumeGame;
 - (void)restartLevel;
+- (BOOL)hasNextLevel;
+- (void)loadNextLevel;
 - (void)quitGame;
 
 //Game States

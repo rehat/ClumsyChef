@@ -15,23 +15,20 @@
 
 @implementation CHGameScene
 {
-	CCLabelBMFont *_debugLabel;
-
-	CHGameLayer			*_gameLayer;
-    
+	CCLabelBMFont	*_debugLabel;
+	CHGameLayer		*_gameLayer;
+    NSUInteger		_levelIndex;
 }
 
 #pragma mark - 
 #pragma mark Constructor and destructor
 
-- (id)init
+- (id)initWithLevelIndex:(NSUInteger)levelIndex
 {
 	if (self = [super init])
 	{
-		
-        
-        
-		_gameLayer = [CHGameLayer node];
+		_levelIndex = levelIndex;
+		_gameLayer = [CHGameLayer nodeWithLevelIndex:levelIndex];
         [self addChild:_gameLayer z:0];
 		
 		_debugLabel = [[[CCLabelBMFont alloc] initWithString:@"" fntFile:@"font-testFont.fnt"] autorelease];
@@ -41,6 +38,17 @@
 		[self addChild:_debugLabel];
 	}
 	return self;
+}
+
++ (id)nodeWithLevelIndex:(NSUInteger)levelIndex
+{
+	return [[[self alloc] initWithLevelIndex:levelIndex] autorelease];
+}
+
++ (id)node
+{
+	NSAssert(NO, @"+node no longer used, use +nodeWithLevelIndex");
+	return nil;
 }
 
 - (void)dealloc
@@ -83,7 +91,8 @@
 
 - (void)pauseGame
 {
-	
+	// Pause
+	// Show menu
 }
 
 
@@ -94,12 +103,30 @@
 
 - (void)restartLevel
 {
-	
+	NSUInteger levelIndex = _levelIndex;
+	CCDirector *d = [CCDirector sharedDirector];
+	[d popScene];
+	[d pushScene:[CHGameScene nodeWithLevelIndex:levelIndex]];
+}
+
+- (BOOL)hasNextLevel
+{
+	NSUInteger numLevels = [[CHGameLibrary sharedGameLibrary] numberOfLevels];
+	return (_levelIndex + 1 < numLevels);
+}
+
+- (void)loadNextLevel
+{
+	NSAssert([self hasNextLevel], @"No next level");
+	NSUInteger next = _levelIndex + 1;
+	CCDirector *d = [CCDirector sharedDirector];
+	[d popScene];
+	[d pushScene:[CHGameScene nodeWithLevelIndex:next]];
 }
 
 - (void)quitGame
 {
-	
+	[[CCDirector sharedDirector] popScene];
 }
 
 @end

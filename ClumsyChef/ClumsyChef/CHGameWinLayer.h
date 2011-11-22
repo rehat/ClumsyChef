@@ -14,6 +14,7 @@
 
 + (id)nodeWithMoneyAmount:(NSInteger)score;
 
-- (void)showInNode:(CCNode *)node;
+- (void)showAsModelLayerInNode:(CCNode *)node;
+- (void)dismissModelLayer;
 
 @end

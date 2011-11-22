@@ -13,9 +13,7 @@
 
 @interface CHGameLayer : CCLayer
 
-
-//+ (id)nodeWithStageInfo:(NSString *)stageInfo;
-
++ (id)nodeWithLevelIndex:(NSUInteger)levelIndex;
 
 @end
 

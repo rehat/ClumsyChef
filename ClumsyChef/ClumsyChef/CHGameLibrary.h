@@ -71,7 +71,7 @@
 //- (CHHarmfulItemInfo *)harmfulItemInfoWithID:(NSString *)itemName;
 
 // Obtain stage info
-- (NSArray *)allLevelInfo;
+- (NSUInteger)numberOfLevels;
 - (CHLevelInfo *)levelInfoAtIndex:(NSUInteger)index;
 
 + (void)test;
