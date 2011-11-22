@@ -23,4 +23,9 @@
 	self.position = pp;
 }
 
+- (void)sharpenCurrentPosition
+{
+	[self setPositionSharp:self.position];
+}
+
 @end

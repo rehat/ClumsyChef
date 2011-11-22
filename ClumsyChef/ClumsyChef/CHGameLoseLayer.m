@@ -11,43 +11,63 @@
 
 @implementation CHGameLoseLayer
 
+- (CHGameScene *)gameSceneParent
+{
+	CHGameScene *p = (CHGameScene *)self.parent;
+	if ([p isKindOfClass:[CHGameScene class]])
+		return p;
+	return nil;
+}
+
 - (id)init
 {
 	if (self = [super init])
 	{
+		CGFloat screenCenterX = CHGetHalfWinWidth();
+		
         CCLayerColor *bg = [CCLayerColor layerWithColor:ccc4(160, 160, 160, 255)];
         [self addChild:bg];
         
-        CCSprite *lose = [CCSprite spriteWithFile:@"gameOver-title.png" ];
-        CGSize screenSize = [[CCDirector sharedDirector]winSize];
-        lose.position = ccp(screenSize.width/2, screenSize.height/2 + 50);
+        CCSprite *lose = [CCSprite spriteWithFile:@"gameOver-title.png"];
+        [lose setPositionSharp:ccp(screenCenterX, 290)];
         [self addChild:lose];
         
+        CCMenuItemImage *retry = [CCMenuItemImage itemFromNormalImage:@"gameEnd-restart.png" 
+														selectedImage:@"gameEnd-restart-high.png"
+															   target:self 
+															 selector:@selector(restartPressed:)];
         
-        CCMenuItemImage *retry = [CCMenuItemImage itemFromNormalImage:@"gameEnd-restart.png" selectedImage:@"gameEnd-restart-high.png" block:^(id sender) {
-            [[CCDirector sharedDirector] replaceScene:[CHGameScene node]];}];
-        
-        CCMenuItemImage *quit = [CCMenuItemImage itemFromNormalImage:@"gameEnd-menu.png" selectedImage:@"gameEnd-menu-high.png" block:^(id sender) {
-            [[CCDirector sharedDirector] popScene];}];
-        
+        CCMenuItemImage *quit = [CCMenuItemImage itemFromNormalImage:@"gameEnd-menu.png" 
+													   selectedImage:@"gameEnd-menu-high.png"
+															  target:self
+															selector:@selector(menuPressed:)];
 
-        
-        
-     
-        
-        
-        CCMenu *menu = [CCMenu menuWithItems:retry,quit, nil];
-        menu.position = ccp(screenSize.width/2, screenSize.height/2 - lose.position.y/2  );
-        //[menu setPositionSharp:CHGetWinPointTL(screenSize.width/2, screenSize.height/2+40)];
+        CCMenu *menu = [CCMenu menuWithItems:retry, quit, nil];
+        menu.position = ccp(screenCenterX, 52);
         [menu alignItemsHorizontally];
-        [self addChild:menu];
-        
+		
+		// Make sure they are at sharp position after the alignment
+		[retry sharpenCurrentPosition];
+		[quit sharpenCurrentPosition];
+		
+        [self addChild:menu];        
 	}
 	return self;
 }
 
 
+#pragma mark -
+#pragma mark UI events
 
+- (void)restartPressed:(id)sender
+{
+	[[self gameSceneParent] restartLevel];
+}
+
+- (void)menuPressed:(id)sender
+{
+	[[self gameSceneParent] quitGame];
+}
 
 
 @end

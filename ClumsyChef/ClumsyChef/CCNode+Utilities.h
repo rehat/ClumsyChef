@@ -14,5 +14,6 @@
 // Set the current position 
 //  and have it adjusted so that it doesn't look blur by avoiding fractional coordinates
 - (void)setPositionSharp:(CGPoint)p;
+- (void)sharpenCurrentPosition;
 
 @end

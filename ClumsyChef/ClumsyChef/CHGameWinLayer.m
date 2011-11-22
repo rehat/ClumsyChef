@@ -8,8 +8,6 @@
 
 #import "CHGameWinLayer.h"
 #import "CHGameScene.h"
-#import "CHTouchBlockingLayer.h"
-#import "CHGameScene.h"
 
 
 @implementation CHGameWinLayer
@@ -31,8 +29,6 @@
 	{
 		CGFloat screenCenterX = CHGetHalfWinWidth();
 
-		[self addChild:[CHTouchBlockingLayer node]];
-		
         CCLayerColor *bg = [CCLayerColor layerWithColor:ccc4(160, 160, 160, 255)];
         [self addChild:bg];
         
@@ -50,6 +46,8 @@
 		[_score setPositionSharp:ccp(screenCenterX, 134)];
         [self addChild:_score];
         
+		// Important: we don't use blocks because they retains (self), causing circular reference
+		// and our layer will not be deallocated
         CCMenuItemImage *retry = [CCMenuItemImage itemFromNormalImage:@"gameEnd-restart.png" 
 														selectedImage:@"gameEnd-restart-high.png" 
 															   target:self 
@@ -66,6 +64,12 @@
         CCMenu *menu = [CCMenu menuWithItems:retry, next, quit, nil];
         menu.position = ccp(screenCenterX, 50);
 		[menu alignItemsHorizontally];
+		
+		// Make sure they are at sharp positons after the alignment
+		[retry sharpenCurrentPosition];
+		[next sharpenCurrentPosition];
+		[quit sharpenCurrentPosition];
+		
         [self addChild:menu];
 	}
 	return self;
@@ -74,17 +78,6 @@
 + (id)nodeWithMoneyAmount:(NSInteger)score
 {
 	return [[[self alloc] initWithMoneyAmount:score] autorelease];
-}
-
-- (void)showAsModelLayerInNode:(CCNode *)node
-{
-	[node addChild:self];
-	// TODO: run like "pop-up" animation to show this layer
-}
-
-- (void)dismissModelLayer
-{
-	[self removeFromParentAndCleanup:YES];
 }
 
 #pragma mark -

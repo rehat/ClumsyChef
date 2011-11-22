@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+#import "CHModalLayer.h"
 
-@interface CHGameLoseLayer : CCLayer
 
-
+@interface CHGameLoseLayer : CHModalLayer
 
 @end
