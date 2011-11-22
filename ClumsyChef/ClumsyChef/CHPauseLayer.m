@@ -20,7 +20,7 @@ CCMenu *menu;
 		//CCSprite *chefLife = [CCSprite spriteWithFile:@"hud-chefLive.png"];
 		//[chefLife setPositionSharp:ccp(250, 30)];
 		//[self addChild:chefLife];
-        
+
         
         CCMenuItemImage *item = [CCMenuItemImage itemFromNormalImage:@"playbutton.png" 
                                                        selectedImage:@"playbuttonselected.png" 
