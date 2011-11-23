@@ -22,6 +22,8 @@
 
 
 static CGFloat const kChefYOffset = 110.f;
+static NSInteger const kTagLiveRecipeItem = 711;
+
 
 // When objected go out of the screen at the top and beyond this distance,
 // They get removed
@@ -61,28 +63,32 @@ static float const kGenObjectRangeDown = 100.f;
 	
     CHItemObject *item;
     CGFloat x = CCRANDOM_0_1();
-    if (x > .1f && x < .4f) {   //better: (x > .1f && x < .2f)
+    if (x > .1f && x < .4f)  //better: (x > .1f && x < .2f)
+	{   
         item = [CHHarmfulObject node];
         [self addChild:item];
     }
-    else if(x <= .1f && [_goalRecipeItemIDs count] != 0){
+    else if(x <= .1f && [_goalRecipeItemIDs count] != 0)
+	{
         NSUInteger randomIndex = (NSUInteger)arc4random() % [_goalRecipeItemIDs count];
-        if([self getChildByTag:711] != nil){ //checks to see if recipe item is already in the game
+		
+        if([self getChildByTag:kTagLiveRecipeItem] != nil)	//checks to see if recipe item is already in the game
+		{ 
             item = [CHCoinObject node];
             [self addChild:item];
         }
-        else{
+        else
+		{
             item = [CHRecipeItemObject nodeWithItemID:[_goalRecipeItemIDs objectAtIndex:randomIndex]];
-            [self addChild:item z:2 tag:711];
+            [self addChild:item z:2 tag:kTagLiveRecipeItem];
         }    
-
-
     }
-    else{
+    else
+	{
         item = [CHCoinObject node];
-        [self addChild:item];
-
+        [self addChild:item];	
     }
+	
 	item.position = p;
     [_liveGameObjects addObject:item];
 	
@@ -176,7 +182,7 @@ static float const kGenObjectRangeDown = 100.f;
 	if ([SimpleAudioEngine sharedEngine].willPlayBackgroundMusic) {
 		[SimpleAudioEngine sharedEngine].backgroundMusicVolume = 0.4f;
 	}
-
+	
 }
 
 #pragma mark - 
@@ -247,19 +253,16 @@ static float const kGenObjectRangeDown = 100.f;
 	
 	// Update objects
 	CGFloat oldOffset = _chefObj.position.y;    
-
+	
 	[_chefObj update:dt];
 	
 	CGFloat pullUp = oldOffset - _chefObj.position.y;
 	
-    
-	// Pull everything up
+	// Delta position for pulling everything up
 	CGPoint delta = ccp(0, pullUp);
-    
-    	
+	
 	_chefObj.position = ccpAdd(_chefObj.position, delta);
 	CGFloat cullThresh = CHGetWinHeight() + kObjectActiveRangeUp;
-
     
 	CGFloat chefRadius = MIN(_chefObj.contentSize.width, _chefObj.contentSize.height) * 0.5f;
 	
@@ -268,13 +271,13 @@ static float const kGenObjectRangeDown = 100.f;
 	// A array shouldn't be mutabled (cased by [CCNode removeFromParentAndCleanup:YES] 
 	// during enumeration or it will crash
 	// So here we made a copy
-   
+	
 	CCARRAY_FOREACH(_liveGameObjects, item)
 	{
 		
 		CGPoint p = ccpAdd(item.position, delta);
 		
-                
+		
 		// Perform culling
 		if (p.y >= cullThresh)
 		{
@@ -288,48 +291,57 @@ static float const kGenObjectRangeDown = 100.f;
 			// Detect collision
 			CGFloat itemRadius = MAX(item.contentSize.width, item.contentSize.height) * 0.5f;
 			CGFloat dist = ccpDistance(_chefObj.position, item.position);
+			
 			if (dist < chefRadius + itemRadius)
 			{
                 [item collected];
                 
-                        //Harmful: Update health and check if it's game over
-                if ([item isKindOfClass:[CHHarmfulObject class]]) {
-                    
-                        //prevents chef getting hit twice in a row
+				//Harmful: Update health and check if it's game over
+                if ([item isKindOfClass:[CHHarmfulObject class]]) 
+				{    
+					//prevents chef getting hit twice in a row
                     if (![_chefObj recentlyHit]) 
                     {   
-                        [_chefObj chefDamaged];   //fadding in/out 
+                        [_chefObj chefDamaged];		//fadding in/out 
                         _hudLayer.numberOfLifes--;  //updating HUD
-                        if (_hudLayer.numberOfLifes <1) {                            
+                        if (_hudLayer.numberOfLifes <1) 
+						{                            
                             [[self gameSceneParent] showGameOver];
+							break;
                         }
                     }                                       
-                    
-                        //Coin:  Update player's score (maybe play a sound for every 1000)    
-                }else if([item isKindOfClass:[CHCoinObject class]]){
+                }
+				else if([item isKindOfClass:[CHCoinObject class]])
+				{
+					//Coin:  Update player's score (maybe play a sound for every 1000)    
 					_hudLayer.moneyAmount += 10;
-                        //Recipe:  Update HUD and left over itmes needed.  Then check if its game win
-                }else{
-                    if ([item isKindOfClass:[CHRecipeItemObject class]]) {
+                }
+				else
+				{
+					//Recipe:  Update HUD and left over itmes needed.  Then check if its game win
+                    if ([item isKindOfClass:[CHRecipeItemObject class]]) 
+					{
                         NSString *checkRecipe;
                         CHRecipeItemObject *checkMe = (CHRecipeItemObject*)item;
-                        CCARRAY_FOREACH(_goalRecipeItemIDs, checkRecipe){
-                            if( [checkRecipe isEqualToString:checkMe.itemID]){
+						
+                        CCARRAY_FOREACH(_goalRecipeItemIDs, checkRecipe)
+						{
+                            if( [checkRecipe isEqualToString:checkMe.itemID])
+							{
                                 [_goalRecipeItemIDs removeObject:checkRecipe];
 								[_hudLayer setRecipeItemCollected:checkRecipe];
                                 break;
                             }
                         }
-                        if([_goalRecipeItemIDs count] == 0){
-                            
+                        
+						if([_goalRecipeItemIDs count] == 0)
+						{    
                             //TODO: update player info with score and level cleared
                             [[self gameSceneParent] showWin:_hudLayer.moneyAmount];
-
+							break;
                         }
                     }
-                
                 }
-                
                 [_liveGameObjects removeObject:item];
 			}
 		}		
@@ -351,7 +363,7 @@ static float const kGenObjectRangeDown = 100.f;
     
 	while (_bottomWorldOffset + kGenObjectRangeDown >= _nextGenItemsOffset)
 	{   
-       
+		
 		CGFloat y = -(_nextGenItemsOffset - _bottomWorldOffset);
 		float interval = [self generateItemsAtY:y];
 		// Next round
