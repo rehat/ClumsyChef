@@ -393,6 +393,11 @@ static float const kGenObjectRangeDown = 100.f;
 	[self initContents];
 }
 
+- (void)stopBackgroundMusic
+{
+	[[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
+}
+
 #pragma mark -
 #pragma mark UI events
 //BOOL paused = false;

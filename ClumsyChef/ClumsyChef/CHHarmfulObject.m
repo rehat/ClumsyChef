@@ -11,6 +11,8 @@
 #import "SimpleAudioEngine.h"
 #import "CCParticleSystemPoint.h"
 #import "CHSharedResHolder.h"
+#import "CHGameLayer.h"
+
 
 @implementation CHHarmfulObject
 {
@@ -45,6 +47,9 @@
 
 - (void)update:(ccTime)delta
 {   
+	if ([self gameLayerParent].isPaused)
+		return;
+	
 	// Update rotation
 	_knife.rotation += _rotationSpeed * delta;
 }

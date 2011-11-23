@@ -15,7 +15,6 @@
 
 @implementation CHGameScene
 {
-	CCLabelBMFont	*_debugLabel;
 	CHGameLayer		*_gameLayer;
     NSUInteger		_levelIndex;
 }
@@ -29,13 +28,7 @@
 	{
 		_levelIndex = levelIndex;
 		_gameLayer = [CHGameLayer nodeWithLevelIndex:levelIndex];
-        [self addChild:_gameLayer z:0];
-		
-		_debugLabel = [[[CCLabelBMFont alloc] initWithString:@"" fntFile:@"font-testFont.fnt"] autorelease];
-		[_debugLabel setColor:ccGREEN];
-		_debugLabel.anchorPoint = ccp(1, 1);
-		_debugLabel.position = CHGetWinPointTR(20, 20);
-		[self addChild:_debugLabel];		
+        [self addChild:_gameLayer];
 	}
 	return self;
 }
@@ -56,31 +49,19 @@
 	[super dealloc];
 }
 
-#pragma mark -
-#pragma mark public API
-
-- (void)setDebugMessage:(NSString *)format, ...
-{
-	va_list args;
-	va_start(args, format);	
-	NSString *msg = [[NSString alloc] initWithFormat:format arguments:args];
-	va_end(args);
-
-	[_debugLabel setString:msg];
-	[msg release];
-}
-
 #pragma mark - 
 #pragma mark Game Win/Game Lose
 
 - (void)showWin:(NSInteger)score
 {
+	[_gameLayer stopBackgroundMusic];
 	_gameLayer.isPaused = YES;
 	[[CHGameWinLayer nodeWithMoneyAmount:score] showAsModalLayerInNode:self];
 }
 
 - (void)showGameOver
 {
+	[_gameLayer stopBackgroundMusic];
     _gameLayer.isPaused = YES;
 	[[CHGameLoseLayer node] showAsModalLayerInNode:self];
 }
@@ -93,6 +74,7 @@
 	_gameLayer.isPaused = YES;
 	// Pause
 	// Show menu
+	// Donald!!!!!!!!!!
 }
 
 
@@ -118,6 +100,7 @@
 	NSAssert([self hasNextLevel], @"No next level");
 	NSUInteger next = _levelIndex + 1;
 	[_gameLayer resetForLevelIndex:next];
+	_gameLayer.isPaused = NO;
 }
 
 - (void)quitGame

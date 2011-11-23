@@ -13,9 +13,6 @@
 
 + (id)nodeWithLevelIndex:(NSUInteger)levelIndex;
 
-// For debugging
-- (void)setDebugMessage:(NSString *)format, ...;
-
 // For HUD
 - (void)pauseGame;
 

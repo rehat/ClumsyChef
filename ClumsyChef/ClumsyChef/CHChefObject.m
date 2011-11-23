@@ -8,6 +8,8 @@
 
 #import "CHChefObject.h"
 #import "CHGameLibrary.h"
+#import "CHGameLayer.h"
+
 
 static CGFloat const kMaxSpeed = 300;
 static CGFloat const kNormalSpeed = 200;
@@ -23,15 +25,26 @@ NSInteger const chefTag = 45;
 	float _horizontalAcc;
     float _verticalSpeed;
 	float _horizontalSpeed;
-    
-    
-    
 }
 
 @synthesize verticalSpeed = _verticalSpeed;
 @synthesize horizontalSpeed = _horizontalSpeed;
 
+#pragma mark -
+#pragma Private
 
+- (CHGameLayer *)gameLayerParent
+{
+	CHGameLayer *p = (CHGameLayer *)[self parent];
+	if ([p isKindOfClass:[CHGameLayer class]])
+	{
+		return p;
+	}
+	return nil;
+}
+
+#pragma mark -
+#pragma mark Constructor and destructor
 
 - (id)init
 {
@@ -44,16 +57,19 @@ NSInteger const chefTag = 45;
 	return self;
 }
 
-
-
-
 - (void)dealloc
 {
 	[super dealloc];
 }
 
+#pragma mark -
+#pragma mark Control
+
 - (void)update:(float)dt
 {
+	if ([self gameLayerParent].isPaused)
+		return;
+	
 	float vSpeed = self.verticalSpeed + _verticalAcc * dt;
 	vSpeed = clampf(vSpeed, kNormalSpeed, kMaxSpeed);
 	self.verticalSpeed = vSpeed;
