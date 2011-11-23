@@ -13,9 +13,13 @@
 
 @interface CHGameLayer : CCLayer
 
+@property(nonatomic, assign) BOOL isPaused;
 
-//+ (id)nodeWithStageInfo:(NSString *)stageInfo;
++ (id)nodeWithLevelIndex:(NSUInteger)levelIndex;
 
+- (void)resetForLevelIndex:(NSUInteger)levelIndex;
+
+- (void)stopBackgroundMusic;
 
 @end
 

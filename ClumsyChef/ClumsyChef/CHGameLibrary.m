@@ -256,9 +256,9 @@ NSString* const kHarmfulItemPlistFilename = @"gameLibrary-harmfulItems.plist";
 	return nil;
 }
 
-- (NSArray *)allLevelInfo
+- (NSUInteger)numberOfLevels
 {
-	return _stageInfo;
+	return [_stageInfo count];
 }
 
 - (CHLevelInfo *)levelInfoAtIndex:(NSUInteger)index

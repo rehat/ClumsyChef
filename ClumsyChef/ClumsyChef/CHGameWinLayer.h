@@ -8,12 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+#import "CHModalLayer.h"
 
-@interface CHGameWinLayer : CCLayer 
-
+@interface CHGameWinLayer : CHModalLayer 
 
 + (id)nodeWithMoneyAmount:(NSInteger)score;
-
-- (void)showInNode:(CCNode *)node;
 
 @end

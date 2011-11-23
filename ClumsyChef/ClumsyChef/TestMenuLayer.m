@@ -18,6 +18,8 @@
 #import "CHHUDLayer.h"
 #import "CHSelectLevelLayer.h"
 #import "CHPauseLayer.h"
+#import "CHGameWinLayer.h"
+#import "CHGameLoseLayer.h"
 //-----------------------------------
 
 
@@ -54,20 +56,12 @@ NSInteger const TestBackButtonTag = -9999;
 	{
 		// Add the tests menu item here
 		//-----------------------------------
-		CCMenuItem *itemTestBg = [self menuItemWithTitle:@"Background Layer" block:^(id sender) {
-			[self runLayer:[CHBackgroundLayer node]];
-		}];
-
-		CCMenuItem *itemTestGameLayer = [self menuItemWithTitle:@"Game Layer" block:^(id sender) {
-			[self runLayer:[CHGameLayer node]];
-		}];
-
 		CCMenuItem *itemTestMainMenu = [self menuItemWithTitle:@"Main Menu" block:^(id sender) {
 			[self runLayer:[CHMainMenuLayer node]];
 		}];
 		
 		CCMenuItem *itemTestGameScene = [self menuItemWithTitle:@"Game Scene" block:^(id sender) {
-			[self runScene:[CHGameScene node]];
+			[self runScene:[CHGameScene nodeWithLevelIndex:0]];
 		}];
         
         CCMenuItem *itemTestHUD = [self menuItemWithTitle:@"HUD Layer" block:^(id sender) {
@@ -82,9 +76,19 @@ NSInteger const TestBackButtonTag = -9999;
 			[self runLayer:[CHSelectLevelLayer node]];
 		}];
 		
-		CCMenu *testMenu = [CCMenu menuWithItems:itemTestBg, itemTestGameLayer, 
+		CCMenuItem *itemTestWin = [self menuItemWithTitle:@"Game Win" block:^(id sender) {
+			[[CHGameWinLayer nodeWithMoneyAmount:3002] showAsModalLayerInNode:self];
+		}];
+		
+		CCMenuItem *itemTestLose = [self menuItemWithTitle:@"Game Lose" block:^(id sender) {
+			[[CHGameLoseLayer node] showAsModalLayerInNode:self];
+		}];
+		
+		
+		CCMenu *testMenu = [CCMenu menuWithItems: 
 							itemTestMainMenu, itemTestGameScene, itemTestHUD, 
-							itemTestSelectLevel, itemTestPauseLayer, nil];
+							itemTestSelectLevel, itemTestPauseLayer, 
+							itemTestWin, itemTestLose, nil];
 		
 		// ----------------------------------
 		

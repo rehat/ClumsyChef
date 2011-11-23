@@ -9,54 +9,69 @@
 #import "CHGameWinLayer.h"
 #import "CHGameScene.h"
 
+
 @implementation CHGameWinLayer
 {
-    CCLabelBMFont	*_score;
-
+    CCLabelBMFont	*_score;	
 }
 
+- (CHGameScene *)gameSceneParent
+{
+	CHGameScene *p = (CHGameScene *)self.parent;
+	if ([p isKindOfClass:[CHGameScene class]])
+		return p;
+	return nil;
+}
 
 - (id)initWithMoneyAmount:(NSInteger)score
 {
 	if (self = [super init])
 	{
-	
-        
-        CCLayerColor *bg = [CCLayerColor layerWithColor:ccc4(160, 160, 160, 255)];
+		CGFloat screenCenterX = CHGetHalfWinWidth();
+
+        CCLayerColor *bg = [CCLayerColor layerWithColor:ccc4(0, 0, 0, 180)];
         [self addChild:bg];
         
         CCSprite *win = [CCSprite spriteWithFile:@"gameWin-title.png" ];
-        CGSize screenSize = [[CCDirector sharedDirector]winSize];
-        win.position = ccp(screenSize.width/2, screenSize.height - win.contentSize.height -100);
+        [win setPositionSharp:CHGetWinPointTL(screenCenterX, 85)];
         [self addChild:win];
         
         CCSprite *description = [CCSprite spriteWithFile:@"gameWin-description.png"];
-        description.position = ccp(screenSize.width/2, screenSize.height - win.contentSize.height - 100 - description.contentSize.height -100 );
+		[description setPositionSharp:ccp(screenCenterX, 170)];
         [self addChild:description];
         
-        _score = [CCLabelBMFont labelWithString:[NSString stringWithFormat:@"$ %d", score]
-                                            fntFile:@"gameWin-scoreFont.fnt"];
-        _score.position = ccp(screenSize.width/2, screenSize.height - win.contentSize.height - 100 - description.contentSize.height -  100 - _score.contentSize.height  );
+		NSString *scoreString = [NSString stringWithFormat:@"$%@", CHFormatDecimalNumber([NSNumber numberWithInteger:score])];
+		_score = [CCLabelBMFont labelWithString:scoreString
+										fntFile:@"gameWin-scoreFont.fnt"];
+		[_score setPositionSharp:ccp(screenCenterX, 134)];
         [self addChild:_score];
         
-        CCMenuItemImage *retry = [CCMenuItemImage itemFromNormalImage:@"gameEnd-restart.png" selectedImage:@"gameEnd-restart-high.png" block:^(id sender) {
-            [[CCDirector sharedDirector] replaceScene:[CHGameScene node]];}];
+		// Important: we don't use blocks because they retains (self), causing circular reference
+		// and our layer will not be deallocated
+        CCMenuItemImage *retry = [CCMenuItemImage itemFromNormalImage:@"gameEnd-restart.png" 
+														selectedImage:@"gameEnd-restart-high.png" 
+															   target:self 
+															 selector:@selector(restartPressed:)];
+        CCMenuItemImage *next = [CCMenuItemImage itemFromNormalImage:@"gameWin-next.png" 
+													   selectedImage:@"gameWin-next-high.png" 
+															  target:self 
+															selector:@selector(nextPressed:)];
+        CCMenuItemImage *quit = [CCMenuItemImage itemFromNormalImage:@"gameEnd-menu.png" 
+													   selectedImage:@"gameEnd-menu-high.png" 
+															  target:self 
+															selector:@selector(menuPressed:)];
         
-        CCMenuItemImage *quit = [CCMenuItemImage itemFromNormalImage:@"gameEnd-menu.png" selectedImage:@"gameEnd-menu-high.png" block:^(id sender) {
-            [[CCDirector sharedDirector] popScene];}];
-        
-        
-        
-        
-        
-        
-        CCMenu *menu = [CCMenu menuWithItems:retry,quit, nil];
-        menu.position = ccp(screenSize.width/2, 50  );
-        [menu alignItemsHorizontally];
+        CCMenu *menu = [CCMenu menuWithItems:retry, next, quit, nil];
+        menu.position = ccp(screenCenterX, 50);
+		[menu alignItemsHorizontally];
+		
+		// Make sure they are at sharp positons after the alignment
+		[retry sharpenCurrentPosition];
+		[next sharpenCurrentPosition];
+		[quit sharpenCurrentPosition];
+		
         [self addChild:menu];
-
-        
-      	}
+	}
 	return self;
 }
 
@@ -65,13 +80,26 @@
 	return [[[self alloc] initWithMoneyAmount:score] autorelease];
 }
 
-- (void)showInNode:(CCNode *)node
+#pragma mark -
+#pragma mark UI events
+
+- (void)restartPressed:(id)sender
 {
-	// run like "pop-up" animation to show this layer
+	CHGameScene *p = [self gameSceneParent];
+	[self dismissModalLayer];
+	[p restartLevel];
 }
 
+- (void)nextPressed:(id)sender
+{
+	CHGameScene *p = [self gameSceneParent];
+	[self dismissModalLayer];
+	[p loadNextLevel];
+}
 
-
-
+- (void)menuPressed:(id)sender
+{
+	[[self gameSceneParent] quitGame];
+}
 
 @end

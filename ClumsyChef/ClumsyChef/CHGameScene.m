@@ -15,32 +15,33 @@
 
 @implementation CHGameScene
 {
-	CCLabelBMFont *_debugLabel;
-
-	CHGameLayer			*_gameLayer;
-    
+	CHGameLayer		*_gameLayer;
+    NSUInteger		_levelIndex;
 }
 
 #pragma mark - 
 #pragma mark Constructor and destructor
 
-- (id)init
+- (id)initWithLevelIndex:(NSUInteger)levelIndex
 {
 	if (self = [super init])
 	{
-		
-        
-        
-		_gameLayer = [CHGameLayer node];
-        [self addChild:_gameLayer z:0];
-		
-		_debugLabel = [[[CCLabelBMFont alloc] initWithString:@"" fntFile:@"font-testFont.fnt"] autorelease];
-		[_debugLabel setColor:ccGREEN];
-		_debugLabel.anchorPoint = ccp(1, 1);
-		_debugLabel.position = CHGetWinPointTR(20, 20);
-		[self addChild:_debugLabel];
+		_levelIndex = levelIndex;
+		_gameLayer = [CHGameLayer nodeWithLevelIndex:levelIndex];
+        [self addChild:_gameLayer];
 	}
 	return self;
+}
+
++ (id)nodeWithLevelIndex:(NSUInteger)levelIndex
+{
+	return [[[self alloc] initWithLevelIndex:levelIndex] autorelease];
+}
+
++ (id)node
+{
+	NSAssert(NO, @"+node no longer used, use +nodeWithLevelIndex");
+	return nil;
 }
 
 - (void)dealloc
@@ -48,66 +49,21 @@
 	[super dealloc];
 }
 
-#pragma mark -
-#pragma mark public API
-
-- (void)setDebugMessage:(NSString *)format, ...
-{
-	va_list args;
-	va_start(args, format);	
-	NSString *msg = [[NSString alloc] initWithFormat:format arguments:args];
-	va_end(args);
-
-	[_debugLabel setString:msg];
-	[msg release];
-}
-
-#pragma mark-
-#pragma mark Game Layer
-
-- (void)worldOffsetDidChange:(NSInteger)newOffset
-{
-  
-	//[self setDebugMessage:@"%d", newOffset];
-}
-
-- (void)chefDidReachBottom
-{
-	
-}
-
-#pragma mark -
-#pragma mark Game Object Calls
-
-- (void)addChefMoney:(NSInteger)amount
-{
-	
-}
-
-//- (void)chefDidCollectRecipeItem:(CHRecipeItemID)itemID
-//{
-//	
-//}
-
-- (void)deductChefLife:(NSInteger)numLife
-{
-	
-}
-
 #pragma mark - 
-#pragma mark HUD calls
+#pragma mark Game Win/Game Lose
 
 - (void)showWin:(NSInteger)score
 {
-    [self removeChild:_gameLayer cleanup:YES];
-    CHGameWinLayer *winLayer = [CHGameWinLayer nodeWithMoneyAmount:score];
-    [self addChild:winLayer];
+	[_gameLayer stopBackgroundMusic];
+	_gameLayer.isPaused = YES;
+	[[CHGameWinLayer nodeWithMoneyAmount:score] showAsModalLayerInNode:self];
 }
 
--(void)showGameOver{
-    [self removeChild:_gameLayer cleanup:YES];
-    CHGameLoseLayer *loseLayer = [CHGameLoseLayer node];
-    [self addChild:loseLayer];
+- (void)showGameOver
+{
+	[_gameLayer stopBackgroundMusic];
+    _gameLayer.isPaused = YES;
+	[[CHGameLoseLayer node] showAsModalLayerInNode:self];
 }
 
 #pragma mark -
@@ -115,23 +71,41 @@
 
 - (void)pauseGame
 {
-	
+	_gameLayer.isPaused = YES;
+	// Pause
+	// Show menu
+	// Donald!!!!!!!!!!
 }
 
 
 - (void)resumeGame
 {
-	
+	_gameLayer.isPaused = NO;
 }
 
 - (void)restartLevel
 {
-	
+	[_gameLayer resetForLevelIndex:_levelIndex];
+	_gameLayer.isPaused = NO;
+}
+
+- (BOOL)hasNextLevel
+{
+	NSUInteger numLevels = [[CHGameLibrary sharedGameLibrary] numberOfLevels];
+	return (_levelIndex + 1 < numLevels);
+}
+
+- (void)loadNextLevel
+{
+	NSAssert([self hasNextLevel], @"No next level");
+	NSUInteger next = _levelIndex + 1;
+	[_gameLayer resetForLevelIndex:next];
+	_gameLayer.isPaused = NO;
 }
 
 - (void)quitGame
 {
-	
+	[[CCDirector sharedDirector] popScene];
 }
 
 @end
