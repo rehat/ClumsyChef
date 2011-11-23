@@ -47,53 +47,53 @@ CCSprite *background;
 		CCLOG(@"init %@", self);
 		
 		// wait a short moment before creating the menu so we can see it scroll in 
-		background = [CCSprite spriteWithFile:@"selectLevel-background-hd.png"];
+		background = [CCSprite spriteWithFile:@"selectLevel-background.png"];
 		background.position = CGPointMake(background.contentSize.width/2,background.contentSize.height/2);
 		[self addChild:background];
 		
 		// create a menu item using existing sprites
-		CCSprite* normal = [CCSprite spriteWithFile:@"selectLevel-hot_dog-hd.png"];
-		CCSprite* selected = [CCSprite spriteWithFile:@"selectLevel-hot_dog-high-hd.png"];
+		CCSprite* normal = [CCSprite spriteWithFile:@"selectLevel-hot_dog.png"];
+		CCSprite* selected = [CCSprite spriteWithFile:@"selectLevel-hot_dog-high.png"];
 		
-		CCMenuItemSprite *item1 = [CCMenuItemSprite itemFromNormalSprite:normal selectedSprite:selected block:^(id sender)
+		CCMenuItemSprite *item1 = [CCMenuItemSprite itemFromNormalSprite:normal selectedSprite:selected block:^(id self)
 								   {
 									   CCLOG(@"xxx");
 									   [self runScene:[CHGameScene node]];
 								   }];
 		
-		CCSprite* normal2 = [CCSprite spriteWithFile:@"selectLevel-taco-hd.png"];
-		CCSprite* selected2 = [CCSprite spriteWithFile:@"selectLevel-taco-high-hd.png"];
+		CCSprite* normal2 = [CCSprite spriteWithFile:@"selectLevel-taco.png"];
+		CCSprite* selected2 = [CCSprite spriteWithFile:@"selectLevel-taco-high.png"];
 		
 		CCMenuItemSprite *item2 = [CCMenuItemSprite itemFromNormalSprite:normal2 selectedSprite:selected2 block:^(id sender)
 								   {
 									   CCLOG(@"xxx");
 								   }];
 		
-		CCSprite* normal3 = [CCSprite spriteWithFile:@"selectLevel-hamburger-hd.png"];
-		CCSprite* selected3 = [CCSprite spriteWithFile:@"selectLevel-hamburger-high-hd.png"];
+		CCSprite* normal3 = [CCSprite spriteWithFile:@"selectLevel-hamburger.png"];
+		CCSprite* selected3 = [CCSprite spriteWithFile:@"selectLevel-hamburger-high.png"];
 		
 		CCMenuItemSprite *item3 = [CCMenuItemSprite itemFromNormalSprite:normal3 selectedSprite:selected3 block:^(id sender)
 								   {
 									   CCLOG(@"xxx");
 									
 								   }];
-		CCSprite* normal4 = [CCSprite spriteWithFile:@"selectLevel-burrito-hd.png"];
-		CCSprite* selected4 = [CCSprite spriteWithFile:@"selectLevel-burrito-high-hd.png"];
+		CCSprite* normal4 = [CCSprite spriteWithFile:@"selectLevel-burrito.png"];
+		CCSprite* selected4 = [CCSprite spriteWithFile:@"selectLevel-burrito-high.png"];
 		
 		CCMenuItemSprite *item4 = [CCMenuItemSprite itemFromNormalSprite:normal4 selectedSprite:selected4 block:^(id sender)
 								   {
 									   CCLOG(@"xxx");
 									  
 								   }];
-		CCSprite* normal5 = [CCSprite spriteWithFile:@"selectLevel-pizza-hd.png"];
-		CCSprite* selected5 = [CCSprite spriteWithFile:@"selectLevel-pizza-high-hd.png"];
+		CCSprite* normal5 = [CCSprite spriteWithFile:@"selectLevel-pizza.png"];
+		CCSprite* selected5 = [CCSprite spriteWithFile:@"selectLevel-pizza-high.png"];
 		
 		CCMenuItemSprite *item5 = [CCMenuItemSprite itemFromNormalSprite:normal5 selectedSprite:selected5 block:^(id sender)
 								   {
 									   CCLOG(@"xxx");
 								   }];
-		CCSprite* normal6 = [CCSprite spriteWithFile:@"selectLevel-locked-hd.png"];
-		CCSprite* selected6 = [CCSprite spriteWithFile:@"selectLevel-locked-high-hd.png"];
+		CCSprite* normal6 = [CCSprite spriteWithFile:@"selectLevel-locked.png"];
+		CCSprite* selected6 = [CCSprite spriteWithFile:@"selectLevel-locked-high.png"];
 		
 		CCMenuItemSprite *item6 = [CCMenuItemSprite itemFromNormalSprite:normal6 selectedSprite:selected6 block:^(id sender)
 								   {
