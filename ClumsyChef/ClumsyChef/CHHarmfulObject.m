@@ -63,8 +63,9 @@
     emitter.autoRemoveOnFinish = YES;
     
 	// Insert damage label
-	// TODO: optimize using Bitmap font instead of TTF
-	CCLabelTTF *amount = [CCLabelTTF labelWithString:@"-1" fontName:@"Marker Felt" fontSize:20];
+	CCLabelBMFont *amount = [CCLabelBMFont labelWithString:@"-1" 
+												   fntFile:@"gameLayer-collisionScoreFont.fnt"];
+	[amount setColor:ccRED];
     amount.position = _knife.position;
     [emitter addChild:amount];
 	

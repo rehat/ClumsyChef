@@ -41,8 +41,8 @@
     emitter.autoRemoveOnFinish = YES;
     
 	// Insert score label
-	// TODO: optimize using Bitmap font instead of TTF
-	CCLabelTTF *amount = [CCLabelTTF labelWithString:@"+10" fontName:@"Marker Felt" fontSize:14];
+	CCLabelBMFont *amount = [CCLabelBMFont labelWithString:@"+10" 
+												   fntFile:@"gameLayer-collisionScoreFont.fnt"];
     amount.position = coin.position;
     [emitter addChild:amount];
 	
