@@ -60,24 +60,25 @@ CCSprite *background;
 									   CCLOG(@"xxx");
 									   [self runScene:[CHGameScene nodeWithLevelIndex:(0)]];
 								   }];
-		
-		CCSprite* normal2 = [CCSprite spriteWithFile:@"selectLevel-taco.png"];
-		CCSprite* selected2 = [CCSprite spriteWithFile:@"selectLevel-taco-high.png"];
+		CCSprite* normal2 = [CCSprite spriteWithFile:@"selectLevel-hamburger.png"];
+		CCSprite* selected2 = [CCSprite spriteWithFile:@"selectLevel-hamburger-high.png"];
 		
 		CCMenuItemSprite *levelTwoButton = [CCMenuItemSprite itemFromNormalSprite:normal2 selectedSprite:selected2 block:^(id sender)
+											  {
+												  CCLOG(@"xxx");
+												  [self runScene:[CHGameScene nodeWithLevelIndex:(2)]];
+											  }];
+		
+		CCSprite* normal3 = [CCSprite spriteWithFile:@"selectLevel-taco.png"];
+		CCSprite* selected3 = [CCSprite spriteWithFile:@"selectLevel-taco-high.png"];
+		
+		CCMenuItemSprite *levelThreeButton = [CCMenuItemSprite itemFromNormalSprite:normal3 selectedSprite:selected3 block:^(id sender)
 								   {
 									   CCLOG(@"xxx");
 									   [self runScene:[CHGameScene nodeWithLevelIndex:(1)]];
 								   }];
 		
-		CCSprite* normal3 = [CCSprite spriteWithFile:@"selectLevel-hamburger.png"];
-		CCSprite* selected3 = [CCSprite spriteWithFile:@"selectLevel-hamburger-high.png"];
-		
-		CCMenuItemSprite *levelThreeButton = [CCMenuItemSprite itemFromNormalSprite:normal3 selectedSprite:selected3 block:^(id sender)
-								   {
-									   CCLOG(@"xxx");
-									[self runScene:[CHGameScene nodeWithLevelIndex:(3)]];
-								   }];
+
 		CCSprite* normal4 = [CCSprite spriteWithFile:@"selectLevel-burrito.png"];
 		CCSprite* selected4 = [CCSprite spriteWithFile:@"selectLevel-burrito-high.png"];
 		
