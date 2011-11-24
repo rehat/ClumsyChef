@@ -167,7 +167,9 @@ static float const kGenObjectRangeDown = 100.f;
 	//-------------------------------------------
 	// HUD
 	//-------------------------------------------
-	_hudLayer = [CHHUDLayer nodeWithRequiredRecipeItems:levelInfo.recipeItems numberOfLifes:3 moneyAmount:0];
+	_hudLayer = [CHHUDLayer nodeWithRequiredRecipeItems:levelInfo.recipeItems 
+										  numberOfLifes:3 
+											moneyAmount:0];
 	[self addChild:_hudLayer z:5];
 	
 	//-------------------------------------------
@@ -353,7 +355,8 @@ static float const kGenObjectRangeDown = 100.f;
     
     [_bgLayer updatePull:_bottomWorldOffset];	
     
-    if(_bottomWorldOffset > _levelHeight){
+    if(_bottomWorldOffset > _levelHeight)
+	{
         [[self gameSceneParent] showGameOver];
     }
     
@@ -410,6 +413,16 @@ static float const kGenObjectRangeDown = 100.f;
 - (void)stopBackgroundMusic
 {
 	[[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
+}
+
+- (NSUInteger)moneyAmount
+{
+	return _hudLayer.moneyAmount;
+}
+
+- (void)setMoneyAmount:(NSUInteger)moneyAmount
+{
+	_hudLayer.moneyAmount = moneyAmount;
 }
 
 #pragma mark -

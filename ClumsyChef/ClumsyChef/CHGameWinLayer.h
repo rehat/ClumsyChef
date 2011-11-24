@@ -12,6 +12,6 @@
 
 @interface CHGameWinLayer : CHModalLayer 
 
-+ (id)nodeWithLevelIndex:(NSUInteger)index moneyAmount:(NSInteger)score;
++ (id)nodeWithLevelIndex:(NSUInteger)index moneyAmount:(NSUInteger)score;
 
 @end
