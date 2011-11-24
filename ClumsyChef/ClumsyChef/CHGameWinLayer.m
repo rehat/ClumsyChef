@@ -118,8 +118,10 @@ static NSString* const kDefaultPlayerName = @"Player1";
 	CHPlayerInfo *info = [CHPlayerInfo sharedPlayerInfo];
 	if ([info canEnterHighScores:_score])
 	{
-		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"High Score" 
-														message:@"Enter your name:" 
+		NSUInteger rank = [info rankOfScore:_score];
+		NSString *title = [NSString stringWithFormat:@"#%u in High Score", rank+1];
+		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title
+														message:@"Congratulations!\nPlease enter your name:" 
 													   delegate:self 
 											  cancelButtonTitle:@"No Thanks" 
 											  otherButtonTitles:@"Enter", nil];
@@ -139,11 +141,7 @@ static NSString* const kDefaultPlayerName = @"Player1";
 							  
 - (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
-	if (buttonIndex == alertView.cancelButtonIndex)
-	{
-		[[self gameSceneParent] quitGame];
-	}
-	else
+	if (buttonIndex != alertView.cancelButtonIndex)
 	{
 		NSString *text = [[alertView textFieldAtIndex:0] text];
 		// Set the name to default one if users inputs nothing
@@ -153,8 +151,9 @@ static NSString* const kDefaultPlayerName = @"Player1";
 			text = kDefaultPlayerName;
 		}
 		CHPlayerInfo *info = [CHPlayerInfo sharedPlayerInfo];
-		[info addHighScoreWithPlayerName:text scores:_score];
+		[info addHighScoreWithPlayerName:text score:_score];
 	}
+	[[self gameSceneParent] quitGame];
 }
 
 @end

@@ -607,6 +607,10 @@
 		E599005D14687E3B00458316 /* Oowh.caf in Resources */ = {isa = PBXBuildFile; fileRef = E599004614687E3B00458316 /* Oowh.caf */; };
 		E599005E14687E3B00458316 /* skull.png in Resources */ = {isa = PBXBuildFile; fileRef = E599004714687E3B00458316 /* skull.png */; };
 		E599005F14687E3B00458316 /* skull.png in Resources */ = {isa = PBXBuildFile; fileRef = E599004714687E3B00458316 /* skull.png */; };
+		E5A30310147EE8D10050DA25 /* gameWin-next-disabled-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E5A3030E147EE8D10050DA25 /* gameWin-next-disabled-hd.png */; };
+		E5A30311147EE8D10050DA25 /* gameWin-next-disabled-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E5A3030E147EE8D10050DA25 /* gameWin-next-disabled-hd.png */; };
+		E5A30312147EE8D10050DA25 /* gameWin-next-disabled.png in Resources */ = {isa = PBXBuildFile; fileRef = E5A3030F147EE8D10050DA25 /* gameWin-next-disabled.png */; };
+		E5A30313147EE8D10050DA25 /* gameWin-next-disabled.png in Resources */ = {isa = PBXBuildFile; fileRef = E5A3030F147EE8D10050DA25 /* gameWin-next-disabled.png */; };
 		E5A51990147B947B0047113A /* CHTouchBlockingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A5198F147B947B0047113A /* CHTouchBlockingLayer.m */; };
 		E5A51991147B947B0047113A /* CHTouchBlockingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A5198F147B947B0047113A /* CHTouchBlockingLayer.m */; };
 		E5A51995147B9C540047113A /* CHModalLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A51994147B9C540047113A /* CHModalLayer.m */; };
@@ -1033,6 +1037,8 @@
 		E599004514687E3B00458316 /* harmfulObject-smallKnife.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "harmfulObject-smallKnife.png"; path = "Resources/harmfulObject-smallKnife.png"; sourceTree = "<group>"; };
 		E599004614687E3B00458316 /* Oowh.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Oowh.caf; path = Resources/Oowh.caf; sourceTree = "<group>"; };
 		E599004714687E3B00458316 /* skull.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = skull.png; path = Resources/skull.png; sourceTree = "<group>"; };
+		E5A3030E147EE8D10050DA25 /* gameWin-next-disabled-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gameWin-next-disabled-hd.png"; path = "Resources/gameWin-next-disabled-hd.png"; sourceTree = "<group>"; };
+		E5A3030F147EE8D10050DA25 /* gameWin-next-disabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gameWin-next-disabled.png"; path = "Resources/gameWin-next-disabled.png"; sourceTree = "<group>"; };
 		E5A5198E147B947B0047113A /* CHTouchBlockingLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHTouchBlockingLayer.h; sourceTree = "<group>"; };
 		E5A5198F147B947B0047113A /* CHTouchBlockingLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHTouchBlockingLayer.m; sourceTree = "<group>"; };
 		E5A51993147B9C540047113A /* CHModalLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHModalLayer.h; sourceTree = "<group>"; };
@@ -1646,6 +1652,8 @@
 			children = (
 				E52E5EE21474E09D00FD9C4D /* gameWin-description-hd.png */,
 				E52E5EE31474E09D00FD9C4D /* gameWin-description.png */,
+				E5A3030E147EE8D10050DA25 /* gameWin-next-disabled-hd.png */,
+				E5A3030F147EE8D10050DA25 /* gameWin-next-disabled.png */,
 				E52E5EE41474E09D00FD9C4D /* gameWin-scoreFont-hd.fnt */,
 				E52E5EE51474E09D00FD9C4D /* gameWin-scoreFont-hd.GlyphProject */,
 				E52E5EE61474E09D00FD9C4D /* gameWin-scoreFont-hd.png */,
@@ -2680,6 +2688,8 @@
 				8516825A147E51D600858288 /* recipeItem-big-hamburger-hd.png in Resources */,
 				8516825C147E51D600858288 /* recipeItem-big-pizza-hd.png in Resources */,
 				8516825E147E51D600858288 /* recipeItem-big-taco-hd.png in Resources */,
+				E5A30311147EE8D10050DA25 /* gameWin-next-disabled-hd.png in Resources */,
+				E5A30313147EE8D10050DA25 /* gameWin-next-disabled.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2907,6 +2917,8 @@
 				85168259147E51D600858288 /* recipeItem-big-hamburger-hd.png in Resources */,
 				8516825B147E51D600858288 /* recipeItem-big-pizza-hd.png in Resources */,
 				8516825D147E51D600858288 /* recipeItem-big-taco-hd.png in Resources */,
+				E5A30310147EE8D10050DA25 /* gameWin-next-disabled-hd.png in Resources */,
+				E5A30312147EE8D10050DA25 /* gameWin-next-disabled.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
