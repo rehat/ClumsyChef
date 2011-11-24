@@ -21,6 +21,7 @@ static NSString* const kDefaultPlayerName = @"Player1";
 @implementation CHGameWinLayer
 {
     NSUInteger	_score;
+	CCMenuItemImage	*_nextButton;
 }
 
 - (CHGameScene *)gameSceneParent
@@ -74,8 +75,6 @@ static NSString* const kDefaultPlayerName = @"Player1";
 													   selectedImage:@"gameEnd-menu-high.png" 
 															  target:self 
 															selector:@selector(menuPressed:)];
-        // Enable/disable the next image
-		[next setIsEnabled:[[self gameSceneParent] hasNextLevel]];
 		
         CCMenu *menu = [CCMenu menuWithItems:retry, next, quit, nil];
         menu.position = ccp(screenCenterX, 50);
@@ -87,6 +86,8 @@ static NSString* const kDefaultPlayerName = @"Player1";
 		[quit sharpenCurrentPosition];
 		
         [self addChild:menu];
+		
+		_nextButton = next;
 	}
 	return self;
 }
@@ -94,6 +95,13 @@ static NSString* const kDefaultPlayerName = @"Player1";
 + (id)nodeWithLevelIndex:(NSUInteger)index moneyAmount:(NSUInteger)score
 {
 	return [[[self alloc] initWithLevelIndex:index moneyAmount:score] autorelease];
+}
+
+- (void)onEnter
+{
+	[super onEnter];
+	// Enable/disable the next image
+	[_nextButton setIsEnabled:[[self gameSceneParent] hasNextLevel]];
 }
 
 #pragma mark -
