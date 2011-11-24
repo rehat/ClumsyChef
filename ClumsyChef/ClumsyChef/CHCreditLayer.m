@@ -7,8 +7,28 @@
 //
 
 #import "CHCreditLayer.h"
+#import "CHMainMenuUtilities.h"
 
 
 @implementation CHCreditLayer
+
+- (id)init
+{
+	if (self = [super init])
+	{
+		CCSprite *bg = [CCSprite spriteWithFile:@"credits-background.png"];
+		[bg setPositionSharp:CHGetWinCenterPoint()];
+		[self addChild:bg];
+		
+		CCMenu *button = CHMenuMakeBackButton(ccp(CHGetHalfWinWidth(), 51), self, @selector(backButtonPressed:));
+		[self addChild:button];
+	}
+	return self;
+}
+
+- (void)backButtonPressed:(id)sender
+{
+	[[CCDirector sharedDirector] popScene];
+}
 
 @end

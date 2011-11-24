@@ -14,6 +14,7 @@
 @interface CHGameLayer : CCLayer
 
 @property(nonatomic, assign) BOOL isPaused;
+@property(nonatomic, assign) NSUInteger moneyAmount;
 
 + (id)nodeWithLevelIndex:(NSUInteger)levelIndex;
 

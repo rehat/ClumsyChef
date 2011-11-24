@@ -11,7 +11,6 @@
 // ----------------------------------
 // Add the scene/layer header files for each scene you want to test here
 #import "CHBackgroundLayer.h"
-#import "CHGameLayer.h"
 #import "CHGameScene.h"
 #import "CHMainMenuLayer.h"
 #import "CHGameLibrary.h"
@@ -20,6 +19,8 @@
 #import "CHPauseLayer.h"
 #import "CHGameWinLayer.h"
 #import "CHGameLoseLayer.h"
+#import "CHCreditLayer.h"
+#import "CHHighScoresLayer.h"
 //-----------------------------------
 
 
@@ -85,11 +86,19 @@ NSInteger const TestBackButtonTag = -9999;
 			[[CHGameLoseLayer node] showAsModalLayerInNode:self];
 		}];
 		
+		CCMenuItem *itemTestCredits = [self menuItemWithTitle:@"Credits" block:^(id sender) {
+			[self runLayer:[CHCreditLayer node]];
+		}];
+		
+		CCMenuItem *itemTestHighScores = [self menuItemWithTitle:@"High Scores" block:^(id sender) {
+			[self runLayer:[CHHighScoresLayer node]];
+		}];
 		
 		CCMenu *testMenu = [CCMenu menuWithItems: 
 							itemTestMainMenu, itemTestGameScene, itemTestHUD, 
 							itemTestSelectLevel, itemTestPauseLayer, 
-							itemTestWin, itemTestLose, nil];
+							itemTestWin, itemTestLose,
+							itemTestCredits, itemTestHighScores, nil];
 		
 		// ----------------------------------
 		

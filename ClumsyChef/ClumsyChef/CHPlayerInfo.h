@@ -18,8 +18,9 @@
 
 + (CHPlayerInfo *)sharedPlayerInfo;
 
-- (BOOL)canEnterHighScores:(NSUInteger)scores;
-- (void)addHighScoreWithPlayerName:(NSString *)name scores:(NSUInteger)scores;
+- (NSUInteger)rankOfScore:(NSUInteger)score;
+- (BOOL)canEnterHighScores:(NSUInteger)score;
+- (void)addHighScoreWithPlayerName:(NSString *)name score:(NSUInteger)score;
 
 #ifdef COCOS2D_DEBUG
 + (void)test;

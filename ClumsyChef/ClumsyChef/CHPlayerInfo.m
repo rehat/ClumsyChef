@@ -58,39 +58,46 @@ static NSString* const kKeyHighScores = @"highScores";
 	return a;
 }
 
-- (BOOL)canEnterHighScores:(NSUInteger)scores
+- (NSUInteger)rankOfScore:(NSUInteger)score
 {
 	NSArray *a = self.highScores;
-	if ([a count] < CHPlayerInfoMaxNumHighScores)
+	NSUInteger rank = 0;
+	
+	for (NSDictionary *dict in a)
 	{
-		return YES;
+		NSUInteger s = [[dict valueForKey:CHPlayerInfoScoreEntryKeyScore] unsignedIntegerValue];
+		if (score >= s)
+		{
+			// Found the rank
+			break;
+		}
+		rank++;
 	}
-	else if (scores > [[[a objectAtIndex:CHPlayerInfoMaxNumHighScores-1] 
-						valueForKey:CHPlayerInfoScoreEntryKeyScore] unsignedIntegerValue])
-	{
-		return YES;
-	}
-	return NO;
+	return rank;
 }
 
-- (void)addHighScoreWithPlayerName:(NSString *)name scores:(NSUInteger)scores
+- (BOOL)canEnterHighScores:(NSUInteger)score
 {
-	// No checking
+	NSUInteger rank = [self rankOfScore:score];
+	return (rank < CHPlayerInfoMaxNumHighScores);
+}
+
+- (void)addHighScoreWithPlayerName:(NSString *)name score:(NSUInteger)score
+{
+	NSUInteger rank = [self rankOfScore:score];
+	
+	NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:
+						  name, CHPlayerInfoScoreEntryKeyPlyerName,
+						  [NSNumber numberWithUnsignedInteger:score], CHPlayerInfoScoreEntryKeyScore, nil];
+	
 	NSMutableArray *a = [NSMutableArray arrayWithArray:self.highScores];
+	[a insertObject:dict atIndex:rank];
+	
+	// Remove excess object
 	while ([a count] >= CHPlayerInfoMaxNumHighScores)
 	{
 		[a removeLastObject];
 	}
-	
-	[a addObject:[NSDictionary dictionaryWithObjectsAndKeys:
-				  name, CHPlayerInfoScoreEntryKeyPlyerName,
-				  [NSNumber numberWithUnsignedInteger:scores], CHPlayerInfoScoreEntryKeyScore, nil]];
-	// Sort it
-	[a sortUsingComparator:^(id obj1, id obj2) {
-		NSNumber *num1 = [obj1 objectForKey:CHPlayerInfoScoreEntryKeyScore];
-		NSNumber *num2 = [obj2 objectForKey:CHPlayerInfoScoreEntryKeyScore];
-		return [num1 compare:num2];
-	}];
 	
 	// Set the new array
 	[[NSUserDefaults standardUserDefaults] setObject:a forKey:kKeyHighScores];
@@ -126,7 +133,7 @@ static NSString* const kKeyHighScores = @"highScores";
 	if ([p canEnterHighScores:1000])
 	{
 		NSLog(@"Adding high score");
-		[p addHighScoreWithPlayerName:@"Tong" scores:1000];
+		[p addHighScoreWithPlayerName:@"Tong" score:1000];
 	}
 	else
 	{

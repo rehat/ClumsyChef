@@ -18,6 +18,7 @@
 {
 	CHGameLayer		*_gameLayer;
     NSUInteger		_levelIndex;
+	NSUInteger		_moneyAmount;
 }
 
 #pragma mark - 
@@ -28,7 +29,9 @@
 	if (self = [super init])
 	{
 		_levelIndex = levelIndex;
+		_moneyAmount = 0;
 		_gameLayer = [CHGameLayer nodeWithLevelIndex:levelIndex];
+		_gameLayer.moneyAmount = _moneyAmount;
         [self addChild:_gameLayer];
 	}
 	return self;
@@ -55,9 +58,12 @@
 
 - (void)showWin:(NSInteger)score
 {
+	_moneyAmount += score;
+	
 	[_gameLayer stopBackgroundMusic];
 	_gameLayer.isPaused = YES;
-	[[CHGameWinLayer nodeWithLevelIndex:_levelIndex moneyAmount:score] showAsModalLayerInNode:self];
+	[[CHGameWinLayer nodeWithLevelIndex:_levelIndex 
+							moneyAmount:score] showAsModalLayerInNode:self];
 }
 
 - (void)showGameOver
@@ -85,6 +91,7 @@
 - (void)restartLevel
 {
 	[_gameLayer resetForLevelIndex:_levelIndex];
+	_gameLayer.moneyAmount = _moneyAmount;
 	_gameLayer.isPaused = NO;
 }
 
@@ -99,6 +106,7 @@
 	NSAssert([self hasNextLevel], @"No next level");
 	NSUInteger next = _levelIndex + 1;
 	[_gameLayer resetForLevelIndex:next];
+	_gameLayer.moneyAmount += _moneyAmount;
 	_gameLayer.isPaused = NO;
 }
 
