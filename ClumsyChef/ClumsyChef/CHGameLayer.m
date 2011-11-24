@@ -110,7 +110,9 @@ static float const kGenObjectRangeDown = 100.f;
 														  target:self 
 														selector:@selector(pauseButtonPressed:)];
 	CCMenu *menu = [CCMenu menuWithItems:item, nil];
-	[menu setPositionSharp:CHGetWinPointBR(29, 31)];
+	menu.anchorPoint = CGPointZero;
+	menu.position = CGPointZero;
+	[item setPositionSharp:CHGetWinPointBR(29, 31)];
 	return menu;
 }
 
