@@ -251,12 +251,17 @@ static float const kProgressHighThreshold = 0.9f;
 												 moneyAmount:amount] autorelease];
 }
 
+
 + (id)nodeForTesting
 {
-	NSArray *itemIDs = [NSArray arrayWithObjects:@"HotDogBun", @"HotDog", @"Beef", 
-						@"Bacon", @"Bread", @"Cheese",
-						@"HotSauce", @"Lettuce", @"Tomato", @"Tortilla", nil];
-	CHHUDLayer *hud = [CHHUDLayer nodeWithRequiredRecipeItems:itemIDs 
+	//NSString *itemsID = [[NSBundle mainBundle] pathForResource:@"gameLibrary-recipeItems" ofType:@"plist"];
+	//NSDictionary *dictionary = [[NSDictionary alloc] initWithContentsOfFile:itemsID];
+//- (NSArray *)allKeys;
+		NSString *filename = [[NSBundle mainBundle] pathForResource:@"gameLibrary-recipeItems" ofType:@"plist"];
+		NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:filename];
+	NSArray *itemIDs = [dict allKeys];
+
+	CHHUDLayer *hud = [CHHUDLayer nodeWithRequiredRecipeItems:itemIDs
 												  numberOfLifes:3 
 													moneyAmount:3000];
 	[hud addChild:[CCLayerColor layerWithColor:ccc4Hex(0xc8c8c8)] z:-1];

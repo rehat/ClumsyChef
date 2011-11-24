@@ -8,9 +8,7 @@
 	<string>recipeItem_hotdog.png</string>
 	<key>Beef</key>
 	<string>recipeItem_beef.png</string>
-	<key>Bacon</key>
-	<string>recipeItem_bacon.png</string>
-	<key>Bread</key>
+	<key>HamburgerBun</key>
 	<string>recipeItem_bread.png</string>
 	<key>Cheese</key>
 	<string>recipeItem_cheese.png</string>
@@ -22,5 +20,23 @@
 	<string>recipeItem_tomato.png</string>
 	<key>Tortilla</key>
 	<string>recipeItem_tortilla.png</string>
+	<key>TacoShell</key>
+	<string>recipeItem_tacoShell.png</string>
+	<key>GroundBeef</key>
+	<string>recipeItem_groundBeef.png</string>
+	<key>Pepperoni</key>
+	<string>recipeItem_pepperoni.png</string>
+	<key>Dough</key>
+	<string>recipeItem_dough.png</string>
+	<key>MozzarelaCheese</key>
+	<string>recipeItem_mozzarelaCheese.png</string>
+	<key>TomatoSauce</key>
+	<string>recipeItem_tomatoSauce.png</string>
+	<key>Mushroom</key>
+	<string>recipeItem_mushroom.png</string>
+	<key>Bellpeppers</key>
+	<string>recipeItem_bellPepper.png</string>
+	<key>Onions</key>
+	<string>recipeItem_onion.png</string>
 </dict>
 </plist>

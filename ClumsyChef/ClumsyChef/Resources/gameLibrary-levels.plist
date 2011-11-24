@@ -6,7 +6,7 @@
 		<key>levelName</key>
 		<string>Hot Dog</string>
 		<key>previewImage</key>
-		<string>test.png</string>
+		<string>selectLevel-hot_dog.png</string>
 		<key>worldHeight</key>
 		<integer>5000</integer>
 		<key>backgroundSideBuildingImage</key>
@@ -21,9 +21,9 @@
 	</dict>
 	<dict>
 		<key>levelName</key>
-		<string>BLT</string>
+		<string>Hamburger</string>
 		<key>previewImage</key>
-		<string>test.png</string>
+		<string>selectLevel-hamburger.png</string>
 		<key>worldHeight</key>
 		<integer>6000</integer>
 		<key>backgroundSideBuildingImage</key>
@@ -32,7 +32,7 @@
 		<string>side.png</string>
 		<key>recipeItems</key>
 		<array>
-			<string>Bread</string>
+			<string>HamburgerBun</string>
 			<string>Lettuce</string>
 			<string>Tomato</string>
 			<string>Bacon</string>
@@ -42,7 +42,7 @@
 		<key>levelName</key>
 		<string>Tacos</string>
 		<key>previewImage</key>
-		<string>test.png</string>
+		<string>selectLevel-taco.png</string>
 		<key>worldHeight</key>
 		<integer>8000</integer>
 		<key>backgroundSideBuildingImage</key>
@@ -56,6 +56,45 @@
 			<string>Tomato</string>
 			<string>Beef</string>
 			<string>HotSauce</string>
+		</array>
+	</dict>
+	<dict>
+		<key>levelName</key>
+		<string>Burrito</string>
+		<key>previewImage</key>
+		<string>selectLevel-burrito.png</string>
+		<key>backgroundSideBuildingImage</key>
+		<string>back.png</string>
+		<key>backgroundBackImage</key>
+		<string>side.png</string>
+		<key>recipeItems</key>
+		<array>
+			<string>TacoShell</string>
+			<string>GroundBeef</string>
+			<string>Cheese</string>
+			<string>HotSauce</string>
+			<string>Tomato</string>
+			<string>Lettuce</string>
+		</array>
+	</dict>
+	<dict>
+		<key>levelName</key>
+		<string>Pizza</string>
+		<key>previewImage</key>
+		<string>selectLevel-pizza.png</string>
+		<key>backgroundSideBuildingImage</key>
+		<string>back.png</string>
+		<key>backgroundBackImage</key>
+		<string>side.png</string>
+		<key>recipeItems</key>
+		<array>
+			<string>Pepperoni</string>
+			<string>Dough</string>
+			<string>MozzarellaCheese</string>
+			<string>TomatoSauce</string>
+			<string>Mushroom</string>
+			<string>BellPeppers</string>
+			<string>Onions</string>
 		</array>
 	</dict>
 </array>
