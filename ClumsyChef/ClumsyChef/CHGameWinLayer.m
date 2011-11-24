@@ -8,7 +8,7 @@
 
 #import "CHGameWinLayer.h"
 #import "CHGameScene.h"
-
+#import "CHGameLibrary.h"
 
 @implementation CHGameWinLayer
 {
@@ -23,7 +23,7 @@
 	return nil;
 }
 
-- (id)initWithMoneyAmount:(NSInteger)score
+- (id)initWithLevelIndex:(NSUInteger)index moneyAmount:(NSInteger)score
 {
 	if (self = [super initWithDimOpacity:CHModalLayerDefaultDimOpacity])
 	{
@@ -37,6 +37,13 @@
 		[description setPositionSharp:ccp(screenCenterX, 170)];
         [self addChild:description];
         
+		// Finish image (recipe item image)
+		//CHLevelInfo *levelInfo = [[CHGameLibrary sharedGameLibrary] levelInfoAtIndex:index];
+		//CCSprite *finishImage = [CCSprite spriteWithFile:levelInfo.finishImage];
+		//[finishImage setPositionSharp:ccp(screenCenterX, 240)];
+		//[self addChild:finishImage];
+		
+		// Score label
 		NSString *scoreString = [NSString stringWithFormat:@"$%@", CHFormatDecimalNumber([NSNumber numberWithInteger:score])];
 		_score = [CCLabelBMFont labelWithString:scoreString
 										fntFile:@"gameWin-scoreFont.fnt"];
@@ -72,9 +79,9 @@
 	return self;
 }
 
-+ (id)nodeWithMoneyAmount:(NSInteger)score
++ (id)nodeWithLevelIndex:(NSUInteger)index moneyAmount:(NSInteger)score
 {
-	return [[[self alloc] initWithMoneyAmount:score] autorelease];
+	return [[[self alloc] initWithLevelIndex:index moneyAmount:score] autorelease];
 }
 
 #pragma mark -

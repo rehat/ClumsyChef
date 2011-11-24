@@ -41,6 +41,7 @@
 // Background information
 @property(nonatomic, readonly, retain) NSString *levelName;
 @property(nonatomic, readonly, retain) NSString *previewImage;
+@property(nonatomic, readonly, retain) NSString *finishImage;
 @property(nonatomic, readonly, assign) NSUInteger worldHeight;
 @property(nonatomic, readonly, retain) NSString *backgroundSideBuildingImage;
 @property(nonatomic, readonly, retain) NSString *backgroundBackImage;

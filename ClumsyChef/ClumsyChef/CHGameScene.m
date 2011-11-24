@@ -57,7 +57,7 @@
 {
 	[_gameLayer stopBackgroundMusic];
 	_gameLayer.isPaused = YES;
-	[[CHGameWinLayer nodeWithMoneyAmount:score] showAsModalLayerInNode:self];
+	[[CHGameWinLayer nodeWithLevelIndex:_levelIndex moneyAmount:score] showAsModalLayerInNode:self];
 }
 
 - (void)showGameOver

@@ -78,7 +78,7 @@ NSInteger const TestBackButtonTag = -9999;
 		}];
 		
 		CCMenuItem *itemTestWin = [self menuItemWithTitle:@"Game Win" block:^(id sender) {
-			[[CHGameWinLayer nodeWithMoneyAmount:3002] showAsModalLayerInNode:self];
+			[[CHGameWinLayer nodeWithLevelIndex:0 moneyAmount:3002] showAsModalLayerInNode:self];
 		}];
 		
 		CCMenuItem *itemTestLose = [self menuItemWithTitle:@"Game Lose" block:^(id sender) {

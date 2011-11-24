@@ -71,6 +71,7 @@ NSString* const kHarmfulItemPlistFilename = @"gameLibrary-harmfulItems.plist";
 
 @property(nonatomic, retain) NSString *levelName;
 @property(nonatomic, retain) NSString *previewImage;
+@property(nonatomic, retain) NSString *finishImage;
 @property(nonatomic, assign) NSUInteger worldHeight;
 @property(nonatomic, retain) NSString *backgroundSideBuildingImage;
 @property(nonatomic, retain) NSString *backgroundBackImage;
@@ -84,6 +85,7 @@ NSString* const kHarmfulItemPlistFilename = @"gameLibrary-harmfulItems.plist";
 {
 	NSString		*_levelName;
 	NSString		*_previewImage;
+	NSString		*_finishImage;
 	NSUInteger		_worldHeight;
 	NSString		*_backgroundSideBuildingImage;
 	NSString		*_backgroundBackImage;
@@ -93,6 +95,7 @@ NSString* const kHarmfulItemPlistFilename = @"gameLibrary-harmfulItems.plist";
 
 @synthesize levelName = _levelName;
 @synthesize previewImage = _previewImage;
+@synthesize finishImage = _finishImage;
 @synthesize worldHeight = _worldHeight;
 @synthesize backgroundSideBuildingImage = _backgroundSideBuildingImage;
 @synthesize backgroundBackImage = _backgroundBackImage;
@@ -103,6 +106,7 @@ NSString* const kHarmfulItemPlistFilename = @"gameLibrary-harmfulItems.plist";
 {
 	[_levelName release];
 	[_previewImage release];
+	[_finishImage release];
 	[_backgroundSideBuildingImage release];
 	[_backgroundBackImage release];
 	[_recipeItems release];
@@ -127,6 +131,7 @@ NSString* const kHarmfulItemPlistFilename = @"gameLibrary-harmfulItems.plist";
 	CHLevelInfo *info = [[[CHLevelInfo alloc] init] autorelease];
 	info.levelName = [dict objectForKey:@"levelName"];
 	info.previewImage = [dict objectForKey:@"previewImage"];
+	info.finishImage = [dict objectForKey:@"finishImage"];
 	info.worldHeight = [[dict objectForKey:@"worldHeight"] unsignedIntegerValue];
 	info.backgroundSideBuildingImage = [dict objectForKey:@"backgroundSideBuildingImage"];
 	info.backgroundBackImage = [dict objectForKey:@"backgroundBackImage"];
