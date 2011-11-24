@@ -456,6 +456,10 @@
 		E541A709147DF8B900882478 /* pause-sound-off-high.png in Resources */ = {isa = PBXBuildFile; fileRef = E541A702147DF8B900882478 /* pause-sound-off-high.png */; };
 		E541A70A147DF8B900882478 /* pause-sound-off.png in Resources */ = {isa = PBXBuildFile; fileRef = E541A703147DF8B900882478 /* pause-sound-off.png */; };
 		E541A70B147DF8B900882478 /* pause-sound-off.png in Resources */ = {isa = PBXBuildFile; fileRef = E541A703147DF8B900882478 /* pause-sound-off.png */; };
+		E541A716147E07DF00882478 /* AWTextureFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = E541A713147E07DF00882478 /* AWTextureFilter.m */; };
+		E541A717147E07DF00882478 /* AWTextureFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = E541A713147E07DF00882478 /* AWTextureFilter.m */; };
+		E541A718147E07DF00882478 /* CCTexture2DMutable.m in Sources */ = {isa = PBXBuildFile; fileRef = E541A715147E07DF00882478 /* CCTexture2DMutable.m */; };
+		E541A719147E07DF00882478 /* CCTexture2DMutable.m in Sources */ = {isa = PBXBuildFile; fileRef = E541A715147E07DF00882478 /* CCTexture2DMutable.m */; };
 		E5469B59147C865100F4D27B /* gameLayer-collisionScoreFont-hd.fnt in Resources */ = {isa = PBXBuildFile; fileRef = E5469B55147C865100F4D27B /* gameLayer-collisionScoreFont-hd.fnt */; };
 		E5469B5A147C865100F4D27B /* gameLayer-collisionScoreFont-hd.fnt in Resources */ = {isa = PBXBuildFile; fileRef = E5469B55147C865100F4D27B /* gameLayer-collisionScoreFont-hd.fnt */; };
 		E5469B5B147C865100F4D27B /* gameLayer-collisionScoreFont-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E5469B56147C865100F4D27B /* gameLayer-collisionScoreFont-hd.png */; };
@@ -868,6 +872,10 @@
 		E541A701147DF8B900882478 /* pause-sound-off-high-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pause-sound-off-high-hd.png"; path = "Resources/pause-sound-off-high-hd.png"; sourceTree = "<group>"; };
 		E541A702147DF8B900882478 /* pause-sound-off-high.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pause-sound-off-high.png"; path = "Resources/pause-sound-off-high.png"; sourceTree = "<group>"; };
 		E541A703147DF8B900882478 /* pause-sound-off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pause-sound-off.png"; path = "Resources/pause-sound-off.png"; sourceTree = "<group>"; };
+		E541A712147E07DF00882478 /* AWTextureFilter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWTextureFilter.h; sourceTree = "<group>"; };
+		E541A713147E07DF00882478 /* AWTextureFilter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWTextureFilter.m; sourceTree = "<group>"; };
+		E541A714147E07DF00882478 /* CCTexture2DMutable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CCTexture2DMutable.h; sourceTree = "<group>"; };
+		E541A715147E07DF00882478 /* CCTexture2DMutable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CCTexture2DMutable.m; sourceTree = "<group>"; };
 		E5469B55147C865100F4D27B /* gameLayer-collisionScoreFont-hd.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "gameLayer-collisionScoreFont-hd.fnt"; path = "Resources/gameLayer-collisionScoreFont-hd.fnt"; sourceTree = "<group>"; };
 		E5469B56147C865100F4D27B /* gameLayer-collisionScoreFont-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gameLayer-collisionScoreFont-hd.png"; path = "Resources/gameLayer-collisionScoreFont-hd.png"; sourceTree = "<group>"; };
 		E5469B57147C865100F4D27B /* gameLayer-collisionScoreFont.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "gameLayer-collisionScoreFont.fnt"; path = "Resources/gameLayer-collisionScoreFont.fnt"; sourceTree = "<group>"; };
@@ -1566,6 +1574,18 @@
 			name = "Menu-Shared";
 			sourceTree = "<group>";
 		};
+		E541A711147E07DE00882478 /* AWTextureFilter */ = {
+			isa = PBXGroup;
+			children = (
+				E541A712147E07DF00882478 /* AWTextureFilter.h */,
+				E541A713147E07DF00882478 /* AWTextureFilter.m */,
+				E541A714147E07DF00882478 /* CCTexture2DMutable.h */,
+				E541A715147E07DF00882478 /* CCTexture2DMutable.m */,
+			);
+			name = AWTextureFilter;
+			path = libs/AWTextureFilter;
+			sourceTree = "<group>";
+		};
 		E552D23F146318A7005EBBB1 /* Main Menu */ = {
 			isa = PBXGroup;
 			children = (
@@ -1755,17 +1775,18 @@
 		E5A903AB144F7799002A1F6C /* libs */ = {
 			isa = PBXGroup;
 			children = (
-				E5A904A1144F779B002A1F6C /* LICENSE_cocos2d.txt */,
-				E5A904B0144F779B002A1F6C /* LICENSE_CocosDenshion.txt */,
-				E5A904BB144F779B002A1F6C /* LICENSE_TouchJSON.txt */,
-				E5A904E3144F779C002A1F6C /* LICENSE_FontLabel.txt */,
-				E5A90556144F779D002A1F6C /* LICENSE_Box2D.txt */,
+				E541A711147E07DE00882478 /* AWTextureFilter */,
+				E5A904E4144F779C002A1F6C /* Box2D */,
 				E5A903AC144F7799002A1F6C /* cocos2d */,
 				E5A904A2144F779B002A1F6C /* CocosDenshion */,
 				E5A904B1144F779B002A1F6C /* cocoslive */,
-				E5A904BC144F779B002A1F6C /* TouchJSON */,
 				E5A904D2144F779C002A1F6C /* FontLabel */,
-				E5A904E4144F779C002A1F6C /* Box2D */,
+				E5A90556144F779D002A1F6C /* LICENSE_Box2D.txt */,
+				E5A904A1144F779B002A1F6C /* LICENSE_cocos2d.txt */,
+				E5A904B0144F779B002A1F6C /* LICENSE_CocosDenshion.txt */,
+				E5A904E3144F779C002A1F6C /* LICENSE_FontLabel.txt */,
+				E5A904BB144F779B002A1F6C /* LICENSE_TouchJSON.txt */,
+				E5A904BC144F779B002A1F6C /* TouchJSON */,
 			);
 			name = libs;
 			sourceTree = "<group>";
@@ -2915,6 +2936,8 @@
 				E5D0C9D51478B9F10089E28D /* CHStretchableSprite.m in Sources */,
 				E5A51991147B947B0047113A /* CHTouchBlockingLayer.m in Sources */,
 				E5A51996147B9C540047113A /* CHModalLayer.m in Sources */,
+				E541A717147E07DF00882478 /* AWTextureFilter.m in Sources */,
+				E541A719147E07DF00882478 /* CCTexture2DMutable.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3080,6 +3103,8 @@
 				E5D0C9D41478B9F10089E28D /* CHStretchableSprite.m in Sources */,
 				E5A51990147B947B0047113A /* CHTouchBlockingLayer.m in Sources */,
 				E5A51995147B9C540047113A /* CHModalLayer.m in Sources */,
+				E541A716147E07DF00882478 /* AWTextureFilter.m in Sources */,
+				E541A718147E07DF00882478 /* CCTexture2DMutable.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

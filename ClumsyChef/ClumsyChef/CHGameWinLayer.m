@@ -25,13 +25,10 @@
 
 - (id)initWithMoneyAmount:(NSInteger)score
 {
-	if (self = [super init])
+	if (self = [super initWithDimOpacity:CHModalLayerDefaultDimOpacity])
 	{
 		CGFloat screenCenterX = CHGetHalfWinWidth();
 
-        CCLayerColor *bg = [CCLayerColor layerWithColor:ccc4(0, 0, 0, 180)];
-        [self addChild:bg];
-        
         CCSprite *win = [CCSprite spriteWithFile:@"gameWin-title.png" ];
         [win setPositionSharp:CHGetWinPointTL(screenCenterX, 85)];
         [self addChild:win];

@@ -11,7 +11,11 @@
 
 @interface CHModalLayer : CCLayer
 
+- (id)initWithDimOpacity:(float)opacity;
+
 - (void)showAsModalLayerInNode:(CCNode *)node;
 - (void)dismissModalLayer;
 
 @end
+
+extern float const CHModalLayerDefaultDimOpacity;

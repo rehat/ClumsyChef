@@ -9,13 +9,19 @@
 #import "CHModalLayer.h"
 #import "CHTouchBlockingLayer.h"
 
-@implementation CHModalLayer
+float const CHModalLayerDefaultDimOpacity = 0.6f;
 
-- (id)init
+@implementation CHModalLayer
+{
+}
+
+- (id)initWithDimOpacity:(float)opacity
 {
 	if (self = [super init])
 	{
 		[self addChild:[CHTouchBlockingLayer node]];
+		CCLayerColor *dimLayer = [CCLayerColor layerWithColor:ccc4(0, 0, 0, opacity * 255)];
+		[self addChild:dimLayer];
 	}
 	return self;
 }
