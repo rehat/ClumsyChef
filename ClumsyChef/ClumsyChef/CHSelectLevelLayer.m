@@ -55,65 +55,68 @@ CCSprite *background;
 		CCSprite* normal = [CCSprite spriteWithFile:@"selectLevel-hot_dog.png"];
 		CCSprite* selected = [CCSprite spriteWithFile:@"selectLevel-hot_dog-high.png"];
 		
-		CCMenuItemSprite *item1 = [CCMenuItemSprite itemFromNormalSprite:normal selectedSprite:selected block:^(id self)
+		CCMenuItemSprite *levelOneButton = [CCMenuItemSprite itemFromNormalSprite:normal selectedSprite:selected block:^(id sender)
 								   {
 									   CCLOG(@"xxx");
-									   [self runScene:[CHGameScene node]];
+									   [self runScene:[CHGameScene nodeWithLevelIndex:(0)]];
 								   }];
 		
 		CCSprite* normal2 = [CCSprite spriteWithFile:@"selectLevel-taco.png"];
 		CCSprite* selected2 = [CCSprite spriteWithFile:@"selectLevel-taco-high.png"];
 		
-		CCMenuItemSprite *item2 = [CCMenuItemSprite itemFromNormalSprite:normal2 selectedSprite:selected2 block:^(id sender)
+		CCMenuItemSprite *levelTwoButton = [CCMenuItemSprite itemFromNormalSprite:normal2 selectedSprite:selected2 block:^(id sender)
 								   {
 									   CCLOG(@"xxx");
+									   [self runScene:[CHGameScene nodeWithLevelIndex:(1)]];
 								   }];
 		
 		CCSprite* normal3 = [CCSprite spriteWithFile:@"selectLevel-hamburger.png"];
 		CCSprite* selected3 = [CCSprite spriteWithFile:@"selectLevel-hamburger-high.png"];
 		
-		CCMenuItemSprite *item3 = [CCMenuItemSprite itemFromNormalSprite:normal3 selectedSprite:selected3 block:^(id sender)
+		CCMenuItemSprite *levelThreeButton = [CCMenuItemSprite itemFromNormalSprite:normal3 selectedSprite:selected3 block:^(id sender)
 								   {
 									   CCLOG(@"xxx");
-									
+									[self runScene:[CHGameScene nodeWithLevelIndex:(3)]];
 								   }];
 		CCSprite* normal4 = [CCSprite spriteWithFile:@"selectLevel-burrito.png"];
 		CCSprite* selected4 = [CCSprite spriteWithFile:@"selectLevel-burrito-high.png"];
 		
-		CCMenuItemSprite *item4 = [CCMenuItemSprite itemFromNormalSprite:normal4 selectedSprite:selected4 block:^(id sender)
+		CCMenuItemSprite *levelFourButton = [CCMenuItemSprite itemFromNormalSprite:normal4 selectedSprite:selected4 block:^(id sender)
 								   {
 									   CCLOG(@"xxx");
-									  
+									  [self runScene:[CHGameScene nodeWithLevelIndex:(4)]];
 								   }];
 		CCSprite* normal5 = [CCSprite spriteWithFile:@"selectLevel-pizza.png"];
 		CCSprite* selected5 = [CCSprite spriteWithFile:@"selectLevel-pizza-high.png"];
 		
-		CCMenuItemSprite *item5 = [CCMenuItemSprite itemFromNormalSprite:normal5 selectedSprite:selected5 block:^(id sender)
+		CCMenuItemSprite *levelFiveButton = [CCMenuItemSprite itemFromNormalSprite:normal5 selectedSprite:selected5 block:^(id sender)
 								   {
 									   CCLOG(@"xxx");
+									   [self runScene:[CHGameScene nodeWithLevelIndex:(5)]];
 								   }];
 		CCSprite* normal6 = [CCSprite spriteWithFile:@"selectLevel-locked.png"];
 		CCSprite* selected6 = [CCSprite spriteWithFile:@"selectLevel-locked-high.png"];
 		
-		CCMenuItemSprite *item6 = [CCMenuItemSprite itemFromNormalSprite:normal6 selectedSprite:selected6 block:^(id sender)
+		CCMenuItemSprite *levelSixButton = [CCMenuItemSprite itemFromNormalSprite:normal6 selectedSprite:selected6 block:^(id sender)
 								   {
 									   CCLOG(@"xxx");
+									   //[self runScene:[CHGameScene nodeWithLevelIndex:(6)]];
 								   }];
 		
 		
-		CCMenu* menu = [CCMenu menuWithItems:item1, item2, item3, item4, item5, item6, nil];
+		CCMenu* menu = [CCMenu menuWithItems:levelOneButton, levelTwoButton, levelThreeButton, levelFourButton, levelFiveButton, levelSixButton, nil];
 		menu.anchorPoint = CGPointZero;
 		menu.position = CGPointZero;
 		
 		menu.tag = 100;
 		
 		// create the menu using the items
-		item1.position = ccp(60, 320);
-		item2.position = ccp(160, 320);
-		item3.position = ccp(260, 320);
-		item4.position = ccp(60, 220);
-		item5.position = ccp(160, 220);
-		item6.position = ccp(260, 220);
+		levelOneButton.position = ccp(60, 320);
+		levelTwoButton.position = ccp(160, 320);
+		levelThreeButton.position = ccp(260, 320);
+		levelFourButton.position = ccp(60, 220);
+		levelFiveButton.position = ccp(160, 220);
+		levelSixButton.position = ccp(260, 220);
 		[self addChild:menu];
 	}
 	return self;
