@@ -69,7 +69,8 @@ NSInteger const TestBackButtonTag = -9999;
 		}];
         
         CCMenuItem *itemTestPauseLayer = [self menuItemWithTitle:@"Pause Layer" block:^(id sender) {
-			[self runLayer:[CHPauseLayer node]];
+			//[self runLayer:[CHPauseLayer node]];
+			[[CHPauseLayer node] showAsModalLayerInNode:self];
 		}];
 		
 		CCMenuItem *itemTestSelectLevel = [self menuItemWithTitle:@"Select Level" block:^(id sender) {

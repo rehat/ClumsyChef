@@ -21,13 +21,10 @@
 
 - (id)init
 {
-	if (self = [super init])
+	if (self = [super initWithDimOpacity:CHModalLayerDefaultDimOpacity])
 	{
 		CGFloat screenCenterX = CHGetHalfWinWidth();
 		
-        CCLayerColor *bg = [CCLayerColor layerWithColor:ccc4(0, 0, 0, 180)];
-        [self addChild:bg];
-        
         CCSprite *lose = [CCSprite spriteWithFile:@"gameOver-title.png"];
         [lose setPositionSharp:ccp(screenCenterX, 290)];
         [self addChild:lose];
