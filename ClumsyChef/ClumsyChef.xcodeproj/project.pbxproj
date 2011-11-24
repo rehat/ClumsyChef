@@ -17,6 +17,16 @@
 		8516824D147E4ED600858288 /* recipeItem-big-pizza.png in Resources */ = {isa = PBXBuildFile; fileRef = 85168244147E4ED600858288 /* recipeItem-big-pizza.png */; };
 		8516824E147E4ED600858288 /* recipeItem-big-taco.png in Resources */ = {isa = PBXBuildFile; fileRef = 85168245147E4ED600858288 /* recipeItem-big-taco.png */; };
 		8516824F147E4ED600858288 /* recipeItem-big-taco.png in Resources */ = {isa = PBXBuildFile; fileRef = 85168245147E4ED600858288 /* recipeItem-big-taco.png */; };
+		85168255147E51D600858288 /* recipeItem-big-hot_dog-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 85168250147E51D600858288 /* recipeItem-big-hot_dog-hd.png */; };
+		85168256147E51D600858288 /* recipeItem-big-hot_dog-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 85168250147E51D600858288 /* recipeItem-big-hot_dog-hd.png */; };
+		85168257147E51D600858288 /* recipeItem-big-burrito-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 85168251147E51D600858288 /* recipeItem-big-burrito-hd.png */; };
+		85168258147E51D600858288 /* recipeItem-big-burrito-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 85168251147E51D600858288 /* recipeItem-big-burrito-hd.png */; };
+		85168259147E51D600858288 /* recipeItem-big-hamburger-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 85168252147E51D600858288 /* recipeItem-big-hamburger-hd.png */; };
+		8516825A147E51D600858288 /* recipeItem-big-hamburger-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 85168252147E51D600858288 /* recipeItem-big-hamburger-hd.png */; };
+		8516825B147E51D600858288 /* recipeItem-big-pizza-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 85168253147E51D600858288 /* recipeItem-big-pizza-hd.png */; };
+		8516825C147E51D600858288 /* recipeItem-big-pizza-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 85168253147E51D600858288 /* recipeItem-big-pizza-hd.png */; };
+		8516825D147E51D600858288 /* recipeItem-big-taco-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 85168254147E51D600858288 /* recipeItem-big-taco-hd.png */; };
+		8516825E147E51D600858288 /* recipeItem-big-taco-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 85168254147E51D600858288 /* recipeItem-big-taco-hd.png */; };
 		854E24FE147AE9C7007F4039 /* selectLevel-burrito.png in Resources */ = {isa = PBXBuildFile; fileRef = 854E24E6147AE9C7007F4039 /* selectLevel-burrito.png */; };
 		854E24FF147AE9C7007F4039 /* selectLevel-burrito.png in Resources */ = {isa = PBXBuildFile; fileRef = 854E24E6147AE9C7007F4039 /* selectLevel-burrito.png */; };
 		854E2500147AE9C7007F4039 /* selectLevel-hamburger.png in Resources */ = {isa = PBXBuildFile; fileRef = 854E24E7147AE9C7007F4039 /* selectLevel-hamburger.png */; };
@@ -783,6 +793,11 @@
 		85168243147E4ED600858288 /* recipeItem-big-hot_dog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recipeItem-big-hot_dog.png"; path = "Resources/recipeItem-big-hot_dog.png"; sourceTree = "<group>"; };
 		85168244147E4ED600858288 /* recipeItem-big-pizza.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recipeItem-big-pizza.png"; path = "Resources/recipeItem-big-pizza.png"; sourceTree = "<group>"; };
 		85168245147E4ED600858288 /* recipeItem-big-taco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recipeItem-big-taco.png"; path = "Resources/recipeItem-big-taco.png"; sourceTree = "<group>"; };
+		85168250147E51D600858288 /* recipeItem-big-hot_dog-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recipeItem-big-hot_dog-hd.png"; path = "Resources/recipeItem-big-hot_dog-hd.png"; sourceTree = "<group>"; };
+		85168251147E51D600858288 /* recipeItem-big-burrito-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recipeItem-big-burrito-hd.png"; path = "Resources/recipeItem-big-burrito-hd.png"; sourceTree = "<group>"; };
+		85168252147E51D600858288 /* recipeItem-big-hamburger-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recipeItem-big-hamburger-hd.png"; path = "Resources/recipeItem-big-hamburger-hd.png"; sourceTree = "<group>"; };
+		85168253147E51D600858288 /* recipeItem-big-pizza-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recipeItem-big-pizza-hd.png"; path = "Resources/recipeItem-big-pizza-hd.png"; sourceTree = "<group>"; };
+		85168254147E51D600858288 /* recipeItem-big-taco-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recipeItem-big-taco-hd.png"; path = "Resources/recipeItem-big-taco-hd.png"; sourceTree = "<group>"; };
 		854E24E6147AE9C7007F4039 /* selectLevel-burrito.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "selectLevel-burrito.png"; path = "Resources/selectLevel-burrito.png"; sourceTree = "<group>"; };
 		854E24E7147AE9C7007F4039 /* selectLevel-hamburger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "selectLevel-hamburger.png"; path = "Resources/selectLevel-hamburger.png"; sourceTree = "<group>"; };
 		854E24E8147AE9C7007F4039 /* selectLevel-hot_dog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "selectLevel-hot_dog.png"; path = "Resources/selectLevel-hot_dog.png"; sourceTree = "<group>"; };
@@ -1389,6 +1404,11 @@
 		85168240147E4E5500858288 /* Recipe Items - big */ = {
 			isa = PBXGroup;
 			children = (
+				85168250147E51D600858288 /* recipeItem-big-hot_dog-hd.png */,
+				85168251147E51D600858288 /* recipeItem-big-burrito-hd.png */,
+				85168252147E51D600858288 /* recipeItem-big-hamburger-hd.png */,
+				85168253147E51D600858288 /* recipeItem-big-pizza-hd.png */,
+				85168254147E51D600858288 /* recipeItem-big-taco-hd.png */,
 				85168241147E4ED600858288 /* recipeItem-big-burrito.png */,
 				85168242147E4ED600858288 /* recipeItem-big-hamburger.png */,
 				85168243147E4ED600858288 /* recipeItem-big-hot_dog.png */,
@@ -2648,6 +2668,11 @@
 				8516824B147E4ED600858288 /* recipeItem-big-hot_dog.png in Resources */,
 				8516824D147E4ED600858288 /* recipeItem-big-pizza.png in Resources */,
 				8516824F147E4ED600858288 /* recipeItem-big-taco.png in Resources */,
+				85168256147E51D600858288 /* recipeItem-big-hot_dog-hd.png in Resources */,
+				85168258147E51D600858288 /* recipeItem-big-burrito-hd.png in Resources */,
+				8516825A147E51D600858288 /* recipeItem-big-hamburger-hd.png in Resources */,
+				8516825C147E51D600858288 /* recipeItem-big-pizza-hd.png in Resources */,
+				8516825E147E51D600858288 /* recipeItem-big-taco-hd.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2870,6 +2895,11 @@
 				8516824A147E4ED600858288 /* recipeItem-big-hot_dog.png in Resources */,
 				8516824C147E4ED600858288 /* recipeItem-big-pizza.png in Resources */,
 				8516824E147E4ED600858288 /* recipeItem-big-taco.png in Resources */,
+				85168255147E51D600858288 /* recipeItem-big-hot_dog-hd.png in Resources */,
+				85168257147E51D600858288 /* recipeItem-big-burrito-hd.png in Resources */,
+				85168259147E51D600858288 /* recipeItem-big-hamburger-hd.png in Resources */,
+				8516825B147E51D600858288 /* recipeItem-big-pizza-hd.png in Resources */,
+				8516825D147E51D600858288 /* recipeItem-big-taco-hd.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
