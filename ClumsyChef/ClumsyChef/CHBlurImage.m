@@ -34,6 +34,12 @@ static CGImageRef createImageFromBuffer(const vImage_Buffer *buffer)
 
 CGImageRef CHCreateBlurImage(CGImageRef srcImage, NSUInteger radius, NSUInteger repeatCount)
 {
+	if (&vImageBoxConvolve_ARGB8888 == NULL)
+	{
+		// vImage not avaialble;
+		return CGImageRetain(srcImage);
+	}
+	
 	vImage_Buffer src;
 	src.width = CGImageGetWidth(srcImage);
 	src.height = CGImageGetHeight(srcImage);
