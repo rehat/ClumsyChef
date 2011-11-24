@@ -506,6 +506,9 @@
 		E539D829147E368000098C9E /* recipeItem_tomatoSauce-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E539D824147E368000098C9E /* recipeItem_tomatoSauce-hd.png */; };
 		E539D82A147E368000098C9E /* recipeItem_tomatoSauce.png in Resources */ = {isa = PBXBuildFile; fileRef = E539D825147E368000098C9E /* recipeItem_tomatoSauce.png */; };
 		E539D82B147E368000098C9E /* recipeItem_tomatoSauce.png in Resources */ = {isa = PBXBuildFile; fileRef = E539D825147E368000098C9E /* recipeItem_tomatoSauce.png */; };
+		E539D844147E56D900098C9E /* CHMainMenuUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E539D843147E56D900098C9E /* CHMainMenuUtilities.m */; };
+		E539D845147E56FA00098C9E /* CHMainMenuUtilities.h in Sources */ = {isa = PBXBuildFile; fileRef = E539D842147E56D900098C9E /* CHMainMenuUtilities.h */; };
+		E539D846147E56FA00098C9E /* CHMainMenuUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E539D843147E56D900098C9E /* CHMainMenuUtilities.m */; };
 		E541A704147DF8B900882478 /* pause-sound-off-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E541A700147DF8B900882478 /* pause-sound-off-hd.png */; };
 		E541A705147DF8B900882478 /* pause-sound-off-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E541A700147DF8B900882478 /* pause-sound-off-hd.png */; };
 		E541A706147DF8B900882478 /* pause-sound-off-high-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E541A701147DF8B900882478 /* pause-sound-off-high-hd.png */; };
@@ -953,6 +956,8 @@
 		E539D823147E368000098C9E /* recipeItem_tacoShell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = recipeItem_tacoShell.png; path = Resources/recipeItem_tacoShell.png; sourceTree = "<group>"; };
 		E539D824147E368000098C9E /* recipeItem_tomatoSauce-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recipeItem_tomatoSauce-hd.png"; path = "Resources/recipeItem_tomatoSauce-hd.png"; sourceTree = "<group>"; };
 		E539D825147E368000098C9E /* recipeItem_tomatoSauce.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = recipeItem_tomatoSauce.png; path = Resources/recipeItem_tomatoSauce.png; sourceTree = "<group>"; };
+		E539D842147E56D900098C9E /* CHMainMenuUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHMainMenuUtilities.h; sourceTree = "<group>"; };
+		E539D843147E56D900098C9E /* CHMainMenuUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHMainMenuUtilities.m; sourceTree = "<group>"; };
 		E541A700147DF8B900882478 /* pause-sound-off-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pause-sound-off-hd.png"; path = "Resources/pause-sound-off-hd.png"; sourceTree = "<group>"; };
 		E541A701147DF8B900882478 /* pause-sound-off-high-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pause-sound-off-high-hd.png"; path = "Resources/pause-sound-off-high-hd.png"; sourceTree = "<group>"; };
 		E541A702147DF8B900882478 /* pause-sound-off-high.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pause-sound-off-high.png"; path = "Resources/pause-sound-off-high.png"; sourceTree = "<group>"; };
@@ -1703,6 +1708,8 @@
 				E552D241146318DD005EBBB1 /* CHMainMenuLayer.m */,
 				E552D24C14631A34005EBBB1 /* CHSelectLevelLayer.h */,
 				E552D24D14631A34005EBBB1 /* CHSelectLevelLayer.m */,
+				E539D842147E56D900098C9E /* CHMainMenuUtilities.h */,
+				E539D843147E56D900098C9E /* CHMainMenuUtilities.m */,
 			);
 			name = "Main Menu";
 			sourceTree = "<group>";
@@ -2939,6 +2946,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E539D845147E56FA00098C9E /* CHMainMenuUtilities.h in Sources */,
+				E539D846147E56FA00098C9E /* CHMainMenuUtilities.m in Sources */,
 				BC6229F71463362A0016DFA0 /* CCAction.m in Sources */,
 				BC6229F81463362A0016DFA0 /* CCActionCamera.m in Sources */,
 				BC6229F91463362A0016DFA0 /* CCActionEase.m in Sources */,
@@ -3266,6 +3275,7 @@
 				E5A51995147B9C540047113A /* CHModalLayer.m in Sources */,
 				E539D7DB147E1F5800098C9E /* CHBlurImage.m in Sources */,
 				E539D7DF147E274200098C9E /* CHScreenshot.m in Sources */,
+				E539D844147E56D900098C9E /* CHMainMenuUtilities.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

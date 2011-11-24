@@ -7,6 +7,7 @@
 //
 
 #import "CHCreditLayer.h"
+#import "CHMainMenuUtilities.h"
 
 
 @implementation CHCreditLayer
@@ -19,14 +20,7 @@
 		[bg setPositionSharp:CHGetWinCenterPoint()];
 		[self addChild:bg];
 		
-		CCMenuItemImage *back = [CCMenuItemImage itemFromNormalImage:@"menu-backButton.png" 
-													   selectedImage:@"menu-backButton-high.png" 
-															  target:self 
-															selector:@selector(backButtonPressed:)];
-		CCMenu *button = [CCMenu menuWithItems:back, nil];
-		button.anchorPoint = CGPointZero;
-		button.position = CGPointZero;
-		[back setPositionSharp:ccp(CHGetHalfWinWidth(), 51)];
+		CCMenu *button = CHMenuMakeBackButton(ccp(CHGetHalfWinWidth(), 51), self, @selector(backButtonPressed:));
 		[self addChild:button];
 	}
 	return self;
@@ -34,7 +28,7 @@
 
 - (void)backButtonPressed:(id)sender
 {
-	
+	[[CCDirector sharedDirector] popScene];
 }
 
 @end
