@@ -47,6 +47,16 @@
 		85168222147E205900858288 /* recipeItem_tomatoSauce-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 851681FF147E205900858288 /* recipeItem_tomatoSauce-hd.png */; };
 		85168223147E205900858288 /* recipeItem_tomatoSauce.png in Resources */ = {isa = PBXBuildFile; fileRef = 85168200147E205900858288 /* recipeItem_tomatoSauce.png */; };
 		85168224147E205900858288 /* recipeItem_tomatoSauce.png in Resources */ = {isa = PBXBuildFile; fileRef = 85168200147E205900858288 /* recipeItem_tomatoSauce.png */; };
+		85168230147E48BE00858288 /* recipeItem-big-burrito.png.png in Resources */ = {isa = PBXBuildFile; fileRef = 8516822B147E48BE00858288 /* recipeItem-big-burrito.png.png */; };
+		85168231147E48BE00858288 /* recipeItem-big-burrito.png.png in Resources */ = {isa = PBXBuildFile; fileRef = 8516822B147E48BE00858288 /* recipeItem-big-burrito.png.png */; };
+		85168232147E48BE00858288 /* recipeItem-big-hamburger.png.png in Resources */ = {isa = PBXBuildFile; fileRef = 8516822C147E48BE00858288 /* recipeItem-big-hamburger.png.png */; };
+		85168233147E48BE00858288 /* recipeItem-big-hamburger.png.png in Resources */ = {isa = PBXBuildFile; fileRef = 8516822C147E48BE00858288 /* recipeItem-big-hamburger.png.png */; };
+		85168234147E48BE00858288 /* recipeItem-big-hot_dog.png.png in Resources */ = {isa = PBXBuildFile; fileRef = 8516822D147E48BE00858288 /* recipeItem-big-hot_dog.png.png */; };
+		85168235147E48BE00858288 /* recipeItem-big-hot_dog.png.png in Resources */ = {isa = PBXBuildFile; fileRef = 8516822D147E48BE00858288 /* recipeItem-big-hot_dog.png.png */; };
+		85168236147E48BE00858288 /* recipeItem-big-pizza.png.png in Resources */ = {isa = PBXBuildFile; fileRef = 8516822E147E48BE00858288 /* recipeItem-big-pizza.png.png */; };
+		85168237147E48BE00858288 /* recipeItem-big-pizza.png.png in Resources */ = {isa = PBXBuildFile; fileRef = 8516822E147E48BE00858288 /* recipeItem-big-pizza.png.png */; };
+		85168238147E48BE00858288 /* recipeItem-big-taco.png.png in Resources */ = {isa = PBXBuildFile; fileRef = 8516822F147E48BE00858288 /* recipeItem-big-taco.png.png */; };
+		85168239147E48BE00858288 /* recipeItem-big-taco.png.png in Resources */ = {isa = PBXBuildFile; fileRef = 8516822F147E48BE00858288 /* recipeItem-big-taco.png.png */; };
 		8582CFD3147D8B2F00608CFA /* selectLevel-background-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8582CFB9147D8B2F00608CFA /* selectLevel-background-hd.png */; };
 		8582CFD4147D8B2F00608CFA /* selectLevel-background-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 8582CFB9147D8B2F00608CFA /* selectLevel-background-hd.png */; };
 		8582CFD5147D8B2F00608CFA /* selectLevel-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 8582CFBA147D8B2F00608CFA /* selectLevel-background.png */; };
@@ -762,6 +772,11 @@
 		851681FE147E205900858288 /* recipeItem_tacoShell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = recipeItem_tacoShell.png; path = Resources/recipeItem_tacoShell.png; sourceTree = "<group>"; };
 		851681FF147E205900858288 /* recipeItem_tomatoSauce-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recipeItem_tomatoSauce-hd.png"; path = "Resources/recipeItem_tomatoSauce-hd.png"; sourceTree = "<group>"; };
 		85168200147E205900858288 /* recipeItem_tomatoSauce.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = recipeItem_tomatoSauce.png; path = Resources/recipeItem_tomatoSauce.png; sourceTree = "<group>"; };
+		8516822B147E48BE00858288 /* recipeItem-big-burrito.png.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recipeItem-big-burrito.png.png"; path = "Resources/recipeItem-big-burrito.png.png"; sourceTree = "<group>"; };
+		8516822C147E48BE00858288 /* recipeItem-big-hamburger.png.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recipeItem-big-hamburger.png.png"; path = "Resources/recipeItem-big-hamburger.png.png"; sourceTree = "<group>"; };
+		8516822D147E48BE00858288 /* recipeItem-big-hot_dog.png.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recipeItem-big-hot_dog.png.png"; path = "Resources/recipeItem-big-hot_dog.png.png"; sourceTree = "<group>"; };
+		8516822E147E48BE00858288 /* recipeItem-big-pizza.png.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recipeItem-big-pizza.png.png"; path = "Resources/recipeItem-big-pizza.png.png"; sourceTree = "<group>"; };
+		8516822F147E48BE00858288 /* recipeItem-big-taco.png.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recipeItem-big-taco.png.png"; path = "Resources/recipeItem-big-taco.png.png"; sourceTree = "<group>"; };
 		854E252E147B3347007F4039 /* play-gameLayerButton-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "play-gameLayerButton-hd.png"; path = "Resources/play-gameLayerButton-hd.png"; sourceTree = "<group>"; };
 		854E252F147B3348007F4039 /* play-gameLayerButton-high-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "play-gameLayerButton-high-hd.png"; path = "Resources/play-gameLayerButton-high-hd.png"; sourceTree = "<group>"; };
 		8582CFB9147D8B2F00608CFA /* selectLevel-background-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "selectLevel-background-hd.png"; path = "Resources/selectLevel-background-hd.png"; sourceTree = "<group>"; };
@@ -1330,6 +1345,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8516822A147E48A400858288 /* Recipe Items-big */ = {
+			isa = PBXGroup;
+			children = (
+				8516822B147E48BE00858288 /* recipeItem-big-burrito.png.png */,
+				8516822C147E48BE00858288 /* recipeItem-big-hamburger.png.png */,
+				8516822D147E48BE00858288 /* recipeItem-big-hot_dog.png.png */,
+				8516822E147E48BE00858288 /* recipeItem-big-pizza.png.png */,
+				8516822F147E48BE00858288 /* recipeItem-big-taco.png.png */,
+			);
+			name = "Recipe Items-big";
+			sourceTree = "<group>";
+		};
 		85CEB0AF14685EC70099409C /* Main Menu */ = {
 			isa = PBXGroup;
 			children = (
@@ -1641,6 +1668,8 @@
 		E5631E8A146B4BA000DACD3E /* Game Library */ = {
 			isa = PBXGroup;
 			children = (
+				8516822A147E48A400858288 /* Recipe Items-big */,
+				BC03E83B14773C3C00E34189 /* Recipe Items */,
 				E5631EA0146B790000DACD3E /* gameLibrary-harmfulItems.plist */,
 				E5631EA1146B790000DACD3E /* gameLibrary-levels.plist */,
 				E5631EA2146B790000DACD3E /* gameLibrary-recipeItems.plist */,
@@ -1774,7 +1803,6 @@
 				85CEB0AF14685EC70099409C /* Main Menu */,
 				E52E5F4F1474E12900FD9C4D /* Menu-Shared */,
 				E52E5ED61474E02200FD9C4D /* Pause */,
-				BC03E83B14773C3C00E34189 /* Recipe Items */,
 				E511C2911459258B008BCFF8 /* Test Materials */,
 			);
 			name = Resources;
@@ -2551,6 +2579,11 @@
 				85168220147E205900858288 /* recipeItem_tacoShell.png in Resources */,
 				85168222147E205900858288 /* recipeItem_tomatoSauce-hd.png in Resources */,
 				85168224147E205900858288 /* recipeItem_tomatoSauce.png in Resources */,
+				85168231147E48BE00858288 /* recipeItem-big-burrito.png.png in Resources */,
+				85168233147E48BE00858288 /* recipeItem-big-hamburger.png.png in Resources */,
+				85168235147E48BE00858288 /* recipeItem-big-hot_dog.png.png in Resources */,
+				85168237147E48BE00858288 /* recipeItem-big-pizza.png.png in Resources */,
+				85168239147E48BE00858288 /* recipeItem-big-taco.png.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2758,6 +2791,11 @@
 				8516821F147E205900858288 /* recipeItem_tacoShell.png in Resources */,
 				85168221147E205900858288 /* recipeItem_tomatoSauce-hd.png in Resources */,
 				85168223147E205900858288 /* recipeItem_tomatoSauce.png in Resources */,
+				85168230147E48BE00858288 /* recipeItem-big-burrito.png.png in Resources */,
+				85168232147E48BE00858288 /* recipeItem-big-hamburger.png.png in Resources */,
+				85168234147E48BE00858288 /* recipeItem-big-hot_dog.png.png in Resources */,
+				85168236147E48BE00858288 /* recipeItem-big-pizza.png.png in Resources */,
+				85168238147E48BE00858288 /* recipeItem-big-taco.png.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

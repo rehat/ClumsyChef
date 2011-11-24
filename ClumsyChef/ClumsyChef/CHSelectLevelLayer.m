@@ -63,7 +63,7 @@ CCSprite *background;
 		CCSprite* normal2 = [CCSprite spriteWithFile:@"selectLevel-hamburger.png"];
 		CCSprite* selected2 = [CCSprite spriteWithFile:@"selectLevel-hamburger-high.png"];
 		
-		CCMenuItemSprite *levelTwoButton = [CCMenuItemSprite itemFromNormalSprite:normal2 selectedSprite:selected2 block:^(id sender)
+		CCMenuItemSprite *levelThreeButton = [CCMenuItemSprite itemFromNormalSprite:normal2 selectedSprite:selected2 block:^(id sender)
 											  {
 												  CCLOG(@"xxx");
 												  [self runScene:[CHGameScene nodeWithLevelIndex:(2)]];

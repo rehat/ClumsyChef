@@ -254,11 +254,8 @@ static float const kProgressHighThreshold = 0.9f;
 
 + (id)nodeForTesting
 {
-	//NSString *itemsID = [[NSBundle mainBundle] pathForResource:@"gameLibrary-recipeItems" ofType:@"plist"];
-	//NSDictionary *dictionary = [[NSDictionary alloc] initWithContentsOfFile:itemsID];
-//- (NSArray *)allKeys;
-		NSString *filename = [[NSBundle mainBundle] pathForResource:@"gameLibrary-recipeItems" ofType:@"plist"];
-		NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:filename];
+	NSString *filename = [[NSBundle mainBundle] pathForResource:@"gameLibrary-recipeItems" ofType:@"plist"];
+	NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:filename];
 	NSArray *itemIDs = [dict allKeys];
 
 	CHHUDLayer *hud = [CHHUDLayer nodeWithRequiredRecipeItems:itemIDs
