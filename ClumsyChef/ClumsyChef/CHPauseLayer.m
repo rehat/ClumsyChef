@@ -8,44 +8,95 @@
 
 #import "CHPauseLayer.h"
 #import "CHGameScene.h"
+#import "SimpleAudioEngine.h"
+
 
 @implementation CHPauseLayer
+{
+	CCMenuItemToggle *_soundToggle;
+}
 
-CCMenu *menu;
+#pragma mark -
+#pragma mark Private
+
+- (void)updateSoundToggleButton
+{
+	SimpleAudioEngine *engine = [SimpleAudioEngine sharedEngine];
+	_soundToggle.selectedIndex = (engine.mute? 1 : 0);
+}
+
+#pragma mark -
+#pragma mark Constructor and destructor
 
 - (id)init
 {
 	if (self = [super init])
 	{
-		//CCSprite *chefLife = [CCSprite spriteWithFile:@"hud-chefLive.png"];
-		//[chefLife setPositionSharp:ccp(250, 30)];
-		//[self addChild:chefLife];
-        
-        
-        CCMenuItemImage *item = [CCMenuItemImage itemFromNormalImage:@"playbutton.png" 
-                                                       selectedImage:@"playbuttonselected.png" 
-                                                              target:self 
-                                                            selector:@selector(resumeButtonPressed)];
-        menu = [CCMenu menuWithItems:item, nil];
-        [menu setPositionSharp:ccp(250, 30)];
-        [self addChild:menu];
-        
-        
-		        
-    }
+		CCSprite *menuBG = [CCSprite spriteWithFile:@"pause-background.png"];
+		[menuBG setPositionSharp:ccp(CHGetHalfWinWidth(), CHGetHalfWinHeight())];
+		[self addChild:menuBG];
+		
+		CCMenuItemImage *resumeBtn = [CCMenuItemImage itemFromNormalImage:@"pause-resume.png" 
+													 selectedImage:@"pause-resume-high.png" 
+															target:self 
+														  selector:@selector(resumePressed:)];
+		[resumeBtn setPositionSharp:ccp(106, 264)];
+		
+		CCMenuItemImage *restart = [CCMenuItemImage itemFromNormalImage:@"pause-restart.png" 
+												   selectedImage:@"pause-restart-high.png" 
+														  target:self 
+														selector:@selector(restartPressed:)];
+		[restart setPositionSharp:ccp(209, 264)];
+		
+		CCMenuItemImage *soundOn = [CCMenuItemImage itemFromNormalImage:@"pause-sound.png" 
+														  selectedImage:@"pause-sound-high.png"];
+		CCMenuItemImage *soundOff = [CCMenuItemImage itemFromNormalImage:@"pause-sound-off.png" 
+														   selectedImage:@"pause-sound-off-high.png"];
+		_soundToggle = [CCMenuItemToggle itemWithTarget:self 
+																selector:@selector(soundPressed:) 
+																   items:soundOn, soundOff, nil];
+		[_soundToggle setPositionSharp:ccp(106, 205)];
+
+		CCMenuItemImage *quit = [CCMenuItemImage itemFromNormalImage:@"pause-quit.png" 
+													   selectedImage:@"pause-quit-high.png" 
+															  target:self 
+															selector:@selector(quitPressed:)];
+		[quit setPositionSharp:ccp(209, 205)];
+
+		CCMenu *menu = [CCMenu menuWithItems:resumeBtn, restart, _soundToggle, quit, nil];
+		menu.anchorPoint = CGPointZero;
+		menu.position = CGPointZero;
+		
+		[self updateSoundToggleButton];
+		[self addChild:menu];
+	}
 	return self;
 }
 
-- (void)resumeButtonPressed
-{
-	// TODO
-    [[CCDirector sharedDirector] resume];
-    [self removeChild:menu cleanup:true];
-    //[[CCDirector sharedDirector] popScene];
-    //[self remove
 
+#pragma mark -
+#pragma mark UI
+
+- (void)resumePressed:(id)sender
+{
+	
 }
 
+- (void)restartPressed:(id)sender
+{
+	
+}
 
+- (void)soundPressed:(id)sender
+{
+	SimpleAudioEngine *engine = [SimpleAudioEngine sharedEngine];
+	engine.mute = !engine.mute;
+	[self updateSoundToggleButton];
+}
+
+- (void)quitPressed:(id)sender
+{
+	
+}
 
 @end

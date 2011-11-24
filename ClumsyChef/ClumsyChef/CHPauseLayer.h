@@ -8,12 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+#import "CHModalLayer.h"
 
-@interface CHPauseLayer : CCLayer
 
-//+ (id)node;
-//
-//- (void)showInNode:(CCNode *)parent;
-//- (void)hide;
+@interface CHPauseLayer : CHModalLayer
 
 @end
