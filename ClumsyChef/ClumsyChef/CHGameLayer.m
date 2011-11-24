@@ -415,6 +415,7 @@ static float const kGenObjectRangeDown = 100.f;
 //BOOL paused = false;
 - (void)pauseButtonPressed:(id)sender
 {
+	[[self gameSceneParent] pauseGame];
 }
 
 @end

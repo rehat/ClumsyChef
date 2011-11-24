@@ -11,3 +11,4 @@
 
 CGImageRef CHGetScreenShotImage();
 
+CGImageRef CHGetScreenShotImageForBlur();	// Returns a low resolution one

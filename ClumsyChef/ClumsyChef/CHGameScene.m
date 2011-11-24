@@ -7,11 +7,12 @@
 //
 
 #import "CHGameScene.h"
-#import "CHBackgroundLayer.h"
 #import "CHGameLayer.h"
 #import "CHGameLibrary.h"
 #import "CHGameWinLayer.h"
 #import "CHGameLoseLayer.h"
+#import "CHPauseLayer.h"
+
 
 @implementation CHGameScene
 {
@@ -72,11 +73,9 @@
 - (void)pauseGame
 {
 	_gameLayer.isPaused = YES;
-	// Pause
-	// Show menu
-	// Donald!!!!!!!!!!
+	CHPauseLayer *p = [CHPauseLayer node];
+	[p showAsModalLayerInNode:self];
 }
-
 
 - (void)resumeGame
 {

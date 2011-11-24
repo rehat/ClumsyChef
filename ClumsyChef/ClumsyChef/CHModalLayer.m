@@ -22,14 +22,18 @@ float const CHModalLayerDefaultDimOpacity = 0.6f;
 	if (self = [super init])
 	{
 		// Take a screen shot and make it as a texture
-		CGImageRef image = CHGetScreenShotImage();
-		int r = (int)floorf([[UIScreen mainScreen] scale] * 3);
-		CGImageRef blurImage = CHCreateBlurImage(image, r, 3);
+		CGImageRef image = CHGetScreenShotImageForBlur();
+		CGImageRef blurImage = CHCreateBlurImage(image, 3, 2);
 		CCTexture2D *tex = [[CCTexture2D alloc] initWithImage:[UIImage imageWithCGImage:blurImage]];
 		CGImageRelease(blurImage);
 		
 		// Add it as sprite
 		CCSprite *screenSprite = [CCSprite spriteWithTexture:tex];
+		
+		// Scale it 
+		CGSize winSizePx = [[CCDirector sharedDirector] winSizeInPixels];
+		screenSprite.scaleX = ceilf(winSizePx.width / tex.pixelsWide);
+		screenSprite.scaleY = ceilf(winSizePx.height / tex.pixelsHigh);
 		[screenSprite setPositionSharp:CHGetWinCenterPoint()];
 		[self addChild:screenSprite];
 		

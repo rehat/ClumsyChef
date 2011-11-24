@@ -81,3 +81,56 @@ CGImageRef CHGetScreenShotImage()
 	
 	return imageRef;
 }
+
+
+CGImageRef CHGetScreenShotImageForBlur()
+{
+    CCDirector *director = [CCDirector sharedDirector];
+	CGSize displaySize	= [director displaySizeInPixels];
+	CGSize winSize	= [director winSizeInPixels];
+	CGSize outSize = CGSizeMake(floorf(winSize.width / 2), floorf(winSize.height / 2));
+	
+	// Create buffer for pixels
+	GLuint bufferLength = displaySize.width * displaySize.height * 4;
+	GLubyte* buffer = (GLubyte*)malloc(bufferLength);
+	
+	// Read Pixels from OpenGL
+	glReadPixels(0, 0, displaySize.width, displaySize.height, GL_RGBA, GL_UNSIGNED_BYTE, buffer);
+	
+	// Make data provider with data.
+	CGDataProviderRef provider = CGDataProviderCreateWithData(NULL, buffer, bufferLength, NULL);
+	
+	// Configure image
+	CGColorSpaceRef colorSpaceRef = CGColorSpaceCreateDeviceRGB();
+	CGImageRef iref = CGImageCreate(displaySize.width, displaySize.height, 
+									8, 32, 
+									displaySize.width * 4, 
+									colorSpaceRef, kCGBitmapByteOrderDefault, 
+									provider, NULL, NO, kCGRenderingIntentDefault);
+	
+    // Create buffer for output image
+	uint32_t* pixels = (uint32_t*)malloc(outSize.width * outSize.height * 4);
+	CGContextRef context = CGBitmapContextCreate(pixels, outSize.width, outSize.height, 
+												 8, outSize.width * 4, 
+												 colorSpaceRef, 
+												 kCGImageAlphaNoneSkipFirst);
+    // Transform
+    CGContextTranslateCTM(context, 0, outSize.height);
+	CGContextScaleCTM(context, 1, -1);
+	
+    // Render
+    CGContextDrawImage(context, CGRectMake(0.0f, 0.0f, outSize.width, outSize.height), iref);
+	
+    // Create image
+	CGImageRef imageRef = CGBitmapContextCreateImage(context);
+	
+	// Dealloc
+	CGDataProviderRelease(provider);
+	CGImageRelease(iref);
+	CGColorSpaceRelease(colorSpaceRef);
+	CGContextRelease(context);
+	free(buffer);
+	free(pixels);
+	
+	return imageRef;	
+}
