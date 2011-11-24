@@ -38,10 +38,10 @@
         [self addChild:description];
         
 		// Finish image (recipe item image)
-		//CHLevelInfo *levelInfo = [[CHGameLibrary sharedGameLibrary] levelInfoAtIndex:index];
-		//CCSprite *finishImage = [CCSprite spriteWithFile:levelInfo.finishImage];
-		//[finishImage setPositionSharp:ccp(screenCenterX, 240)];
-		//[self addChild:finishImage];
+		CHLevelInfo *levelInfo = [[CHGameLibrary sharedGameLibrary] levelInfoAtIndex:index];
+		CCSprite *finishImage = [CCSprite spriteWithFile:levelInfo.finishImage];
+		[finishImage setPositionSharp:ccp(screenCenterX, 274)];
+		[self addChild:finishImage];
 		
 		// Score label
 		NSString *scoreString = [NSString stringWithFormat:@"$%@", CHFormatDecimalNumber([NSNumber numberWithInteger:score])];
