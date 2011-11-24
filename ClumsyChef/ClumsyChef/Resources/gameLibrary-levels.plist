@@ -7,6 +7,8 @@
 		<string>Hot Dog</string>
 		<key>previewImage</key>
 		<string>selectLevel-hot_dog.png</string>
+		<key>finishImage</key>
+		<string>recipeItem-big-hot_dog.png</string>
 		<key>worldHeight</key>
 		<integer>5000</integer>
 		<key>backgroundSideBuildingImage</key>
@@ -24,6 +26,8 @@
 		<string>Hamburger</string>
 		<key>previewImage</key>
 		<string>selectLevel-hamburger.png</string>
+		<key>finishImage</key>
+		<string>recipeItem-big-hamburger.png</string>
 		<key>worldHeight</key>
 		<integer>6000</integer>
 		<key>backgroundSideBuildingImage</key>
@@ -43,6 +47,8 @@
 		<string>Tacos</string>
 		<key>previewImage</key>
 		<string>selectLevel-taco.png</string>
+		<key>finishImage</key>
+		<string>recipeItem-big-taco.png</string>
 		<key>worldHeight</key>
 		<integer>8000</integer>
 		<key>backgroundSideBuildingImage</key>
@@ -63,6 +69,8 @@
 		<string>Burrito</string>
 		<key>previewImage</key>
 		<string>selectLevel-burrito.png</string>
+		<key>finishImage</key>
+		<string>recipeItem-big-burrito.png</string>
 		<key>backgroundSideBuildingImage</key>
 		<string>back.png</string>
 		<key>backgroundBackImage</key>
@@ -82,6 +90,8 @@
 		<string>Pizza</string>
 		<key>previewImage</key>
 		<string>selectLevel-pizza.png</string>
+		<key>finishImage</key>
+		<string>recipeItem-big-pizza.png</string>
 		<key>backgroundSideBuildingImage</key>
 		<string>back.png</string>
 		<key>backgroundBackImage</key>
