@@ -51,7 +51,7 @@
         [self addChild:clouds];
         
         //Main Background
-        background = [CCSprite spriteWithFile:@"backgroundLayer-mainBG.png"];
+        background = [CCSprite spriteWithFile:@"background-empire.png"];
         background.position = CGPointMake(background.contentSize.width/2,background.contentSize.height/2);
         [self addChild:background];
         
