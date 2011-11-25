@@ -9,7 +9,7 @@
 	<key>Beef</key>
 	<string>recipeItem_beef.png</string>
 	<key>HamburgerBun</key>
-	<string>recipeItem_bread.png</string>
+	<string>recipeItem_bun.png</string>
 	<key>Cheese</key>
 	<string>recipeItem_cheese.png</string>
 	<key>HotSauce</key>
@@ -38,5 +38,7 @@
 	<string>recipeItem_bellPepper.png</string>
 	<key>Onions</key>
 	<string>recipeItem_onion.png</string>
+	<key>HamburgerPatty</key>
+	<string>recipeItem_patty.png</string>
 </dict>
 </plist>

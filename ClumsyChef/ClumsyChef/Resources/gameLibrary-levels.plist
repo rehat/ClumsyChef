@@ -39,7 +39,7 @@
 			<string>HamburgerBun</string>
 			<string>Lettuce</string>
 			<string>Tomato</string>
-			<string>GroundBeef</string>
+			<string>HamburgerPatty</string>
 		</array>
 	</dict>
 	<dict>
@@ -57,10 +57,10 @@
 		<string>background-ritzLA.png</string>
 		<key>recipeItems</key>
 		<array>
-			<string>Tortilla</string>
+			<string>TacoShell</string>
 			<string>Lettuce</string>
 			<string>Tomato</string>
-			<string>Beef</string>
+			<string>GroundBeef</string>
 			<string>HotSauce</string>
 		</array>
 	</dict>
@@ -79,8 +79,8 @@
 		<string>background-taipei.png</string>
 		<key>recipeItems</key>
 		<array>
-			<string>TacoShell</string>
-			<string>GroundBeef</string>
+			<string>Tortilla</string>
+			<string>Beef</string>
 			<string>Cheese</string>
 			<string>HotSauce</string>
 			<string>Tomato</string>
