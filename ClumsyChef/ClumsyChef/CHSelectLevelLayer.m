@@ -36,14 +36,12 @@
 		[bg setPositionSharp:CHGetWinCenterPoint()];
 		[self addChild:bg];
 		
-		//CHPlayerInfo *info = [CHPlayerInfo sharedPlayerInfo];
+		CHPlayerInfo *info = [CHPlayerInfo sharedPlayerInfo];
 		
 	
 	}
 	return self;
 }
-
-
 
 
 @end
