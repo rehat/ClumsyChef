@@ -32,19 +32,19 @@ static float const kGenObjectRangeDown = 100.f;
 
 @implementation CHGameLayer
 {
-	CHChefObject *_chefObj;
-    CHHUDLayer *_hudLayer;
+	CHChefObject		*_chefObj;
+    CHHUDLayer			*_hudLayer;
     CHBackgroundLayer	*_bgLayer;
-	BOOL _isPaused;
-    NSUInteger _levelIndex;
+	BOOL				_isPaused;
+    NSUInteger			_levelIndex;
 	
-	float _bottomWorldOffset;
-	float _nextGenItemsOffset;
+	float				_bottomWorldOffset;
+	float				_nextGenItemsOffset;
     
-    CCArray *_liveGameObjects;
-    CCArray *_goalRecipeItemIDs;
+    CCArray				*_liveGameObjects;
+    CCArray				*_goalRecipeItemIDs;
     
-	NSInteger _levelHeight;
+	NSInteger			_levelHeight;
 }
 
 @synthesize isPaused = _isPaused;
@@ -157,8 +157,7 @@ static float const kGenObjectRangeDown = 100.f;
 	// Background 
 	//-------------------------------------------
 	
-	_bgLayer = [CHBackgroundLayer node];
-	[_bgLayer setWorldHeight:levelInfo.worldHeight];
+	_bgLayer = [CHBackgroundLayer nodeWithLevelIndex:_levelIndex];
 	[self addChild:_bgLayer z:-1];
 	
 	//Array of items in play
@@ -353,7 +352,7 @@ static float const kGenObjectRangeDown = 100.f;
 	
 	_bottomWorldOffset += pullUp;
     
-    [_bgLayer updatePull:_bottomWorldOffset];	
+    [_bgLayer setBackgroundOffset:_bottomWorldOffset];
     
     if(_bottomWorldOffset > _levelHeight)
 	{
