@@ -14,22 +14,22 @@
 
 @implementation CHCoinObject
 {
-    CCSprite *coin;
+    CCSprite *_coin;
 }
 
 - (id)init
 {
 	if (self = [super init])
 	{
-        coin = [CCSprite spriteWithFile:@"coinObject-coin.png"];
-        [self addChild:coin];
+        _coin = [CCSprite spriteWithFile:@"coinObject-coin.png"];
+        [self addChild:_coin];
     }
 	return self;
 }
 
 - (CGSize)contentSize
 {
-    return coin.contentSize;
+    return _coin.contentSize;
 }
 
 - (void)collected
@@ -37,20 +37,21 @@
 	// Craete the particle effect
 	NSDictionary *dict = [[CHSharedResHolder sharedResHolder] coinParticleEffectDict];
 	CCParticleSystemQuad *emitter = [[[CCParticleSystemQuad alloc] initWithDictionary:dict] autorelease];
-	emitter.position = coin.position;
+	emitter.position = _coin.position;
     emitter.autoRemoveOnFinish = YES;
     
 	// Insert score label
 	CCLabelBMFont *amount = [CCLabelBMFont labelWithString:@"+10" 
 												   fntFile:@"gameLayer-collisionScoreFont.fnt"];
-    amount.position = coin.position;
+    amount.position = _coin.position;
     [emitter addChild:amount];
 	
 	[self addChild:emitter];
     
 	// Play sound
     [[SimpleAudioEngine sharedEngine] playEffect:@"coin.caf"];
-    [self removeChild:coin cleanup:YES];
+    [self removeChild:_coin cleanup:YES];
+	_coin = nil;
     [self schedule: @selector(removeFromParent) interval:.8];
 }
 

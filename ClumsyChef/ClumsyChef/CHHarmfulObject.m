@@ -74,7 +74,9 @@
 	// Play sound
     [[SimpleAudioEngine sharedEngine] playEffect:@"Oowh.caf"];
     [self removeChild:_knife cleanup:YES];
-    [self schedule: @selector(removeFromParent) interval:1];
+	_knife = nil;
+	[self unscheduleUpdate];
+    [self schedule: @selector(removeFromParent) interval:1];;
 }
 
 - (void)removeFromParent

@@ -18,5 +18,6 @@
 @property(nonatomic, readonly) NSDictionary *coinParticleEffectDict;
 @property(nonatomic, readonly) NSDictionary *harmfulParticleEffectDict;
 @property(nonatomic, readonly) NSDictionary *recipeParticleEffectDict;
+@property(nonatomic, readonly) NSDictionary *recipeCollectedParticleDict;
 
 @end

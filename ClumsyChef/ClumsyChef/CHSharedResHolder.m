@@ -17,11 +17,13 @@ static CHSharedResHolder *_sharedHolder = nil;
 	NSDictionary *_coinParticleEffectDict;
 	NSDictionary *_harmfulParticleEffectDict;
 	NSDictionary *_recipeParticleEffectDict;
+	NSDictionary *_recipeCollectedParticleDict;
 }
 
 @synthesize coinParticleEffectDict = _coinParticleEffectDict;
 @synthesize harmfulParticleEffectDict = _harmfulParticleEffectDict;
 @synthesize recipeParticleEffectDict = _recipeParticleEffectDict;
+@synthesize recipeCollectedParticleDict = _recipeCollectedParticleDict;
 
 #pragma mark -
 #pragma mark Constructor and destructor
@@ -39,6 +41,9 @@ static CHSharedResHolder *_sharedHolder = nil;
 		
 		filename = [[NSBundle mainBundle] pathForResource:@"recipeItem-particle" ofType:@"plist"];
 		_recipeParticleEffectDict = [[NSDictionary alloc] initWithContentsOfFile:filename];
+	
+		filename = [[NSBundle mainBundle] pathForResource:@"recipeItem-collected-particle" ofType:@"plist"];
+		_recipeCollectedParticleDict = [[NSDictionary alloc] initWithContentsOfFile:filename];
 	}
 	return self;
 }
@@ -48,6 +53,7 @@ static CHSharedResHolder *_sharedHolder = nil;
 	[_coinParticleEffectDict release];
 	[_harmfulParticleEffectDict release];
 	[_recipeParticleEffectDict release];
+	[_recipeCollectedParticleDict release];
 	[super dealloc];
 }
 

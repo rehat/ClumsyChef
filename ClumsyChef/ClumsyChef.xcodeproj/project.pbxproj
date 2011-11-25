@@ -330,8 +330,8 @@
 		BCC06AB3146B2DB60068103A /* harmfulObject-knife2-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BCC06AA7146B2DB60068103A /* harmfulObject-knife2-hd.png */; };
 		BCC06AB4146B2DB60068103A /* harmfulObject-knife2.png in Resources */ = {isa = PBXBuildFile; fileRef = BCC06AA8146B2DB60068103A /* harmfulObject-knife2.png */; };
 		BCC06AB5146B2DB60068103A /* harmfulObject-knife2.png in Resources */ = {isa = PBXBuildFile; fileRef = BCC06AA8146B2DB60068103A /* harmfulObject-knife2.png */; };
-		BCC06AB8146B2DB60068103A /* recipeItem-particle.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCC06AAA146B2DB60068103A /* recipeItem-particle.plist */; };
-		BCC06AB9146B2DB60068103A /* recipeItem-particle.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCC06AAA146B2DB60068103A /* recipeItem-particle.plist */; };
+		BCC06AB8146B2DB60068103A /* recipeItem-collected-particle.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCC06AAA146B2DB60068103A /* recipeItem-collected-particle.plist */; };
+		BCC06AB9146B2DB60068103A /* recipeItem-collected-particle.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCC06AAA146B2DB60068103A /* recipeItem-collected-particle.plist */; };
 		BCC06ABA146B2DB60068103A /* recipeItem-sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = BCC06AAB146B2DB60068103A /* recipeItem-sound.caf */; };
 		BCC06ABB146B2DB60068103A /* recipeItem-sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = BCC06AAB146B2DB60068103A /* recipeItem-sound.caf */; };
 		E507A13F147DEE360014BEDE /* pause-quit-high-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E507A137147DEE360014BEDE /* pause-quit-high-hd.png */; };
@@ -800,6 +800,12 @@
 		E5A9055D144F779D002A1F6C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9055C144F779D002A1F6C /* AppDelegate.m */; };
 		E5A90560144F779D002A1F6C /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5A9055F144F779D002A1F6C /* RootViewController.m */; };
 		E5B234BE145F1C1000BED350 /* CCNode+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E5B234BD145F1C1000BED350 /* CCNode+Utilities.m */; };
+		E5B4D5E3147F9347009B76FD /* recipeItem-collected-particle-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E5B4D5E1147F9347009B76FD /* recipeItem-collected-particle-hd.png */; };
+		E5B4D5E4147F9347009B76FD /* recipeItem-collected-particle-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E5B4D5E1147F9347009B76FD /* recipeItem-collected-particle-hd.png */; };
+		E5B4D5E5147F9347009B76FD /* recipeItem-collected-particle.png in Resources */ = {isa = PBXBuildFile; fileRef = E5B4D5E2147F9347009B76FD /* recipeItem-collected-particle.png */; };
+		E5B4D5E6147F9347009B76FD /* recipeItem-collected-particle.png in Resources */ = {isa = PBXBuildFile; fileRef = E5B4D5E2147F9347009B76FD /* recipeItem-collected-particle.png */; };
+		E5B4D5E9147F9558009B76FD /* recipeItem-particle.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5B4D5E8147F9558009B76FD /* recipeItem-particle.plist */; };
+		E5B4D5EA147F9558009B76FD /* recipeItem-particle.plist in Resources */ = {isa = PBXBuildFile; fileRef = E5B4D5E8147F9558009B76FD /* recipeItem-particle.plist */; };
 		E5BED0161474C3280003D6F2 /* CHSharedResHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = E5BED0151474C3280003D6F2 /* CHSharedResHolder.m */; };
 		E5BED0171474C3280003D6F2 /* CHSharedResHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = E5BED0151474C3280003D6F2 /* CHSharedResHolder.m */; };
 		E5BED0191474CC5E0003D6F2 /* skull-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E5BED0181474CC5E0003D6F2 /* skull-hd.png */; };
@@ -902,7 +908,7 @@
 		BCC06AA6146B2DB60068103A /* gameLayer-music.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "gameLayer-music.caf"; path = "Resources/gameLayer-music.caf"; sourceTree = "<group>"; };
 		BCC06AA7146B2DB60068103A /* harmfulObject-knife2-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "harmfulObject-knife2-hd.png"; path = "Resources/harmfulObject-knife2-hd.png"; sourceTree = "<group>"; };
 		BCC06AA8146B2DB60068103A /* harmfulObject-knife2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "harmfulObject-knife2.png"; path = "Resources/harmfulObject-knife2.png"; sourceTree = "<group>"; };
-		BCC06AAA146B2DB60068103A /* recipeItem-particle.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "recipeItem-particle.plist"; path = "Resources/recipeItem-particle.plist"; sourceTree = "<group>"; };
+		BCC06AAA146B2DB60068103A /* recipeItem-collected-particle.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "recipeItem-collected-particle.plist"; path = "Resources/recipeItem-collected-particle.plist"; sourceTree = "<group>"; };
 		BCC06AAB146B2DB60068103A /* recipeItem-sound.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "recipeItem-sound.caf"; path = "Resources/recipeItem-sound.caf"; sourceTree = "<group>"; };
 		E507A137147DEE360014BEDE /* pause-quit-high-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pause-quit-high-hd.png"; path = "Resources/pause-quit-high-hd.png"; sourceTree = "<group>"; };
 		E507A138147DEE360014BEDE /* pause-quit-high.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pause-quit-high.png"; path = "Resources/pause-quit-high.png"; sourceTree = "<group>"; };
@@ -1404,6 +1410,9 @@
 		E5A90567144F779D002A1F6C /* GameConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
 		E5B234BC145F1C1000BED350 /* CCNode+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CCNode+Utilities.h"; sourceTree = "<group>"; };
 		E5B234BD145F1C1000BED350 /* CCNode+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CCNode+Utilities.m"; sourceTree = "<group>"; };
+		E5B4D5E1147F9347009B76FD /* recipeItem-collected-particle-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recipeItem-collected-particle-hd.png"; path = "Resources/recipeItem-collected-particle-hd.png"; sourceTree = "<group>"; };
+		E5B4D5E2147F9347009B76FD /* recipeItem-collected-particle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recipeItem-collected-particle.png"; path = "Resources/recipeItem-collected-particle.png"; sourceTree = "<group>"; };
+		E5B4D5E8147F9558009B76FD /* recipeItem-particle.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "recipeItem-particle.plist"; path = "Resources/recipeItem-particle.plist"; sourceTree = "<group>"; };
 		E5BED0141474C3280003D6F2 /* CHSharedResHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHSharedResHolder.h; sourceTree = "<group>"; };
 		E5BED0151474C3280003D6F2 /* CHSharedResHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHSharedResHolder.m; sourceTree = "<group>"; };
 		E5BED0181474CC5E0003D6F2 /* skull-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "skull-hd.png"; path = "Resources/skull-hd.png"; sourceTree = "<group>"; };
@@ -1661,7 +1670,10 @@
 				E599004414687E3B00458316 /* harmfulObject-smallKnife-hd.png */,
 				E599004514687E3B00458316 /* harmfulObject-smallKnife.png */,
 				E599004614687E3B00458316 /* Oowh.caf */,
-				BCC06AAA146B2DB60068103A /* recipeItem-particle.plist */,
+				E5B4D5E1147F9347009B76FD /* recipeItem-collected-particle-hd.png */,
+				BCC06AAA146B2DB60068103A /* recipeItem-collected-particle.plist */,
+				E5B4D5E2147F9347009B76FD /* recipeItem-collected-particle.png */,
+				E5B4D5E8147F9558009B76FD /* recipeItem-particle.plist */,
 				BCC06AAB146B2DB60068103A /* recipeItem-sound.caf */,
 				E5BED0181474CC5E0003D6F2 /* skull-hd.png */,
 				E599004714687E3B00458316 /* skull.png */,
@@ -2591,7 +2603,7 @@
 				BCC06AB1146B2DB60068103A /* gameLayer-music.caf in Resources */,
 				BCC06AB3146B2DB60068103A /* harmfulObject-knife2-hd.png in Resources */,
 				BCC06AB5146B2DB60068103A /* harmfulObject-knife2.png in Resources */,
-				BCC06AB9146B2DB60068103A /* recipeItem-particle.plist in Resources */,
+				BCC06AB9146B2DB60068103A /* recipeItem-collected-particle.plist in Resources */,
 				BCC06ABB146B2DB60068103A /* recipeItem-sound.caf in Resources */,
 				E5631EA4146B790000DACD3E /* gameLibrary-harmfulItems.plist in Resources */,
 				E5631EA6146B790000DACD3E /* gameLibrary-levels.plist in Resources */,
@@ -2788,6 +2800,9 @@
 				85D20C46147F8B7300C09EAB /* backgroundLayer-sideBuilding-empire.png in Resources */,
 				85D20C48147F8B7300C09EAB /* backgroundLayer-sideBuilding-empire-hd.png in Resources */,
 				85D20C4B147F8BE300C09EAB /* selectLevel-italianPizza.png in Resources */,
+				E5B4D5E4147F9347009B76FD /* recipeItem-collected-particle-hd.png in Resources */,
+				E5B4D5E6147F9347009B76FD /* recipeItem-collected-particle.png in Resources */,
+				E5B4D5EA147F9558009B76FD /* recipeItem-particle.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2838,7 +2853,7 @@
 				BCC06AB0146B2DB60068103A /* gameLayer-music.caf in Resources */,
 				BCC06AB2146B2DB60068103A /* harmfulObject-knife2-hd.png in Resources */,
 				BCC06AB4146B2DB60068103A /* harmfulObject-knife2.png in Resources */,
-				BCC06AB8146B2DB60068103A /* recipeItem-particle.plist in Resources */,
+				BCC06AB8146B2DB60068103A /* recipeItem-collected-particle.plist in Resources */,
 				BCC06ABA146B2DB60068103A /* recipeItem-sound.caf in Resources */,
 				E5631EA3146B790000DACD3E /* gameLibrary-harmfulItems.plist in Resources */,
 				E5631EA5146B790000DACD3E /* gameLibrary-levels.plist in Resources */,
@@ -3035,6 +3050,9 @@
 				85D20C45147F8B7300C09EAB /* backgroundLayer-sideBuilding-empire.png in Resources */,
 				85D20C47147F8B7300C09EAB /* backgroundLayer-sideBuilding-empire-hd.png in Resources */,
 				85D20C4A147F8BE300C09EAB /* selectLevel-italianPizza.png in Resources */,
+				E5B4D5E3147F9347009B76FD /* recipeItem-collected-particle-hd.png in Resources */,
+				E5B4D5E5147F9347009B76FD /* recipeItem-collected-particle.png in Resources */,
+				E5B4D5E9147F9558009B76FD /* recipeItem-particle.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

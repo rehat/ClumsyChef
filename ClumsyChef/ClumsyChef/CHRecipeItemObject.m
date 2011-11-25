@@ -15,9 +15,8 @@
 
 @implementation CHRecipeItemObject
 {
-	CCSprite *itemSprite;
-    CCParticleSystemQuad *emitter;
-
+	CCSprite *_itemSprite;
+    CCParticleSystemQuad *_sparkEmitter;
     NSString *_itemID;
 }
 
@@ -34,17 +33,17 @@
 		_itemID = [itemID retain];
 		CHRecipeItemInfo *info = [[CHGameLibrary sharedGameLibrary] recipeItemInfoWithName:_itemID];
 		
-		itemSprite = [CCSprite spriteWithFile:info.spriteFilename];
+		_itemSprite = [CCSprite spriteWithFile:info.spriteFilename];
 		
 		NSDictionary *dict = [[CHSharedResHolder sharedResHolder] recipeParticleEffectDict];
-		emitter = [[[CCParticleSystemQuad alloc] initWithDictionary:dict] autorelease];
+		_sparkEmitter = [[[CCParticleSystemQuad alloc] initWithDictionary:dict] autorelease];
 		
 		//this is nasty :(
-        emitter.position = ccpAdd(itemSprite.position, ccp(15, 20));
-        emitter.rotation = 180;  //based on the particle effect used.  Makes it look like it's falling (kinda);
+        _sparkEmitter.position = ccpAdd(_itemSprite.position, ccp(15, 20));
+        _sparkEmitter.rotation = 180;  //based on the particle effect used.  Makes it look like it's falling (kinda);
 		
-		[itemSprite addChild:emitter z:-1];
-        [self addChild:itemSprite];
+		[_itemSprite addChild:_sparkEmitter z:-1];
+        [self addChild:_itemSprite];
 	}
 	return self;
 }
@@ -63,18 +62,30 @@
 
 - (CGSize)contentSize
 {    
-    return itemSprite.contentSize;
+    return _itemSprite.contentSize;
 }
 
 - (void)collected
 {
-	//[[self gameSceneParent] chefDidCollectRecipeItem:_itemID];
-    [[SimpleAudioEngine sharedEngine] playEffect:@"recipeItem-sound.caf"];
-
-    [[self gameLayerParent] removeChild:self cleanup:YES];
+	// Remove the old particle effect
+	[_sparkEmitter removeFromParentAndCleanup:YES];
+	_sparkEmitter = nil;
+	
+	// Craete the particle effect
+	NSDictionary *dict = [[CHSharedResHolder sharedResHolder] recipeCollectedParticleDict];
+	CCParticleSystemQuad *e = [[[CCParticleSystemQuad alloc] initWithDictionary:dict] autorelease];
+	e.position = CGPointZero;
+    e.autoRemoveOnFinish = YES;
+    [self addChild:e];
+	
+	[[SimpleAudioEngine sharedEngine] playEffect:@"recipeItem-sound.caf"];
+    [self removeChild:_itemSprite cleanup:YES];
+	_itemSprite = nil;
+    [self schedule: @selector(removeFromParent) interval:1.5];
 }
 
--(void)removeFromParent{
+-(void)removeFromParent
+{
     [[self gameLayerParent] removeChild:self cleanup:YES];
 }
 
