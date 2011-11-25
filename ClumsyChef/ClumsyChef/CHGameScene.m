@@ -106,7 +106,7 @@
 	NSAssert([self hasNextLevel], @"No next level");
 	_levelIndex++;
 	[_gameLayer resetForLevelIndex:_levelIndex];
-	_gameLayer.moneyAmount += _moneyAmount;
+	_gameLayer.moneyAmount = _moneyAmount;
 	_gameLayer.isPaused = NO;
 }
 

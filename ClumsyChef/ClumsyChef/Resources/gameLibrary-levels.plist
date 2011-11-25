@@ -71,6 +71,8 @@
 		<string>selectLevel-burrito.png</string>
 		<key>finishImage</key>
 		<string>recipeItem-big-burrito.png</string>
+		<key>worldHeight</key>
+		<integer>6000</integer>
 		<key>backgroundSideBuildingImage</key>
 		<string>back.png</string>
 		<key>backgroundBackImage</key>
@@ -92,6 +94,8 @@
 		<string>selectLevel-pizza.png</string>
 		<key>finishImage</key>
 		<string>recipeItem-big-pizza.png</string>
+		<key>worldHeight</key>
+		<integer>6000</integer>
 		<key>backgroundSideBuildingImage</key>
 		<string>back.png</string>
 		<key>backgroundBackImage</key>
