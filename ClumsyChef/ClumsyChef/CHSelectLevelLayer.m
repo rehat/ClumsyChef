@@ -10,6 +10,7 @@
 #import "CHPlayerInfo.h"
 #import "CHGameScene.h"
 #import "CHGameLibrary.h"
+#import "CHMainMenuUtilities.h"
 
 
 static CGFloat const kX0 = 67;
@@ -81,6 +82,10 @@ static CGFloat const kYSpacing = 110;
 			}
 		}
 	
+		// Back button
+		CCMenu *button = CHMenuMakeBackButton(ccp(CHGetHalfWinWidth(), 35), 
+											  self, @selector(backButtonPressed:));
+		[self addChild:button];
 	}
 	return self;
 }
@@ -95,5 +100,10 @@ static CGFloat const kYSpacing = 110;
 	CHGameScene *gs = [CHGameScene nodeWithLevelIndex:levelIndex];
 	[[CCDirector sharedDirector] popScene];
 	[[CCDirector sharedDirector] pushScene:gs];
+}
+
+- (void)backButtonPressed:(id)sender
+{
+	[[CCDirector sharedDirector] popScene];
 }
 @end

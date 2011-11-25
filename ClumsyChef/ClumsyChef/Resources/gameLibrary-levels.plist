@@ -12,9 +12,9 @@
 		<key>worldHeight</key>
 		<integer>5000</integer>
 		<key>backgroundSideBuildingImage</key>
-		<string>back.png</string>
+		<string>backgroundLayer-sideBuilding.png</string>
 		<key>backgroundBackImage</key>
-		<string>side.png</string>
+		<string>background-empire.png</string>
 		<key>recipeItems</key>
 		<array>
 			<string>HotDogBun</string>
@@ -31,9 +31,9 @@
 		<key>worldHeight</key>
 		<integer>6000</integer>
 		<key>backgroundSideBuildingImage</key>
-		<string>back.png</string>
+		<string>backgroundLayer-sideBuilding.png</string>
 		<key>backgroundBackImage</key>
-		<string>side.png</string>
+		<string>background-searsTowerChicago.png</string>
 		<key>recipeItems</key>
 		<array>
 			<string>HamburgerBun</string>
@@ -52,9 +52,9 @@
 		<key>worldHeight</key>
 		<integer>8000</integer>
 		<key>backgroundSideBuildingImage</key>
-		<string>back.png</string>
+		<string>backgroundLayer-sideBuilding.png</string>
 		<key>backgroundBackImage</key>
-		<string>side.png</string>
+		<string>background-ritzLA.png</string>
 		<key>recipeItems</key>
 		<array>
 			<string>Tortilla</string>
@@ -74,9 +74,9 @@
 		<key>worldHeight</key>
 		<integer>6000</integer>
 		<key>backgroundSideBuildingImage</key>
-		<string>back.png</string>
+		<string>backgroundLayer-sideBuilding.png</string>
 		<key>backgroundBackImage</key>
-		<string>side.png</string>
+		<string>background-ritzLA.png</string>
 		<key>recipeItems</key>
 		<array>
 			<string>TacoShell</string>
@@ -97,9 +97,9 @@
 		<key>worldHeight</key>
 		<integer>6000</integer>
 		<key>backgroundSideBuildingImage</key>
-		<string>back.png</string>
+		<string>backgroundLayer-sideBuilding.png</string>
 		<key>backgroundBackImage</key>
-		<string>side.png</string>
+		<string>background-ritzLA.png</string>
 		<key>recipeItems</key>
 		<array>
 			<string>Pepperoni</string>

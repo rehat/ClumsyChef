@@ -25,12 +25,12 @@
 		_worldHeight = info.worldHeight;
 		
 		// Load the background
-		CCSprite *bg = [CCSprite spriteWithFile:@"background-empire.png"];
+		CCSprite *bg = [CCSprite spriteWithFile:info.backgroundBackImage];
 		[bg setPositionSharp:CHGetWinCenterPoint()];
 		[self addChild:bg];
 		
         //Side building in the foreground 
-		_sideBuilding = [CCSprite spriteWithFile:@"backgroundLayer-sideBuilding.png" 
+		_sideBuilding = [CCSprite spriteWithFile:info.backgroundSideBuildingImage
 										   rect:CGRectMake(0, 0, 32, _worldHeight)]; 
         ccTexParams paramsSide = {GL_LINEAR, GL_LINEAR, GL_LINEAR, GL_REPEAT};
         [_sideBuilding.texture setTexParameters:&paramsSide];
