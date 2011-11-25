@@ -13,7 +13,7 @@
 #import "RootViewController.h"
 #import "TestMenuLayer.h"
 #import "SimpleAudioEngine.h"
-
+#import "CHMainMenuLayer.h"
 
 @implementation AppDelegate
 
@@ -127,9 +127,12 @@
 
     
     
-	
+#ifdef CH_NO_TEST_MENU
 	// Run the intro Scene
-	[[CCDirector sharedDirector] runWithScene: [TestMenuLayer layerAsScene]];
+	[[CCDirector sharedDirector] runWithScene:[CHMainMenuLayer layerAsScene]];
+#else
+	[[CCDirector sharedDirector] runWithScene:[TestMenuLayer layerAsScene]];
+#endif
 }
 
 

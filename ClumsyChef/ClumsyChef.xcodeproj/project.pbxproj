@@ -35,8 +35,6 @@
 		854E2503147AE9C7007F4039 /* selectLevel-hot_dog.png in Resources */ = {isa = PBXBuildFile; fileRef = 854E24E8147AE9C7007F4039 /* selectLevel-hot_dog.png */; };
 		854E2504147AE9C7007F4039 /* selectLevel-locked.png in Resources */ = {isa = PBXBuildFile; fileRef = 854E24E9147AE9C7007F4039 /* selectLevel-locked.png */; };
 		854E2505147AE9C7007F4039 /* selectLevel-locked.png in Resources */ = {isa = PBXBuildFile; fileRef = 854E24E9147AE9C7007F4039 /* selectLevel-locked.png */; };
-		854E2506147AE9C7007F4039 /* selectLevel-Pizza.png in Resources */ = {isa = PBXBuildFile; fileRef = 854E24EA147AE9C7007F4039 /* selectLevel-Pizza.png */; };
-		854E2507147AE9C7007F4039 /* selectLevel-Pizza.png in Resources */ = {isa = PBXBuildFile; fileRef = 854E24EA147AE9C7007F4039 /* selectLevel-Pizza.png */; };
 		854E2508147AE9C7007F4039 /* selectLevel-taco.png in Resources */ = {isa = PBXBuildFile; fileRef = 854E24EB147AE9C7007F4039 /* selectLevel-taco.png */; };
 		854E2509147AE9C7007F4039 /* selectLevel-taco.png in Resources */ = {isa = PBXBuildFile; fileRef = 854E24EB147AE9C7007F4039 /* selectLevel-taco.png */; };
 		854E250A147AE9C7007F4039 /* selectLevel-burrito-high.png in Resources */ = {isa = PBXBuildFile; fileRef = 854E24EC147AE9C7007F4039 /* selectLevel-burrito-high.png */; };
@@ -47,8 +45,6 @@
 		854E250F147AE9C7007F4039 /* selectLevel-hot_dog-high.png in Resources */ = {isa = PBXBuildFile; fileRef = 854E24EE147AE9C7007F4039 /* selectLevel-hot_dog-high.png */; };
 		854E2510147AE9C7007F4039 /* selectLevel-locked-high.png in Resources */ = {isa = PBXBuildFile; fileRef = 854E24EF147AE9C7007F4039 /* selectLevel-locked-high.png */; };
 		854E2511147AE9C7007F4039 /* selectLevel-locked-high.png in Resources */ = {isa = PBXBuildFile; fileRef = 854E24EF147AE9C7007F4039 /* selectLevel-locked-high.png */; };
-		854E2512147AE9C7007F4039 /* selectLevel-pizza-high.png in Resources */ = {isa = PBXBuildFile; fileRef = 854E24F0147AE9C7007F4039 /* selectLevel-pizza-high.png */; };
-		854E2513147AE9C7007F4039 /* selectLevel-pizza-high.png in Resources */ = {isa = PBXBuildFile; fileRef = 854E24F0147AE9C7007F4039 /* selectLevel-pizza-high.png */; };
 		854E2514147AE9C7007F4039 /* selectLevel-taco-high.png in Resources */ = {isa = PBXBuildFile; fileRef = 854E24F1147AE9C7007F4039 /* selectLevel-taco-high.png */; };
 		854E2515147AE9C7007F4039 /* selectLevel-taco-high.png in Resources */ = {isa = PBXBuildFile; fileRef = 854E24F1147AE9C7007F4039 /* selectLevel-taco-high.png */; };
 		854E2516147AE9C7007F4039 /* selectLevel-burrito-high-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 854E24F2147AE9C7007F4039 /* selectLevel-burrito-high-hd.png */; };
@@ -59,8 +55,6 @@
 		854E251B147AE9C7007F4039 /* selectLevel-hot_dog-high-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 854E24F4147AE9C7007F4039 /* selectLevel-hot_dog-high-hd.png */; };
 		854E251C147AE9C7007F4039 /* selectLevel-locked-high-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 854E24F5147AE9C7007F4039 /* selectLevel-locked-high-hd.png */; };
 		854E251D147AE9C7007F4039 /* selectLevel-locked-high-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 854E24F5147AE9C7007F4039 /* selectLevel-locked-high-hd.png */; };
-		854E251E147AE9C7007F4039 /* selectLevel-pizza-high-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 854E24F6147AE9C7007F4039 /* selectLevel-pizza-high-hd.png */; };
-		854E251F147AE9C7007F4039 /* selectLevel-pizza-high-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 854E24F6147AE9C7007F4039 /* selectLevel-pizza-high-hd.png */; };
 		854E2520147AE9C7007F4039 /* selectLevel-taco-high-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 854E24F7147AE9C7007F4039 /* selectLevel-taco-high-hd.png */; };
 		854E2521147AE9C7007F4039 /* selectLevel-taco-high-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 854E24F7147AE9C7007F4039 /* selectLevel-taco-high-hd.png */; };
 		854E2522147AE9C7007F4039 /* selectLevel-burrito-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 854E24F8147AE9C7007F4039 /* selectLevel-burrito-hd.png */; };
@@ -71,8 +65,6 @@
 		854E2527147AE9C7007F4039 /* selectLevel-hot_dog-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 854E24FA147AE9C7007F4039 /* selectLevel-hot_dog-hd.png */; };
 		854E2528147AE9C7007F4039 /* selectLevel-locked-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 854E24FB147AE9C7007F4039 /* selectLevel-locked-hd.png */; };
 		854E2529147AE9C7007F4039 /* selectLevel-locked-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 854E24FB147AE9C7007F4039 /* selectLevel-locked-hd.png */; };
-		854E252A147AE9C7007F4039 /* selectLevel-pizza-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 854E24FC147AE9C7007F4039 /* selectLevel-pizza-hd.png */; };
-		854E252B147AE9C7007F4039 /* selectLevel-pizza-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 854E24FC147AE9C7007F4039 /* selectLevel-pizza-hd.png */; };
 		854E252C147AE9C7007F4039 /* selectLevel-taco-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 854E24FD147AE9C7007F4039 /* selectLevel-taco-hd.png */; };
 		854E252D147AE9C7007F4039 /* selectLevel-taco-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 854E24FD147AE9C7007F4039 /* selectLevel-taco-hd.png */; };
 		856FD5E2147F549900FE42F0 /* background-empire-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 856FD5DC147F549900FE42F0 /* background-empire-hd.png */; };
@@ -525,6 +517,10 @@
 		E5469B5E147C865100F4D27B /* gameLayer-collisionScoreFont.fnt in Resources */ = {isa = PBXBuildFile; fileRef = E5469B57147C865100F4D27B /* gameLayer-collisionScoreFont.fnt */; };
 		E5469B5F147C865100F4D27B /* gameLayer-collisionScoreFont.png in Resources */ = {isa = PBXBuildFile; fileRef = E5469B58147C865100F4D27B /* gameLayer-collisionScoreFont.png */; };
 		E5469B60147C865100F4D27B /* gameLayer-collisionScoreFont.png in Resources */ = {isa = PBXBuildFile; fileRef = E5469B58147C865100F4D27B /* gameLayer-collisionScoreFont.png */; };
+		E5489C68147F775400C83EEF /* chefAtlas-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E5489C66147F775400C83EEF /* chefAtlas-hd.png */; };
+		E5489C69147F775400C83EEF /* chefAtlas-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E5489C66147F775400C83EEF /* chefAtlas-hd.png */; };
+		E5489C6A147F775400C83EEF /* chefAtlas.png in Resources */ = {isa = PBXBuildFile; fileRef = E5489C67147F775400C83EEF /* chefAtlas.png */; };
+		E5489C6B147F775400C83EEF /* chefAtlas.png in Resources */ = {isa = PBXBuildFile; fileRef = E5489C67147F775400C83EEF /* chefAtlas.png */; };
 		E552D23A1463148A005EBBB1 /* CHGameWinLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E552D23914631489005EBBB1 /* CHGameWinLayer.m */; };
 		E552D23E146314A4005EBBB1 /* CHGameLoseLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E552D23D146314A3005EBBB1 /* CHGameLoseLayer.m */; };
 		E552D242146318DD005EBBB1 /* CHMainMenuLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E552D241146318DD005EBBB1 /* CHMainMenuLayer.m */; };
@@ -567,6 +563,14 @@
 		E56B03C3147AD971000589C1 /* selectLevel-background.png in Resources */ = {isa = PBXBuildFile; fileRef = E56B03C0147AD971000589C1 /* selectLevel-background.png */; };
 		E56B03C4147AD971000589C1 /* selectLevel-background-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E56B03C1147AD971000589C1 /* selectLevel-background-hd.png */; };
 		E56B03C5147AD971000589C1 /* selectLevel-background-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E56B03C1147AD971000589C1 /* selectLevel-background-hd.png */; };
+		E56E5429147F8926004DAE56 /* selectLevel-pizza-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E56E5425147F8926004DAE56 /* selectLevel-pizza-hd.png */; };
+		E56E542A147F8926004DAE56 /* selectLevel-pizza-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E56E5425147F8926004DAE56 /* selectLevel-pizza-hd.png */; };
+		E56E542B147F8926004DAE56 /* selectLevel-pizza-high-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E56E5426147F8926004DAE56 /* selectLevel-pizza-high-hd.png */; };
+		E56E542C147F8926004DAE56 /* selectLevel-pizza-high-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E56E5426147F8926004DAE56 /* selectLevel-pizza-high-hd.png */; };
+		E56E542D147F8926004DAE56 /* selectLevel-pizza-high.png in Resources */ = {isa = PBXBuildFile; fileRef = E56E5427147F8926004DAE56 /* selectLevel-pizza-high.png */; };
+		E56E542E147F8926004DAE56 /* selectLevel-pizza-high.png in Resources */ = {isa = PBXBuildFile; fileRef = E56E5427147F8926004DAE56 /* selectLevel-pizza-high.png */; };
+		E56E542F147F8926004DAE56 /* selectLevel-pizza.png in Resources */ = {isa = PBXBuildFile; fileRef = E56E5428147F8926004DAE56 /* selectLevel-pizza.png */; };
+		E56E5430147F8926004DAE56 /* selectLevel-pizza.png in Resources */ = {isa = PBXBuildFile; fileRef = E56E5428147F8926004DAE56 /* selectLevel-pizza.png */; };
 		E58ABB5A145A7B15002CC4EE /* font-testFont.fnt in Resources */ = {isa = PBXBuildFile; fileRef = E58ABB58145A7B15002CC4EE /* font-testFont.fnt */; };
 		E58ABB5B145A7B15002CC4EE /* font-testFont.png in Resources */ = {isa = PBXBuildFile; fileRef = E58ABB59145A7B15002CC4EE /* font-testFont.png */; };
 		E58ABB5E145A7EB6002CC4EE /* font-testFont-hd.fnt in Resources */ = {isa = PBXBuildFile; fileRef = E58ABB5C145A7EB6002CC4EE /* font-testFont-hd.fnt */; };
@@ -587,10 +591,6 @@
 		E599003914687D2E00458316 /* backgroundLayer-sideBuilding-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E599002A14687D2E00458316 /* backgroundLayer-sideBuilding-hd.png */; };
 		E599003A14687D2E00458316 /* backgroundLayer-sideBuilding.png in Resources */ = {isa = PBXBuildFile; fileRef = E599002B14687D2E00458316 /* backgroundLayer-sideBuilding.png */; };
 		E599003B14687D2E00458316 /* backgroundLayer-sideBuilding.png in Resources */ = {isa = PBXBuildFile; fileRef = E599002B14687D2E00458316 /* backgroundLayer-sideBuilding.png */; };
-		E599004814687E3B00458316 /* chefObject-chef-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E599003C14687E3B00458316 /* chefObject-chef-hd.png */; };
-		E599004914687E3B00458316 /* chefObject-chef-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E599003C14687E3B00458316 /* chefObject-chef-hd.png */; };
-		E599004A14687E3B00458316 /* chefObject-chef.png in Resources */ = {isa = PBXBuildFile; fileRef = E599003D14687E3B00458316 /* chefObject-chef.png */; };
-		E599004B14687E3B00458316 /* chefObject-chef.png in Resources */ = {isa = PBXBuildFile; fileRef = E599003D14687E3B00458316 /* chefObject-chef.png */; };
 		E599004C14687E3B00458316 /* coin.caf in Resources */ = {isa = PBXBuildFile; fileRef = E599003E14687E3B00458316 /* coin.caf */; };
 		E599004D14687E3B00458316 /* coin.caf in Resources */ = {isa = PBXBuildFile; fileRef = E599003E14687E3B00458316 /* coin.caf */; };
 		E599005014687E3B00458316 /* coinObject-particle.plist in Resources */ = {isa = PBXBuildFile; fileRef = E599004014687E3B00458316 /* coinObject-particle.plist */; };
@@ -845,25 +845,21 @@
 		854E24E7147AE9C7007F4039 /* selectLevel-hamburger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "selectLevel-hamburger.png"; path = "Resources/selectLevel-hamburger.png"; sourceTree = "<group>"; };
 		854E24E8147AE9C7007F4039 /* selectLevel-hot_dog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "selectLevel-hot_dog.png"; path = "Resources/selectLevel-hot_dog.png"; sourceTree = "<group>"; };
 		854E24E9147AE9C7007F4039 /* selectLevel-locked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "selectLevel-locked.png"; path = "Resources/selectLevel-locked.png"; sourceTree = "<group>"; };
-		854E24EA147AE9C7007F4039 /* selectLevel-Pizza.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "selectLevel-Pizza.png"; path = "Resources/selectLevel-Pizza.png"; sourceTree = "<group>"; };
 		854E24EB147AE9C7007F4039 /* selectLevel-taco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "selectLevel-taco.png"; path = "Resources/selectLevel-taco.png"; sourceTree = "<group>"; };
 		854E24EC147AE9C7007F4039 /* selectLevel-burrito-high.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "selectLevel-burrito-high.png"; path = "Resources/selectLevel-burrito-high.png"; sourceTree = "<group>"; };
 		854E24ED147AE9C7007F4039 /* selectLevel-hamburger-high.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "selectLevel-hamburger-high.png"; path = "Resources/selectLevel-hamburger-high.png"; sourceTree = "<group>"; };
 		854E24EE147AE9C7007F4039 /* selectLevel-hot_dog-high.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "selectLevel-hot_dog-high.png"; path = "Resources/selectLevel-hot_dog-high.png"; sourceTree = "<group>"; };
 		854E24EF147AE9C7007F4039 /* selectLevel-locked-high.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "selectLevel-locked-high.png"; path = "Resources/selectLevel-locked-high.png"; sourceTree = "<group>"; };
-		854E24F0147AE9C7007F4039 /* selectLevel-pizza-high.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "selectLevel-pizza-high.png"; path = "Resources/selectLevel-pizza-high.png"; sourceTree = "<group>"; };
 		854E24F1147AE9C7007F4039 /* selectLevel-taco-high.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "selectLevel-taco-high.png"; path = "Resources/selectLevel-taco-high.png"; sourceTree = "<group>"; };
 		854E24F2147AE9C7007F4039 /* selectLevel-burrito-high-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "selectLevel-burrito-high-hd.png"; path = "Resources/selectLevel-burrito-high-hd.png"; sourceTree = "<group>"; };
 		854E24F3147AE9C7007F4039 /* selectLevel-hamburger-high-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "selectLevel-hamburger-high-hd.png"; path = "Resources/selectLevel-hamburger-high-hd.png"; sourceTree = "<group>"; };
 		854E24F4147AE9C7007F4039 /* selectLevel-hot_dog-high-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "selectLevel-hot_dog-high-hd.png"; path = "Resources/selectLevel-hot_dog-high-hd.png"; sourceTree = "<group>"; };
 		854E24F5147AE9C7007F4039 /* selectLevel-locked-high-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "selectLevel-locked-high-hd.png"; path = "Resources/selectLevel-locked-high-hd.png"; sourceTree = "<group>"; };
-		854E24F6147AE9C7007F4039 /* selectLevel-pizza-high-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "selectLevel-pizza-high-hd.png"; path = "Resources/selectLevel-pizza-high-hd.png"; sourceTree = "<group>"; };
 		854E24F7147AE9C7007F4039 /* selectLevel-taco-high-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "selectLevel-taco-high-hd.png"; path = "Resources/selectLevel-taco-high-hd.png"; sourceTree = "<group>"; };
 		854E24F8147AE9C7007F4039 /* selectLevel-burrito-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "selectLevel-burrito-hd.png"; path = "Resources/selectLevel-burrito-hd.png"; sourceTree = "<group>"; };
 		854E24F9147AE9C7007F4039 /* selectLevel-hamburger-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "selectLevel-hamburger-hd.png"; path = "Resources/selectLevel-hamburger-hd.png"; sourceTree = "<group>"; };
 		854E24FA147AE9C7007F4039 /* selectLevel-hot_dog-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "selectLevel-hot_dog-hd.png"; path = "Resources/selectLevel-hot_dog-hd.png"; sourceTree = "<group>"; };
 		854E24FB147AE9C7007F4039 /* selectLevel-locked-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "selectLevel-locked-hd.png"; path = "Resources/selectLevel-locked-hd.png"; sourceTree = "<group>"; };
-		854E24FC147AE9C7007F4039 /* selectLevel-pizza-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "selectLevel-pizza-hd.png"; path = "Resources/selectLevel-pizza-hd.png"; sourceTree = "<group>"; };
 		854E24FD147AE9C7007F4039 /* selectLevel-taco-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "selectLevel-taco-hd.png"; path = "Resources/selectLevel-taco-hd.png"; sourceTree = "<group>"; };
 		856FD5DC147F549900FE42F0 /* background-empire-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background-empire-hd.png"; path = "Resources/background-empire-hd.png"; sourceTree = "<group>"; };
 		856FD5DD147F549900FE42F0 /* background-ritzLA-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background-ritzLA-hd.png"; path = "Resources/background-ritzLA-hd.png"; sourceTree = "<group>"; };
@@ -1006,6 +1002,8 @@
 		E5469B56147C865100F4D27B /* gameLayer-collisionScoreFont-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gameLayer-collisionScoreFont-hd.png"; path = "Resources/gameLayer-collisionScoreFont-hd.png"; sourceTree = "<group>"; };
 		E5469B57147C865100F4D27B /* gameLayer-collisionScoreFont.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "gameLayer-collisionScoreFont.fnt"; path = "Resources/gameLayer-collisionScoreFont.fnt"; sourceTree = "<group>"; };
 		E5469B58147C865100F4D27B /* gameLayer-collisionScoreFont.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gameLayer-collisionScoreFont.png"; path = "Resources/gameLayer-collisionScoreFont.png"; sourceTree = "<group>"; };
+		E5489C66147F775400C83EEF /* chefAtlas-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "chefAtlas-hd.png"; path = "Resources/chefAtlas-hd.png"; sourceTree = "<group>"; };
+		E5489C67147F775400C83EEF /* chefAtlas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = chefAtlas.png; path = Resources/chefAtlas.png; sourceTree = "<group>"; };
 		E552D23814631488005EBBB1 /* CHGameWinLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGameWinLayer.h; sourceTree = "<group>"; };
 		E552D23914631489005EBBB1 /* CHGameWinLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGameWinLayer.m; sourceTree = "<group>"; };
 		E552D23C146314A2005EBBB1 /* CHGameLoseLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGameLoseLayer.h; sourceTree = "<group>"; };
@@ -1051,6 +1049,10 @@
 		E56B03B6147AD7D7000589C1 /* gameWin-next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gameWin-next.png"; path = "Resources/gameWin-next.png"; sourceTree = "<group>"; };
 		E56B03C0147AD971000589C1 /* selectLevel-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "selectLevel-background.png"; path = "Resources/selectLevel-background.png"; sourceTree = "<group>"; };
 		E56B03C1147AD971000589C1 /* selectLevel-background-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "selectLevel-background-hd.png"; path = "Resources/selectLevel-background-hd.png"; sourceTree = "<group>"; };
+		E56E5425147F8926004DAE56 /* selectLevel-pizza-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "selectLevel-pizza-hd.png"; path = "Resources/selectLevel-pizza-hd.png"; sourceTree = "<group>"; };
+		E56E5426147F8926004DAE56 /* selectLevel-pizza-high-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "selectLevel-pizza-high-hd.png"; path = "Resources/selectLevel-pizza-high-hd.png"; sourceTree = "<group>"; };
+		E56E5427147F8926004DAE56 /* selectLevel-pizza-high.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "selectLevel-pizza-high.png"; path = "Resources/selectLevel-pizza-high.png"; sourceTree = "<group>"; };
+		E56E5428147F8926004DAE56 /* selectLevel-pizza.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "selectLevel-pizza.png"; path = "Resources/selectLevel-pizza.png"; sourceTree = "<group>"; };
 		E58ABB58145A7B15002CC4EE /* font-testFont.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "font-testFont.fnt"; path = "Resources/font-testFont.fnt"; sourceTree = "<group>"; };
 		E58ABB59145A7B15002CC4EE /* font-testFont.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "font-testFont.png"; path = "Resources/font-testFont.png"; sourceTree = "<group>"; };
 		E58ABB5C145A7EB6002CC4EE /* font-testFont-hd.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "font-testFont-hd.fnt"; path = "Resources/font-testFont-hd.fnt"; sourceTree = "<group>"; };
@@ -1063,8 +1065,6 @@
 		E599002914687D2E00458316 /* backgroundLayer-mainBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "backgroundLayer-mainBG.png"; path = "Resources/backgroundLayer-mainBG.png"; sourceTree = "<group>"; };
 		E599002A14687D2E00458316 /* backgroundLayer-sideBuilding-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "backgroundLayer-sideBuilding-hd.png"; path = "Resources/backgroundLayer-sideBuilding-hd.png"; sourceTree = "<group>"; };
 		E599002B14687D2E00458316 /* backgroundLayer-sideBuilding.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "backgroundLayer-sideBuilding.png"; path = "Resources/backgroundLayer-sideBuilding.png"; sourceTree = "<group>"; };
-		E599003C14687E3B00458316 /* chefObject-chef-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "chefObject-chef-hd.png"; path = "Resources/chefObject-chef-hd.png"; sourceTree = "<group>"; };
-		E599003D14687E3B00458316 /* chefObject-chef.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "chefObject-chef.png"; path = "Resources/chefObject-chef.png"; sourceTree = "<group>"; };
 		E599003E14687E3B00458316 /* coin.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = coin.caf; path = Resources/coin.caf; sourceTree = "<group>"; };
 		E599004014687E3B00458316 /* coinObject-particle.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "coinObject-particle.plist"; path = "Resources/coinObject-particle.plist"; sourceTree = "<group>"; };
 		E599004114687E3B00458316 /* fps_images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fps_images.png; path = Resources/fps_images.png; sourceTree = "<group>"; };
@@ -1644,8 +1644,8 @@
 		E522B2FF146863950049D367 /* Game Layer */ = {
 			isa = PBXGroup;
 			children = (
-				E599003C14687E3B00458316 /* chefObject-chef-hd.png */,
-				E599003D14687E3B00458316 /* chefObject-chef.png */,
+				E5489C66147F775400C83EEF /* chefAtlas-hd.png */,
+				E5489C67147F775400C83EEF /* chefAtlas.png */,
 				E599003E14687E3B00458316 /* coin.caf */,
 				BCC06AA4146B2DB60068103A /* coinObject-coin-hd.png */,
 				BCC06AA5146B2DB60068103A /* coinObject-coin.png */,
@@ -1887,10 +1887,10 @@
 				854E24F5147AE9C7007F4039 /* selectLevel-locked-high-hd.png */,
 				854E24EF147AE9C7007F4039 /* selectLevel-locked-high.png */,
 				854E24E9147AE9C7007F4039 /* selectLevel-locked.png */,
-				854E24FC147AE9C7007F4039 /* selectLevel-pizza-hd.png */,
-				854E24F6147AE9C7007F4039 /* selectLevel-pizza-high-hd.png */,
-				854E24F0147AE9C7007F4039 /* selectLevel-pizza-high.png */,
-				854E24EA147AE9C7007F4039 /* selectLevel-Pizza.png */,
+				E56E5425147F8926004DAE56 /* selectLevel-pizza-hd.png */,
+				E56E5426147F8926004DAE56 /* selectLevel-pizza-high-hd.png */,
+				E56E5427147F8926004DAE56 /* selectLevel-pizza-high.png */,
+				E56E5428147F8926004DAE56 /* selectLevel-pizza.png */,
 				854E24FD147AE9C7007F4039 /* selectLevel-taco-hd.png */,
 				854E24F7147AE9C7007F4039 /* selectLevel-taco-high-hd.png */,
 				854E24F1147AE9C7007F4039 /* selectLevel-taco-high.png */,
@@ -2578,8 +2578,6 @@
 				E599003714687D2E00458316 /* backgroundLayer-mainBG.png in Resources */,
 				E599003914687D2E00458316 /* backgroundLayer-sideBuilding-hd.png in Resources */,
 				E599003B14687D2E00458316 /* backgroundLayer-sideBuilding.png in Resources */,
-				E599004914687E3B00458316 /* chefObject-chef-hd.png in Resources */,
-				E599004B14687E3B00458316 /* chefObject-chef.png in Resources */,
 				E599004D14687E3B00458316 /* coin.caf in Resources */,
 				E599005114687E3B00458316 /* coinObject-particle.plist in Resources */,
 				E599005314687E3B00458316 /* fps_images.png in Resources */,
@@ -2692,25 +2690,21 @@
 				854E2501147AE9C7007F4039 /* selectLevel-hamburger.png in Resources */,
 				854E2503147AE9C7007F4039 /* selectLevel-hot_dog.png in Resources */,
 				854E2505147AE9C7007F4039 /* selectLevel-locked.png in Resources */,
-				854E2507147AE9C7007F4039 /* selectLevel-Pizza.png in Resources */,
 				854E2509147AE9C7007F4039 /* selectLevel-taco.png in Resources */,
 				854E250B147AE9C7007F4039 /* selectLevel-burrito-high.png in Resources */,
 				854E250D147AE9C7007F4039 /* selectLevel-hamburger-high.png in Resources */,
 				854E250F147AE9C7007F4039 /* selectLevel-hot_dog-high.png in Resources */,
 				854E2511147AE9C7007F4039 /* selectLevel-locked-high.png in Resources */,
-				854E2513147AE9C7007F4039 /* selectLevel-pizza-high.png in Resources */,
 				854E2515147AE9C7007F4039 /* selectLevel-taco-high.png in Resources */,
 				854E2517147AE9C7007F4039 /* selectLevel-burrito-high-hd.png in Resources */,
 				854E2519147AE9C7007F4039 /* selectLevel-hamburger-high-hd.png in Resources */,
 				854E251B147AE9C7007F4039 /* selectLevel-hot_dog-high-hd.png in Resources */,
 				854E251D147AE9C7007F4039 /* selectLevel-locked-high-hd.png in Resources */,
-				854E251F147AE9C7007F4039 /* selectLevel-pizza-high-hd.png in Resources */,
 				854E2521147AE9C7007F4039 /* selectLevel-taco-high-hd.png in Resources */,
 				854E2523147AE9C7007F4039 /* selectLevel-burrito-hd.png in Resources */,
 				854E2525147AE9C7007F4039 /* selectLevel-hamburger-hd.png in Resources */,
 				854E2527147AE9C7007F4039 /* selectLevel-hot_dog-hd.png in Resources */,
 				854E2529147AE9C7007F4039 /* selectLevel-locked-hd.png in Resources */,
-				854E252B147AE9C7007F4039 /* selectLevel-pizza-hd.png in Resources */,
 				854E252D147AE9C7007F4039 /* selectLevel-taco-hd.png in Resources */,
 				E5469B5A147C865100F4D27B /* gameLayer-collisionScoreFont-hd.fnt in Resources */,
 				E5469B5C147C865100F4D27B /* gameLayer-collisionScoreFont-hd.png in Resources */,
@@ -2825,8 +2819,6 @@
 				E599003614687D2E00458316 /* backgroundLayer-mainBG.png in Resources */,
 				E599003814687D2E00458316 /* backgroundLayer-sideBuilding-hd.png in Resources */,
 				E599003A14687D2E00458316 /* backgroundLayer-sideBuilding.png in Resources */,
-				E599004814687E3B00458316 /* chefObject-chef-hd.png in Resources */,
-				E599004A14687E3B00458316 /* chefObject-chef.png in Resources */,
 				E599004C14687E3B00458316 /* coin.caf in Resources */,
 				E599005014687E3B00458316 /* coinObject-particle.plist in Resources */,
 				E599005214687E3B00458316 /* fps_images.png in Resources */,
@@ -2939,25 +2931,21 @@
 				854E2500147AE9C7007F4039 /* selectLevel-hamburger.png in Resources */,
 				854E2502147AE9C7007F4039 /* selectLevel-hot_dog.png in Resources */,
 				854E2504147AE9C7007F4039 /* selectLevel-locked.png in Resources */,
-				854E2506147AE9C7007F4039 /* selectLevel-Pizza.png in Resources */,
 				854E2508147AE9C7007F4039 /* selectLevel-taco.png in Resources */,
 				854E250A147AE9C7007F4039 /* selectLevel-burrito-high.png in Resources */,
 				854E250C147AE9C7007F4039 /* selectLevel-hamburger-high.png in Resources */,
 				854E250E147AE9C7007F4039 /* selectLevel-hot_dog-high.png in Resources */,
 				854E2510147AE9C7007F4039 /* selectLevel-locked-high.png in Resources */,
-				854E2512147AE9C7007F4039 /* selectLevel-pizza-high.png in Resources */,
 				854E2514147AE9C7007F4039 /* selectLevel-taco-high.png in Resources */,
 				854E2516147AE9C7007F4039 /* selectLevel-burrito-high-hd.png in Resources */,
 				854E2518147AE9C7007F4039 /* selectLevel-hamburger-high-hd.png in Resources */,
 				854E251A147AE9C7007F4039 /* selectLevel-hot_dog-high-hd.png in Resources */,
 				854E251C147AE9C7007F4039 /* selectLevel-locked-high-hd.png in Resources */,
-				854E251E147AE9C7007F4039 /* selectLevel-pizza-high-hd.png in Resources */,
 				854E2520147AE9C7007F4039 /* selectLevel-taco-high-hd.png in Resources */,
 				854E2522147AE9C7007F4039 /* selectLevel-burrito-hd.png in Resources */,
 				854E2524147AE9C7007F4039 /* selectLevel-hamburger-hd.png in Resources */,
 				854E2526147AE9C7007F4039 /* selectLevel-hot_dog-hd.png in Resources */,
 				854E2528147AE9C7007F4039 /* selectLevel-locked-hd.png in Resources */,
-				854E252A147AE9C7007F4039 /* selectLevel-pizza-hd.png in Resources */,
 				854E252C147AE9C7007F4039 /* selectLevel-taco-hd.png in Resources */,
 				E5469B59147C865100F4D27B /* gameLayer-collisionScoreFont-hd.fnt in Resources */,
 				E5469B5B147C865100F4D27B /* gameLayer-collisionScoreFont-hd.png in Resources */,
@@ -3484,7 +3472,10 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = NDEBUG;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					CH_NO_TEST_MENU,
+					NDEBUG,
+				);
 				GCC_VERSION = "";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
