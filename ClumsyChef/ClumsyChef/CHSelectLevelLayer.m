@@ -51,7 +51,7 @@ static CGFloat const kYSpacing = 110;
 		[self addChild:bg];
 		
 		CHPlayerInfo *info = [CHPlayerInfo sharedPlayerInfo];
-		info.numClearedLevels = 5;
+		//info.numClearedLevels = 5;
 		CHGameLibrary *lib = [CHGameLibrary sharedGameLibrary];
 		NSUInteger numClearedLevels = info.numClearedLevels;
 		NSUInteger numLevels = [lib numberOfLevels];
