@@ -8,25 +8,38 @@
 
 #import "CHSelectLevelLayer.h"
 #import "CHPlayerInfo.h"
-#import "TestMenuLayer.h"
-#import "CHUtilities.h"
 #import "CHGameScene.h"
 #import "CHGameLibrary.h"
 
 
-// private methods are declared in this manner to avoid "may not respond to ..." compiler warnings
-//@interface CHSelectLevelLayer (PrivateMethods)
-//-(void) createMenu:(ccTime)delta;
-//-(void) menuItem1Touched:(id)sender;
-//-(void) menuItem2Touched:(id)sender;
-//-(void) menuItem3Touched:(id)sender;
-//-(void) menuItem4Touched:(id)sender;
-//-(void) menuItem5Touched:(id)sender;
-//-(void) menuItem6Touched:(id)sender;
-//@end
+static CGFloat const kX0 = 67;
+static CGFloat const kY0 = 154;
+static CGFloat const kXSpacing = 93;
+static CGFloat const kYSpacing = 110;
+
 
 @implementation CHSelectLevelLayer
 
+#pragma mark -
+#pragma mark Private
+
+- (CGPoint)positionForItemInRow:(NSUInteger)row col:(NSUInteger)col
+{
+	return CHGetWinPointTL(kX0 + col * kXSpacing, kY0 + row * kYSpacing);
+}
+
+- (NSString *)filenameForHighImage:(NSString *)filename
+{
+	// E.g. given recipeItem-xxx.png
+	// Return reciptItem-xxx-high.png
+	NSString *ext = [filename pathExtension];
+	NSString *name = [filename stringByDeletingPathExtension];
+	NSString *result = [NSString stringWithFormat:@"%@-high.%@", name, ext];
+	return result;
+}
+
+#pragma mark -
+#pragma mark Constructor 
 
 - (id)init
 {
@@ -37,11 +50,45 @@
 		[self addChild:bg];
 		
 		CHPlayerInfo *info = [CHPlayerInfo sharedPlayerInfo];
+		CHGameLibrary *lib = [CHGameLibrary sharedGameLibrary];
+		NSUInteger numClearedLevels = info.numClearedLevels;
+		NSUInteger numLevels = [lib numberOfLevels];
 		
+		for (NSUInteger i = 0; i < numLevels; i++) {
+			if (i <= numClearedLevels) {
+				// For cleared stages
+				CHLevelInfo *levelInfo = [lib levelInfoAtIndex:i];
+				
+				CCMenuItemImage *item = [CCMenuItemImage itemFromNormalImage:levelInfo.previewImage 
+															   selectedImage:[self filenameForHighImage:levelInfo.previewImage]
+																	  target:self 
+																	selector:@selector(itemPressed:)];
+				item.tag = i;
+				[item setPositionSharp:[self positionForItemInRow:i/3 col:i%3]];
+				
+				CCMenu *menu = [CCMenu menuWithItems:item, nil];
+				menu.anchorPoint = CGPointZero;
+				menu.position = CGPointZero;
+				[self addChild:menu];
+			}
+			else {
+				// For levels not cleared
+				CCSprite *placeHolder = [CCSprite spriteWithFile:@"selectLevel-locked.png"];
+				[placeHolder setPositionSharp:[self positionForItemInRow:i/3 col:i%3]];
+				
+				[self addChild:placeHolder];
+			}
+		}
 	
 	}
 	return self;
 }
 
-
+#pragma mark -
+#pragma mark UI events
+					
+- (void)itemPressed:(id)sender
+{
+	
+}
 @end
