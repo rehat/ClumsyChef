@@ -58,7 +58,7 @@
 
 - (void)showWin:(NSInteger)score
 {
-	_moneyAmount += score;
+	_moneyAmount = score;
 	
 	[_gameLayer stopBackgroundMusic];
 	_gameLayer.isPaused = YES;
@@ -104,8 +104,8 @@
 - (void)loadNextLevel
 {
 	NSAssert([self hasNextLevel], @"No next level");
-	NSUInteger next = _levelIndex + 1;
-	[_gameLayer resetForLevelIndex:next];
+	_levelIndex++;
+	[_gameLayer resetForLevelIndex:_levelIndex];
 	_gameLayer.moneyAmount += _moneyAmount;
 	_gameLayer.isPaused = NO;
 }
