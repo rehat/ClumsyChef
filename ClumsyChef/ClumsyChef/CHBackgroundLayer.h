@@ -14,7 +14,8 @@
  */
 @interface CHBackgroundLayer : CCNode 
 
++ (id)nodeWithLevelIndex:(NSUInteger)levelIndex;
 
--(void)setWorldHeight:(CGFloat) height;
--(void)updatePull:(CGFloat)pull;
+- (void)setBackgroundOffset:(CGFloat)offset;
+
 @end

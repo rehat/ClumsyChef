@@ -12,6 +12,7 @@
 #import "CHGameWinLayer.h"
 #import "CHGameLoseLayer.h"
 #import "CHPauseLayer.h"
+#import "CHPlayerInfo.h"
 
 
 @implementation CHGameScene
@@ -58,8 +59,14 @@
 
 - (void)showWin:(NSInteger)score
 {
-	_moneyAmount = score;
+	// Update the number of cleared levels of CHPlayerInfo
+	CHPlayerInfo *info = [CHPlayerInfo sharedPlayerInfo];
+	if (info.numClearedLevels < _levelIndex + 1)
+	{
+		info.numClearedLevels = _levelIndex + 1;
+	}
 	
+	_moneyAmount = score;
 	[_gameLayer stopBackgroundMusic];
 	_gameLayer.isPaused = YES;
 	[[CHGameWinLayer nodeWithLevelIndex:_levelIndex 
