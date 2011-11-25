@@ -39,7 +39,7 @@
 			<string>HamburgerBun</string>
 			<string>Lettuce</string>
 			<string>Tomato</string>
-			<string>GroundBeef</string>
+			<string>HamburgerPatty</string>
 		</array>
 	</dict>
 	<dict>
@@ -57,10 +57,10 @@
 		<string>background-ritzLA.png</string>
 		<key>recipeItems</key>
 		<array>
-			<string>Tortilla</string>
+			<string>TacoShell</string>
 			<string>Lettuce</string>
 			<string>Tomato</string>
-			<string>Beef</string>
+			<string>GroundBeef</string>
 			<string>HotSauce</string>
 		</array>
 	</dict>
@@ -74,13 +74,13 @@
 		<key>worldHeight</key>
 		<integer>6000</integer>
 		<key>backgroundSideBuildingImage</key>
-		<string>backgroundLayer-sideBuilding.png</string>
+		<string>backgroundLayer-sideBuilding-taipei.png</string>
 		<key>backgroundBackImage</key>
-		<string>background-ritzLA.png</string>
+		<string>background-taipei.png</string>
 		<key>recipeItems</key>
 		<array>
-			<string>TacoShell</string>
-			<string>GroundBeef</string>
+			<string>Tortilla</string>
+			<string>Beef</string>
 			<string>Cheese</string>
 			<string>HotSauce</string>
 			<string>Tomato</string>
@@ -97,9 +97,9 @@
 		<key>worldHeight</key>
 		<integer>6000</integer>
 		<key>backgroundSideBuildingImage</key>
-		<string>backgroundLayer-sideBuilding.png</string>
+		<string>backgroundLayer-sideBuilding-financeTower.png</string>
 		<key>backgroundBackImage</key>
-		<string>background-ritzLA.png</string>
+		<string>background-financeTower.png</string>
 		<key>recipeItems</key>
 		<array>
 			<string>Pepperoni</string>
