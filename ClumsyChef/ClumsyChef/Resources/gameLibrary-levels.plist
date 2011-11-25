@@ -91,7 +91,7 @@
 		<key>levelName</key>
 		<string>Pizza</string>
 		<key>previewImage</key>
-		<string>selectLevel-pizza.png</string>
+		<string>selectLevel-italianPizza.png</string>
 		<key>finishImage</key>
 		<string>recipeItem-big-pizza.png</string>
 		<key>worldHeight</key>
