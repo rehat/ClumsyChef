@@ -74,9 +74,9 @@
 		<key>worldHeight</key>
 		<integer>6000</integer>
 		<key>backgroundSideBuildingImage</key>
-		<string>backgroundLayer-sideBuilding.png</string>
+		<string>backgroundLayer-sideBuilding-taipei.png</string>
 		<key>backgroundBackImage</key>
-		<string>background-ritzLA.png</string>
+		<string>background-taipei.png</string>
 		<key>recipeItems</key>
 		<array>
 			<string>TacoShell</string>
@@ -97,9 +97,9 @@
 		<key>worldHeight</key>
 		<integer>6000</integer>
 		<key>backgroundSideBuildingImage</key>
-		<string>backgroundLayer-sideBuilding.png</string>
+		<string>backgroundLayer-sideBuilding-financeTower.png</string>
 		<key>backgroundBackImage</key>
-		<string>background-ritzLA.png</string>
+		<string>background-financeTower.png</string>
 		<key>recipeItems</key>
 		<array>
 			<string>Pepperoni</string>
