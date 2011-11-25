@@ -12,7 +12,7 @@
 		<key>worldHeight</key>
 		<integer>5000</integer>
 		<key>backgroundSideBuildingImage</key>
-		<string>backgroundLayer-sideBuilding.png</string>
+		<string>backgroundLayer-sideBuilding-empire.png</string>
 		<key>backgroundBackImage</key>
 		<string>background-empire.png</string>
 		<key>recipeItems</key>
@@ -31,7 +31,7 @@
 		<key>worldHeight</key>
 		<integer>6000</integer>
 		<key>backgroundSideBuildingImage</key>
-		<string>backgroundLayer-sideBuilding.png</string>
+		<string>backgroundLayer-sideBuilding-searsTowerChicago.png</string>
 		<key>backgroundBackImage</key>
 		<string>background-searsTowerChicago.png</string>
 		<key>recipeItems</key>
@@ -52,7 +52,7 @@
 		<key>worldHeight</key>
 		<integer>8000</integer>
 		<key>backgroundSideBuildingImage</key>
-		<string>backgroundLayer-sideBuilding.png</string>
+		<string>backgroundLayer-sideBuilding-ritzLA.png</string>
 		<key>backgroundBackImage</key>
 		<string>background-ritzLA.png</string>
 		<key>recipeItems</key>

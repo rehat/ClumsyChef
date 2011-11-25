@@ -87,10 +87,18 @@
 		856FD5EB147F549900FE42F0 /* background-ritzLA.png in Resources */ = {isa = PBXBuildFile; fileRef = 856FD5E0147F549900FE42F0 /* background-ritzLA.png */; };
 		856FD5EC147F549900FE42F0 /* background-empire.png in Resources */ = {isa = PBXBuildFile; fileRef = 856FD5E1147F549900FE42F0 /* background-empire.png */; };
 		856FD5ED147F549900FE42F0 /* background-empire.png in Resources */ = {isa = PBXBuildFile; fileRef = 856FD5E1147F549900FE42F0 /* background-empire.png */; };
-		856FD5F3147F67FB00FE42F0 /* backgroundLayer-sideBuilding-empire.png in Resources */ = {isa = PBXBuildFile; fileRef = 856FD5F1147F67FB00FE42F0 /* backgroundLayer-sideBuilding-empire.png */; };
-		856FD5F4147F67FB00FE42F0 /* backgroundLayer-sideBuilding-empire.png in Resources */ = {isa = PBXBuildFile; fileRef = 856FD5F1147F67FB00FE42F0 /* backgroundLayer-sideBuilding-empire.png */; };
-		856FD5F5147F67FB00FE42F0 /* backgroundLayer-sideBuilding-empire-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 856FD5F2147F67FB00FE42F0 /* backgroundLayer-sideBuilding-empire-hd.png */; };
-		856FD5F6147F67FB00FE42F0 /* backgroundLayer-sideBuilding-empire-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 856FD5F2147F67FB00FE42F0 /* backgroundLayer-sideBuilding-empire-hd.png */; };
+		85D20C1E147F6C8A00C09EAB /* backgroundLayer-sideBuilding-empire-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D20C1C147F6C8A00C09EAB /* backgroundLayer-sideBuilding-empire-hd.png */; };
+		85D20C1F147F6C8A00C09EAB /* backgroundLayer-sideBuilding-empire-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D20C1C147F6C8A00C09EAB /* backgroundLayer-sideBuilding-empire-hd.png */; };
+		85D20C20147F6C8A00C09EAB /* backgroundLayer-sideBuilding-empire.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D20C1D147F6C8A00C09EAB /* backgroundLayer-sideBuilding-empire.png */; };
+		85D20C21147F6C8A00C09EAB /* backgroundLayer-sideBuilding-empire.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D20C1D147F6C8A00C09EAB /* backgroundLayer-sideBuilding-empire.png */; };
+		85D20C26147F888800C09EAB /* backgroundLayer-sideBuilding-ritzLA-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D20C22147F888800C09EAB /* backgroundLayer-sideBuilding-ritzLA-hd.png */; };
+		85D20C27147F888800C09EAB /* backgroundLayer-sideBuilding-ritzLA-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D20C22147F888800C09EAB /* backgroundLayer-sideBuilding-ritzLA-hd.png */; };
+		85D20C28147F888800C09EAB /* backgroundLayer-sideBuilding-ritzLA.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D20C23147F888800C09EAB /* backgroundLayer-sideBuilding-ritzLA.png */; };
+		85D20C29147F888800C09EAB /* backgroundLayer-sideBuilding-ritzLA.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D20C23147F888800C09EAB /* backgroundLayer-sideBuilding-ritzLA.png */; };
+		85D20C2A147F888800C09EAB /* backgroundLayer-sideBuilding-searsTowerChicago-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D20C24147F888800C09EAB /* backgroundLayer-sideBuilding-searsTowerChicago-hd.png */; };
+		85D20C2B147F888800C09EAB /* backgroundLayer-sideBuilding-searsTowerChicago-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D20C24147F888800C09EAB /* backgroundLayer-sideBuilding-searsTowerChicago-hd.png */; };
+		85D20C2C147F888800C09EAB /* backgroundLayer-sideBuilding-searsTowerChicago.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D20C25147F888800C09EAB /* backgroundLayer-sideBuilding-searsTowerChicago.png */; };
+		85D20C2D147F888800C09EAB /* backgroundLayer-sideBuilding-searsTowerChicago.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D20C25147F888800C09EAB /* backgroundLayer-sideBuilding-searsTowerChicago.png */; };
 		BC03E85114773C9200E34189 /* recipeItem_bacon-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E83D14773C9200E34189 /* recipeItem_bacon-hd.png */; };
 		BC03E85214773C9200E34189 /* recipeItem_bacon-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E83D14773C9200E34189 /* recipeItem_bacon-hd.png */; };
 		BC03E85314773C9200E34189 /* recipeItem_bacon.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E83E14773C9200E34189 /* recipeItem_bacon.png */; };
@@ -863,8 +871,12 @@
 		856FD5DF147F549900FE42F0 /* background-searsTowerChicago.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background-searsTowerChicago.png"; path = "Resources/background-searsTowerChicago.png"; sourceTree = "<group>"; };
 		856FD5E0147F549900FE42F0 /* background-ritzLA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background-ritzLA.png"; path = "Resources/background-ritzLA.png"; sourceTree = "<group>"; };
 		856FD5E1147F549900FE42F0 /* background-empire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background-empire.png"; path = "Resources/background-empire.png"; sourceTree = "<group>"; };
-		856FD5F1147F67FB00FE42F0 /* backgroundLayer-sideBuilding-empire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "backgroundLayer-sideBuilding-empire.png"; path = "Resources/backgroundLayer-sideBuilding-empire.png"; sourceTree = "<group>"; };
-		856FD5F2147F67FB00FE42F0 /* backgroundLayer-sideBuilding-empire-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "backgroundLayer-sideBuilding-empire-hd.png"; path = "Resources/backgroundLayer-sideBuilding-empire-hd.png"; sourceTree = "<group>"; };
+		85D20C1C147F6C8A00C09EAB /* backgroundLayer-sideBuilding-empire-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "backgroundLayer-sideBuilding-empire-hd.png"; path = "Resources/backgroundLayer-sideBuilding-empire-hd.png"; sourceTree = "<group>"; };
+		85D20C1D147F6C8A00C09EAB /* backgroundLayer-sideBuilding-empire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "backgroundLayer-sideBuilding-empire.png"; path = "Resources/backgroundLayer-sideBuilding-empire.png"; sourceTree = "<group>"; };
+		85D20C22147F888800C09EAB /* backgroundLayer-sideBuilding-ritzLA-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "backgroundLayer-sideBuilding-ritzLA-hd.png"; path = "Resources/backgroundLayer-sideBuilding-ritzLA-hd.png"; sourceTree = "<group>"; };
+		85D20C23147F888800C09EAB /* backgroundLayer-sideBuilding-ritzLA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "backgroundLayer-sideBuilding-ritzLA.png"; path = "Resources/backgroundLayer-sideBuilding-ritzLA.png"; sourceTree = "<group>"; };
+		85D20C24147F888800C09EAB /* backgroundLayer-sideBuilding-searsTowerChicago-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "backgroundLayer-sideBuilding-searsTowerChicago-hd.png"; path = "Resources/backgroundLayer-sideBuilding-searsTowerChicago-hd.png"; sourceTree = "<group>"; };
+		85D20C25147F888800C09EAB /* backgroundLayer-sideBuilding-searsTowerChicago.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "backgroundLayer-sideBuilding-searsTowerChicago.png"; path = "Resources/backgroundLayer-sideBuilding-searsTowerChicago.png"; sourceTree = "<group>"; };
 		BC03E83D14773C9200E34189 /* recipeItem_bacon-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recipeItem_bacon-hd.png"; path = "Resources/recipeItem_bacon-hd.png"; sourceTree = "<group>"; };
 		BC03E83E14773C9200E34189 /* recipeItem_bacon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = recipeItem_bacon.png; path = Resources/recipeItem_bacon.png; sourceTree = "<group>"; };
 		BC03E83F14773C9200E34189 /* recipeItem_beef-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recipeItem_beef-hd.png"; path = "Resources/recipeItem_beef-hd.png"; sourceTree = "<group>"; };
@@ -1611,8 +1623,12 @@
 		E522B2FE146863820049D367 /* Background Layer */ = {
 			isa = PBXGroup;
 			children = (
-				856FD5F1147F67FB00FE42F0 /* backgroundLayer-sideBuilding-empire.png */,
-				856FD5F2147F67FB00FE42F0 /* backgroundLayer-sideBuilding-empire-hd.png */,
+				85D20C22147F888800C09EAB /* backgroundLayer-sideBuilding-ritzLA-hd.png */,
+				85D20C23147F888800C09EAB /* backgroundLayer-sideBuilding-ritzLA.png */,
+				85D20C24147F888800C09EAB /* backgroundLayer-sideBuilding-searsTowerChicago-hd.png */,
+				85D20C25147F888800C09EAB /* backgroundLayer-sideBuilding-searsTowerChicago.png */,
+				85D20C1C147F6C8A00C09EAB /* backgroundLayer-sideBuilding-empire-hd.png */,
+				85D20C1D147F6C8A00C09EAB /* backgroundLayer-sideBuilding-empire.png */,
 				E599002414687D2E00458316 /* backgroundLayer-bottom-hd.png */,
 				E599002514687D2E00458316 /* backgroundLayer-bottom.png */,
 				E599002614687D2E00458316 /* backgroundLayer-clouds-hd.png */,
@@ -2766,8 +2782,12 @@
 				856FD5E9147F549900FE42F0 /* background-searsTowerChicago.png in Resources */,
 				856FD5EB147F549900FE42F0 /* background-ritzLA.png in Resources */,
 				856FD5ED147F549900FE42F0 /* background-empire.png in Resources */,
-				856FD5F4147F67FB00FE42F0 /* backgroundLayer-sideBuilding-empire.png in Resources */,
-				856FD5F6147F67FB00FE42F0 /* backgroundLayer-sideBuilding-empire-hd.png in Resources */,
+				85D20C1F147F6C8A00C09EAB /* backgroundLayer-sideBuilding-empire-hd.png in Resources */,
+				85D20C21147F6C8A00C09EAB /* backgroundLayer-sideBuilding-empire.png in Resources */,
+				85D20C27147F888800C09EAB /* backgroundLayer-sideBuilding-ritzLA-hd.png in Resources */,
+				85D20C29147F888800C09EAB /* backgroundLayer-sideBuilding-ritzLA.png in Resources */,
+				85D20C2B147F888800C09EAB /* backgroundLayer-sideBuilding-searsTowerChicago-hd.png in Resources */,
+				85D20C2D147F888800C09EAB /* backgroundLayer-sideBuilding-searsTowerChicago.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3009,8 +3029,12 @@
 				856FD5E8147F549900FE42F0 /* background-searsTowerChicago.png in Resources */,
 				856FD5EA147F549900FE42F0 /* background-ritzLA.png in Resources */,
 				856FD5EC147F549900FE42F0 /* background-empire.png in Resources */,
-				856FD5F3147F67FB00FE42F0 /* backgroundLayer-sideBuilding-empire.png in Resources */,
-				856FD5F5147F67FB00FE42F0 /* backgroundLayer-sideBuilding-empire-hd.png in Resources */,
+				85D20C1E147F6C8A00C09EAB /* backgroundLayer-sideBuilding-empire-hd.png in Resources */,
+				85D20C20147F6C8A00C09EAB /* backgroundLayer-sideBuilding-empire.png in Resources */,
+				85D20C26147F888800C09EAB /* backgroundLayer-sideBuilding-ritzLA-hd.png in Resources */,
+				85D20C28147F888800C09EAB /* backgroundLayer-sideBuilding-ritzLA.png in Resources */,
+				85D20C2A147F888800C09EAB /* backgroundLayer-sideBuilding-searsTowerChicago-hd.png in Resources */,
+				85D20C2C147F888800C09EAB /* backgroundLayer-sideBuilding-searsTowerChicago.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
