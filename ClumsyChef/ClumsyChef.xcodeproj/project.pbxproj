@@ -513,6 +513,10 @@
 		E5469B5E147C865100F4D27B /* gameLayer-collisionScoreFont.fnt in Resources */ = {isa = PBXBuildFile; fileRef = E5469B57147C865100F4D27B /* gameLayer-collisionScoreFont.fnt */; };
 		E5469B5F147C865100F4D27B /* gameLayer-collisionScoreFont.png in Resources */ = {isa = PBXBuildFile; fileRef = E5469B58147C865100F4D27B /* gameLayer-collisionScoreFont.png */; };
 		E5469B60147C865100F4D27B /* gameLayer-collisionScoreFont.png in Resources */ = {isa = PBXBuildFile; fileRef = E5469B58147C865100F4D27B /* gameLayer-collisionScoreFont.png */; };
+		E5489C68147F775400C83EEF /* chefAtlas-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E5489C66147F775400C83EEF /* chefAtlas-hd.png */; };
+		E5489C69147F775400C83EEF /* chefAtlas-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E5489C66147F775400C83EEF /* chefAtlas-hd.png */; };
+		E5489C6A147F775400C83EEF /* chefAtlas.png in Resources */ = {isa = PBXBuildFile; fileRef = E5489C67147F775400C83EEF /* chefAtlas.png */; };
+		E5489C6B147F775400C83EEF /* chefAtlas.png in Resources */ = {isa = PBXBuildFile; fileRef = E5489C67147F775400C83EEF /* chefAtlas.png */; };
 		E552D23A1463148A005EBBB1 /* CHGameWinLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E552D23914631489005EBBB1 /* CHGameWinLayer.m */; };
 		E552D23E146314A4005EBBB1 /* CHGameLoseLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E552D23D146314A3005EBBB1 /* CHGameLoseLayer.m */; };
 		E552D242146318DD005EBBB1 /* CHMainMenuLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E552D241146318DD005EBBB1 /* CHMainMenuLayer.m */; };
@@ -575,10 +579,6 @@
 		E599003914687D2E00458316 /* backgroundLayer-sideBuilding-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E599002A14687D2E00458316 /* backgroundLayer-sideBuilding-hd.png */; };
 		E599003A14687D2E00458316 /* backgroundLayer-sideBuilding.png in Resources */ = {isa = PBXBuildFile; fileRef = E599002B14687D2E00458316 /* backgroundLayer-sideBuilding.png */; };
 		E599003B14687D2E00458316 /* backgroundLayer-sideBuilding.png in Resources */ = {isa = PBXBuildFile; fileRef = E599002B14687D2E00458316 /* backgroundLayer-sideBuilding.png */; };
-		E599004814687E3B00458316 /* chefObject-chef-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E599003C14687E3B00458316 /* chefObject-chef-hd.png */; };
-		E599004914687E3B00458316 /* chefObject-chef-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E599003C14687E3B00458316 /* chefObject-chef-hd.png */; };
-		E599004A14687E3B00458316 /* chefObject-chef.png in Resources */ = {isa = PBXBuildFile; fileRef = E599003D14687E3B00458316 /* chefObject-chef.png */; };
-		E599004B14687E3B00458316 /* chefObject-chef.png in Resources */ = {isa = PBXBuildFile; fileRef = E599003D14687E3B00458316 /* chefObject-chef.png */; };
 		E599004C14687E3B00458316 /* coin.caf in Resources */ = {isa = PBXBuildFile; fileRef = E599003E14687E3B00458316 /* coin.caf */; };
 		E599004D14687E3B00458316 /* coin.caf in Resources */ = {isa = PBXBuildFile; fileRef = E599003E14687E3B00458316 /* coin.caf */; };
 		E599005014687E3B00458316 /* coinObject-particle.plist in Resources */ = {isa = PBXBuildFile; fileRef = E599004014687E3B00458316 /* coinObject-particle.plist */; };
@@ -988,6 +988,8 @@
 		E5469B56147C865100F4D27B /* gameLayer-collisionScoreFont-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gameLayer-collisionScoreFont-hd.png"; path = "Resources/gameLayer-collisionScoreFont-hd.png"; sourceTree = "<group>"; };
 		E5469B57147C865100F4D27B /* gameLayer-collisionScoreFont.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = "gameLayer-collisionScoreFont.fnt"; path = "Resources/gameLayer-collisionScoreFont.fnt"; sourceTree = "<group>"; };
 		E5469B58147C865100F4D27B /* gameLayer-collisionScoreFont.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gameLayer-collisionScoreFont.png"; path = "Resources/gameLayer-collisionScoreFont.png"; sourceTree = "<group>"; };
+		E5489C66147F775400C83EEF /* chefAtlas-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "chefAtlas-hd.png"; path = "Resources/chefAtlas-hd.png"; sourceTree = "<group>"; };
+		E5489C67147F775400C83EEF /* chefAtlas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = chefAtlas.png; path = Resources/chefAtlas.png; sourceTree = "<group>"; };
 		E552D23814631488005EBBB1 /* CHGameWinLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGameWinLayer.h; sourceTree = "<group>"; };
 		E552D23914631489005EBBB1 /* CHGameWinLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGameWinLayer.m; sourceTree = "<group>"; };
 		E552D23C146314A2005EBBB1 /* CHGameLoseLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGameLoseLayer.h; sourceTree = "<group>"; };
@@ -1045,8 +1047,6 @@
 		E599002914687D2E00458316 /* backgroundLayer-mainBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "backgroundLayer-mainBG.png"; path = "Resources/backgroundLayer-mainBG.png"; sourceTree = "<group>"; };
 		E599002A14687D2E00458316 /* backgroundLayer-sideBuilding-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "backgroundLayer-sideBuilding-hd.png"; path = "Resources/backgroundLayer-sideBuilding-hd.png"; sourceTree = "<group>"; };
 		E599002B14687D2E00458316 /* backgroundLayer-sideBuilding.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "backgroundLayer-sideBuilding.png"; path = "Resources/backgroundLayer-sideBuilding.png"; sourceTree = "<group>"; };
-		E599003C14687E3B00458316 /* chefObject-chef-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "chefObject-chef-hd.png"; path = "Resources/chefObject-chef-hd.png"; sourceTree = "<group>"; };
-		E599003D14687E3B00458316 /* chefObject-chef.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "chefObject-chef.png"; path = "Resources/chefObject-chef.png"; sourceTree = "<group>"; };
 		E599003E14687E3B00458316 /* coin.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = coin.caf; path = Resources/coin.caf; sourceTree = "<group>"; };
 		E599004014687E3B00458316 /* coinObject-particle.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "coinObject-particle.plist"; path = "Resources/coinObject-particle.plist"; sourceTree = "<group>"; };
 		E599004114687E3B00458316 /* fps_images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fps_images.png; path = Resources/fps_images.png; sourceTree = "<group>"; };
@@ -1620,8 +1620,8 @@
 		E522B2FF146863950049D367 /* Game Layer */ = {
 			isa = PBXGroup;
 			children = (
-				E599003C14687E3B00458316 /* chefObject-chef-hd.png */,
-				E599003D14687E3B00458316 /* chefObject-chef.png */,
+				E5489C66147F775400C83EEF /* chefAtlas-hd.png */,
+				E5489C67147F775400C83EEF /* chefAtlas.png */,
 				E599003E14687E3B00458316 /* coin.caf */,
 				BCC06AA4146B2DB60068103A /* coinObject-coin-hd.png */,
 				BCC06AA5146B2DB60068103A /* coinObject-coin.png */,
@@ -2554,8 +2554,6 @@
 				E599003714687D2E00458316 /* backgroundLayer-mainBG.png in Resources */,
 				E599003914687D2E00458316 /* backgroundLayer-sideBuilding-hd.png in Resources */,
 				E599003B14687D2E00458316 /* backgroundLayer-sideBuilding.png in Resources */,
-				E599004914687E3B00458316 /* chefObject-chef-hd.png in Resources */,
-				E599004B14687E3B00458316 /* chefObject-chef.png in Resources */,
 				E599004D14687E3B00458316 /* coin.caf in Resources */,
 				E599005114687E3B00458316 /* coinObject-particle.plist in Resources */,
 				E599005314687E3B00458316 /* fps_images.png in Resources */,
@@ -2758,6 +2756,8 @@
 				856FD5E9147F549900FE42F0 /* background-searsTowerChicago.png in Resources */,
 				856FD5EB147F549900FE42F0 /* background-ritzLA.png in Resources */,
 				856FD5ED147F549900FE42F0 /* background-empire.png in Resources */,
+				E5489C69147F775400C83EEF /* chefAtlas-hd.png in Resources */,
+				E5489C6B147F775400C83EEF /* chefAtlas.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2795,8 +2795,6 @@
 				E599003614687D2E00458316 /* backgroundLayer-mainBG.png in Resources */,
 				E599003814687D2E00458316 /* backgroundLayer-sideBuilding-hd.png in Resources */,
 				E599003A14687D2E00458316 /* backgroundLayer-sideBuilding.png in Resources */,
-				E599004814687E3B00458316 /* chefObject-chef-hd.png in Resources */,
-				E599004A14687E3B00458316 /* chefObject-chef.png in Resources */,
 				E599004C14687E3B00458316 /* coin.caf in Resources */,
 				E599005014687E3B00458316 /* coinObject-particle.plist in Resources */,
 				E599005214687E3B00458316 /* fps_images.png in Resources */,
@@ -2999,6 +2997,8 @@
 				856FD5E8147F549900FE42F0 /* background-searsTowerChicago.png in Resources */,
 				856FD5EA147F549900FE42F0 /* background-ritzLA.png in Resources */,
 				856FD5EC147F549900FE42F0 /* background-empire.png in Resources */,
+				E5489C68147F775400C83EEF /* chefAtlas-hd.png in Resources */,
+				E5489C6A147F775400C83EEF /* chefAtlas.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -20,7 +20,7 @@ NSInteger const chefTag = 45;
 
 @implementation CHChefObject
 {
-    CCSprite *chef;
+    CCSprite *_chef;
 	float _verticalAcc;
 	float _horizontalAcc;
     float _verticalSpeed;
@@ -50,9 +50,22 @@ NSInteger const chefTag = 45;
 {
 	if ((self = [super init]))
 	{
-        chef = [CCSprite spriteWithFile:@"chefObject-chef.png"];
+		CCTexture2D *chefAtlas = [[CCTextureCache sharedTextureCache] addImage:@"chefAtlas.png"];
+		
+		NSArray *frames = [NSArray arrayWithObjects:
+						   [CCSpriteFrame frameWithTexture:chefAtlas rect:CGRectMake(0, 0, 75, 75)],
+						   [CCSpriteFrame frameWithTexture:chefAtlas rect:CGRectMake(75, 0, 75, 75)],
+						   [CCSpriteFrame frameWithTexture:chefAtlas rect:CGRectMake(150, 0, 75, 75)],
+						   [CCSpriteFrame frameWithTexture:chefAtlas rect:CGRectMake(75, 0, 75, 75)], nil];
+		CCAnimation *animation = [CCAnimation animationWithFrames:frames delay:0.07f];
+		CCAnimate *anim = [CCAnimate actionWithAnimation:animation];
+		
+		_chef = [CCSprite node];
+		[self addChild:_chef];
+		
+		[_chef runAction:[CCRepeatForever actionWithAction:anim]];
+		
 		self.verticalSpeed = kNormalSpeed;
-        [self addChild:chef z:0 tag:chefTag];
 	}
 	return self;
 }
@@ -82,19 +95,11 @@ NSInteger const chefTag = 45;
     
     
     //rotate chef based on direction
-    if(self.horizontalSpeed > 0){
-        [self getChildByTag:chefTag].rotation = 15;
-    }
-    else if(self.horizontalSpeed < 0){
-        [self getChildByTag:chefTag].rotation = -15;
-    }
-    else{
-        [self getChildByTag:chefTag].rotation = 0;
-    }
-    
+	CGFloat rot = 15 * (self.horizontalSpeed / 100);
+    _chef.rotation = clampf(rot, -60, 60);
     
 	// Correct coordinate so that it doesn't go out of bounds
-	CGFloat halfWidth = 0.5f * [self getChildByTag:chefTag].contentSize.width;
+	CGFloat halfWidth = 0.5f * _chef.contentSize.width;
     
     p = self.position;
 	p.x = clampf(p.x, halfWidth, CHGetWinWidth() - halfWidth);
@@ -134,26 +139,30 @@ NSInteger const chefTag = 45;
 	}
 }
 
-- (CGSize) contentSize{
-    return chef.contentSize;
+- (CGSize) contentSize
+{
+    return CGSizeMake(45, 45);
 }
 
--(BOOL) recentlyHit{
-    return [chef numberOfRunningActions]>0;
+-(BOOL) recentlyHit
+{
+    return [_chef numberOfRunningActions] > 1;
 }
 
 
--(void) chefDamaged{
-    
-    [chef setOpacity:1.0];
-    CCFadeTo *fadeIn = [CCFadeTo actionWithDuration:0.2 opacity:100];
-    CCFadeTo *fadeOut = [CCFadeTo actionWithDuration:0.2 opacity:255];
-    
-    CCSequence *pulseSequence = [CCSequence actionOne:fadeIn two:fadeOut];
-    
-    CCSequence *pulseSequence2 = [CCSequence actionOne:pulseSequence two:pulseSequence];
-    pulseSequence2.tag = 5;
-    [chef runAction:pulseSequence2];
+-(void) chefDamaged
+{
+    CCBlink *blink = [CCBlink actionWithDuration:0.8f blinks:7];
+	[_chef runAction:blink];
+//    [_chef setOpacity:1.0];
+//    CCFadeTo *fadeIn = [CCFadeTo actionWithDuration:0.2 opacity:100];
+//    CCFadeTo *fadeOut = [CCFadeTo actionWithDuration:0.2 opacity:255];
+//    
+//    CCSequence *pulseSequence = [CCSequence actionOne:fadeIn two:fadeOut];
+//    
+//    CCSequence *pulseSequence2 = [CCSequence actionOne:pulseSequence two:pulseSequence];
+//    pulseSequence2.tag = 5;
+//    [_chef runAction:pulseSequence2];
 }
 
 
