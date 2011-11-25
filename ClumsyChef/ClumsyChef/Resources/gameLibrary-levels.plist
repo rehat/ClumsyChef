@@ -71,8 +71,6 @@
 		<string>selectLevel-burrito.png</string>
 		<key>finishImage</key>
 		<string>recipeItem-big-burrito.png</string>
-		<key>New item</key>
-		<string></string>
 		<key>backgroundSideBuildingImage</key>
 		<string>back.png</string>
 		<key>backgroundBackImage</key>
