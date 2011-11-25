@@ -35,8 +35,8 @@
 		854E2503147AE9C7007F4039 /* selectLevel-hot_dog.png in Resources */ = {isa = PBXBuildFile; fileRef = 854E24E8147AE9C7007F4039 /* selectLevel-hot_dog.png */; };
 		854E2504147AE9C7007F4039 /* selectLevel-locked.png in Resources */ = {isa = PBXBuildFile; fileRef = 854E24E9147AE9C7007F4039 /* selectLevel-locked.png */; };
 		854E2505147AE9C7007F4039 /* selectLevel-locked.png in Resources */ = {isa = PBXBuildFile; fileRef = 854E24E9147AE9C7007F4039 /* selectLevel-locked.png */; };
-		854E2506147AE9C7007F4039 /* selectLevel-Pizza.png in Resources */ = {isa = PBXBuildFile; fileRef = 854E24EA147AE9C7007F4039 /* selectLevel-Pizza.png */; };
-		854E2507147AE9C7007F4039 /* selectLevel-Pizza.png in Resources */ = {isa = PBXBuildFile; fileRef = 854E24EA147AE9C7007F4039 /* selectLevel-Pizza.png */; };
+		854E2506147AE9C7007F4039 /* selectLevel-pizza.png in Resources */ = {isa = PBXBuildFile; fileRef = 854E24EA147AE9C7007F4039 /* selectLevel-pizza.png */; };
+		854E2507147AE9C7007F4039 /* selectLevel-pizza.png in Resources */ = {isa = PBXBuildFile; fileRef = 854E24EA147AE9C7007F4039 /* selectLevel-pizza.png */; };
 		854E2508147AE9C7007F4039 /* selectLevel-taco.png in Resources */ = {isa = PBXBuildFile; fileRef = 854E24EB147AE9C7007F4039 /* selectLevel-taco.png */; };
 		854E2509147AE9C7007F4039 /* selectLevel-taco.png in Resources */ = {isa = PBXBuildFile; fileRef = 854E24EB147AE9C7007F4039 /* selectLevel-taco.png */; };
 		854E250A147AE9C7007F4039 /* selectLevel-burrito-high.png in Resources */ = {isa = PBXBuildFile; fileRef = 854E24EC147AE9C7007F4039 /* selectLevel-burrito-high.png */; };
@@ -833,7 +833,7 @@
 		854E24E7147AE9C7007F4039 /* selectLevel-hamburger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "selectLevel-hamburger.png"; path = "Resources/selectLevel-hamburger.png"; sourceTree = "<group>"; };
 		854E24E8147AE9C7007F4039 /* selectLevel-hot_dog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "selectLevel-hot_dog.png"; path = "Resources/selectLevel-hot_dog.png"; sourceTree = "<group>"; };
 		854E24E9147AE9C7007F4039 /* selectLevel-locked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "selectLevel-locked.png"; path = "Resources/selectLevel-locked.png"; sourceTree = "<group>"; };
-		854E24EA147AE9C7007F4039 /* selectLevel-Pizza.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "selectLevel-Pizza.png"; path = "Resources/selectLevel-Pizza.png"; sourceTree = "<group>"; };
+		854E24EA147AE9C7007F4039 /* selectLevel-pizza.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "selectLevel-pizza.png"; path = "Resources/selectLevel-pizza.png"; sourceTree = "<group>"; };
 		854E24EB147AE9C7007F4039 /* selectLevel-taco.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "selectLevel-taco.png"; path = "Resources/selectLevel-taco.png"; sourceTree = "<group>"; };
 		854E24EC147AE9C7007F4039 /* selectLevel-burrito-high.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "selectLevel-burrito-high.png"; path = "Resources/selectLevel-burrito-high.png"; sourceTree = "<group>"; };
 		854E24ED147AE9C7007F4039 /* selectLevel-hamburger-high.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "selectLevel-hamburger-high.png"; path = "Resources/selectLevel-hamburger-high.png"; sourceTree = "<group>"; };
@@ -1866,7 +1866,7 @@
 				854E24FC147AE9C7007F4039 /* selectLevel-pizza-hd.png */,
 				854E24F6147AE9C7007F4039 /* selectLevel-pizza-high-hd.png */,
 				854E24F0147AE9C7007F4039 /* selectLevel-pizza-high.png */,
-				854E24EA147AE9C7007F4039 /* selectLevel-Pizza.png */,
+				854E24EA147AE9C7007F4039 /* selectLevel-pizza.png */,
 				854E24FD147AE9C7007F4039 /* selectLevel-taco-hd.png */,
 				854E24F7147AE9C7007F4039 /* selectLevel-taco-high-hd.png */,
 				854E24F1147AE9C7007F4039 /* selectLevel-taco-high.png */,
@@ -2666,7 +2666,7 @@
 				854E2501147AE9C7007F4039 /* selectLevel-hamburger.png in Resources */,
 				854E2503147AE9C7007F4039 /* selectLevel-hot_dog.png in Resources */,
 				854E2505147AE9C7007F4039 /* selectLevel-locked.png in Resources */,
-				854E2507147AE9C7007F4039 /* selectLevel-Pizza.png in Resources */,
+				854E2507147AE9C7007F4039 /* selectLevel-pizza.png in Resources */,
 				854E2509147AE9C7007F4039 /* selectLevel-taco.png in Resources */,
 				854E250B147AE9C7007F4039 /* selectLevel-burrito-high.png in Resources */,
 				854E250D147AE9C7007F4039 /* selectLevel-hamburger-high.png in Resources */,
@@ -2907,7 +2907,7 @@
 				854E2500147AE9C7007F4039 /* selectLevel-hamburger.png in Resources */,
 				854E2502147AE9C7007F4039 /* selectLevel-hot_dog.png in Resources */,
 				854E2504147AE9C7007F4039 /* selectLevel-locked.png in Resources */,
-				854E2506147AE9C7007F4039 /* selectLevel-Pizza.png in Resources */,
+				854E2506147AE9C7007F4039 /* selectLevel-pizza.png in Resources */,
 				854E2508147AE9C7007F4039 /* selectLevel-taco.png in Resources */,
 				854E250A147AE9C7007F4039 /* selectLevel-burrito-high.png in Resources */,
 				854E250C147AE9C7007F4039 /* selectLevel-hamburger-high.png in Resources */,
