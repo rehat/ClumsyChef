@@ -50,6 +50,7 @@ static CGFloat const kYSpacing = 110;
 		[self addChild:bg];
 		
 		CHPlayerInfo *info = [CHPlayerInfo sharedPlayerInfo];
+		//info.numClearedLevels = 5;
 		CHGameLibrary *lib = [CHGameLibrary sharedGameLibrary];
 		NSUInteger numClearedLevels = info.numClearedLevels;
 		NSUInteger numLevels = [lib numberOfLevels];
@@ -89,6 +90,10 @@ static CGFloat const kYSpacing = 110;
 					
 - (void)itemPressed:(id)sender
 {
-	
+	CCNode *item = sender;
+	NSUInteger levelIndex = item.tag;
+	CHGameScene *gs = [CHGameScene nodeWithLevelIndex:levelIndex];
+	[[CCDirector sharedDirector] popScene];
+	[[CCDirector sharedDirector] pushScene:gs];
 }
 @end
