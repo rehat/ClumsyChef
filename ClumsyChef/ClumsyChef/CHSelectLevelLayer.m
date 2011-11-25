@@ -15,33 +15,32 @@
 
 
 // private methods are declared in this manner to avoid "may not respond to ..." compiler warnings
-@interface CHSelectLevelLayer (PrivateMethods)
--(void) createMenu:(ccTime)delta;
--(void) menuItem1Touched:(id)sender;
--(void) menuItem2Touched:(id)sender;
--(void) menuItem3Touched:(id)sender;
--(void) menuItem4Touched:(id)sender;
--(void) menuItem5Touched:(id)sender;
--(void) menuItem6Touched:(id)sender;
-@end
+//@interface CHSelectLevelLayer (PrivateMethods)
+//-(void) createMenu:(ccTime)delta;
+//-(void) menuItem1Touched:(id)sender;
+//-(void) menuItem2Touched:(id)sender;
+//-(void) menuItem3Touched:(id)sender;
+//-(void) menuItem4Touched:(id)sender;
+//-(void) menuItem5Touched:(id)sender;
+//-(void) menuItem6Touched:(id)sender;
+//@end
 
 @implementation CHSelectLevelLayer
-
-CCSprite *background;
-
-- (void)runScene:(CCScene *)scene
-{
-	[scene addChild:[TestMenuLayer backButton]];
-	[[CCDirector sharedDirector] pushScene:scene];
-}
 
 
 - (id)init
 {
 	if (self = [super init])
 	{
+		CCSprite *bg = [CCSprite spriteWithFile:@"selectLevel-background.png"];
+		[bg setPositionSharp:CHGetWinCenterPoint()];
+		[self addChild:bg];
+		
+		//CHPlayerInfo *info = [CHPlayerInfo sharedPlayerInfo];
+		
 	
 	}
+	return self;
 }
 
 
