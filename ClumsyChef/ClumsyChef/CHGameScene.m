@@ -58,7 +58,7 @@
 
 - (void)showWin:(NSInteger)score
 {
-	_moneyAmount += score;
+	_moneyAmount = score;
 	
 	[_gameLayer stopBackgroundMusic];
 	_gameLayer.isPaused = YES;

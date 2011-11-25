@@ -8,9 +8,26 @@
 
 #import "CHMainMenuLayer.h"
 #import "SimpleAudioEngine.h"
+#import "CHSelectLevelLayer.h"
+#import "CHHighScoresLayer.h"
+#import "CHCreditLayer.h"
 
 @implementation CHMainMenuLayer
+{
+	CCMenuItemToggle *_soundToggle;
+}
 
+#pragma mark -
+#pragma mark Private
+
+- (void)updateSoundToggleButton
+{
+	SimpleAudioEngine *engine = [SimpleAudioEngine sharedEngine];
+	_soundToggle.selectedIndex = (engine.mute? 1 : 0);
+}
+
+#pragma mark -
+#pragma mark Constructor and destructor
 - (id)init
 {
 	if (self = [super init])
@@ -43,13 +60,14 @@
 														   selectedImage:nil];
 		CCMenuItemImage *soundOn = [CCMenuItemImage itemFromNormalImage:@"mainMenu-soundOn.png" 
 														  selectedImage:nil];
-		CCMenuItemToggle *toggle = [CCMenuItemToggle itemWithTarget:self selector:@selector(soundPressed:) 
+		_soundToggle = [CCMenuItemToggle itemWithTarget:self selector:@selector(soundPressed:) 
 															  items:soundOn, soundOff, nil];
-		[toggle setPositionSharp:ccp(289, 23)];
+		[_soundToggle setPositionSharp:ccp(289, 23)];
 		
-		CCMenu *menu = [CCMenu menuWithItems:play, highScores, credits, toggle, nil];
+		CCMenu *menu = [CCMenu menuWithItems:play, highScores, credits, _soundToggle, nil];
 		menu.anchorPoint = CGPointZero;
 		menu.position = CGPointZero;
+		[self updateSoundToggleButton];
 		[self addChild:menu];
 	}
 	return self;
@@ -60,22 +78,24 @@
 
 - (void)playPressed:(id)sender
 {
-	
+	[[CCDirector sharedDirector] pushScene:[CHSelectLevelLayer node]];
 }
 
 - (void)highScoresPressed:(id)sender
 {
-	
+	[[CCDirector sharedDirector] pushScene:[CHHighScoresLayer node]];	
 }
 
 - (void)creditsPressed:(id)sender
 {
-	
+	[[CCDirector sharedDirector] pushScene:[CHCreditLayer node]];
 }
 
 - (void)soundPressed:(id)sender
 {
-	
+	SimpleAudioEngine *engine = [SimpleAudioEngine sharedEngine];
+	engine.mute = !engine.mute;
+	[self updateSoundToggleButton];
 }
 
 @end
