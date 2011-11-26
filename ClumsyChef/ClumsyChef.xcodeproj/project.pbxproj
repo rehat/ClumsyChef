@@ -117,6 +117,10 @@
 		85D20C6D147F9EDC00C09EAB /* recipeItem_patty.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D20C6A147F9EDC00C09EAB /* recipeItem_patty.png */; };
 		85D20C6E147F9EDC00C09EAB /* recipeItem_patty-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D20C6B147F9EDC00C09EAB /* recipeItem_patty-hd.png */; };
 		85D20C6F147F9EDC00C09EAB /* recipeItem_patty-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D20C6B147F9EDC00C09EAB /* recipeItem_patty-hd.png */; };
+		85D20C811480DDAD00C09EAB /* background-test.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D20C7F1480DDAD00C09EAB /* background-test.png */; };
+		85D20C821480DDAD00C09EAB /* background-test.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D20C7F1480DDAD00C09EAB /* background-test.png */; };
+		85D20C831480DDAD00C09EAB /* background-test-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D20C801480DDAD00C09EAB /* background-test-hd.png */; };
+		85D20C841480DDAD00C09EAB /* background-test-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D20C801480DDAD00C09EAB /* background-test-hd.png */; };
 		BC03E85114773C9200E34189 /* recipeItem_bacon-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E83D14773C9200E34189 /* recipeItem_bacon-hd.png */; };
 		BC03E85214773C9200E34189 /* recipeItem_bacon-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E83D14773C9200E34189 /* recipeItem_bacon-hd.png */; };
 		BC03E85314773C9200E34189 /* recipeItem_bacon.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E83E14773C9200E34189 /* recipeItem_bacon.png */; };
@@ -912,6 +916,8 @@
 		85D20C65147F9D5700C09EAB /* recipeItem_bun-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recipeItem_bun-hd.png"; path = "Resources/recipeItem_bun-hd.png"; sourceTree = "<group>"; };
 		85D20C6A147F9EDC00C09EAB /* recipeItem_patty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = recipeItem_patty.png; path = Resources/recipeItem_patty.png; sourceTree = "<group>"; };
 		85D20C6B147F9EDC00C09EAB /* recipeItem_patty-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recipeItem_patty-hd.png"; path = "Resources/recipeItem_patty-hd.png"; sourceTree = "<group>"; };
+		85D20C7F1480DDAD00C09EAB /* background-test.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background-test.png"; path = "Resources/background-test.png"; sourceTree = "<group>"; };
+		85D20C801480DDAD00C09EAB /* background-test-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background-test-hd.png"; path = "Resources/background-test-hd.png"; sourceTree = "<group>"; };
 		BC03E83D14773C9200E34189 /* recipeItem_bacon-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recipeItem_bacon-hd.png"; path = "Resources/recipeItem_bacon-hd.png"; sourceTree = "<group>"; };
 		BC03E83E14773C9200E34189 /* recipeItem_bacon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = recipeItem_bacon.png; path = Resources/recipeItem_bacon.png; sourceTree = "<group>"; };
 		BC03E83F14773C9200E34189 /* recipeItem_beef-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "recipeItem_beef-hd.png"; path = "Resources/recipeItem_beef-hd.png"; sourceTree = "<group>"; };
@@ -1525,6 +1531,8 @@
 		856FD5DB147F547000FE42F0 /* Backgrounds */ = {
 			isa = PBXGroup;
 			children = (
+				85D20C7F1480DDAD00C09EAB /* background-test.png */,
+				85D20C801480DDAD00C09EAB /* background-test-hd.png */,
 				85D20C58147F943F00C09EAB /* background-taipei.png */,
 				85D20C59147F943F00C09EAB /* background-financeTower.png */,
 				85D20C5A147F943F00C09EAB /* background-financeTower-hd.png */,
@@ -2853,6 +2861,8 @@
 				E5B4D5F4147FA0AD009B76FD /* recipeItem-collected-particle-hd.png in Resources */,
 				E5B4D5F6147FA0AD009B76FD /* recipeItem-collected-particle.plist in Resources */,
 				E5B4D5F8147FA0AD009B76FD /* recipeItem-collected-particle.png in Resources */,
+				85D20C821480DDAD00C09EAB /* background-test.png in Resources */,
+				85D20C841480DDAD00C09EAB /* background-test-hd.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3113,6 +3123,8 @@
 				E5B4D5F3147FA0AD009B76FD /* recipeItem-collected-particle-hd.png in Resources */,
 				E5B4D5F5147FA0AD009B76FD /* recipeItem-collected-particle.plist in Resources */,
 				E5B4D5F7147FA0AD009B76FD /* recipeItem-collected-particle.png in Resources */,
+				85D20C811480DDAD00C09EAB /* background-test.png in Resources */,
+				85D20C831480DDAD00C09EAB /* background-test-hd.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

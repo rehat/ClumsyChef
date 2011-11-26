@@ -33,7 +33,7 @@
 		<key>backgroundSideBuildingImage</key>
 		<string>backgroundLayer-sideBuilding-searsTowerChicago.png</string>
 		<key>backgroundBackImage</key>
-		<string>background-searsTowerChicago.png</string>
+		<string>background-test.png</string>
 		<key>recipeItems</key>
 		<array>
 			<string>HamburgerBun</string>
