@@ -23,6 +23,22 @@
 }
 
 #pragma mark - 
+#pragma mark Private
+
+- (void)showModalOverlay:(CHModalLayer *)modalLayer
+{
+	_gameLayer.isPaused = YES;
+	_gameLayer.visible = NO;
+	[modalLayer showAsModalLayerInNode:self];
+}
+
+- (void)prepareToDismissModalOverlay
+{
+	_gameLayer.isPaused = NO;
+	_gameLayer.visible = YES;
+}
+
+#pragma mark - 
 #pragma mark Constructor and destructor
 
 - (id)initWithLevelIndex:(NSUInteger)levelIndex
@@ -68,16 +84,14 @@
 	
 	_moneyAmount = score;
 	[_gameLayer stopBackgroundMusic];
-	_gameLayer.isPaused = YES;
-	[[CHGameWinLayer nodeWithLevelIndex:_levelIndex 
-							moneyAmount:score] showAsModalLayerInNode:self];
+	[self showModalOverlay:[CHGameWinLayer nodeWithLevelIndex:_levelIndex 
+														   moneyAmount:score]];
 }
 
 - (void)showGameOver
 {
 	[_gameLayer stopBackgroundMusic];
-    _gameLayer.isPaused = YES;
-	[[CHGameLoseLayer node] showAsModalLayerInNode:self];
+    [self showModalOverlay:[CHGameLoseLayer node]];
 }
 
 #pragma mark -
@@ -85,21 +99,19 @@
 
 - (void)pauseGame
 {
-	_gameLayer.isPaused = YES;
-	CHPauseLayer *p = [CHPauseLayer node];
-	[p showAsModalLayerInNode:self];
+	[self showModalOverlay:[CHPauseLayer node]];
 }
 
 - (void)resumeGame
 {
-	_gameLayer.isPaused = NO;
+	[self prepareToDismissModalOverlay];
 }
 
 - (void)restartLevel
 {
 	[_gameLayer resetForLevelIndex:_levelIndex];
 	_gameLayer.moneyAmount = _moneyAmount;
-	_gameLayer.isPaused = NO;
+	[self prepareToDismissModalOverlay];
 }
 
 - (BOOL)hasNextLevel
@@ -114,7 +126,7 @@
 	_levelIndex++;
 	[_gameLayer resetForLevelIndex:_levelIndex];
 	_gameLayer.moneyAmount = _moneyAmount;
-	_gameLayer.isPaused = NO;
+	[self prepareToDismissModalOverlay];
 }
 
 - (void)quitGame
