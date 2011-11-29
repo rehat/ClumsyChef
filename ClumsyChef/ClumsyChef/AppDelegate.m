@@ -92,7 +92,6 @@
 #endif
 	
 	[director setAnimationInterval:1.0/60];
-	[director setDisplayFPS:YES];
 	
 	
 	// make the OpenGLView a child of the view controller
@@ -132,8 +131,10 @@
     
 #ifdef CH_NO_TEST_MENU
 	// Run the intro Scene
+	[director setDisplayFPS:NO];
 	[[CCDirector sharedDirector] runWithScene:[CHMainMenuLayer layerAsScene]];
 #else
+	[director setDisplayFPS:YES];
 	[[CCDirector sharedDirector] runWithScene:[TestMenuLayer layerAsScene]];
 #endif
 }
