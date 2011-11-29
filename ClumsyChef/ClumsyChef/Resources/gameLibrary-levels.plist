@@ -10,7 +10,7 @@
 		<key>finishImage</key>
 		<string>recipeItem-big-hot_dog.png</string>
 		<key>worldHeight</key>
-		<integer>5000</integer>
+		<integer>4000</integer>
 		<key>backgroundSideBuildingImage</key>
 		<string>backgroundLayer-sideBuilding-empire.png</string>
 		<key>backgroundBackImage</key>
@@ -29,7 +29,7 @@
 		<key>finishImage</key>
 		<string>recipeItem-big-hamburger.png</string>
 		<key>worldHeight</key>
-		<integer>6000</integer>
+		<integer>5000</integer>
 		<key>backgroundSideBuildingImage</key>
 		<string>backgroundLayer-sideBuilding-searsTowerChicago.png</string>
 		<key>backgroundBackImage</key>
@@ -50,7 +50,7 @@
 		<key>finishImage</key>
 		<string>recipeItem-big-taco.png</string>
 		<key>worldHeight</key>
-		<integer>8000</integer>
+		<integer>6000</integer>
 		<key>backgroundSideBuildingImage</key>
 		<string>backgroundLayer-sideBuilding-ritzLA.png</string>
 		<key>backgroundBackImage</key>
@@ -72,7 +72,7 @@
 		<key>finishImage</key>
 		<string>recipeItem-big-burrito.png</string>
 		<key>worldHeight</key>
-		<integer>6000</integer>
+		<integer>7000</integer>
 		<key>backgroundSideBuildingImage</key>
 		<string>backgroundLayer-sideBuilding-taipei.png</string>
 		<key>backgroundBackImage</key>
@@ -95,7 +95,7 @@
 		<key>finishImage</key>
 		<string>recipeItem-big-pizza.png</string>
 		<key>worldHeight</key>
-		<integer>6000</integer>
+		<integer>8000</integer>
 		<key>backgroundSideBuildingImage</key>
 		<string>backgroundLayer-sideBuilding-financeTower.png</string>
 		<key>backgroundBackImage</key>
