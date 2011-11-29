@@ -30,9 +30,9 @@
 	CCMoveTo *inMove = [CCMoveBy actionWithDuration:duration_ position:ccp(-distance, 0)];
 	CCMoveTo *outMove = [CCMoveBy actionWithDuration:duration_ position:ccp(-distance, 0)];
 
-	[outScene_ runAction:[CCEaseElasticOut actionWithAction:outMove]];
+	[outScene_ runAction:[CCEaseInOut actionWithAction:outMove rate:3]];
 	[inScene_ runAction:[CCSequence actions:
-						 [CCEaseElasticOut actionWithAction:inMove],
+						 [CCEaseInOut actionWithAction:inMove rate:3],
 						 [CCCallFunc actionWithTarget:self selector:@selector(finish)], nil]];
 
 }

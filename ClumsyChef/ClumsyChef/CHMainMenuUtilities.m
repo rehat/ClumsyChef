@@ -9,6 +9,7 @@
 #import "CHMainMenuUtilities.h"
 #import "CHMenuTransitionScene.h"
 
+ccTime const kAnimDuration = 0.3f;
 
 CCMenu* CHMenuMakeBackButton(CGPoint position, id target, SEL selector)
 {
@@ -26,12 +27,12 @@ CCMenu* CHMenuMakeBackButton(CGPoint position, id target, SEL selector)
 
 void CHMenuPushScene(CCScene *scene)
 {
-	CHMenuTransitionScene *s = [CHMenuTransitionScene transitionWithDuration:1 scene:scene];
+	CHMenuTransitionScene *s = [CHMenuTransitionScene transitionWithDuration:kAnimDuration scene:scene];
 	[[CCDirector sharedDirector] pushScene:s];
 }
 
 void CHMenuPopScene()
 {
 	[[CCDirector sharedDirector] popSceneWithTransition:[CHMenuTransitionSceneBack class] 
-											   duration:1];
+											   duration:kAnimDuration];
 }
