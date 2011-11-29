@@ -10,3 +10,6 @@
 #import "cocos2d.h"
 
 CCMenu* CHMenuMakeBackButton(CGPoint position, id target, SEL selector);
+
+void CHMenuPushScene(CCScene *scene);
+void CHMenuPopScene();

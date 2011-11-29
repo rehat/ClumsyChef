@@ -7,6 +7,8 @@
 //
 
 #import "CHMainMenuUtilities.h"
+#import "CHMenuTransitionScene.h"
+
 
 CCMenu* CHMenuMakeBackButton(CGPoint position, id target, SEL selector)
 {
@@ -20,4 +22,16 @@ CCMenu* CHMenuMakeBackButton(CGPoint position, id target, SEL selector)
 	[back setPositionSharp:position];
 	
 	return button;
+}
+
+void CHMenuPushScene(CCScene *scene)
+{
+	CHMenuTransitionScene *s = [CHMenuTransitionScene transitionWithDuration:1 scene:scene];
+	[[CCDirector sharedDirector] pushScene:s];
+}
+
+void CHMenuPopScene()
+{
+	[[CCDirector sharedDirector] popSceneWithTransition:[CHMenuTransitionSceneBack class] 
+											   duration:1];
 }

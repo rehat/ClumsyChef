@@ -104,6 +104,6 @@ static CGFloat const kYSpacing = 110;
 
 - (void)backButtonPressed:(id)sender
 {
-	[[CCDirector sharedDirector] popScene];
+	CHMenuPopScene();
 }
 @end

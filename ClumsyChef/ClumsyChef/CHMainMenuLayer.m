@@ -11,6 +11,8 @@
 #import "CHSelectLevelLayer.h"
 #import "CHHighScoresLayer.h"
 #import "CHCreditLayer.h"
+#import "CHMainMenuUtilities.h"
+
 
 @implementation CHMainMenuLayer
 {
@@ -89,17 +91,17 @@
 
 - (void)playPressed:(id)sender
 {
-	[[CCDirector sharedDirector] pushScene:[CHSelectLevelLayer node]];
+	CHMenuPushScene([CHSelectLevelLayer node]);
 }
 
 - (void)highScoresPressed:(id)sender
 {
-	[[CCDirector sharedDirector] pushScene:[CHHighScoresLayer node]];	
+	CHMenuPushScene([CHHighScoresLayer node]);	
 }
 
 - (void)creditsPressed:(id)sender
 {
-	[[CCDirector sharedDirector] pushScene:[CHCreditLayer node]];
+	CHMenuPushScene([CHCreditLayer node]);
 }
 
 - (void)soundPressed:(id)sender
