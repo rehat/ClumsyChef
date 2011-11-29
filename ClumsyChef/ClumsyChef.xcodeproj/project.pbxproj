@@ -551,6 +551,8 @@
 		E5489C6B147F775400C83EEF /* chefAtlas.png in Resources */ = {isa = PBXBuildFile; fileRef = E5489C67147F775400C83EEF /* chefAtlas.png */; };
 		E550BEF31485919D007C2100 /* CHMenuTransitionScene.m in Sources */ = {isa = PBXBuildFile; fileRef = E550BEF21485919D007C2100 /* CHMenuTransitionScene.m */; };
 		E550BEF41485919D007C2100 /* CHMenuTransitionScene.m in Sources */ = {isa = PBXBuildFile; fileRef = E550BEF21485919D007C2100 /* CHMenuTransitionScene.m */; };
+		E550BEF71485A104007C2100 /* CHSplashImageLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E550BEF61485A104007C2100 /* CHSplashImageLayer.m */; };
+		E550BEF81485A104007C2100 /* CHSplashImageLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E550BEF61485A104007C2100 /* CHSplashImageLayer.m */; };
 		E552D23A1463148A005EBBB1 /* CHGameWinLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E552D23914631489005EBBB1 /* CHGameWinLayer.m */; };
 		E552D23E146314A4005EBBB1 /* CHGameLoseLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E552D23D146314A3005EBBB1 /* CHGameLoseLayer.m */; };
 		E552D242146318DD005EBBB1 /* CHMainMenuLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E552D241146318DD005EBBB1 /* CHMainMenuLayer.m */; };
@@ -1054,6 +1056,8 @@
 		E5489C67147F775400C83EEF /* chefAtlas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = chefAtlas.png; path = Resources/chefAtlas.png; sourceTree = "<group>"; };
 		E550BEF11485919D007C2100 /* CHMenuTransitionScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHMenuTransitionScene.h; sourceTree = "<group>"; };
 		E550BEF21485919D007C2100 /* CHMenuTransitionScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHMenuTransitionScene.m; sourceTree = "<group>"; };
+		E550BEF51485A104007C2100 /* CHSplashImageLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; path = CHSplashImageLayer.h; sourceTree = "<group>"; };
+		E550BEF61485A104007C2100 /* CHSplashImageLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHSplashImageLayer.m; sourceTree = "<group>"; };
 		E552D23814631488005EBBB1 /* CHGameWinLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGameWinLayer.h; sourceTree = "<group>"; };
 		E552D23914631489005EBBB1 /* CHGameWinLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGameWinLayer.m; sourceTree = "<group>"; };
 		E552D23C146314A2005EBBB1 /* CHGameLoseLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGameLoseLayer.h; sourceTree = "<group>"; };
@@ -1853,18 +1857,20 @@
 		E552D23F146318A7005EBBB1 /* Main Menu */ = {
 			isa = PBXGroup;
 			children = (
+				E550BEF51485A104007C2100 /* CHSplashImageLayer.h */,
+				E550BEF61485A104007C2100 /* CHSplashImageLayer.m */,
 				E552D243146319B7005EBBB1 /* CHCreditLayer.h */,
 				E552D244146319B7005EBBB1 /* CHCreditLayer.m */,
 				E552D246146319E6005EBBB1 /* CHHighScoresLayer.h */,
 				E552D247146319E6005EBBB1 /* CHHighScoresLayer.m */,
 				E552D240146318DD005EBBB1 /* CHMainMenuLayer.h */,
 				E552D241146318DD005EBBB1 /* CHMainMenuLayer.m */,
-				E552D24C14631A34005EBBB1 /* CHSelectLevelLayer.h */,
-				E552D24D14631A34005EBBB1 /* CHSelectLevelLayer.m */,
 				E539D842147E56D900098C9E /* CHMainMenuUtilities.h */,
 				E539D843147E56D900098C9E /* CHMainMenuUtilities.m */,
 				E550BEF11485919D007C2100 /* CHMenuTransitionScene.h */,
 				E550BEF21485919D007C2100 /* CHMenuTransitionScene.m */,
+				E552D24C14631A34005EBBB1 /* CHSelectLevelLayer.h */,
+				E552D24D14631A34005EBBB1 /* CHSelectLevelLayer.m */,
 			);
 			name = "Main Menu";
 			sourceTree = "<group>";
@@ -3339,6 +3345,7 @@
 				E539D7DC147E1F5800098C9E /* CHBlurImage.m in Sources */,
 				E539D7E0147E274200098C9E /* CHScreenshot.m in Sources */,
 				E550BEF41485919D007C2100 /* CHMenuTransitionScene.m in Sources */,
+				E550BEF81485A104007C2100 /* CHSplashImageLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3508,6 +3515,7 @@
 				E539D7DF147E274200098C9E /* CHScreenshot.m in Sources */,
 				E539D844147E56D900098C9E /* CHMainMenuUtilities.m in Sources */,
 				E550BEF31485919D007C2100 /* CHMenuTransitionScene.m in Sources */,
+				E550BEF71485A104007C2100 /* CHSplashImageLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
