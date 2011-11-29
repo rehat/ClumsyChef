@@ -10,6 +10,8 @@
 #import "CHGameScene.h"
 #import "CHGameLibrary.h"
 #import "CHPlayerInfo.h"
+#import "SimpleAudioEngine.h"
+
 
 static NSString* const kDefaultPlayerName = @"Player1";
 
@@ -86,7 +88,9 @@ static NSString* const kDefaultPlayerName = @"Player1";
 		[quit sharpenCurrentPosition];
 		
         [self addChild:menu];
-		
+        
+        [[SimpleAudioEngine sharedEngine] playEffect:@"levelWin.caf"];
+
 		_nextButton = next;
 	}
 	return self;

@@ -124,6 +124,8 @@
     [[SimpleAudioEngine sharedEngine] preloadEffect:@"Oowh.caf"];
     [[SimpleAudioEngine sharedEngine] preloadEffect:@"recipeItem-sound.caf"];
     [[SimpleAudioEngine sharedEngine] preloadBackgroundMusic:@"gameLayer-music.caf"];
+    [[SimpleAudioEngine sharedEngine] preloadEffect:@"levelFail.caf"];
+    [[SimpleAudioEngine sharedEngine] preloadEffect:@"levelWin.caf"];
 
     
     
