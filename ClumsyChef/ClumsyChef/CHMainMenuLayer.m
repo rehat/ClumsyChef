@@ -12,6 +12,7 @@
 #import "CHHighScoresLayer.h"
 #import "CHCreditLayer.h"
 #import "CHMainMenuUtilities.h"
+#import "CHMenuButton.h"
 
 
 @implementation CHMainMenuLayer
@@ -39,31 +40,31 @@
 		[self addChild:bg];
 		
 		// Menu button
-		CCMenuItemImage *play = [CCMenuItemImage itemFromNormalImage:@"mainMenu-play.png" 
-														selectedImage:@"mainMenu-play-high.png" 
-															   target:self 
-															 selector:@selector(playPressed:)];
+		CCMenuItemImage *play = [CHMenuButton itemFromImageName:@"mainMenu-play"
+														  sound:CHSoundButtonPress
+														 target:self 
+													   selector:@selector(playPressed:)];
 		[play setPositionSharp:CHGetWinPointTL(240, 163)];
 		
-		CCMenuItemImage *highScores = [CCMenuItemImage itemFromNormalImage:@"mainMenu-highScores.png" 
-													   selectedImage:@"mainMenu-highScores-high.png" 
-															  target:self 
-															selector:@selector(highScoresPressed:)];
+		CCMenuItemImage *highScores = [CHMenuButton itemFromImageName:@"mainMenu-highScores" 
+																sound:CHSoundButtonPress
+															   target:self 
+															 selector:@selector(highScoresPressed:)];
 		[highScores setPositionSharp:CHGetWinPointTL(240, 204)];
 		
-		CCMenuItemImage *credits = [CCMenuItemImage itemFromNormalImage:@"mainMenu-credits.png" 
-													   selectedImage:@"mainMenu-credits-high.png" 
-															  target:self 
-															selector:@selector(creditsPressed:)];
+		CCMenuItemImage *credits = [CHMenuButton itemFromImageName:@"mainMenu-credits" 
+															 sound:CHSoundButtonPress
+															target:self 
+														  selector:@selector(creditsPressed:)];
 		[credits setPositionSharp:CHGetWinPointTL(240, 245)];
 		
-
+		
 		CCMenuItemImage *soundOff = [CCMenuItemImage itemFromNormalImage:@"mainMenu-soundOff.png" 
 														   selectedImage:nil];
 		CCMenuItemImage *soundOn = [CCMenuItemImage itemFromNormalImage:@"mainMenu-soundOn.png" 
 														  selectedImage:nil];
 		_soundToggle = [CCMenuItemToggle itemWithTarget:self selector:@selector(soundPressed:) 
-															  items:soundOn, soundOff, nil];
+												  items:soundOn, soundOff, nil];
 		[_soundToggle setPositionSharp:ccp(289, 23)];
 		
 		CCMenu *menu = [CCMenu menuWithItems:play, highScores, credits, _soundToggle, nil];

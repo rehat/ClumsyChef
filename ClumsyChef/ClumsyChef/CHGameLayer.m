@@ -19,6 +19,7 @@
 #import "CHSharedResHolder.h"
 #import "CHPauseLayer.h"
 #import "TestMenuLayer.h"
+#import "CHMenuButton.h"
 
 
 static CGFloat const kChefYOffset = 110.f;
@@ -105,10 +106,10 @@ static float const kGenObjectRangeDown = 100.f;
 
 - (CCMenu *)pauseButton
 {
-	CCMenuItemImage *item = [CCMenuItemImage itemFromNormalImage:@"pause-gameLayerButton.png" 
-												   selectedImage:@"pause-gameLayerButton-high.png" 
-														  target:self 
-														selector:@selector(pauseButtonPressed:)];
+	CCMenuItemImage *item = [CHMenuButton itemFromImageName:@"pause-gameLayerButton"
+													  sound:CHSoundButtonPopup
+													 target:self 
+												   selector:@selector(pauseButtonPressed:)];
 	CCMenu *menu = [CCMenu menuWithItems:item, nil];
 	menu.anchorPoint = CGPointZero;
 	menu.position = CGPointZero;

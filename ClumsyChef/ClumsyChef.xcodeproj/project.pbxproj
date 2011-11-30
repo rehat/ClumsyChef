@@ -595,6 +595,16 @@
 		E56B03C3147AD971000589C1 /* selectLevel-background.png in Resources */ = {isa = PBXBuildFile; fileRef = E56B03C0147AD971000589C1 /* selectLevel-background.png */; };
 		E56B03C4147AD971000589C1 /* selectLevel-background-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E56B03C1147AD971000589C1 /* selectLevel-background-hd.png */; };
 		E56B03C5147AD971000589C1 /* selectLevel-background-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E56B03C1147AD971000589C1 /* selectLevel-background-hd.png */; };
+		E56D77C11486E8AB00B91FF2 /* click2.wav in Resources */ = {isa = PBXBuildFile; fileRef = E56D77BE1486E8AB00B91FF2 /* click2.wav */; };
+		E56D77C21486E8AB00B91FF2 /* click2.wav in Resources */ = {isa = PBXBuildFile; fileRef = E56D77BE1486E8AB00B91FF2 /* click2.wav */; };
+		E56D77C31486E8AB00B91FF2 /* click1.wav in Resources */ = {isa = PBXBuildFile; fileRef = E56D77BF1486E8AB00B91FF2 /* click1.wav */; };
+		E56D77C41486E8AB00B91FF2 /* click1.wav in Resources */ = {isa = PBXBuildFile; fileRef = E56D77BF1486E8AB00B91FF2 /* click1.wav */; };
+		E56D77C51486E8AB00B91FF2 /* back.wav in Resources */ = {isa = PBXBuildFile; fileRef = E56D77C01486E8AB00B91FF2 /* back.wav */; };
+		E56D77C61486E8AB00B91FF2 /* back.wav in Resources */ = {isa = PBXBuildFile; fileRef = E56D77C01486E8AB00B91FF2 /* back.wav */; };
+		E56D77C91486EA1800B91FF2 /* CHSoundUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E56D77C81486EA1800B91FF2 /* CHSoundUtilities.m */; };
+		E56D77CA1486EA1800B91FF2 /* CHSoundUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = E56D77C81486EA1800B91FF2 /* CHSoundUtilities.m */; };
+		E56D77CD1486ED6E00B91FF2 /* CHMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E56D77CC1486ED6E00B91FF2 /* CHMenuButton.m */; };
+		E56D77CE1486ED6E00B91FF2 /* CHMenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E56D77CC1486ED6E00B91FF2 /* CHMenuButton.m */; };
 		E56E5429147F8926004DAE56 /* selectLevel-italianPizza-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E56E5425147F8926004DAE56 /* selectLevel-italianPizza-hd.png */; };
 		E56E542A147F8926004DAE56 /* selectLevel-italianPizza-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E56E5425147F8926004DAE56 /* selectLevel-italianPizza-hd.png */; };
 		E56E542B147F8926004DAE56 /* selectLevel-italianPizza-high-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E56E5426147F8926004DAE56 /* selectLevel-italianPizza-high-hd.png */; };
@@ -1056,7 +1066,7 @@
 		E5489C67147F775400C83EEF /* chefAtlas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = chefAtlas.png; path = Resources/chefAtlas.png; sourceTree = "<group>"; };
 		E550BEF11485919D007C2100 /* CHMenuTransitionScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHMenuTransitionScene.h; sourceTree = "<group>"; };
 		E550BEF21485919D007C2100 /* CHMenuTransitionScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHMenuTransitionScene.m; sourceTree = "<group>"; };
-		E550BEF51485A104007C2100 /* CHSplashImageLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; path = CHSplashImageLayer.h; sourceTree = "<group>"; };
+		E550BEF51485A104007C2100 /* CHSplashImageLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHSplashImageLayer.h; sourceTree = "<group>"; };
 		E550BEF61485A104007C2100 /* CHSplashImageLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHSplashImageLayer.m; sourceTree = "<group>"; };
 		E552D23814631488005EBBB1 /* CHGameWinLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGameWinLayer.h; sourceTree = "<group>"; };
 		E552D23914631489005EBBB1 /* CHGameWinLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGameWinLayer.m; sourceTree = "<group>"; };
@@ -1103,6 +1113,13 @@
 		E56B03B6147AD7D7000589C1 /* gameWin-next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gameWin-next.png"; path = "Resources/gameWin-next.png"; sourceTree = "<group>"; };
 		E56B03C0147AD971000589C1 /* selectLevel-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "selectLevel-background.png"; path = "Resources/selectLevel-background.png"; sourceTree = "<group>"; };
 		E56B03C1147AD971000589C1 /* selectLevel-background-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "selectLevel-background-hd.png"; path = "Resources/selectLevel-background-hd.png"; sourceTree = "<group>"; };
+		E56D77BE1486E8AB00B91FF2 /* click2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = click2.wav; path = Resources/click2.wav; sourceTree = "<group>"; };
+		E56D77BF1486E8AB00B91FF2 /* click1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = click1.wav; path = Resources/click1.wav; sourceTree = "<group>"; };
+		E56D77C01486E8AB00B91FF2 /* back.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = back.wav; path = Resources/back.wav; sourceTree = "<group>"; };
+		E56D77C71486EA1800B91FF2 /* CHSoundUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHSoundUtilities.h; sourceTree = "<group>"; };
+		E56D77C81486EA1800B91FF2 /* CHSoundUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHSoundUtilities.m; sourceTree = "<group>"; };
+		E56D77CB1486ED6E00B91FF2 /* CHMenuButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHMenuButton.h; sourceTree = "<group>"; };
+		E56D77CC1486ED6E00B91FF2 /* CHMenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHMenuButton.m; sourceTree = "<group>"; };
 		E56E5425147F8926004DAE56 /* selectLevel-italianPizza-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "selectLevel-italianPizza-hd.png"; path = "Resources/selectLevel-italianPizza-hd.png"; sourceTree = "<group>"; };
 		E56E5426147F8926004DAE56 /* selectLevel-italianPizza-high-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "selectLevel-italianPizza-high-hd.png"; path = "Resources/selectLevel-italianPizza-high-hd.png"; sourceTree = "<group>"; };
 		E56E5427147F8926004DAE56 /* selectLevel-italianPizza-high.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "selectLevel-italianPizza-high.png"; path = "Resources/selectLevel-italianPizza-high.png"; sourceTree = "<group>"; };
@@ -1975,6 +1992,16 @@
 			name = "Select Level";
 			sourceTree = "<group>";
 		};
+		E56D77BC1486E88B00B91FF2 /* Common Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				E56D77C01486E8AB00B91FF2 /* back.wav */,
+				E56D77BF1486E8AB00B91FF2 /* click1.wav */,
+				E56D77BE1486E8AB00B91FF2 /* click2.wav */,
+			);
+			name = "Common Sounds";
+			sourceTree = "<group>";
+		};
 		E5A90377144F7799002A1F6C = {
 			isa = PBXGroup;
 			children = (
@@ -2030,9 +2057,9 @@
 		E5A90397144F7799002A1F6C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				E56B03BF147AD942000589C1 /* Select Level */,
 				E5BED01B1474D5870003D6F2 /* Application */,
 				E522B2FE146863820049D367 /* Background Layer */,
+				E56D77BC1486E88B00B91FF2 /* Common Sounds */,
 				E52E5ED81474E02B00FD9C4D /* Credits */,
 				E522B2FF146863950049D367 /* Game Layer */,
 				E5631E8A146B4BA000DACD3E /* Game Library */,
@@ -2044,6 +2071,7 @@
 				85CEB0AF14685EC70099409C /* Main Menu */,
 				E52E5F4F1474E12900FD9C4D /* Menu-Shared */,
 				E52E5ED61474E02200FD9C4D /* Pause */,
+				E56B03BF147AD942000589C1 /* Select Level */,
 				E511C2911459258B008BCFF8 /* Test Materials */,
 			);
 			name = Resources;
@@ -2543,12 +2571,16 @@
 				E5A51994147B9C540047113A /* CHModalLayer.m */,
 				E539D7DD147E274100098C9E /* CHScreenshot.h */,
 				E539D7DE147E274200098C9E /* CHScreenshot.m */,
+				E56D77C71486EA1800B91FF2 /* CHSoundUtilities.h */,
+				E56D77C81486EA1800B91FF2 /* CHSoundUtilities.m */,
 				E5D0C9D21478B9F10089E28D /* CHStretchableSprite.h */,
 				E5D0C9D31478B9F10089E28D /* CHStretchableSprite.m */,
 				E5A5198E147B947B0047113A /* CHTouchBlockingLayer.h */,
 				E5A5198F147B947B0047113A /* CHTouchBlockingLayer.m */,
 				E5F410F91455E9A800FBEE4B /* CHUtilities.h */,
 				E5F410FA1455E9A800FBEE4B /* CHUtilities.m */,
+				E56D77CB1486ED6E00B91FF2 /* CHMenuButton.h */,
+				E56D77CC1486ED6E00B91FF2 /* CHMenuButton.m */,
 			);
 			name = Utilities;
 			sourceTree = "<group>";
@@ -2880,6 +2912,9 @@
 				BC7A84A81484A6A000634F56 /* levelFail.caf in Resources */,
 				BC7A84AC1484A6AB00634F56 /* levelWin.caf in Resources */,
 				BC7A84AF1484A9B700634F56 /* mainMenu.caf in Resources */,
+				E56D77C21486E8AB00B91FF2 /* click2.wav in Resources */,
+				E56D77C41486E8AB00B91FF2 /* click1.wav in Resources */,
+				E56D77C61486E8AB00B91FF2 /* back.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3143,6 +3178,9 @@
 				BC7A84A71484A6A000634F56 /* levelFail.caf in Resources */,
 				BC7A84AB1484A6AB00634F56 /* levelWin.caf in Resources */,
 				BC7A84AE1484A9B700634F56 /* mainMenu.caf in Resources */,
+				E56D77C11486E8AB00B91FF2 /* click2.wav in Resources */,
+				E56D77C31486E8AB00B91FF2 /* click1.wav in Resources */,
+				E56D77C51486E8AB00B91FF2 /* back.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3346,6 +3384,8 @@
 				E539D7E0147E274200098C9E /* CHScreenshot.m in Sources */,
 				E550BEF41485919D007C2100 /* CHMenuTransitionScene.m in Sources */,
 				E550BEF81485A104007C2100 /* CHSplashImageLayer.m in Sources */,
+				E56D77CA1486EA1800B91FF2 /* CHSoundUtilities.m in Sources */,
+				E56D77CE1486ED6E00B91FF2 /* CHMenuButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3516,6 +3556,8 @@
 				E539D844147E56D900098C9E /* CHMainMenuUtilities.m in Sources */,
 				E550BEF31485919D007C2100 /* CHMenuTransitionScene.m in Sources */,
 				E550BEF71485A104007C2100 /* CHSplashImageLayer.m in Sources */,
+				E56D77C91486EA1800B91FF2 /* CHSoundUtilities.m in Sources */,
+				E56D77CD1486ED6E00B91FF2 /* CHMenuButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
