@@ -218,7 +218,6 @@ static float const kGenObjectRangeDown = 100.f;
 	[CHSharedResHolder unloadSharedResources];	// Unload
 	
 	[_goalRecipeItemIDs release];
-    [[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
 	[super dealloc];
 }
 
@@ -408,11 +407,6 @@ static float const kGenObjectRangeDown = 100.f;
 	_levelIndex = levelIndex;
 	[self prepareInitContents];
 	[self initContents];
-}
-
-- (void)stopBackgroundMusic
-{
-	[[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
 }
 
 - (NSUInteger)moneyAmount
