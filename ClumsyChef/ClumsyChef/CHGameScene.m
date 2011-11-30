@@ -134,7 +134,8 @@
 
 - (void)quitGame
 {
-	[[CCDirector sharedDirector] popScene];
+	[[CCDirector sharedDirector] popSceneWithTransition:[CCTransitionFade class] 
+											   duration:0.6f];
 }
 
 @end
