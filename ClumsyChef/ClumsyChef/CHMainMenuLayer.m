@@ -11,6 +11,8 @@
 #import "CHSelectLevelLayer.h"
 #import "CHHighScoresLayer.h"
 #import "CHCreditLayer.h"
+#import "CHMainMenuUtilities.h"
+
 
 @implementation CHMainMenuLayer
 {
@@ -76,19 +78,30 @@
 #pragma mark - 
 #pragma mark UI events
 
+- (void)onEnter
+{
+	[super onEnter];
+	
+	if (![[SimpleAudioEngine sharedEngine] isBackgroundMusicPlaying])
+	{
+        [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"mainMenu.caf" loop:YES];
+		[SimpleAudioEngine sharedEngine].backgroundMusicVolume = 0.4f;
+	}
+}
+
 - (void)playPressed:(id)sender
 {
-	[[CCDirector sharedDirector] pushScene:[CHSelectLevelLayer node]];
+	CHMenuPushScene([CHSelectLevelLayer node]);
 }
 
 - (void)highScoresPressed:(id)sender
 {
-	[[CCDirector sharedDirector] pushScene:[CHHighScoresLayer node]];	
+	CHMenuPushScene([CHHighScoresLayer node]);	
 }
 
 - (void)creditsPressed:(id)sender
 {
-	[[CCDirector sharedDirector] pushScene:[CHCreditLayer node]];
+	CHMenuPushScene([CHCreditLayer node]);
 }
 
 - (void)soundPressed:(id)sender

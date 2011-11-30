@@ -14,6 +14,8 @@
 #import "TestMenuLayer.h"
 #import "SimpleAudioEngine.h"
 #import "CHMainMenuLayer.h"
+#import "CHSplashImageLayer.h"
+
 
 @implementation AppDelegate
 
@@ -92,7 +94,6 @@
 #endif
 	
 	[director setAnimationInterval:1.0/60];
-	[director setDisplayFPS:YES];
 	
 	
 	// make the OpenGLView a child of the view controller
@@ -124,13 +125,18 @@
     [[SimpleAudioEngine sharedEngine] preloadEffect:@"Oowh.caf"];
     [[SimpleAudioEngine sharedEngine] preloadEffect:@"recipeItem-sound.caf"];
     [[SimpleAudioEngine sharedEngine] preloadBackgroundMusic:@"gameLayer-music.caf"];
+    [[SimpleAudioEngine sharedEngine] preloadEffect:@"levelFail.caf"];
+    [[SimpleAudioEngine sharedEngine] preloadEffect:@"levelWin.caf"];
+    [[SimpleAudioEngine sharedEngine] preloadBackgroundMusic:@"mainMenu.caf"];
 
     
     
 #ifdef CH_NO_TEST_MENU
 	// Run the intro Scene
-	[[CCDirector sharedDirector] runWithScene:[CHMainMenuLayer layerAsScene]];
+	[director setDisplayFPS:NO];
+	[[CCDirector sharedDirector] runWithScene:[CHSplashImageLayer layerAsScene]];
 #else
+	[director setDisplayFPS:YES];
 	[[CCDirector sharedDirector] runWithScene:[TestMenuLayer layerAsScene]];
 #endif
 }

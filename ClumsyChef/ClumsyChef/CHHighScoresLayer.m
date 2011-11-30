@@ -72,7 +72,7 @@
 
 - (void)backButtonPressed:(id)sender
 {
-	[[CCDirector sharedDirector] popScene];
+	CHMenuPopScene();
 }
 
 @end

@@ -99,11 +99,11 @@ static CGFloat const kYSpacing = 110;
 	NSUInteger levelIndex = item.tag;
 	CHGameScene *gs = [CHGameScene nodeWithLevelIndex:levelIndex];
 	[[CCDirector sharedDirector] popScene];
-	[[CCDirector sharedDirector] pushScene:gs];
+	[[CCDirector sharedDirector] pushScene:[CCTransitionFade transitionWithDuration:0.5f scene:gs]];
 }
 
 - (void)backButtonPressed:(id)sender
 {
-	[[CCDirector sharedDirector] popScene];
+	CHMenuPopScene();
 }
 @end

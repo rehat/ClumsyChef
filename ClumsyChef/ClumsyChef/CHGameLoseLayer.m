@@ -8,6 +8,7 @@
 
 #import "CHGameLoseLayer.h"
 #import "CHGameScene.h"
+#import "SimpleAudioEngine.h"
 
 @implementation CHGameLoseLayer
 
@@ -47,7 +48,10 @@
 		[retry sharpenCurrentPosition];
 		[quit sharpenCurrentPosition];
 		
-        [self addChild:menu];        
+        [self addChild:menu];  
+        
+        [[SimpleAudioEngine sharedEngine] playEffect:@"levelFail.caf"];
+        
 	}
 	return self;
 }

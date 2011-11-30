@@ -346,6 +346,12 @@
 		BC622AB11463362A0016DFA0 /* font-testFont-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E58ABB5D145A7EB6002CC4EE /* font-testFont-hd.png */; };
 		BC622AB21463362A0016DFA0 /* gameObject-testIconBlue-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E5F2342D145BBF820026799C /* gameObject-testIconBlue-hd.png */; };
 		BC622AB31463362A0016DFA0 /* gameObject-testIconBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = E5F2342E145BBF820026799C /* gameObject-testIconBlue.png */; };
+		BC7A84A71484A6A000634F56 /* levelFail.caf in Resources */ = {isa = PBXBuildFile; fileRef = BC7A84A61484A6A000634F56 /* levelFail.caf */; };
+		BC7A84A81484A6A000634F56 /* levelFail.caf in Resources */ = {isa = PBXBuildFile; fileRef = BC7A84A61484A6A000634F56 /* levelFail.caf */; };
+		BC7A84AB1484A6AB00634F56 /* levelWin.caf in Resources */ = {isa = PBXBuildFile; fileRef = BC7A84AA1484A6AB00634F56 /* levelWin.caf */; };
+		BC7A84AC1484A6AB00634F56 /* levelWin.caf in Resources */ = {isa = PBXBuildFile; fileRef = BC7A84AA1484A6AB00634F56 /* levelWin.caf */; };
+		BC7A84AE1484A9B700634F56 /* mainMenu.caf in Resources */ = {isa = PBXBuildFile; fileRef = BC7A84AD1484A9B700634F56 /* mainMenu.caf */; };
+		BC7A84AF1484A9B700634F56 /* mainMenu.caf in Resources */ = {isa = PBXBuildFile; fileRef = BC7A84AD1484A9B700634F56 /* mainMenu.caf */; };
 		BCC06AAC146B2DB60068103A /* coinObject-coin-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BCC06AA4146B2DB60068103A /* coinObject-coin-hd.png */; };
 		BCC06AAD146B2DB60068103A /* coinObject-coin-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BCC06AA4146B2DB60068103A /* coinObject-coin-hd.png */; };
 		BCC06AAE146B2DB60068103A /* coinObject-coin.png in Resources */ = {isa = PBXBuildFile; fileRef = BCC06AA5146B2DB60068103A /* coinObject-coin.png */; };
@@ -549,6 +555,10 @@
 		E5489C69147F775400C83EEF /* chefAtlas-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E5489C66147F775400C83EEF /* chefAtlas-hd.png */; };
 		E5489C6A147F775400C83EEF /* chefAtlas.png in Resources */ = {isa = PBXBuildFile; fileRef = E5489C67147F775400C83EEF /* chefAtlas.png */; };
 		E5489C6B147F775400C83EEF /* chefAtlas.png in Resources */ = {isa = PBXBuildFile; fileRef = E5489C67147F775400C83EEF /* chefAtlas.png */; };
+		E550BEF31485919D007C2100 /* CHMenuTransitionScene.m in Sources */ = {isa = PBXBuildFile; fileRef = E550BEF21485919D007C2100 /* CHMenuTransitionScene.m */; };
+		E550BEF41485919D007C2100 /* CHMenuTransitionScene.m in Sources */ = {isa = PBXBuildFile; fileRef = E550BEF21485919D007C2100 /* CHMenuTransitionScene.m */; };
+		E550BEF71485A104007C2100 /* CHSplashImageLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E550BEF61485A104007C2100 /* CHSplashImageLayer.m */; };
+		E550BEF81485A104007C2100 /* CHSplashImageLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E550BEF61485A104007C2100 /* CHSplashImageLayer.m */; };
 		E552D23A1463148A005EBBB1 /* CHGameWinLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E552D23914631489005EBBB1 /* CHGameWinLayer.m */; };
 		E552D23E146314A4005EBBB1 /* CHGameLoseLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E552D23D146314A3005EBBB1 /* CHGameLoseLayer.m */; };
 		E552D242146318DD005EBBB1 /* CHMainMenuLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E552D241146318DD005EBBB1 /* CHMainMenuLayer.m */; };
@@ -942,6 +952,9 @@
 		BC4C06AC1479C22600FE285D /* star-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "star-hd.png"; path = "Resources/star-hd.png"; sourceTree = "<group>"; };
 		BC4C06AD1479C22600FE285D /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = star.png; path = Resources/star.png; sourceTree = "<group>"; };
 		BC622ABB1463362A0016DFA0 /* ClumsyChef copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ClumsyChef copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC7A84A61484A6A000634F56 /* levelFail.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = levelFail.caf; path = Resources/levelFail.caf; sourceTree = "<group>"; };
+		BC7A84AA1484A6AB00634F56 /* levelWin.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = levelWin.caf; path = Resources/levelWin.caf; sourceTree = "<group>"; };
+		BC7A84AD1484A9B700634F56 /* mainMenu.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = mainMenu.caf; path = Resources/mainMenu.caf; sourceTree = "<group>"; };
 		BCC06AA4146B2DB60068103A /* coinObject-coin-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "coinObject-coin-hd.png"; path = "Resources/coinObject-coin-hd.png"; sourceTree = "<group>"; };
 		BCC06AA5146B2DB60068103A /* coinObject-coin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "coinObject-coin.png"; path = "Resources/coinObject-coin.png"; sourceTree = "<group>"; };
 		BCC06AA6146B2DB60068103A /* gameLayer-music.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "gameLayer-music.caf"; path = "Resources/gameLayer-music.caf"; sourceTree = "<group>"; };
@@ -1050,6 +1063,10 @@
 		E5469B58147C865100F4D27B /* gameLayer-collisionScoreFont.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gameLayer-collisionScoreFont.png"; path = "Resources/gameLayer-collisionScoreFont.png"; sourceTree = "<group>"; };
 		E5489C66147F775400C83EEF /* chefAtlas-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "chefAtlas-hd.png"; path = "Resources/chefAtlas-hd.png"; sourceTree = "<group>"; };
 		E5489C67147F775400C83EEF /* chefAtlas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = chefAtlas.png; path = Resources/chefAtlas.png; sourceTree = "<group>"; };
+		E550BEF11485919D007C2100 /* CHMenuTransitionScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHMenuTransitionScene.h; sourceTree = "<group>"; };
+		E550BEF21485919D007C2100 /* CHMenuTransitionScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHMenuTransitionScene.m; sourceTree = "<group>"; };
+		E550BEF51485A104007C2100 /* CHSplashImageLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; path = CHSplashImageLayer.h; sourceTree = "<group>"; };
+		E550BEF61485A104007C2100 /* CHSplashImageLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHSplashImageLayer.m; sourceTree = "<group>"; };
 		E552D23814631488005EBBB1 /* CHGameWinLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGameWinLayer.h; sourceTree = "<group>"; };
 		E552D23914631489005EBBB1 /* CHGameWinLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGameWinLayer.m; sourceTree = "<group>"; };
 		E552D23C146314A2005EBBB1 /* CHGameLoseLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGameLoseLayer.h; sourceTree = "<group>"; };
@@ -1556,6 +1573,7 @@
 			children = (
 				E5A30315147F14C80050DA25 /* mainMenu-background-hd.png */,
 				E5A30316147F14C80050DA25 /* mainMenu-background.png */,
+				BC7A84AD1484A9B700634F56 /* mainMenu.caf */,
 				E5A30317147F14C80050DA25 /* mainMenu-credits-hd.png */,
 				E5A30318147F14C80050DA25 /* mainMenu-credits-high-hd.png */,
 				E5A30319147F14C80050DA25 /* mainMenu-credits-high.png */,
@@ -1793,6 +1811,7 @@
 		E52E5EDA1474E04A00FD9C4D /* Game Win */ = {
 			isa = PBXGroup;
 			children = (
+				BC7A84AA1484A6AB00634F56 /* levelWin.caf */,
 				E52E5EE21474E09D00FD9C4D /* gameWin-description-hd.png */,
 				E52E5EE31474E09D00FD9C4D /* gameWin-description.png */,
 				E5A3030E147EE8D10050DA25 /* gameWin-next-disabled-hd.png */,
@@ -1810,6 +1829,7 @@
 		E52E5EDB1474E05B00FD9C4D /* Game Lose */ = {
 			isa = PBXGroup;
 			children = (
+				BC7A84A61484A6A000634F56 /* levelFail.caf */,
 				E52E5EDC1474E08F00FD9C4D /* gameOver-title-hd.png */,
 				E52E5EDD1474E08F00FD9C4D /* gameOver-title.png */,
 			);
@@ -1849,16 +1869,20 @@
 		E552D23F146318A7005EBBB1 /* Main Menu */ = {
 			isa = PBXGroup;
 			children = (
+				E550BEF51485A104007C2100 /* CHSplashImageLayer.h */,
+				E550BEF61485A104007C2100 /* CHSplashImageLayer.m */,
 				E552D243146319B7005EBBB1 /* CHCreditLayer.h */,
 				E552D244146319B7005EBBB1 /* CHCreditLayer.m */,
 				E552D246146319E6005EBBB1 /* CHHighScoresLayer.h */,
 				E552D247146319E6005EBBB1 /* CHHighScoresLayer.m */,
 				E552D240146318DD005EBBB1 /* CHMainMenuLayer.h */,
 				E552D241146318DD005EBBB1 /* CHMainMenuLayer.m */,
-				E552D24C14631A34005EBBB1 /* CHSelectLevelLayer.h */,
-				E552D24D14631A34005EBBB1 /* CHSelectLevelLayer.m */,
 				E539D842147E56D900098C9E /* CHMainMenuUtilities.h */,
 				E539D843147E56D900098C9E /* CHMainMenuUtilities.m */,
+				E550BEF11485919D007C2100 /* CHMenuTransitionScene.h */,
+				E550BEF21485919D007C2100 /* CHMenuTransitionScene.m */,
+				E552D24C14631A34005EBBB1 /* CHSelectLevelLayer.h */,
+				E552D24D14631A34005EBBB1 /* CHSelectLevelLayer.m */,
 			);
 			name = "Main Menu";
 			sourceTree = "<group>";
@@ -3332,6 +3356,8 @@
 				E5A51996147B9C540047113A /* CHModalLayer.m in Sources */,
 				E539D7DC147E1F5800098C9E /* CHBlurImage.m in Sources */,
 				E539D7E0147E274200098C9E /* CHScreenshot.m in Sources */,
+				E550BEF41485919D007C2100 /* CHMenuTransitionScene.m in Sources */,
+				E550BEF81485A104007C2100 /* CHSplashImageLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3500,6 +3526,8 @@
 				E539D7DB147E1F5800098C9E /* CHBlurImage.m in Sources */,
 				E539D7DF147E274200098C9E /* CHScreenshot.m in Sources */,
 				E539D844147E56D900098C9E /* CHMainMenuUtilities.m in Sources */,
+				E550BEF31485919D007C2100 /* CHMenuTransitionScene.m in Sources */,
+				E550BEF71485A104007C2100 /* CHSplashImageLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3562,6 +3590,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
+					CH_NO_TEST_MENU,
 					DEBUG,
 					"COCOS2D_DEBUG=1",
 				);
