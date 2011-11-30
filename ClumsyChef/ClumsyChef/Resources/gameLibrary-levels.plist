@@ -14,7 +14,7 @@
 		<key>backgroundSideBuildingImage</key>
 		<string>backgroundLayer-sideBuilding-empire.png</string>
 		<key>backgroundBackImage</key>
-		<string>background-empire.png</string>
+		<string>background-test1.png</string>
 		<key>recipeItems</key>
 		<array>
 			<string>HotDogBun</string>

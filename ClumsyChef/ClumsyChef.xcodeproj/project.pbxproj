@@ -79,6 +79,8 @@
 		856FD5EB147F549900FE42F0 /* background-ritzLA.png in Resources */ = {isa = PBXBuildFile; fileRef = 856FD5E0147F549900FE42F0 /* background-ritzLA.png */; };
 		856FD5EC147F549900FE42F0 /* background-empire.png in Resources */ = {isa = PBXBuildFile; fileRef = 856FD5E1147F549900FE42F0 /* background-empire.png */; };
 		856FD5ED147F549900FE42F0 /* background-empire.png in Resources */ = {isa = PBXBuildFile; fileRef = 856FD5E1147F549900FE42F0 /* background-empire.png */; };
+		857B74341486EB140009EC1D /* background-test1.png in Resources */ = {isa = PBXBuildFile; fileRef = 857B74321486EB140009EC1D /* background-test1.png */; };
+		857B74351486EB140009EC1D /* background-test1-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 857B74331486EB140009EC1D /* background-test1-hd.png */; };
 		85D20C3D147F8B7300C09EAB /* backgroundLayer-sideBuilding-searsTowerChicago.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D20C37147F8B7300C09EAB /* backgroundLayer-sideBuilding-searsTowerChicago.png */; };
 		85D20C3E147F8B7300C09EAB /* backgroundLayer-sideBuilding-searsTowerChicago.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D20C37147F8B7300C09EAB /* backgroundLayer-sideBuilding-searsTowerChicago.png */; };
 		85D20C3F147F8B7300C09EAB /* backgroundLayer-sideBuilding-searsTowerChicago-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D20C38147F8B7300C09EAB /* backgroundLayer-sideBuilding-searsTowerChicago-hd.png */; };
@@ -117,12 +119,6 @@
 		85D20C6D147F9EDC00C09EAB /* recipeItem_patty.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D20C6A147F9EDC00C09EAB /* recipeItem_patty.png */; };
 		85D20C6E147F9EDC00C09EAB /* recipeItem_patty-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D20C6B147F9EDC00C09EAB /* recipeItem_patty-hd.png */; };
 		85D20C6F147F9EDC00C09EAB /* recipeItem_patty-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D20C6B147F9EDC00C09EAB /* recipeItem_patty-hd.png */; };
-		85D20C811480DDAD00C09EAB /* background-test.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D20C7F1480DDAD00C09EAB /* background-test.png */; };
-		85D20C821480DDAD00C09EAB /* background-test.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D20C7F1480DDAD00C09EAB /* background-test.png */; };
-		85D20C881480E4A000C09EAB /* background-test2.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D20C861480E4A000C09EAB /* background-test2.png */; };
-		85D20C891480E4A000C09EAB /* background-test2.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D20C861480E4A000C09EAB /* background-test2.png */; };
-		85D20C8A1480E4A000C09EAB /* background-test2-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D20C871480E4A000C09EAB /* background-test2-hd.png */; };
-		85D20C8B1480E4A000C09EAB /* background-test2-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D20C871480E4A000C09EAB /* background-test2-hd.png */; };
 		BC03E85114773C9200E34189 /* recipeItem_bacon-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E83D14773C9200E34189 /* recipeItem_bacon-hd.png */; };
 		BC03E85214773C9200E34189 /* recipeItem_bacon-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E83D14773C9200E34189 /* recipeItem_bacon-hd.png */; };
 		BC03E85314773C9200E34189 /* recipeItem_bacon.png in Resources */ = {isa = PBXBuildFile; fileRef = BC03E83E14773C9200E34189 /* recipeItem_bacon.png */; };
@@ -909,6 +905,8 @@
 		856FD5DF147F549900FE42F0 /* background-searsTowerChicago.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background-searsTowerChicago.png"; path = "Resources/background-searsTowerChicago.png"; sourceTree = "<group>"; };
 		856FD5E0147F549900FE42F0 /* background-ritzLA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background-ritzLA.png"; path = "Resources/background-ritzLA.png"; sourceTree = "<group>"; };
 		856FD5E1147F549900FE42F0 /* background-empire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background-empire.png"; path = "Resources/background-empire.png"; sourceTree = "<group>"; };
+		857B74321486EB140009EC1D /* background-test1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background-test1.png"; path = "Resources/background-test1.png"; sourceTree = "<group>"; };
+		857B74331486EB140009EC1D /* background-test1-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background-test1-hd.png"; path = "Resources/background-test1-hd.png"; sourceTree = "<group>"; };
 		85D20C37147F8B7300C09EAB /* backgroundLayer-sideBuilding-searsTowerChicago.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "backgroundLayer-sideBuilding-searsTowerChicago.png"; path = "Resources/backgroundLayer-sideBuilding-searsTowerChicago.png"; sourceTree = "<group>"; };
 		85D20C38147F8B7300C09EAB /* backgroundLayer-sideBuilding-searsTowerChicago-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "backgroundLayer-sideBuilding-searsTowerChicago-hd.png"; path = "Resources/backgroundLayer-sideBuilding-searsTowerChicago-hd.png"; sourceTree = "<group>"; };
 		85D20C39147F8B7300C09EAB /* backgroundLayer-sideBuilding-ritzLA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "backgroundLayer-sideBuilding-ritzLA.png"; path = "Resources/backgroundLayer-sideBuilding-ritzLA.png"; sourceTree = "<group>"; };
@@ -1065,7 +1063,7 @@
 		E5489C67147F775400C83EEF /* chefAtlas.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = chefAtlas.png; path = Resources/chefAtlas.png; sourceTree = "<group>"; };
 		E550BEF11485919D007C2100 /* CHMenuTransitionScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHMenuTransitionScene.h; sourceTree = "<group>"; };
 		E550BEF21485919D007C2100 /* CHMenuTransitionScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHMenuTransitionScene.m; sourceTree = "<group>"; };
-		E550BEF51485A104007C2100 /* CHSplashImageLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; path = CHSplashImageLayer.h; sourceTree = "<group>"; };
+		E550BEF51485A104007C2100 /* CHSplashImageLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHSplashImageLayer.h; sourceTree = "<group>"; };
 		E550BEF61485A104007C2100 /* CHSplashImageLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHSplashImageLayer.m; sourceTree = "<group>"; };
 		E552D23814631488005EBBB1 /* CHGameWinLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CHGameWinLayer.h; sourceTree = "<group>"; };
 		E552D23914631489005EBBB1 /* CHGameWinLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CHGameWinLayer.m; sourceTree = "<group>"; };
@@ -1551,6 +1549,8 @@
 		856FD5DB147F547000FE42F0 /* Backgrounds */ = {
 			isa = PBXGroup;
 			children = (
+				857B74321486EB140009EC1D /* background-test1.png */,
+				857B74331486EB140009EC1D /* background-test1-hd.png */,
 				85D20C861480E4A000C09EAB /* background-test2.png */,
 				85D20C871480E4A000C09EAB /* background-test2-hd.png */,
 				85D20C7F1480DDAD00C09EAB /* background-test.png */,
@@ -2889,9 +2889,9 @@
 				E5B4D5F4147FA0AD009B76FD /* recipeItem-collected-particle-hd.png in Resources */,
 				E5B4D5F6147FA0AD009B76FD /* recipeItem-collected-particle.plist in Resources */,
 				E5B4D5F8147FA0AD009B76FD /* recipeItem-collected-particle.png in Resources */,
-				85D20C821480DDAD00C09EAB /* background-test.png in Resources */,
-				85D20C891480E4A000C09EAB /* background-test2.png in Resources */,
-				85D20C8B1480E4A000C09EAB /* background-test2-hd.png in Resources */,
+				BC7A84A81484A6A000634F56 /* levelFail.caf in Resources */,
+				BC7A84AC1484A6AB00634F56 /* levelWin.caf in Resources */,
+				BC7A84AF1484A9B700634F56 /* mainMenu.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3152,9 +3152,11 @@
 				E5B4D5F3147FA0AD009B76FD /* recipeItem-collected-particle-hd.png in Resources */,
 				E5B4D5F5147FA0AD009B76FD /* recipeItem-collected-particle.plist in Resources */,
 				E5B4D5F7147FA0AD009B76FD /* recipeItem-collected-particle.png in Resources */,
-				85D20C811480DDAD00C09EAB /* background-test.png in Resources */,
-				85D20C881480E4A000C09EAB /* background-test2.png in Resources */,
-				85D20C8A1480E4A000C09EAB /* background-test2-hd.png in Resources */,
+				BC7A84A71484A6A000634F56 /* levelFail.caf in Resources */,
+				BC7A84AB1484A6AB00634F56 /* levelWin.caf in Resources */,
+				BC7A84AE1484A9B700634F56 /* mainMenu.caf in Resources */,
+				857B74341486EB140009EC1D /* background-test1.png in Resources */,
+				857B74351486EB140009EC1D /* background-test1-hd.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
