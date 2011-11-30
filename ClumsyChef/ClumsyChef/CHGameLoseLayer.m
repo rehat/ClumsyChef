@@ -9,6 +9,8 @@
 #import "CHGameLoseLayer.h"
 #import "CHGameScene.h"
 #import "SimpleAudioEngine.h"
+#import "CHMenuButton.h"
+
 
 @implementation CHGameLoseLayer
 
@@ -30,15 +32,15 @@
         [lose setPositionSharp:ccp(screenCenterX, 290)];
         [self addChild:lose];
         
-        CCMenuItemImage *retry = [CCMenuItemImage itemFromNormalImage:@"gameEnd-restart.png" 
-														selectedImage:@"gameEnd-restart-high.png"
-															   target:self 
-															 selector:@selector(restartPressed:)];
+        CCMenuItemImage *retry = [CHMenuButton itemFromImageName:@"gameEnd-restart" 
+														   sound:CHSoundButtonPress
+														  target:self 
+														selector:@selector(restartPressed:)];
         
-        CCMenuItemImage *quit = [CCMenuItemImage itemFromNormalImage:@"gameEnd-menu.png" 
-													   selectedImage:@"gameEnd-menu-high.png"
-															  target:self
-															selector:@selector(menuPressed:)];
+        CCMenuItemImage *quit = [CHMenuButton itemFromImageName:@"gameEnd-menu" 
+														  sound:CHSoundButtonPress
+														 target:self
+													   selector:@selector(menuPressed:)];
 
         CCMenu *menu = [CCMenu menuWithItems:retry, quit, nil];
         menu.position = ccp(screenCenterX, 52);
@@ -49,13 +51,15 @@
 		[quit sharpenCurrentPosition];
 		
         [self addChild:menu];  
-        
-        [[SimpleAudioEngine sharedEngine] playEffect:@"levelFail.caf"];
-        
 	}
 	return self;
 }
 
+- (void)onEnter
+{
+	[super onEnter];
+	[[SimpleAudioEngine sharedEngine] playEffect:@"levelFail.caf"];
+}
 
 #pragma mark -
 #pragma mark UI events
