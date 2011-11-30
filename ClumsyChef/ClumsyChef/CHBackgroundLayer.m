@@ -14,7 +14,7 @@
 {
     CCSprite *_sideBuilding;
     CGFloat _worldHeight;
-
+	CCSprite *_back;
 }
 
 - (id)initWithLevelIndex:(NSUInteger)levelIndex
@@ -25,9 +25,9 @@
 		_worldHeight = info.worldHeight;
 		
 		// Load the background
-		CCSprite *bg = [CCSprite spriteWithFile:info.backgroundBackImage];
-		[bg setPositionSharp:CHGetWinCenterPoint()];
-		[self addChild:bg];
+		_back = [CCSprite spriteWithFile:info.backgroundBackImage];
+		_back.anchorPoint = ccp(0, 1);
+		[self addChild:_back];
 		
         //Side building in the foreground 
 		_sideBuilding = [CCSprite spriteWithFile:info.backgroundSideBuildingImage
@@ -51,6 +51,10 @@
 {
 	CGFloat y = -(offset - CHGetWinHeight());
 	_sideBuilding.position = CHGetWinPointTR(0, y);
+	
+	CGFloat factor = (offset - CHGetWinHeight()) / (_worldHeight - CHGetWinHeight());
+	y = factor * (-(_back.contentSize.height - CHGetWinHeight()));
+	_back.position = CHGetWinPointTL(0, y);
 }
 
 @end
