@@ -25,10 +25,12 @@ float const CHModalLayerDefaultDimOpacity = 0.4f;
 		CGImageRef image = CHGetScreenShotImageForBlur();
 		CGImageRef blurImage = CHCreateBlurImage(image, 3, 2);
 		CCTexture2D *tex = [[CCTexture2D alloc] initWithImage:[UIImage imageWithCGImage:blurImage]];
+		CGImageRelease(image);
 		CGImageRelease(blurImage);
 		
 		// Add it as sprite
 		CCSprite *screenSprite = [CCSprite spriteWithTexture:tex];
+		[tex release];
 		
 		// Scale it 
 		CGSize winSizePx = [[CCDirector sharedDirector] winSizeInPixels];

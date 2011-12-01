@@ -218,6 +218,7 @@ static float const kGenObjectRangeDown = 100.f;
 	[CHSharedResHolder unloadSharedResources];	// Unload
 	
 	[_goalRecipeItemIDs release];
+	[_liveGameObjects release];
 	[super dealloc];
 }
 
@@ -297,55 +298,49 @@ static float const kGenObjectRangeDown = 100.f;
 			
 			if (dist < chefRadius + itemRadius)
 			{
+				// Has collision
                 [item collected];
-                
-				//Harmful: Update health and check if it's game over
+				
+				// Harmful: Update health and check if it's game over
                 if ([item isKindOfClass:[CHHarmfulObject class]]) 
-				{    
+				{
+					[_liveGameObjects removeObject:item];
+					
 					//prevents chef getting hit twice in a row
                     if (![_chefObj recentlyHit]) 
                     {   
-                        [_chefObj chefDamaged];		//fadding in/out 
-                        _hudLayer.numberOfLifes--;  //updating HUD
+                        [_chefObj chefDamaged];		// Blink
+                        _hudLayer.numberOfLifes--;  // Updating HUD
                         if (_hudLayer.numberOfLifes <1) 
 						{                            
                             [[self gameSceneParent] showGameOver];
 							break;
                         }
-                    }                                       
+                    }                                   
                 }
 				else if([item isKindOfClass:[CHCoinObject class]])
 				{
-					//Coin:  Update player's score (maybe play a sound for every 1000)    
+					// Coin:  Update player's score (maybe play a sound for every 1000)    
 					_hudLayer.moneyAmount += 10;
+					[_liveGameObjects removeObject:item];
                 }
-				else
+				else if ([item isKindOfClass:[CHRecipeItemObject class]])
 				{
-					//Recipe:  Update HUD and left over itmes needed.  Then check if its game win
-                    if ([item isKindOfClass:[CHRecipeItemObject class]]) 
-					{
-                        NSString *checkRecipe;
-                        CHRecipeItemObject *checkMe = (CHRecipeItemObject*)item;
-						
-                        CCARRAY_FOREACH(_goalRecipeItemIDs, checkRecipe)
-						{
-                            if( [checkRecipe isEqualToString:checkMe.itemID])
-							{
-                                [_goalRecipeItemIDs removeObject:checkRecipe];
-								[_hudLayer setRecipeItemCollected:checkRecipe];
-                                break;
-                            }
-                        }
-                        
-						if([_goalRecipeItemIDs count] == 0)
-						{    
-                            //TODO: update player info with score and level cleared
-                            [[self gameSceneParent] showWin:_hudLayer.moneyAmount];
-							break;
-                        }
-                    }
+					// Recipe:  Update HUD and left over itmes needed.  Then check if its game win
+					NSString *theItemID = [(CHRecipeItemObject *)item itemID];
+					
+					// Set item collected, if needed
+					[_goalRecipeItemIDs removeObject:theItemID];
+					[_hudLayer setRecipeItemCollected:theItemID];
+					[_liveGameObjects removeObject:item];
+					
+					if([_goalRecipeItemIDs count] == 0)
+					{    
+						// Win!
+						[[self gameSceneParent] showWin:_hudLayer.moneyAmount];
+						break;
+					}
                 }
-                [_liveGameObjects removeObject:item];
 			}
 		}		
 	}

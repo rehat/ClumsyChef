@@ -25,19 +25,13 @@
 	if (self = [super init])
 	{
 		NSString *filename = ((CCRANDOM_0_1() > 0.5f)? @"harmfulObject-smallKnife.png" : @"harmfulObject-knife2.png");
-		_knife = [[CCSprite alloc] initWithFile:filename];
+		_knife = [CCSprite spriteWithFile:filename];
 		_rotationSpeed = 80.f + CCRANDOM_0_1() * 60.f;
 		
 		[self addChild:_knife];
         [self scheduleUpdate];
     }
 	return self;
-}
-
-- (void)dealloc
-{
-	[_knife release];
-	[super dealloc];
 }
 
 - (CGSize)contentSize
