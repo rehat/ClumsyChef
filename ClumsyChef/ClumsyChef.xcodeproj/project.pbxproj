@@ -79,6 +79,26 @@
 		856FD5EB147F549900FE42F0 /* background-ritzLA.png in Resources */ = {isa = PBXBuildFile; fileRef = 856FD5E0147F549900FE42F0 /* background-ritzLA.png */; };
 		856FD5EC147F549900FE42F0 /* background-empire.png in Resources */ = {isa = PBXBuildFile; fileRef = 856FD5E1147F549900FE42F0 /* background-empire.png */; };
 		856FD5ED147F549900FE42F0 /* background-empire.png in Resources */ = {isa = PBXBuildFile; fileRef = 856FD5E1147F549900FE42F0 /* background-empire.png */; };
+		857B74741486FCAA0009EC1D /* background-test5.png in Resources */ = {isa = PBXBuildFile; fileRef = 857B746A1486FCAA0009EC1D /* background-test5.png */; };
+		857B74751486FCAA0009EC1D /* background-test5.png in Resources */ = {isa = PBXBuildFile; fileRef = 857B746A1486FCAA0009EC1D /* background-test5.png */; };
+		857B74761486FCAA0009EC1D /* background-test5-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 857B746B1486FCAA0009EC1D /* background-test5-hd.png */; };
+		857B74771486FCAA0009EC1D /* background-test5-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 857B746B1486FCAA0009EC1D /* background-test5-hd.png */; };
+		857B74781486FCAA0009EC1D /* background-test4.png in Resources */ = {isa = PBXBuildFile; fileRef = 857B746C1486FCAA0009EC1D /* background-test4.png */; };
+		857B74791486FCAA0009EC1D /* background-test4.png in Resources */ = {isa = PBXBuildFile; fileRef = 857B746C1486FCAA0009EC1D /* background-test4.png */; };
+		857B747A1486FCAA0009EC1D /* background-test4-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 857B746D1486FCAA0009EC1D /* background-test4-hd.png */; };
+		857B747B1486FCAA0009EC1D /* background-test4-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 857B746D1486FCAA0009EC1D /* background-test4-hd.png */; };
+		857B747C1486FCAA0009EC1D /* background-test3.png in Resources */ = {isa = PBXBuildFile; fileRef = 857B746E1486FCAA0009EC1D /* background-test3.png */; };
+		857B747D1486FCAA0009EC1D /* background-test3.png in Resources */ = {isa = PBXBuildFile; fileRef = 857B746E1486FCAA0009EC1D /* background-test3.png */; };
+		857B747E1486FCAA0009EC1D /* background-test3-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 857B746F1486FCAA0009EC1D /* background-test3-hd.png */; };
+		857B747F1486FCAA0009EC1D /* background-test3-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 857B746F1486FCAA0009EC1D /* background-test3-hd.png */; };
+		857B74801486FCAA0009EC1D /* background-test1.png in Resources */ = {isa = PBXBuildFile; fileRef = 857B74701486FCAA0009EC1D /* background-test1.png */; };
+		857B74811486FCAA0009EC1D /* background-test1.png in Resources */ = {isa = PBXBuildFile; fileRef = 857B74701486FCAA0009EC1D /* background-test1.png */; };
+		857B74821486FCAA0009EC1D /* background-test1-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 857B74711486FCAA0009EC1D /* background-test1-hd.png */; };
+		857B74831486FCAA0009EC1D /* background-test1-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 857B74711486FCAA0009EC1D /* background-test1-hd.png */; };
+		857B74841486FCAA0009EC1D /* background-test2.png in Resources */ = {isa = PBXBuildFile; fileRef = 857B74721486FCAA0009EC1D /* background-test2.png */; };
+		857B74851486FCAA0009EC1D /* background-test2.png in Resources */ = {isa = PBXBuildFile; fileRef = 857B74721486FCAA0009EC1D /* background-test2.png */; };
+		857B74861486FCAA0009EC1D /* background-test2-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 857B74731486FCAA0009EC1D /* background-test2-hd.png */; };
+		857B74871486FCAA0009EC1D /* background-test2-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 857B74731486FCAA0009EC1D /* background-test2-hd.png */; };
 		85D20C3D147F8B7300C09EAB /* backgroundLayer-sideBuilding-searsTowerChicago.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D20C37147F8B7300C09EAB /* backgroundLayer-sideBuilding-searsTowerChicago.png */; };
 		85D20C3E147F8B7300C09EAB /* backgroundLayer-sideBuilding-searsTowerChicago.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D20C37147F8B7300C09EAB /* backgroundLayer-sideBuilding-searsTowerChicago.png */; };
 		85D20C3F147F8B7300C09EAB /* backgroundLayer-sideBuilding-searsTowerChicago-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = 85D20C38147F8B7300C09EAB /* backgroundLayer-sideBuilding-searsTowerChicago-hd.png */; };
@@ -913,6 +933,16 @@
 		856FD5DF147F549900FE42F0 /* background-searsTowerChicago.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background-searsTowerChicago.png"; path = "Resources/background-searsTowerChicago.png"; sourceTree = "<group>"; };
 		856FD5E0147F549900FE42F0 /* background-ritzLA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background-ritzLA.png"; path = "Resources/background-ritzLA.png"; sourceTree = "<group>"; };
 		856FD5E1147F549900FE42F0 /* background-empire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background-empire.png"; path = "Resources/background-empire.png"; sourceTree = "<group>"; };
+		857B746A1486FCAA0009EC1D /* background-test5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background-test5.png"; path = "Resources/background-test5.png"; sourceTree = "<group>"; };
+		857B746B1486FCAA0009EC1D /* background-test5-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background-test5-hd.png"; path = "Resources/background-test5-hd.png"; sourceTree = "<group>"; };
+		857B746C1486FCAA0009EC1D /* background-test4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background-test4.png"; path = "Resources/background-test4.png"; sourceTree = "<group>"; };
+		857B746D1486FCAA0009EC1D /* background-test4-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background-test4-hd.png"; path = "Resources/background-test4-hd.png"; sourceTree = "<group>"; };
+		857B746E1486FCAA0009EC1D /* background-test3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background-test3.png"; path = "Resources/background-test3.png"; sourceTree = "<group>"; };
+		857B746F1486FCAA0009EC1D /* background-test3-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background-test3-hd.png"; path = "Resources/background-test3-hd.png"; sourceTree = "<group>"; };
+		857B74701486FCAA0009EC1D /* background-test1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background-test1.png"; path = "Resources/background-test1.png"; sourceTree = "<group>"; };
+		857B74711486FCAA0009EC1D /* background-test1-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background-test1-hd.png"; path = "Resources/background-test1-hd.png"; sourceTree = "<group>"; };
+		857B74721486FCAA0009EC1D /* background-test2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background-test2.png"; path = "Resources/background-test2.png"; sourceTree = "<group>"; };
+		857B74731486FCAA0009EC1D /* background-test2-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "background-test2-hd.png"; path = "Resources/background-test2-hd.png"; sourceTree = "<group>"; };
 		85D20C37147F8B7300C09EAB /* backgroundLayer-sideBuilding-searsTowerChicago.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "backgroundLayer-sideBuilding-searsTowerChicago.png"; path = "Resources/backgroundLayer-sideBuilding-searsTowerChicago.png"; sourceTree = "<group>"; };
 		85D20C38147F8B7300C09EAB /* backgroundLayer-sideBuilding-searsTowerChicago-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "backgroundLayer-sideBuilding-searsTowerChicago-hd.png"; path = "Resources/backgroundLayer-sideBuilding-searsTowerChicago-hd.png"; sourceTree = "<group>"; };
 		85D20C39147F8B7300C09EAB /* backgroundLayer-sideBuilding-ritzLA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "backgroundLayer-sideBuilding-ritzLA.png"; path = "Resources/backgroundLayer-sideBuilding-ritzLA.png"; sourceTree = "<group>"; };
@@ -1559,6 +1589,16 @@
 		856FD5DB147F547000FE42F0 /* Backgrounds */ = {
 			isa = PBXGroup;
 			children = (
+				857B746A1486FCAA0009EC1D /* background-test5.png */,
+				857B746B1486FCAA0009EC1D /* background-test5-hd.png */,
+				857B746C1486FCAA0009EC1D /* background-test4.png */,
+				857B746D1486FCAA0009EC1D /* background-test4-hd.png */,
+				857B746E1486FCAA0009EC1D /* background-test3.png */,
+				857B746F1486FCAA0009EC1D /* background-test3-hd.png */,
+				857B74701486FCAA0009EC1D /* background-test1.png */,
+				857B74711486FCAA0009EC1D /* background-test1-hd.png */,
+				857B74721486FCAA0009EC1D /* background-test2.png */,
+				857B74731486FCAA0009EC1D /* background-test2-hd.png */,
 				85D20C58147F943F00C09EAB /* background-taipei.png */,
 				85D20C59147F943F00C09EAB /* background-financeTower.png */,
 				85D20C5A147F943F00C09EAB /* background-financeTower-hd.png */,
@@ -2915,6 +2955,16 @@
 				E56D77C21486E8AB00B91FF2 /* click2.wav in Resources */,
 				E56D77C41486E8AB00B91FF2 /* click1.wav in Resources */,
 				E56D77C61486E8AB00B91FF2 /* back.wav in Resources */,
+				857B74751486FCAA0009EC1D /* background-test5.png in Resources */,
+				857B74771486FCAA0009EC1D /* background-test5-hd.png in Resources */,
+				857B74791486FCAA0009EC1D /* background-test4.png in Resources */,
+				857B747B1486FCAA0009EC1D /* background-test4-hd.png in Resources */,
+				857B747D1486FCAA0009EC1D /* background-test3.png in Resources */,
+				857B747F1486FCAA0009EC1D /* background-test3-hd.png in Resources */,
+				857B74811486FCAA0009EC1D /* background-test1.png in Resources */,
+				857B74831486FCAA0009EC1D /* background-test1-hd.png in Resources */,
+				857B74851486FCAA0009EC1D /* background-test2.png in Resources */,
+				857B74871486FCAA0009EC1D /* background-test2-hd.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3181,6 +3231,16 @@
 				E56D77C11486E8AB00B91FF2 /* click2.wav in Resources */,
 				E56D77C31486E8AB00B91FF2 /* click1.wav in Resources */,
 				E56D77C51486E8AB00B91FF2 /* back.wav in Resources */,
+				857B74741486FCAA0009EC1D /* background-test5.png in Resources */,
+				857B74761486FCAA0009EC1D /* background-test5-hd.png in Resources */,
+				857B74781486FCAA0009EC1D /* background-test4.png in Resources */,
+				857B747A1486FCAA0009EC1D /* background-test4-hd.png in Resources */,
+				857B747C1486FCAA0009EC1D /* background-test3.png in Resources */,
+				857B747E1486FCAA0009EC1D /* background-test3-hd.png in Resources */,
+				857B74801486FCAA0009EC1D /* background-test1.png in Resources */,
+				857B74821486FCAA0009EC1D /* background-test1-hd.png in Resources */,
+				857B74841486FCAA0009EC1D /* background-test2.png in Resources */,
+				857B74861486FCAA0009EC1D /* background-test2-hd.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
