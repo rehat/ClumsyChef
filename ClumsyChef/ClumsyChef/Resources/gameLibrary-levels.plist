@@ -54,7 +54,7 @@
 		<key>backgroundSideBuildingImage</key>
 		<string>backgroundLayer-sideBuilding-ritzLA.png</string>
 		<key>backgroundBackImage</key>
-		<string>background-ritzLA.png</string>
+		<string>background-test3.png</string>
 		<key>recipeItems</key>
 		<array>
 			<string>TacoShell</string>
@@ -76,7 +76,7 @@
 		<key>backgroundSideBuildingImage</key>
 		<string>backgroundLayer-sideBuilding-taipei.png</string>
 		<key>backgroundBackImage</key>
-		<string>background-taipei.png</string>
+		<string>background-test4.png</string>
 		<key>recipeItems</key>
 		<array>
 			<string>Tortilla</string>
@@ -99,7 +99,7 @@
 		<key>backgroundSideBuildingImage</key>
 		<string>backgroundLayer-sideBuilding-financeTower.png</string>
 		<key>backgroundBackImage</key>
-		<string>background-financeTower.png</string>
+		<string>background-test5.png</string>
 		<key>recipeItems</key>
 		<array>
 			<string>Pepperoni</string>
