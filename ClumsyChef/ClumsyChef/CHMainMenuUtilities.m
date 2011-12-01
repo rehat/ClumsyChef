@@ -8,15 +8,17 @@
 
 #import "CHMainMenuUtilities.h"
 #import "CHMenuTransitionScene.h"
+#import "CHMenuButton.h"
+
 
 ccTime const kAnimDuration = 0.3f;
 
 CCMenu* CHMenuMakeBackButton(CGPoint position, id target, SEL selector)
 {
-	CCMenuItemImage *back = [CCMenuItemImage itemFromNormalImage:@"menu-backButton.png" 
-												   selectedImage:@"menu-backButton-high.png" 
-														  target:target 
-														selector:selector];
+	CCMenuItemImage *back = [CHMenuButton itemFromImageName:@"menu-backButton" 
+													  sound:CHSoundButtonBack
+													 target:target
+												   selector:selector];
 	CCMenu *button = [CCMenu menuWithItems:back, nil];
 	button.anchorPoint = CGPointZero;
 	button.position = CGPointZero;

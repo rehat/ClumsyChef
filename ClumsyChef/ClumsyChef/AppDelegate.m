@@ -128,8 +128,9 @@
     [[SimpleAudioEngine sharedEngine] preloadEffect:@"levelFail.caf"];
     [[SimpleAudioEngine sharedEngine] preloadEffect:@"levelWin.caf"];
     [[SimpleAudioEngine sharedEngine] preloadBackgroundMusic:@"mainMenu.caf"];
-
-    
+    [[SimpleAudioEngine sharedEngine] preloadEffect:@"back.wav"];
+    [[SimpleAudioEngine sharedEngine] preloadEffect:@"click1.wav"];
+    [[SimpleAudioEngine sharedEngine] preloadEffect:@"click2.wav"];
     
 #ifdef CH_NO_TEST_MENU
 	// Run the intro Scene

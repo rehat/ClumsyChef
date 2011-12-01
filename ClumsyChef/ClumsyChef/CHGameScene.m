@@ -76,6 +76,8 @@
 
 - (void)showWin:(NSInteger)score
 {
+	[[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
+
 	// Update the number of cleared levels of CHPlayerInfo
 	CHPlayerInfo *info = [CHPlayerInfo sharedPlayerInfo];
 	if (info.numClearedLevels < _levelIndex + 1)
@@ -84,14 +86,13 @@
 	}
 	
 	_moneyAmount = score;
-	[_gameLayer stopBackgroundMusic];
 	[self showModalOverlay:[CHGameWinLayer nodeWithLevelIndex:_levelIndex 
 														   moneyAmount:score]];
 }
 
 - (void)showGameOver
 {
-	[_gameLayer stopBackgroundMusic];
+	[[SimpleAudioEngine sharedEngine] stopBackgroundMusic];
     [self showModalOverlay:[CHGameLoseLayer node]];
 }
 
@@ -134,7 +135,8 @@
 
 - (void)quitGame
 {
-	[[CCDirector sharedDirector] popScene];
+	[[CCDirector sharedDirector] popSceneWithTransition:[CCTransitionFade class] 
+											   duration:0.6f];
 }
 
 @end

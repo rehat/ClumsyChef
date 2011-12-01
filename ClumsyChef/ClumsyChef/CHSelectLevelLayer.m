@@ -11,6 +11,7 @@
 #import "CHGameScene.h"
 #import "CHGameLibrary.h"
 #import "CHMainMenuUtilities.h"
+#import "CHMenuButton.h"
 
 
 static CGFloat const kX0 = 67;
@@ -61,10 +62,11 @@ static CGFloat const kYSpacing = 110;
 				// For cleared stages
 				CHLevelInfo *levelInfo = [lib levelInfoAtIndex:i];
 				
-				CCMenuItemImage *item = [CCMenuItemImage itemFromNormalImage:levelInfo.previewImage 
-															   selectedImage:[self filenameForHighImage:levelInfo.previewImage]
-																	  target:self 
-																	selector:@selector(itemPressed:)];
+				CCMenuItemImage *item = [CHMenuButton itemFromNormalImage:levelInfo.previewImage 
+															selectedImage:[self filenameForHighImage:levelInfo.previewImage]
+																	sound:CHSoundButtonPress  
+																   target:self 
+																 selector:@selector(itemPressed:)];
 				item.tag = i;
 				[item setPositionSharp:[self positionForItemInRow:i/3 col:i%3]];
 				
@@ -95,6 +97,8 @@ static CGFloat const kYSpacing = 110;
 					
 - (void)itemPressed:(id)sender
 {
+	CHSoundPlayButtonPress();
+	
 	CCNode *item = sender;
 	NSUInteger levelIndex = item.tag;
 	CHGameScene *gs = [CHGameScene nodeWithLevelIndex:levelIndex];

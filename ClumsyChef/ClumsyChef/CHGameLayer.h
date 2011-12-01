@@ -20,8 +20,6 @@
 
 - (void)resetForLevelIndex:(NSUInteger)levelIndex;
 
-- (void)stopBackgroundMusic;
-
 @end
 
 

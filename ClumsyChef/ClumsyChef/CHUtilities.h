@@ -10,6 +10,7 @@
 #import "cocos2d.h"
 
 // Other utitlies
+#import "CHSoundUtilities.h"
 #import "CCNode+Utilities.h"
 #import "CCLayer+Utilities.h"
 

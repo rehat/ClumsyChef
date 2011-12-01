@@ -11,6 +11,8 @@
 #import "CHGameLibrary.h"
 #import "CHPlayerInfo.h"
 #import "SimpleAudioEngine.h"
+#import "CHMenuButton.h"
+
 
 
 static NSString* const kDefaultPlayerName = @"Player1";
@@ -64,19 +66,20 @@ static NSString* const kDefaultPlayerName = @"Player1";
         
 		// Important: we don't use blocks because they retains (self), causing circular reference
 		// and our layer will not be deallocated
-        CCMenuItemImage *retry = [CCMenuItemImage itemFromNormalImage:@"gameEnd-restart.png" 
-														selectedImage:@"gameEnd-restart-high.png" 
-															   target:self 
-															 selector:@selector(restartPressed:)];
-        CCMenuItemImage *next = [CCMenuItemImage itemFromNormalImage:@"gameWin-next.png" 
-													   selectedImage:@"gameWin-next-high.png"
-													   disabledImage:@"gameWin-next-disabled.png"
-															  target:self 
-															selector:@selector(nextPressed:)];
-        CCMenuItemImage *quit = [CCMenuItemImage itemFromNormalImage:@"gameEnd-menu.png" 
-													   selectedImage:@"gameEnd-menu-high.png" 
-															  target:self 
-															selector:@selector(menuPressed:)];
+        CCMenuItemImage *retry = [CHMenuButton itemFromImageName:@"gameEnd-restart" 
+														   sound:CHSoundButtonPress
+														  target:self 
+														selector:@selector(restartPressed:)];
+        CCMenuItemImage *next = [CHMenuButton itemFromNormalImage:@"gameWin-next.png" 
+													selectedImage:@"gameWin-next-high.png"
+													disabledImage:@"gameWin-next-disabled.png"
+															sound:CHSoundButtonPress  
+														   target:self 
+														 selector:@selector(nextPressed:)];
+        CCMenuItemImage *quit = [CHMenuButton itemFromImageName:@"gameEnd-menu"
+														  sound:CHSoundButtonPress
+														 target:self 
+													   selector:@selector(menuPressed:)];
 		
         CCMenu *menu = [CCMenu menuWithItems:retry, next, quit, nil];
         menu.position = ccp(screenCenterX, 50);
@@ -88,9 +91,6 @@ static NSString* const kDefaultPlayerName = @"Player1";
 		[quit sharpenCurrentPosition];
 		
         [self addChild:menu];
-        
-        [[SimpleAudioEngine sharedEngine] playEffect:@"levelWin.caf"];
-
 		_nextButton = next;
 	}
 	return self;
@@ -106,6 +106,7 @@ static NSString* const kDefaultPlayerName = @"Player1";
 	[super onEnter];
 	// Enable/disable the next image
 	[_nextButton setIsEnabled:[[self gameSceneParent] hasNextLevel]];
+	[[SimpleAudioEngine sharedEngine] playEffect:@"levelWin.caf"];
 }
 
 #pragma mark -

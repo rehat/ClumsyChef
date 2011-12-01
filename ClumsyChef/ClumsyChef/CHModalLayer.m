@@ -11,7 +11,7 @@
 #import "CHScreenshot.h"
 #import "CHBlurImage.h"
 
-float const CHModalLayerDefaultDimOpacity = 0.6f;
+float const CHModalLayerDefaultDimOpacity = 0.4f;
 
 @implementation CHModalLayer
 {

@@ -10,6 +10,8 @@
 #import "CHGameScene.h"
 #import "SimpleAudioEngine.h"
 #import "CHGameScene.h"
+#import "CHMenuButton.h"
+
 
 @implementation CHPauseLayer
 {
@@ -44,16 +46,16 @@
 		[menuBG setPositionSharp:ccp(CHGetHalfWinWidth(), CHGetHalfWinHeight())];
 		[self addChild:menuBG];
 		
-		CCMenuItemImage *resumeBtn = [CCMenuItemImage itemFromNormalImage:@"pause-resume.png" 
-															selectedImage:@"pause-resume-high.png" 
-																   target:self 
-																 selector:@selector(resumePressed:)];
+		CCMenuItemImage *resumeBtn = [CHMenuButton itemFromImageName:@"pause-resume"
+															   sound:CHSoundButtonBack
+															  target:self 
+															selector:@selector(resumePressed:)];
 		[resumeBtn setPositionSharp:ccp(106, 264)];
 		
-		CCMenuItemImage *restart = [CCMenuItemImage itemFromNormalImage:@"pause-restart.png" 
-														  selectedImage:@"pause-restart-high.png" 
-																 target:self 
-															   selector:@selector(restartPressed:)];
+		CCMenuItemImage *restart = [CHMenuButton itemFromImageName:@"pause-restart" 
+															 sound:CHSoundButtonPress
+															target:self 
+														  selector:@selector(restartPressed:)];
 		[restart setPositionSharp:ccp(209, 264)];
 		
 		CCMenuItemImage *soundOn = [CCMenuItemImage itemFromNormalImage:@"pause-sound.png" 
@@ -65,10 +67,10 @@
 												  items:soundOn, soundOff, nil];
 		[_soundToggle setPositionSharp:ccp(106, 205)];
 		
-		CCMenuItemImage *quit = [CCMenuItemImage itemFromNormalImage:@"pause-quit.png" 
-													   selectedImage:@"pause-quit-high.png" 
-															  target:self 
-															selector:@selector(quitPressed:)];
+		CCMenuItemImage *quit = [CHMenuButton itemFromImageName:@"pause-quit" 
+														  sound:CHSoundButtonPress
+														 target:self 
+													   selector:@selector(quitPressed:)];
 		[quit setPositionSharp:ccp(209, 205)];
 		
 		CCMenu *menu = [CCMenu menuWithItems:resumeBtn, restart, _soundToggle, quit, nil];
