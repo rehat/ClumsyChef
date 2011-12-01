@@ -18,6 +18,7 @@ static CGFloat const kX0 = 67;
 static CGFloat const kY0 = 154;
 static CGFloat const kXSpacing = 93;
 static CGFloat const kYSpacing = 110;
+static NSInteger const kTagAnimSprite = 999;
 
 
 @implementation CHSelectLevelLayer
@@ -101,9 +102,24 @@ static CGFloat const kYSpacing = 110;
 	
 	CCNode *item = sender;
 	NSUInteger levelIndex = item.tag;
-	CHGameScene *gs = [CHGameScene nodeWithLevelIndex:levelIndex];
-	[[CCDirector sharedDirector] popScene];
-	[[CCDirector sharedDirector] pushScene:[CCTransitionFade transitionWithDuration:0.5f scene:gs]];
+	
+	CHLevelInfo *levelInfo = [[CHGameLibrary sharedGameLibrary] levelInfoAtIndex:levelIndex];
+	CCSprite *sprite = [CCSprite spriteWithFile:levelInfo.previewImage];
+	sprite.position = item.position;
+	[self addChild:sprite z:10 tag:kTagAnimSprite];
+	
+	void (^callBack)(void) = ^(void) {
+		CHGameScene *gs = [CHGameScene nodeWithLevelIndex:levelIndex];
+		[[CCDirector sharedDirector] popScene];
+		[[CCDirector sharedDirector] pushScene:[CCTransitionFade transitionWithDuration:0.5f scene:gs]];
+	};
+	
+	ccTime const duration = 0.3f;
+	[sprite runAction:[CCSequence actions:
+					   [CCSpawn actions:
+					    [CCEaseIn actionWithAction:[CCScaleBy actionWithDuration:duration scale:4] rate:3],
+					    [CCFadeTo actionWithDuration:duration opacity:0], nil],
+					   [CCCallBlock actionWithBlock:callBack], nil]];
 }
 
 - (void)backButtonPressed:(id)sender
