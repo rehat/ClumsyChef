@@ -512,12 +512,14 @@ const uint32_t kSceneFade = 0xFADEFADE;
 	inA = [CCSequence actions:
 		   [CCDelayTime actionWithDuration:duration_/2],
 		   [CCShow action],
-		   [CCOrbitCamera actionWithDuration: duration_/2 radius: 1 deltaRadius:0 angleZ:inAngleZ deltaAngleZ:inDeltaZ angleX:0 deltaAngleX:0],
+		   [CCEaseInOut actionWithAction:[CCOrbitCamera actionWithDuration: duration_/2 radius: 1 deltaRadius:0 angleZ:inAngleZ deltaAngleZ:inDeltaZ angleX:0 deltaAngleX:0]
+									rate:2],
 		   [CCCallFunc actionWithTarget:self selector:@selector(finish)],
 		   nil ];
 	outA = [CCSequence actions:
-			[CCOrbitCamera actionWithDuration: duration_/2 radius: 1 deltaRadius:0 angleZ:outAngleZ deltaAngleZ:outDeltaZ angleX:0 deltaAngleX:0],
-			[CCHide action],
+			[CCEaseInOut actionWithAction:[CCOrbitCamera actionWithDuration: duration_/2 radius: 1 deltaRadius:0 angleZ:outAngleZ deltaAngleZ:outDeltaZ angleX:0 deltaAngleX:0]
+									 rate:2],
+			 [CCHide action],
 			[CCDelayTime actionWithDuration:duration_/2],							
 			nil ];
 	

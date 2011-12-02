@@ -37,8 +37,8 @@
 - (void)onEnter
 {
 	[super onEnter];
-	CCTransitionZoomFlipX *trans = [CCTransitionZoomFlipX transitionWithDuration:0.6f 
-																		   scene:[CHMainMenuLayer node]];
+	CCTransitionFlipX *trans = [CCTransitionFlipX transitionWithDuration:0.6f 
+																   scene:[CHMainMenuLayer node]];
 	[[CCDirector sharedDirector] replaceScene:trans];
 }
 
