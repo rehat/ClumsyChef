@@ -13,11 +13,14 @@
 #import "CHCreditLayer.h"
 #import "CHMainMenuUtilities.h"
 #import "CHMenuButton.h"
+#import "CHPlayerInfo.h"
+
 
 
 @implementation CHMainMenuLayer
 {
 	CCMenuItemToggle *_soundToggle;
+	CCMenuItemToggle *_frostModeToggle;
 }
 
 #pragma mark -
@@ -27,6 +30,12 @@
 {
 	SimpleAudioEngine *engine = [SimpleAudioEngine sharedEngine];
 	_soundToggle.selectedIndex = (engine.mute? 1 : 0);
+}
+
+- (void)updateFrostModeButton
+{
+	CHPlayerInfo *info = [CHPlayerInfo sharedPlayerInfo];
+	_frostModeToggle.selectedIndex = (info.frostModeEnabled? 1 : 0);
 }
 
 #pragma mark -
@@ -66,8 +75,22 @@
 		_soundToggle = [CCMenuItemToggle itemWithTarget:self selector:@selector(soundPressed:) 
 												  items:soundOn, soundOff, nil];
 		[_soundToggle setPositionSharp:ccp(289, 23)];
+
+#ifdef ALLOW_FROST_MODE		
+		CCMenuItemImage *frostOff = [CCMenuItemImage itemFromNormalImage:@"mainMenu-frostOff.png" 
+														   selectedImage:nil];
+		CCMenuItemImage *frostOn = [CCMenuItemImage itemFromNormalImage:@"mainMenu-frostOn.png" 
+														  selectedImage:nil];
+		_frostModeToggle = [CCMenuItemToggle itemWithTarget:self selector:@selector(frostModePressed:) 
+													  items:frostOff, frostOn, nil];
+		[_frostModeToggle setPositionSharp:ccp(239, 23)];
 		
+		CCMenu *menu = [CCMenu menuWithItems:play, highScores, credits, _soundToggle, _frostModeToggle, nil];
+		[self updateFrostModeButton];
+#else
 		CCMenu *menu = [CCMenu menuWithItems:play, highScores, credits, _soundToggle, nil];
+#endif
+		
 		menu.anchorPoint = CGPointZero;
 		menu.position = CGPointZero;
 		[self updateSoundToggleButton];
@@ -110,6 +133,13 @@
 	SimpleAudioEngine *engine = [SimpleAudioEngine sharedEngine];
 	engine.mute = !engine.mute;
 	[self updateSoundToggleButton];
+}
+
+- (void)frostModePressed:(id)sender
+{
+	CHPlayerInfo *info = [CHPlayerInfo sharedPlayerInfo];
+	info.frostModeEnabled = !info.frostModeEnabled;
+	[self updateFrostModeButton];
 }
 
 @end

@@ -15,6 +15,10 @@ static NSString* const kKeyNumClearedLevels = @"numClearedLevels";
 static NSString* const kKeyHighScores = @"highScores";
 
 @implementation CHPlayerInfo
+{
+	BOOL _frostModeEnabled;
+}
+@synthesize frostModeEnabled = _frostModeEnabled;
 
 - (id)init
 {

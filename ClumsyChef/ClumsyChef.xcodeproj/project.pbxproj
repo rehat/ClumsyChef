@@ -430,6 +430,16 @@
 		E511C298145925BC008BCFF8 /* testLayer-backButton-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E511C295145925BC008BCFF8 /* testLayer-backButton-hd.png */; };
 		E511C299145925BC008BCFF8 /* testLayer-backButton-highlighted-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E511C296145925BC008BCFF8 /* testLayer-backButton-highlighted-hd.png */; };
 		E511C29A145925BC008BCFF8 /* testLayer-backButton-highlighted.png in Resources */ = {isa = PBXBuildFile; fileRef = E511C297145925BC008BCFF8 /* testLayer-backButton-highlighted.png */; };
+		E52A53BE14898F1400BF15BB /* mainMenu-frostOn.png in Resources */ = {isa = PBXBuildFile; fileRef = E52A53BA14898F1400BF15BB /* mainMenu-frostOn.png */; };
+		E52A53BF14898F1400BF15BB /* mainMenu-frostOn.png in Resources */ = {isa = PBXBuildFile; fileRef = E52A53BA14898F1400BF15BB /* mainMenu-frostOn.png */; };
+		E52A53C014898F1400BF15BB /* mainMenu-frostOn-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E52A53BB14898F1400BF15BB /* mainMenu-frostOn-hd.png */; };
+		E52A53C114898F1400BF15BB /* mainMenu-frostOn-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E52A53BB14898F1400BF15BB /* mainMenu-frostOn-hd.png */; };
+		E52A53C214898F1400BF15BB /* mainMenu-frostOff.png in Resources */ = {isa = PBXBuildFile; fileRef = E52A53BC14898F1400BF15BB /* mainMenu-frostOff.png */; };
+		E52A53C314898F1400BF15BB /* mainMenu-frostOff.png in Resources */ = {isa = PBXBuildFile; fileRef = E52A53BC14898F1400BF15BB /* mainMenu-frostOff.png */; };
+		E52A53C414898F1400BF15BB /* mainMenu-frostOff-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E52A53BD14898F1400BF15BB /* mainMenu-frostOff-hd.png */; };
+		E52A53C514898F1400BF15BB /* mainMenu-frostOff-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E52A53BD14898F1400BF15BB /* mainMenu-frostOff-hd.png */; };
+		E52A53C81489932A00BF15BB /* Comedy Boing.caf in Resources */ = {isa = PBXBuildFile; fileRef = E52A53C71489932A00BF15BB /* Comedy Boing.caf */; };
+		E52A53C91489932A00BF15BB /* Comedy Boing.caf in Resources */ = {isa = PBXBuildFile; fileRef = E52A53C71489932A00BF15BB /* Comedy Boing.caf */; };
 		E52E5EDE1474E08F00FD9C4D /* gameOver-title-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E52E5EDC1474E08F00FD9C4D /* gameOver-title-hd.png */; };
 		E52E5EDF1474E08F00FD9C4D /* gameOver-title-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = E52E5EDC1474E08F00FD9C4D /* gameOver-title-hd.png */; };
 		E52E5EE01474E08F00FD9C4D /* gameOver-title.png in Resources */ = {isa = PBXBuildFile; fileRef = E52E5EDD1474E08F00FD9C4D /* gameOver-title.png */; };
@@ -1021,6 +1031,11 @@
 		E511C295145925BC008BCFF8 /* testLayer-backButton-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "testLayer-backButton-hd.png"; path = "Resources/testLayer-backButton-hd.png"; sourceTree = "<group>"; };
 		E511C296145925BC008BCFF8 /* testLayer-backButton-highlighted-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "testLayer-backButton-highlighted-hd.png"; path = "Resources/testLayer-backButton-highlighted-hd.png"; sourceTree = "<group>"; };
 		E511C297145925BC008BCFF8 /* testLayer-backButton-highlighted.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "testLayer-backButton-highlighted.png"; path = "Resources/testLayer-backButton-highlighted.png"; sourceTree = "<group>"; };
+		E52A53BA14898F1400BF15BB /* mainMenu-frostOn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mainMenu-frostOn.png"; path = "Resources/mainMenu-frostOn.png"; sourceTree = "<group>"; };
+		E52A53BB14898F1400BF15BB /* mainMenu-frostOn-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mainMenu-frostOn-hd.png"; path = "Resources/mainMenu-frostOn-hd.png"; sourceTree = "<group>"; };
+		E52A53BC14898F1400BF15BB /* mainMenu-frostOff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mainMenu-frostOff.png"; path = "Resources/mainMenu-frostOff.png"; sourceTree = "<group>"; };
+		E52A53BD14898F1400BF15BB /* mainMenu-frostOff-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mainMenu-frostOff-hd.png"; path = "Resources/mainMenu-frostOff-hd.png"; sourceTree = "<group>"; };
+		E52A53C71489932A00BF15BB /* Comedy Boing.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Comedy Boing.caf"; path = "Resources/Comedy Boing.caf"; sourceTree = "<group>"; };
 		E52E5EDC1474E08F00FD9C4D /* gameOver-title-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gameOver-title-hd.png"; path = "Resources/gameOver-title-hd.png"; sourceTree = "<group>"; };
 		E52E5EDD1474E08F00FD9C4D /* gameOver-title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gameOver-title.png"; path = "Resources/gameOver-title.png"; sourceTree = "<group>"; };
 		E52E5EE21474E09D00FD9C4D /* gameWin-description-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "gameWin-description-hd.png"; path = "Resources/gameWin-description-hd.png"; sourceTree = "<group>"; };
@@ -1618,11 +1633,14 @@
 			children = (
 				E5A30315147F14C80050DA25 /* mainMenu-background-hd.png */,
 				E5A30316147F14C80050DA25 /* mainMenu-background.png */,
-				BC7A84AD1484A9B700634F56 /* mainMenu.caf */,
 				E5A30317147F14C80050DA25 /* mainMenu-credits-hd.png */,
 				E5A30318147F14C80050DA25 /* mainMenu-credits-high-hd.png */,
 				E5A30319147F14C80050DA25 /* mainMenu-credits-high.png */,
 				E5A3031A147F14C80050DA25 /* mainMenu-credits.png */,
+				E52A53BD14898F1400BF15BB /* mainMenu-frostOff-hd.png */,
+				E52A53BC14898F1400BF15BB /* mainMenu-frostOff.png */,
+				E52A53BB14898F1400BF15BB /* mainMenu-frostOn-hd.png */,
+				E52A53BA14898F1400BF15BB /* mainMenu-frostOn.png */,
 				E5A3031B147F14C80050DA25 /* mainMenu-highScores-hd.png */,
 				E5A3031C147F14C80050DA25 /* mainMenu-highScores-high-hd.png */,
 				E5A3031D147F14C80050DA25 /* mainMenu-highScores-high.png */,
@@ -1635,6 +1653,7 @@
 				E5A30324147F14C80050DA25 /* mainMenu-soundOff.png */,
 				E5A30325147F14C80050DA25 /* mainMenu-soundOn-hd.png */,
 				E5A30326147F14C80050DA25 /* mainMenu-soundOn.png */,
+				BC7A84AD1484A9B700634F56 /* mainMenu.caf */,
 			);
 			name = "Main Menu";
 			sourceTree = "<group>";
@@ -2038,6 +2057,7 @@
 				E56D77C01486E8AB00B91FF2 /* back.wav */,
 				E56D77BF1486E8AB00B91FF2 /* click1.wav */,
 				E56D77BE1486E8AB00B91FF2 /* click2.wav */,
+				E52A53C71489932A00BF15BB /* Comedy Boing.caf */,
 			);
 			name = "Common Sounds";
 			sourceTree = "<group>";
@@ -2965,6 +2985,11 @@
 				857B74831486FCAA0009EC1D /* background-test1-hd.png in Resources */,
 				857B74851486FCAA0009EC1D /* background-test2.png in Resources */,
 				857B74871486FCAA0009EC1D /* background-test2-hd.png in Resources */,
+				E52A53BF14898F1400BF15BB /* mainMenu-frostOn.png in Resources */,
+				E52A53C114898F1400BF15BB /* mainMenu-frostOn-hd.png in Resources */,
+				E52A53C314898F1400BF15BB /* mainMenu-frostOff.png in Resources */,
+				E52A53C514898F1400BF15BB /* mainMenu-frostOff-hd.png in Resources */,
+				E52A53C91489932A00BF15BB /* Comedy Boing.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3241,6 +3266,11 @@
 				857B74821486FCAA0009EC1D /* background-test1-hd.png in Resources */,
 				857B74841486FCAA0009EC1D /* background-test2.png in Resources */,
 				857B74861486FCAA0009EC1D /* background-test2-hd.png in Resources */,
+				E52A53BE14898F1400BF15BB /* mainMenu-frostOn.png in Resources */,
+				E52A53C014898F1400BF15BB /* mainMenu-frostOn-hd.png in Resources */,
+				E52A53C214898F1400BF15BB /* mainMenu-frostOff.png in Resources */,
+				E52A53C414898F1400BF15BB /* mainMenu-frostOff-hd.png in Resources */,
+				E52A53C81489932A00BF15BB /* Comedy Boing.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3680,6 +3710,7 @@
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
+					ALLOW_FROST_MODE,
 					CH_NO_TEST_MENU,
 					DEBUG,
 					"COCOS2D_DEBUG=1",
@@ -3700,6 +3731,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREPROCESSOR_DEFINITIONS = (
+					ALLOW_FROST_MODE,
 					CH_NO_TEST_MENU,
 					NDEBUG,
 				);

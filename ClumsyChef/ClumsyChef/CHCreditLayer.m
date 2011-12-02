@@ -8,6 +8,7 @@
 
 #import "CHCreditLayer.h"
 #import "CHMainMenuUtilities.h"
+#import "SimpleAudioEngine.h"
 
 
 @implementation CHCreditLayer
@@ -22,6 +23,14 @@
 		
 		CCMenu *button = CHMenuMakeBackButton(ccp(CHGetHalfWinWidth(), 51), self, @selector(backButtonPressed:));
 		[self addChild:button];
+		
+		CCMenuItem *item = [CCMenuItem itemWithTarget:self selector:@selector(playSound:)];
+		[item setContentSize:CGSizeMake(180, 40)];
+		[item setPositionSharp:ccp(CHGetHalfWinWidth(), 290)];
+		CCMenu *menu = [CCMenu menuWithItems:item, nil];
+		menu.anchorPoint = CGPointZero;
+		menu.position = CGPointZero;
+		[self addChild:menu];
 	}
 	return self;
 }
@@ -29,6 +38,11 @@
 - (void)backButtonPressed:(id)sender
 {
 	CHMenuPopScene();
+}
+
+- (void)playSound:(id)sender
+{
+	[[SimpleAudioEngine sharedEngine] playEffect:@"Comedy Boing.caf"];
 }
 
 @end

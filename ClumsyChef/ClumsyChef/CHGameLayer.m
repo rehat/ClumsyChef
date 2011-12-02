@@ -18,8 +18,8 @@
 #import "CHHUDLayer.h"
 #import "CHSharedResHolder.h"
 #import "CHPauseLayer.h"
-#import "TestMenuLayer.h"
 #import "CHMenuButton.h"
+#import "CHPlayerInfo.h"
 
 
 static CGFloat const kChefYOffset = 110.f;
@@ -167,8 +167,9 @@ static float const kGenObjectRangeDown = 100.f;
 	//-------------------------------------------
 	// HUD
 	//-------------------------------------------
+	NSUInteger numLifes = ([CHPlayerInfo sharedPlayerInfo].frostModeEnabled? 9 : 3);
 	_hudLayer = [CHHUDLayer nodeWithRequiredRecipeItems:levelInfo.recipeItems 
-										  numberOfLifes:3 
+										  numberOfLifes:numLifes 
 											moneyAmount:0];
 	[self addChild:_hudLayer z:5];
 	

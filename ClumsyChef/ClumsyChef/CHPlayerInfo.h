@@ -15,6 +15,7 @@
 @property(nonatomic) NSUInteger	numClearedLevels;
 // NSDictionary {CHPlayerInfoScoreEntryKeyPlyerName, CHPlayerInfoScoreEntryKeyScore}
 @property(nonatomic, readonly) NSArray		*highScores;
+@property(nonatomic, assign) BOOL			frostModeEnabled;	// Not saved; Default is NO
 
 + (CHPlayerInfo *)sharedPlayerInfo;
 
